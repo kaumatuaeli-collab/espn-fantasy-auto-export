@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
 """
 ESPN Fantasy Football Auto-Extractor
-Runs weekly to pull fantasy football data and save to Google Sheets
+Runs weekly to pull fantasy football data and save to repository
 """
 
 from espn_api.football import League
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 import os
 from datetime import datetime
-import json
 
 # ESPN Configuration
 LEAGUE_ID = 44181678
@@ -17,10 +14,6 @@ YEAR = 2025
 ESPN_S2 = os.environ.get('ESPN_S2')
 SWID = os.environ.get('SWID')
 MY_TEAM_NAME = 'Intelligent MBLeague (TM)'
-
-# Google Sheets Configuration
-GOOGLE_CREDS_JSON = os.environ.get('GOOGLE_CREDS_JSON')
-SPREADSHEET_NAME = 'ESPN Fantasy Football Data'
 
 def connect_to_league():
     """Connect to ESPN Fantasy League"""
@@ -123,45 +116,6 @@ def format_data(league, my_team):
     
     return "\n".join(output)
 
-def save_to_google_sheets(data):
-    """Save data to Google Sheets"""
-    print("Connecting to Google Sheets...")
-    
-    # Parse credentials from environment variable
-    creds_dict = json.loads(GOOGLE_CREDS_JSON)
-    
-    scope = ['https://spreadsheets.google.com/feeds',
-             'https://www.googleapis.com/auth/drive']
-    
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
-    client = gspread.authorize(creds)
-    
-    # Open or create spreadsheet
-    try:
-        sheet = client.open(SPREADSHEET_NAME)
-        print(f"Found existing spreadsheet: {SPREADSHEET_NAME}")
-    except gspread.SpreadsheetNotFound:
-        sheet = client.create(SPREADSHEET_NAME)
-        sheet.share('kaumatuaeli@gmail.com', perm_type='user', role='writer')
-        print(f"Created new spreadsheet: {SPREADSHEET_NAME}")
-    
-    # Get the first worksheet (or create one)
-    try:
-        worksheet = sheet.get_worksheet(0)
-    except:
-        worksheet = sheet.add_worksheet(title="Weekly Data", rows="100", cols="20")
-    
-    # Clear existing content and write new data
-    worksheet.clear()
-    
-    # Split data into lines and write to sheet
-    lines = data.split('\n')
-    for i, line in enumerate(lines, start=1):
-        worksheet.update_cell(i, 1, line)
-    
-    print(f"Data saved to Google Sheets: {sheet.url}")
-    return sheet.url
-
 def main():
     try:
         # Connect to ESPN
@@ -171,14 +125,18 @@ def main():
         # Format data
         data = format_data(league, my_team)
         
-        # Save to Google Sheets
-        sheet_url = save_to_google_sheets(data)
+        # Save to file
+        filename = f"fantasy_data_week_{league.current_week}.txt"
+        with open(filename, 'w') as f:
+            f.write(data)
         
         print("\n" + "="*80)
         print("SUCCESS!")
-        print(f"Week {league.current_week} data extracted and saved")
-        print(f"View at: {sheet_url}")
+        print(f"Week {league.current_week} data extracted and saved to {filename}")
         print("="*80)
+        
+        # Also print to console so it appears in GitHub Actions logs
+        print("\n" + data)
         
     except Exception as e:
         print(f"ERROR: {e}")
