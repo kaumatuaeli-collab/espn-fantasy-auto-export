@@ -142,7 +142,7 @@ def save_to_google_sheets(data):
         print(f"Found existing spreadsheet: {SPREADSHEET_NAME}")
     except gspread.SpreadsheetNotFound:
         sheet = client.create(SPREADSHEET_NAME)
-        sheet.share(kaumatuaeli@gmail.com', perm_type='user', role='writer')
+        sheet.share('kaumatuaeli@gmail.com', perm_type='user', role='writer')
         print(f"Created new spreadsheet: {SPREADSHEET_NAME}")
     
     # Get the first worksheet (or create one)
