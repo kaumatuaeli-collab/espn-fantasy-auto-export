@@ -66,12 +66,19 @@ def get_player_details(player, league):
             else:
                 details['opponent'] = 'BYE'
         
-        # Last 3 weeks actual points
-        for i in range(max(1, week - 3), week):
-            week_stats = player.stats.get(i, {})
-            if isinstance(week_stats, dict):
-                points = week_stats.get('points', 0)
-                details['last_3_weeks'].append(points)
+        # Last 3 weeks actual points - get most recent completed weeks
+        # If current week is 7, get weeks 4, 5, 6
+        for i in range(week - 3, week):
+            if i > 0:  # Make sure week is valid
+                week_stats = player.stats.get(i, {})
+                if isinstance(week_stats, dict):
+                    # Get actual points (not projected)
+                    points = week_stats.get('points', 0)
+                    if points is None:
+                        points = 0
+                    details['last_3_weeks'].append(points)
+                else:
+                    details['last_3_weeks'].append(0)
             else:
                 details['last_3_weeks'].append(0)
     
@@ -214,13 +221,13 @@ def generate_html_report(league, my_team):
 </head>
 <body>
     <div class="header">
-        <h1>ð {league.settings.name}</h1>
+        <h1>{league.settings.name}</h1>
         <div>Week {week} of {league.settings.reg_season_count} | {current_time}</div>
         <div style="margin-top: 10px; font-size: 18px;">{my_team.team_name}</div>
     </div>
     
     <div class="summary">
-        <h2>ð Quick Stats</h2>
+        <h2>Quick Stats</h2>
         <div class="stat-box">Record: {my_team.wins}-{my_team.losses}</div>
         <div class="stat-box">Standing: #{my_team.standing} of {len(league.teams)}</div>
         <div class="stat-box">Points For: {my_team.points_for:.2f}</div>
@@ -235,7 +242,7 @@ def generate_html_report(league, my_team):
         if matchup:
             html += f"""
     <div class="section">
-        <h2>ð¯ Week {week} Matchup</h2>
+        <h2>Week {week} Matchup</h2>
         <h3>{my_team.team_name} vs {matchup.team_name}</h3>
         <div class="stat-box">Opponent Record: {matchup.wins}-{matchup.losses} (#{matchup.standing})</div>
         <div class="stat-box">Their Avg: {matchup.points_for/max(1, matchup.wins + matchup.losses):.2f} pts/wk</div>
@@ -252,7 +259,7 @@ def generate_html_report(league, my_team):
     # My Roster
     html += f"""
     <div class="section">
-        <h2>ð¥ My Roster - Week {week}</h2>
+        <h2>My Roster - Week {week}</h2>
         <table>
             <tr>
                 <th>Slot</th>
@@ -305,7 +312,7 @@ def generate_html_report(league, my_team):
     # All League Rosters
     html += """
     <div class="section">
-        <h2>ð Complete League Rosters</h2>
+        <h2>Complete League Rosters</h2>
 """
     
     sorted_teams = sorted(league.teams, key=lambda x: x.standing)
@@ -314,7 +321,7 @@ def generate_html_report(league, my_team):
         
         html += f"""
         <div style="margin: 20px 0; padding: 15px; background: {'#fff3cd' if is_my_team else '#f8f9fa'}; border-radius: 8px; border-left: 4px solid {'#ffc107' if is_my_team else '#e0e0e0'};">
-            <h3>#{team.standing} - {team.team_name} {'ð YOU' if is_my_team else ''}</h3>
+            <h3>#{team.standing} - {team.team_name} {' <- YOU' if is_my_team else ''}</h3>
             <div class="stat-box">Record: {team.wins}-{team.losses}</div>
             <div class="stat-box">PF: {team.points_for:.2f}</div>
             <div class="stat-box">Avg: {team.points_for/max(1, team.wins + team.losses):.2f}/wk</div>
@@ -375,7 +382,7 @@ def generate_html_report(league, my_team):
     for sort_key, sort_name in sort_options:
         html += f"""
     <div class="section">
-        <h2>ð¯ Top Available Players - {sort_name}</h2>
+        <h2>Top Available Players - {sort_name}</h2>
 """
         
         for pos in positions:
@@ -424,7 +431,7 @@ def generate_html_report(league, my_team):
     # League Standings
     html += """
     <div class="section">
-        <h2>ð League Standings</h2>
+        <h2>League Standings</h2>
         <table>
             <tr>
                 <th>Rank</th>
@@ -444,7 +451,7 @@ def generate_html_report(league, my_team):
         html += f"""
             <tr class="{row_class}">
                 <td>{team.standing}</td>
-                <td><strong>{team.team_name}</strong>{marker}</td>
+                <td><strong>{team.team_name}</strong>{' <- YOU' if marker else ''}</td>
                 <td>{team.wins}-{team.losses}</td>
                 <td>{team.points_for:.2f}</td>
                 <td>{team.points_against:.2f}</td>
@@ -460,7 +467,7 @@ def generate_html_report(league, my_team):
     # Upcoming Schedule
     html += f"""
     <div class="section">
-        <h2>ð My Upcoming Schedule</h2>
+        <h2>My Upcoming Schedule</h2>
         <table>
             <tr>
                 <th>Week</th>
@@ -499,7 +506,7 @@ def generate_html_report(league, my_team):
     # Footer
     html += f"""
     <div class="section" style="text-align: center; color: #666;">
-        <p><strong>ð Complete Data Extraction</strong></p>
+        <p><strong>Complete Data Extraction</strong></p>
         <p>Share this report with Claude for strategic analysis</p>
         <p>Last updated: {current_time}</p>
     </div>
