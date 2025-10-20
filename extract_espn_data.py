@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-Comprehensive ESPN Fantasy Football Data Extractor
-Extracts complete league data for strategic analysis
+Comprehensive ESPN Fantasy Football Data Extractor - FIXED
+Properly extracts all data with correct API access patterns
 """
 
 from espn_api.football import League
 import os
 from datetime import datetime
-import json
 
 # ESPN Configuration
 LEAGUE_ID = 44181678
@@ -15,6 +14,19 @@ YEAR = 2025
 ESPN_S2 = os.environ.get('ESPN_S2')
 SWID = os.environ.get('SWID')
 MY_TEAM_NAME = 'Intelligent MBLeague (TM)'
+
+# Slot position mapping
+SLOT_MAP = {
+    0: 'QB',
+    2: 'RB',
+    4: 'WR',
+    6: 'TE',
+    16: 'D/ST',
+    17: 'K',
+    20: 'BENCH',
+    21: 'IR',
+    23: 'FLEX'
+}
 
 def connect_to_league():
     """Connect to ESPN Fantasy League"""
@@ -34,57 +46,98 @@ def find_my_team(league):
             return team
     raise ValueError(f"Could not find team '{MY_TEAM_NAME}'")
 
-def get_player_details(player, league):
-    """Extract comprehensive player details"""
+def get_slot_name(lineupSlot):
+    """Convert ESPN slot ID to readable name"""
+    return SLOT_MAP.get(lineupSlot, 'BENCH')
+
+def get_player_details(player, league, week=None):
+    """Extract comprehensive player details with proper API access"""
+    if week is None:
+        week = league.current_week
+    
+    # Basic info
     details = {
         'name': player.name,
-        'position': getattr(player, 'position', 'N/A'),
-        'slot': getattr(player, 'slot_position', 'BENCH'),
-        'pro_team': getattr(player, 'proTeam', 'N/A'),
-        'opponent': getattr(player, 'pro_opponent', 'BYE'),
-        'projected': getattr(player, 'projected_points', 0),
-        'injury_status': getattr(player, 'injuryStatus', 'ACTIVE'),
-        'percent_owned': getattr(player, 'percent_owned', 0),
-        'percent_started': getattr(player, 'percent_started', 0),
-        'total_points': getattr(player, 'total_points', 0),
-        'avg_points': getattr(player, 'avg_points', 0),
-        'player_id': getattr(player, 'playerId', 0),
+        'position': player.position if hasattr(player, 'position') else 'N/A',
+        'eligibleSlots': player.eligibleSlots if hasattr(player, 'eligibleSlots') else [],
+        'pro_team': player.proTeam if hasattr(player, 'proTeam') else 'N/A',
+        'player_id': player.playerId if hasattr(player, 'playerId') else 0,
     }
     
-    # Calculate games played (for accurate averaging)
-    details['games_played'] = 0
-    if hasattr(player, 'stats'):
-        for week, stat in player.stats.items():
-            if stat.get('points', 0) > 0:
-                details['games_played'] += 1
+    # Get lineup slot
+    if hasattr(player, 'lineupSlot'):
+        details['slot'] = get_slot_name(player.lineupSlot)
+    else:
+        details['slot'] = 'BENCH'
     
-    # Get last 3 weeks performance
-    last_3_weeks = []
-    if hasattr(player, 'stats'):
-        current_week = league.current_week
-        for i in range(max(1, current_week - 3), current_week):
-            week_points = player.stats.get(i, {}).get('points', 0)
-            last_3_weeks.append(week_points)
+    # Injury status
+    details['injury_status'] = player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE'
     
-    details['last_3_weeks'] = last_3_weeks
-    details['last_3_avg'] = sum(last_3_weeks) / len(last_3_weeks) if last_3_weeks else 0
+    # Ownership percentages
+    details['percent_owned'] = player.percent_owned if hasattr(player, 'percent_owned') else 0
+    details['percent_started'] = player.percent_started if hasattr(player, 'percent_started') else 0
+    
+    # Get stats - this is where we need to be careful
+    details['projected'] = 0
+    details['total_points'] = 0
+    details['avg_points'] = 0
+    details['last_3_weeks'] = []
+    details['opponent'] = 'BYE'
+    
+    try:
+        # Try to get current week projection
+        if hasattr(player, 'projected_points'):
+            details['projected'] = player.projected_points
+        
+        # Try to get total and average points
+        if hasattr(player, 'total_points'):
+            details['total_points'] = player.total_points
+        if hasattr(player, 'avg_points'):
+            details['avg_points'] = player.avg_points
+        
+        # Get opponent for current week
+        if hasattr(player, 'pro_opponent'):
+            opp = player.pro_opponent
+            details['opponent'] = opp if opp else 'BYE'
+        
+        # Get last 3 weeks stats
+        if hasattr(player, 'stats'):
+            for i in range(max(1, week - 3), week):
+                try:
+                    week_stats = player.stats.get(i, {})
+                    if isinstance(week_stats, dict):
+                        points = week_stats.get('points', 0)
+                    else:
+                        # Sometimes it's an object, not a dict
+                        points = getattr(week_stats, 'points', 0) if week_stats else 0
+                    details['last_3_weeks'].append(points)
+                except:
+                    details['last_3_weeks'].append(0)
+    except Exception as e:
+        print(f"Warning: Could not get all stats for {player.name}: {e}")
+    
+    # Calculate last 3 average
+    if details['last_3_weeks']:
+        details['last_3_avg'] = sum(details['last_3_weeks']) / len(details['last_3_weeks'])
+    else:
+        details['last_3_avg'] = 0
     
     return details
 
 def get_injury_color(status):
     """Get color coding for injury status"""
     if status == 'OUT':
-        return '#ffcdd2'  # Light red
+        return '#ffcdd2'
     elif status in ['QUESTIONABLE', 'DOUBTFUL']:
-        return '#fff9c4'  # Light yellow
-    elif status == 'INJURY_RESERVE':
-        return '#e1bee7'  # Light purple
-    return '#ffffff'  # White
+        return '#fff9c4'
+    elif status in ['INJURY_RESERVE', 'IR']:
+        return '#e1bee7'
+    return '#ffffff'
 
 def get_top_available_players(league, position=None, limit=15, sort_by='projected'):
     """Get top available free agents with multiple sorting options"""
     try:
-        free_agents = league.free_agents(size=100)
+        free_agents = league.free_agents(size=100, week=league.current_week)
         
         if position:
             free_agents = [p for p in free_agents if getattr(p, 'position', '') == position]
@@ -103,40 +156,6 @@ def get_top_available_players(league, position=None, limit=15, sort_by='projecte
     except Exception as e:
         print(f"Error fetching free agents: {e}")
         return []
-
-def analyze_position_strength(roster):
-    """Analyze team strength by position"""
-    position_stats = {}
-    
-    for player in roster:
-        pos = getattr(player, 'position', 'UNKNOWN')
-        if pos not in position_stats:
-            position_stats[pos] = {
-                'count': 0,
-                'total_points': 0,
-                'avg_points': 0,
-                'players': []
-            }
-        
-        total = getattr(player, 'total_points', 0)
-        avg = getattr(player, 'avg_points', 0)
-        
-        position_stats[pos]['count'] += 1
-        position_stats[pos]['total_points'] += total
-        position_stats[pos]['avg_points'] += avg
-        position_stats[pos]['players'].append({
-            'name': player.name,
-            'total': total,
-            'avg': avg
-        })
-    
-    # Calculate averages
-    for pos in position_stats:
-        count = position_stats[pos]['count']
-        if count > 0:
-            position_stats[pos]['team_avg'] = position_stats[pos]['avg_points'] / count
-    
-    return position_stats
 
 def generate_html_report(league, my_team):
     """Generate comprehensive HTML report"""
@@ -209,8 +228,6 @@ def generate_html_report(league, my_team):
             padding: 12px 8px;
             text-align: left;
             font-weight: 600;
-            position: sticky;
-            top: 0;
         }}
         td {{
             padding: 10px 8px;
@@ -239,36 +256,6 @@ def generate_html_report(league, my_team):
             border-left: 4px solid #ffc107;
             padding: 15px;
             margin: 15px 0;
-        }}
-        .position-strength {{
-            display: inline-block;
-            padding: 5px 10px;
-            margin: 3px;
-            border-radius: 5px;
-            font-size: 12px;
-        }}
-        .strength-high {{ background-color: #c8e6c9; color: #2e7d32; }}
-        .strength-mid {{ background-color: #fff9c4; color: #f57f17; }}
-        .strength-low {{ background-color: #ffcdd2; color: #c62828; }}
-        .mini-table {{
-            font-size: 12px;
-            margin: 10px 0;
-        }}
-        .tabs {{
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }}
-        .tab {{
-            padding: 10px 20px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-        }}
-        .tab.active {{
-            background-color: #667eea;
-            color: white;
         }}
         @media (max-width: 768px) {{
             body {{ padding: 10px; }}
@@ -336,10 +323,13 @@ def generate_html_report(league, my_team):
             </tr>
 """
     
-    for player in my_team.roster:
+    # Sort roster: starters first, then bench
+    roster_sorted = sorted(my_team.roster, key=lambda p: (getattr(p, 'lineupSlot', 20) == 20, getattr(p, 'lineupSlot', 20)))
+    
+    for player in roster_sorted:
         details = get_player_details(player, league)
         
-        row_class = 'starter' if details['slot'] != 'BENCH' else 'bench'
+        row_class = 'starter' if details['slot'] != 'BENCH' and details['slot'] != 'IR' else 'bench'
         injury_color = get_injury_color(details['injury_status'])
         
         status_display = details['injury_status'] if details['injury_status'] != 'ACTIVE' else 'â'
@@ -348,18 +338,18 @@ def generate_html_report(league, my_team):
         
         html += f"""
             <tr class="{row_class}">
-                <td>{details['slot']}</td>
+                <td><strong>{details['slot']}</strong></td>
                 <td><strong>{details['name']}</strong></td>
                 <td>{details['position']}</td>
                 <td>{details['pro_team']}</td>
                 <td>{details['opponent']}</td>
-                <td>{details['projected']:.1f}</td>
+                <td><strong>{details['projected']:.1f}</strong></td>
                 <td>{details['avg_points']:.1f}</td>
                 <td>{details['total_points']:.1f}</td>
                 <td style="font-size: 11px;">{last_3_display}</td>
                 <td>{details['percent_owned']:.0f}%</td>
                 <td>{details['percent_started']:.0f}%</td>
-                <td style="background-color: {injury_color};">{status_display}</td>
+                <td style="background-color: {injury_color}; font-weight: bold;">{status_display}</td>
             </tr>
 """
     
@@ -377,13 +367,9 @@ def generate_html_report(league, my_team):
     sorted_teams = sorted(league.teams, key=lambda x: x.standing)
     for team in sorted_teams:
         is_my_team = team.team_id == my_team.team_id
-        team_class = 'alert' if is_my_team else ''
-        
-        # Analyze position strength
-        pos_strength = analyze_position_strength(team.roster)
         
         html += f"""
-        <div class="{team_class}" style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+        <div style="margin: 20px 0; padding: 15px; background: {'#fff3cd' if is_my_team else '#f8f9fa'}; border-radius: 8px; border-left: 4px solid {'#ffc107' if is_my_team else '#e0e0e0'};">
             <h3>#{team.standing} - {team.team_name} {'ð YOU' if is_my_team else ''}</h3>
             <div class="stat-box">Record: {team.wins}-{team.losses}</div>
             <div class="stat-box">PF: {team.points_for:.2f}</div>
@@ -391,34 +377,38 @@ def generate_html_report(league, my_team):
             
             <table style="margin-top: 10px;">
                 <tr>
-                    <th style="width: 15%;">Slot</th>
-                    <th style="width: 25%;">Player</th>
-                    <th style="width: 8%;">Pos</th>
+                    <th style="width: 12%;">Slot</th>
+                    <th style="width: 23%;">Player</th>
+                    <th style="width: 7%;">Pos</th>
+                    <th style="width: 7%;">Opp</th>
                     <th style="width: 8%;">Proj</th>
                     <th style="width: 8%;">Avg</th>
                     <th style="width: 8%;">Total</th>
                     <th style="width: 15%;">Last 3</th>
-                    <th style="width: 13%;">Status</th>
+                    <th style="width: 12%;">Status</th>
                 </tr>
 """
         
-        for player in team.roster:
+        roster_sorted = sorted(team.roster, key=lambda p: (getattr(p, 'lineupSlot', 20) == 20, getattr(p, 'lineupSlot', 20)))
+        
+        for player in roster_sorted:
             details = get_player_details(player, league)
-            row_class = 'starter' if details['slot'] != 'BENCH' else 'bench'
+            row_class = 'starter' if details['slot'] != 'BENCH' and details['slot'] != 'IR' else 'bench'
             injury_color = get_injury_color(details['injury_status'])
             status_display = details['injury_status'] if details['injury_status'] != 'ACTIVE' else 'â'
             last_3_display = ', '.join([f"{p:.1f}" for p in details['last_3_weeks']]) if details['last_3_weeks'] else 'N/A'
             
             html += f"""
                 <tr class="{row_class}">
-                    <td>{details['slot']}</td>
+                    <td><strong>{details['slot']}</strong></td>
                     <td><strong>{details['name']}</strong></td>
                     <td>{details['position']}</td>
-                    <td>{details['projected']:.1f}</td>
+                    <td>{details['opponent']}</td>
+                    <td><strong>{details['projected']:.1f}</strong></td>
                     <td>{details['avg_points']:.1f}</td>
                     <td>{details['total_points']:.1f}</td>
                     <td style="font-size: 11px;">{last_3_display}</td>
-                    <td style="background-color: {injury_color}; font-size: 11px;">{status_display}</td>
+                    <td style="background-color: {injury_color}; font-size: 11px; font-weight: bold;">{status_display}</td>
                 </tr>
 """
         
@@ -475,7 +465,7 @@ def generate_html_report(league, my_team):
                 <td><strong>{details['name']}</strong></td>
                 <td>{details['pro_team']}</td>
                 <td>{details['opponent']}</td>
-                <td>{details['projected']:.1f}</td>
+                <td><strong>{details['projected']:.1f}</strong></td>
                 <td>{details['avg_points']:.1f}</td>
                 <td>{details['total_points']:.1f}</td>
                 <td>{details['percent_owned']:.0f}%</td>
