@@ -1,0 +1,32 @@
+name: Weekly ESPN Fantasy Export
+
+on:
+  schedule:
+    # Runs every Monday at 9 AM UTC (adjust timezone as needed)
+    - cron: '0 9 * * 1'
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  extract-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Run extraction script
+      env:
+        ESPN_S2: ${{ secrets.ESPN_S2 }}
+        SWID: ${{ secrets.SWID }}
+        GOOGLE_CREDS_JSON: ${{ secrets.GOOGLE_CREDS_JSON }}
+      run: |
+        python extract_espn_data.py
