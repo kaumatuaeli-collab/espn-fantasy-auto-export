@@ -16,7 +16,7 @@ LEAGUE_ID = 44181678
 YEAR = 2025
 ESPN_S2 = os.environ.get('ESPN_S2')
 SWID = os.environ.get('SWID')
-MY_TEAM_NAME = 'Intelligent MBLeague TM'
+MY_TEAM_NAME = 'Intelligent MBLeague (TM)'
 
 # Google Sheets Configuration
 GOOGLE_CREDS_JSON = os.environ.get('GOOGLE_CREDS_JSON')
