@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football Report - Week 7</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+        }
+        .summary {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th {
+            background-color: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .injury-out { background-color: #ffebee; color: #c62828; font-weight: bold; }
+        .injury-questionable { background-color: #fff3e0; color: #ef6c00; font-weight: bold; }
+        .injury-ir { background-color: #f3e5f5; color: #6a1b9a; font-weight: bold; }
+        .good-matchup { background-color: #e8f5e9; }
+        .bad-matchup { background-color: #ffebee; }
+        .starter { font-weight: bold; background-color: #e3f2fd; }
+        .bench { color: #666; }
+        .stat-box {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #e3f2fd;
+        }
+        .alert {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            table { font-size: 14px; }
+            th, td { padding: 8px 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ð Super Tough Competition (STC)</h1>
+        <div>Week 7 of 13 | 2025-10-20 11:32 AM ET</div>
+        <div style="margin-top: 10px; font-size: 18px;">Intelligent MBLeague (TM)</div>
+    </div>
+    
+    <div class="summary">
+        <h2>ð Quick Stats</h2>
+        <div class="stat-box">Record: 4-2</div>
+        <div class="stat-box">Standing: #4 of 10</div>
+        <div class="stat-box">Points For: 645.66</div>
+        <div class="stat-box">Points Against: 579.58</div>
+    </div>
+
+    <div class="section">
+        <h2>ð¯ Week 7 Matchup</h2>
+        <h3>Intelligent MBLeague (TM) vs Brilliant MBLeague (TM)</h3>
+        <p><strong>Opponent Record:</strong> 4-2 (#2)</p>
+        <p><strong>Their Points For:</strong> 724.26</p>
+    </div>
+
+    <div class="section">
+        <h2>ð¥ My Roster</h2>
+        <table>
+            <tr>
+                <th>Slot</th>
+                <th>Player</th>
+                <th>Pos</th>
+                <th>Team</th>
+                <th>Opp</th>
+                <th>Proj</th>
+                <th>Last Week</th>
+                <th>Owned %</th>
+                <th>Started %</th>
+                <th>Status</th>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Amon-Ra St. Brown</strong></td>
+                <td>WR</td>
+                <td>DET</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>9.2</td>
+                <td>99.9%</td>
+                <td>99.6%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Derrick Henry</strong></td>
+                <td>RB</td>
+                <td>BAL</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>13.5</td>
+                <td>99.1%</td>
+                <td>14.9%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Davante Adams</strong></td>
+                <td>WR</td>
+                <td>LAR</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>5.9</td>
+                <td>99.5%</td>
+                <td>95.7%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Sam LaPorta</strong></td>
+                <td>TE</td>
+                <td>DET</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>14.0</td>
+                <td>98.7%</td>
+                <td>89.1%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>C.J. Stroud</strong></td>
+                <td>QB</td>
+                <td>HOU</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>62.0%</td>
+                <td>23.7%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Jared Goff</strong></td>
+                <td>QB</td>
+                <td>DET</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>16.8</td>
+                <td>79.3%</td>
+                <td>40.1%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Keenan Allen</strong></td>
+                <td>WR</td>
+                <td>LAC</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>4.7</td>
+                <td>90.0%</td>
+                <td>58.0%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Rico Dowdle</strong></td>
+                <td>RB</td>
+                <td>CAR</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>31.9</td>
+                <td>88.5%</td>
+                <td>71.1%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Aaron Jones Sr.</strong></td>
+                <td>RB</td>
+                <td>MIN</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>74.2%</td>
+                <td>3.4%</td>
+                <td class="injury-ir">INJURY_RESERVE</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Rashee Rice</strong></td>
+                <td>WR</td>
+                <td>KC</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>92.5%</td>
+                <td>61.0%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Isiah Pacheco</strong></td>
+                <td>RB</td>
+                <td>KC</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>5.6</td>
+                <td>79.1%</td>
+                <td>30.5%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Patriots D/ST</strong></td>
+                <td>D/ST</td>
+                <td>NE</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>6.0</td>
+                <td>80.9%</td>
+                <td>76.6%</td>
+                <td class="">NORMAL</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Michael Carter</strong></td>
+                <td>RB</td>
+                <td>ARI</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>7.4</td>
+                <td>54.4%</td>
+                <td>15.0%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Alvin Kamara</strong></td>
+                <td>RB</td>
+                <td>NO</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>10.1</td>
+                <td>96.8%</td>
+                <td>73.7%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Evan Engram</strong></td>
+                <td>TE</td>
+                <td>DEN</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>7.4</td>
+                <td>57.2%</td>
+                <td>29.6%</td>
+                <td class="">â</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Dalton Kincaid</strong></td>
+                <td>TE</td>
+                <td>BUF</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>72.4%</td>
+                <td>3.9%</td>
+                <td class="injury-out">OUT</td>
+            </tr>
+
+            <tr class="bench">
+                <td>BENCH</td>
+                <td><strong>Harrison Butker</strong></td>
+                <td>K</td>
+                <td>KC</td>
+                <td>BYE</td>
+                <td>0.0</td>
+                <td>6.0</td>
+                <td>78.2%</td>
+                <td>73.3%</td>
+                <td class="">â</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>ð League Standings</h2>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Record</th>
+                <th>PF</th>
+                <th>PA</th>
+            </tr>
+
+            <tr class="">
+                <td>1</td>
+                <td><strong>EVP Domination</strong></td>
+                <td>5-1</td>
+                <td>656.42</td>
+                <td>580.80</td>
+            </tr>
+
+            <tr class="">
+                <td>2</td>
+                <td><strong>Brilliant MBLeague (TM)</strong></td>
+                <td>4-2</td>
+                <td>724.26</td>
+                <td>559.64</td>
+            </tr>
+
+            <tr class="">
+                <td>3</td>
+                <td><strong>Regular VP Domination</strong></td>
+                <td>4-2</td>
+                <td>716.78</td>
+                <td>647.04</td>
+            </tr>
+
+            <tr class="starter">
+                <td>4</td>
+                <td><strong>Intelligent MBLeague (TM)</strong> ð</td>
+                <td>4-2</td>
+                <td>645.66</td>
+                <td>579.58</td>
+            </tr>
+
+            <tr class="">
+                <td>5</td>
+                <td><strong>EA Sports</strong></td>
+                <td>3-3</td>
+                <td>644.14</td>
+                <td>705.74</td>
+            </tr>
+
+            <tr class="">
+                <td>6</td>
+                <td><strong>Adrian puts the A in Avengers</strong></td>
+                <td>3-3</td>
+                <td>612.76</td>
+                <td>606.34</td>
+            </tr>
+
+            <tr class="">
+                <td>7</td>
+                <td><strong>The Kennetic Energy</strong></td>
+                <td>3-3</td>
+                <td>596.18</td>
+                <td>600.26</td>
+            </tr>
+
+            <tr class="">
+                <td>8</td>
+                <td><strong>Fat Generals</strong></td>
+                <td>2-4</td>
+                <td>569.14</td>
+                <td>645.68</td>
+            </tr>
+
+            <tr class="">
+                <td>9</td>
+                <td><strong>The Life of an STC Girl</strong></td>
+                <td>1-5</td>
+                <td>549.22</td>
+                <td>621.00</td>
+            </tr>
+
+            <tr class="">
+                <td>10</td>
+                <td><strong>Team Victorious</strong></td>
+                <td>1-5</td>
+                <td>446.26</td>
+                <td>614.74</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>ð¯ Top Available Players</h2>
+
+        <h3>QB</h3>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Projected</th>
+                <th>Owned %</th>
+            </tr>
+
+            <tr>
+                <td><strong>Aaron Rodgers</strong></td>
+                <td>PIT</td>
+                <td>17.4</td>
+                <td>27.6%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Sam Darnold</strong></td>
+                <td>SEA</td>
+                <td>14.9</td>
+                <td>27.2%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Jaxson Dart</strong></td>
+                <td>NYG</td>
+                <td>13.8</td>
+                <td>43.3%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Joe Burrow</strong></td>
+                <td>CIN</td>
+                <td>0.0</td>
+                <td>65.1%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Brock Purdy</strong></td>
+                <td>SF</td>
+                <td>0.0</td>
+                <td>64.7%</td>
+            </tr>
+
+        </table>
+
+        <h3>RB</h3>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Projected</th>
+                <th>Owned %</th>
+            </tr>
+
+            <tr>
+                <td><strong>Bam Knight</strong></td>
+                <td>ARI</td>
+                <td>9.1</td>
+                <td>23.9%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Woody Marks</strong></td>
+                <td>HOU</td>
+                <td>8.1</td>
+                <td>53.7%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Tyler Allgeier</strong></td>
+                <td>ATL</td>
+                <td>6.8</td>
+                <td>35.9%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Kareem Hunt</strong></td>
+                <td>KC</td>
+                <td>6.7</td>
+                <td>32.6%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Kendre Miller</strong></td>
+                <td>NO</td>
+                <td>6.2</td>
+                <td>22.2%</td>
+            </tr>
+
+        </table>
+
+        <h3>WR</h3>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Projected</th>
+                <th>Owned %</th>
+            </tr>
+
+            <tr>
+                <td><strong>Darnell Mooney</strong></td>
+                <td>ATL</td>
+                <td>8.4</td>
+                <td>42.4%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Elic Ayomanor</strong></td>
+                <td>TEN</td>
+                <td>8.3</td>
+                <td>26.4%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Travis Hunter</strong></td>
+                <td>JAX</td>
+                <td>7.8</td>
+                <td>72.8%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Kayshon Boutte</strong></td>
+                <td>NE</td>
+                <td>7.2</td>
+                <td>27.1%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Jauan Jennings</strong></td>
+                <td>SF</td>
+                <td>7.2</td>
+                <td>65.6%</td>
+            </tr>
+
+        </table>
+
+        <h3>TE</h3>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Projected</th>
+                <th>Owned %</th>
+            </tr>
+
+            <tr>
+                <td><strong>Harold Fannin Jr.</strong></td>
+                <td>CLE</td>
+                <td>9.3</td>
+                <td>64.8%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Zach Ertz</strong></td>
+                <td>WSH</td>
+                <td>9.1</td>
+                <td>63.5%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Michael Mayer</strong></td>
+                <td>LV</td>
+                <td>8.0</td>
+                <td>24.2%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Kyle Pitts Sr.</strong></td>
+                <td>ATL</td>
+                <td>7.0</td>
+                <td>61.4%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Juwan Johnson</strong></td>
+                <td>NO</td>
+                <td>5.9</td>
+                <td>33.8%</td>
+            </tr>
+
+        </table>
+
+        <h3>D/ST</h3>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Projected</th>
+                <th>Owned %</th>
+            </tr>
+
+            <tr>
+                <td><strong>Rams D/ST</strong></td>
+                <td>LAR</td>
+                <td>6.7</td>
+                <td>62.0%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Panthers D/ST</strong></td>
+                <td>CAR</td>
+                <td>6.6</td>
+                <td>28.8%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Vikings D/ST</strong></td>
+                <td>MIN</td>
+                <td>6.0</td>
+                <td>71.4%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Browns D/ST</strong></td>
+                <td>CLE</td>
+                <td>5.6</td>
+                <td>48.4%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Texans D/ST</strong></td>
+                <td>HOU</td>
+                <td>5.2</td>
+                <td>63.0%</td>
+            </tr>
+
+        </table>
+
+        <h3>K</h3>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Projected</th>
+                <th>Owned %</th>
+            </tr>
+
+            <tr>
+                <td><strong>Jake Bates</strong></td>
+                <td>DET</td>
+                <td>8.8</td>
+                <td>95.7%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Michael Badgley</strong></td>
+                <td>IND</td>
+                <td>8.4</td>
+                <td>29.8%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Eddy Pineiro</strong></td>
+                <td>SF</td>
+                <td>8.1</td>
+                <td>50.3%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Wil Lutz</strong></td>
+                <td>DEN</td>
+                <td>8.1</td>
+                <td>24.6%</td>
+            </tr>
+
+            <tr>
+                <td><strong>Jake Elliott</strong></td>
+                <td>PHI</td>
+                <td>8.0</td>
+                <td>77.4%</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="section">
+        <h2>ð My Upcoming Schedule</h2>
+        <table>
+            <tr>
+                <th>Week</th>
+                <th>Opponent</th>
+                <th>Their Record</th>
+            </tr>
+
+            <tr>
+                <td>Week 7</td>
+                <td>Brilliant MBLeague (TM)</td>
+                <td>4-2</td>
+            </tr>
+
+            <tr>
+                <td>Week 8</td>
+                <td>The Life of an STC Girl</td>
+                <td>1-5</td>
+            </tr>
+
+            <tr>
+                <td>Week 9</td>
+                <td>EVP Domination</td>
+                <td>5-1</td>
+            </tr>
+
+            <tr>
+                <td>Week 10</td>
+                <td>EA Sports</td>
+                <td>3-3</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="section" style="text-align: center; color: #666;">
+        <p>Generated automatically by ESPN Fantasy Extractor</p>
+        <p>Last updated: 2025-10-20 11:32 AM ET</p>
+    </div>
+</body>
+</html>
