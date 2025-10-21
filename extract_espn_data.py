@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
-ESPN Fantasy Football Data Extractor - CORRECTED
-Based on actual API structure from diagnostic
+ESPN Fantasy Football Data Extractor - FULLY FIXED
+- Real NFL opponent names (not "vs OPP")
+- Corrected Last 3 Weeks calculation
 """
 
 from espn_api.football import League
 import os
 from datetime import datetime
+import requests
 
 # ESPN Configuration
 LEAGUE_ID = 44181678
@@ -14,6 +16,25 @@ YEAR = 2025
 ESPN_S2 = os.environ.get('ESPN_S2')
 SWID = os.environ.get('SWID')
 MY_TEAM_NAME = 'Intelligent MBLeague (TM)'
+
+# NFL Team Abbreviation Mapping (ESPN uses different codes than standard)
+ESPN_TO_STANDARD = {
+    'Ari': 'ARI', 'Atl': 'ATL', 'Bal': 'BAL', 'Buf': 'BUF', 'Car': 'CAR',
+    'Chi': 'CHI', 'Cin': 'CIN', 'Cle': 'CLE', 'Dal': 'DAL', 'Den': 'DEN',
+    'Det': 'DET', 'GB': 'GB', 'Hou': 'HOU', 'Ind': 'IND', 'Jax': 'JAX',
+    'KC': 'KC', 'LAC': 'LAC', 'LAR': 'LAR', 'LV': 'LV', 'Mia': 'MIA',
+    'Min': 'MIN', 'NE': 'NE', 'NO': 'NO', 'NYG': 'NYG', 'NYJ': 'NYJ',
+    'Phi': 'PHI', 'Pit': 'PIT', 'SF': 'SF', 'Sea': 'SEA', 'TB': 'TB',
+    'Ten': 'TEN', 'Wsh': 'WSH',
+    # Add uppercase versions too
+    'ARI': 'ARI', 'ATL': 'ATL', 'BAL': 'BAL', 'BUF': 'BUF', 'CAR': 'CAR',
+    'CHI': 'CHI', 'CIN': 'CIN', 'CLE': 'CLE', 'DAL': 'DAL', 'DEN': 'DEN',
+    'DET': 'DET', 'HOU': 'HOU', 'IND': 'IND', 'JAX': 'JAX',
+    'KC': 'KC', 'LAC': 'LAC', 'LAR': 'LAR', 'LV': 'LV', 'MIA': 'MIA',
+    'MIN': 'MIN', 'NE': 'NE', 'NO': 'NO', 'NYG': 'NYG', 'NYJ': 'NYJ',
+    'PHI': 'PHI', 'PIT': 'PIT', 'SF': 'SF', 'SEA': 'SEA', 'TB': 'TB',
+    'TEN': 'TEN', 'WSH': 'WSH',
+}
 
 def connect_to_league():
     """Connect to ESPN Fantasy League"""
@@ -33,7 +54,59 @@ def find_my_team(league):
             return team
     raise ValueError(f"Could not find team '{MY_TEAM_NAME}'")
 
-def get_player_details(player, league):
+def fetch_nfl_schedule(week, year=2025):
+    """
+    Fetch NFL schedule from ESPN's public API
+    Returns dict: {team_abbrev: 'vs OPP' or '@OPP' or 'BYE'}
+    """
+    try:
+        url = f"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates={year}&seasontype=2&week={week}"
+        print(f"Fetching NFL schedule for week {week}...")
+        
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        
+        schedule = {}
+        
+        # Parse games
+        if 'events' in data:
+            for event in data['events']:
+                if 'competitions' in event and len(event['competitions']) > 0:
+                    comp = event['competitions'][0]
+                    if 'competitors' in comp:
+                        home_team = None
+                        away_team = None
+                        
+                        for competitor in comp['competitors']:
+                            team_abbrev = competitor['team'].get('abbreviation', '')
+                            is_home = competitor.get('homeAway') == 'home'
+                            
+                            if is_home:
+                                home_team = team_abbrev
+                            else:
+                                away_team = team_abbrev
+                        
+                        if home_team and away_team:
+                            schedule[home_team] = f'vs {away_team}'
+                            schedule[away_team] = f'@{home_team}'
+        
+        # Fill in BYE weeks for teams not in schedule
+        all_teams = set(ESPN_TO_STANDARD.values())
+        for team in all_teams:
+            if team not in schedule:
+                schedule[team] = 'BYE'
+        
+        print(f"â Found {len([v for v in schedule.values() if v != 'BYE'])} games scheduled")
+        return schedule
+        
+    except Exception as e:
+        print(f"Warning: Could not fetch NFL schedule: {e}")
+        print("Falling back to 'vs OPP' placeholders...")
+        # Return empty dict, will fall back to 'vs OPP' logic
+        return {}
+
+def get_player_details(player, league, nfl_schedule):
     """Extract comprehensive player details using correct API structure"""
     week = league.current_week
     
@@ -49,10 +122,13 @@ def get_player_details(player, league):
         'avg_points': player.avg_points,
     }
     
-    # Get current week projection and last 3 weeks from stats dict
+    # Get opponent from NFL schedule
+    team_abbrev = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
+    details['opponent'] = nfl_schedule.get(team_abbrev, 'vs OPP')
+    
+    # Get current week projection
     details['projected'] = 0
     details['last_3_weeks'] = []
-    details['opponent'] = 'BYE'
     
     if hasattr(player, 'stats') and isinstance(player.stats, dict):
         # Current week projection
@@ -61,26 +137,27 @@ def get_player_details(player, league):
             details['projected'] = current_week_stats.get('projected_points', 0)
             # Check if this is a bye week (empty breakdown means bye)
             proj_breakdown = current_week_stats.get('projected_breakdown', {})
-            if proj_breakdown:  # Has projections = playing this week
-                details['opponent'] = 'vs OPP'  # ESPN doesn't give us opponent name easily
-            else:
+            if not proj_breakdown:  # No projections = bye week
                 details['opponent'] = 'BYE'
         
-        # Last 3 weeks actual points - get most recent completed weeks
-        # If current week is 7, get weeks 4, 5, 6
-        for i in range(week - 3, week):
-            if i > 0:  # Make sure week is valid
-                week_stats = player.stats.get(i, {})
-                if isinstance(week_stats, dict):
-                    # Get actual points (not projected)
-                    points = week_stats.get('points', 0)
-                    if points is None:
-                        points = 0
-                    details['last_3_weeks'].append(points)
-                else:
-                    details['last_3_weeks'].append(0)
+        # FIXED: Last 3 weeks actual points
+        # If current week is 7, we want weeks 4, 5, 6 (the 3 most recent COMPLETED weeks)
+        # So we should get week-3, week-2, week-1
+        start_week = max(1, week - 3)  # Don't go below week 1
+        
+        for w in range(start_week, week):
+            week_stats = player.stats.get(w, {})
+            if isinstance(week_stats, dict):
+                points = week_stats.get('points', 0)
+                if points is None:
+                    points = 0
+                details['last_3_weeks'].append(points)
             else:
                 details['last_3_weeks'].append(0)
+        
+        # Pad with zeros if we don't have 3 weeks yet (early in season)
+        while len(details['last_3_weeks']) < 3:
+            details['last_3_weeks'].insert(0, 0)
     
     return details
 
@@ -94,7 +171,7 @@ def get_injury_color(status):
         return '#e1bee7'
     return '#ffffff'
 
-def get_top_available_players(league, position=None, limit=15, sort_by='projected'):
+def get_top_available_players(league, nfl_schedule, position=None, limit=15, sort_by='projected'):
     """Get top available free agents"""
     try:
         week = league.current_week
@@ -105,7 +182,6 @@ def get_top_available_players(league, position=None, limit=15, sort_by='projecte
         
         # Sort based on criteria
         if sort_by == 'projected':
-            # Get current week projection from stats
             def get_proj(p):
                 if hasattr(p, 'stats') and isinstance(p.stats, dict):
                     return p.stats.get(week, {}).get('projected_points', 0)
@@ -128,6 +204,9 @@ def generate_html_report(league, my_team):
     
     current_time = datetime.now().strftime('%Y-%m-%d %I:%M %p ET')
     week = league.current_week
+    
+    # Fetch real NFL schedule
+    nfl_schedule = fetch_nfl_schedule(week, YEAR)
     
     html = f"""
 <!DOCTYPE html>
@@ -280,7 +359,7 @@ def generate_html_report(league, my_team):
     roster_sorted = sorted(my_team.roster, key=lambda p: (p.lineupSlot == 'BE', p.lineupSlot))
     
     for player in roster_sorted:
-        details = get_player_details(player, league)
+        details = get_player_details(player, league, nfl_schedule)
         
         row_class = 'starter' if details['slot'] != 'BE' else 'bench'
         injury_color = get_injury_color(details['injury_status'])
@@ -342,7 +421,7 @@ def generate_html_report(league, my_team):
         roster_sorted = sorted(team.roster, key=lambda p: (p.lineupSlot == 'BE', p.lineupSlot))
         
         for player in roster_sorted:
-            details = get_player_details(player, league)
+            details = get_player_details(player, league, nfl_schedule)
             row_class = 'starter' if details['slot'] != 'BE' else 'bench'
             injury_color = get_injury_color(details['injury_status'])
             status_display = details['injury_status'] if details['injury_status'] != 'ACTIVE' else 'â'
@@ -386,7 +465,7 @@ def generate_html_report(league, my_team):
 """
         
         for pos in positions:
-            top_players = get_top_available_players(league, position=pos, limit=10, sort_by=sort_key)
+            top_players = get_top_available_players(league, nfl_schedule, position=pos, limit=10, sort_by=sort_key)
             if top_players:
                 html += f"""
         <h3>{pos}</h3>
@@ -404,7 +483,7 @@ def generate_html_report(league, my_team):
 """
                 
                 for player in top_players:
-                    details = get_player_details(player, league)
+                    details = get_player_details(player, league, nfl_schedule)
                     injury_color = get_injury_color(details['injury_status'])
                     
                     html += f"""
@@ -519,7 +598,7 @@ def generate_html_report(league, my_team):
 def main():
     try:
         print("="*80)
-        print("ESPN FANTASY FOOTBALL DATA EXTRACTOR - CORRECTED")
+        print("ESPN FANTASY FOOTBALL DATA EXTRACTOR - FULLY FIXED")
         print("="*80)
         
         league = connect_to_league()
@@ -542,7 +621,7 @@ def main():
         print("="*80)
         
     except Exception as e:
-        print(f"\nâ ERROR: {e}")
+        print(f"\nâ ERROR: {e}")
         import traceback
         traceback.print_exc()
         raise
