@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-ESPN Fantasy Football Data Extractor - WORKING WITH LIMITED HISTORY
-ESPN only stores 1-2 recent weeks, so we calculate older scores from season totals
+ESPN Fantasy Football Data Extractor - COMPLETE STRATEGIC VERSION
+Full extraction with all league rosters, free agents, injury tracking, and trade analysis
 """
 
 from espn_api.football import League
@@ -97,44 +97,46 @@ def fetch_nfl_schedule(week, year=2025):
         print(f"Warning: Could not fetch NFL schedule: {e}")
         return {}
 
+def get_injury_status_display(status):
+    """Get human-readable injury status with expected return info"""
+    status_map = {
+        'ACTIVE': 'Healthy',
+        'QUESTIONABLE': 'Questionable',
+        'DOUBTFUL': 'Doubtful', 
+        'OUT': 'Out',
+        'INJURY_RESERVE': 'IR (4+ weeks)',
+        'IR': 'IR (4+ weeks)',
+        'SUSPENSION': 'Suspended',
+        'DAY_TO_DAY': 'Day-to-Day',
+    }
+    return status_map.get(status, status)
+
 def get_recent_weeks_with_calculation(player, current_week):
     """
     ESPN only stores 1-2 recent weeks. Calculate older weeks from season total.
-    
     Returns: tuple of (last_3_display_string, has_reliable_data: bool)
     """
     if not hasattr(player, 'stats') or not isinstance(player.stats, dict):
         return "No data", False
     
-    # Get what weeks are available
-    available_weeks = [w for w in player.stats.keys() if w > 0]  # Exclude 0 (season total)
+    available_weeks = [w for w in player.stats.keys() if w > 0]
     
     if not available_weeks:
         return "No data", False
     
-    # Get the most recent available individual week
     most_recent_week = max(available_weeks)
-    
-    # Try to get the last available week's score
     recent_week_data = player.stats.get(most_recent_week, {})
     recent_score = recent_week_data.get('points', 0) if isinstance(recent_week_data, dict) else 0
     
-    # Get season total from week 0
     season_data = player.stats.get(0, {})
     season_total = season_data.get('points', player.total_points) if isinstance(season_data, dict) else player.total_points
     
-    # Calculate "all previous weeks combined" score
-    # This is: Total - Recent Week Score
     previous_weeks_combined = season_total - recent_score
     
     if current_week == most_recent_week:
-        # Current week is still live
-        # Show: [Season-Recent], [Recent (live)], [Projected]
-        return f"Weeks 1-{current_week-1}: {previous_weeks_combined:.1f} total | Week {current_week}: {recent_score:.1f} (live)", True
+        return f"Wks 1-{current_week-1}: {previous_weeks_combined:.1f} | Wk {current_week}: {recent_score:.1f} (live)", True
     else:
-        # We have completed week data
-        # Show last completed week
-        return f"Weeks 1-{most_recent_week-1}: {previous_weeks_combined:.1f} total | Week {most_recent_week}: {recent_score:.1f}", True
+        return f"Wks 1-{most_recent_week-1}: {previous_weeks_combined:.1f} | Wk {most_recent_week}: {recent_score:.1f}", True
 
 def get_player_details(player, league, nfl_schedule):
     """Extract comprehensive player details"""
@@ -146,17 +148,16 @@ def get_player_details(player, league, nfl_schedule):
         'slot': player.lineupSlot,
         'pro_team': player.proTeam,
         'injury_status': player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE',
+        'injury_display': get_injury_status_display(player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE'),
         'percent_owned': player.percent_owned,
         'percent_started': player.percent_started,
         'total_points': player.total_points,
         'avg_points': player.avg_points,
     }
     
-    # Get opponent from NFL schedule
     team_abbrev = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
     details['opponent'] = nfl_schedule.get(team_abbrev, 'vs OPP')
     
-    # Get current week projection
     details['projected'] = 0
     
     if hasattr(player, 'stats') and isinstance(player.stats, dict):
@@ -167,7 +168,6 @@ def get_player_details(player, league, nfl_schedule):
             if not proj_breakdown:
                 details['opponent'] = 'BYE'
     
-    # Get recent weeks info
     details['recent_weeks_display'], details['has_reliable_data'] = get_recent_weeks_with_calculation(player, week)
     
     return details
@@ -176,9 +176,9 @@ def get_injury_color(status):
     """Get color coding for injury status"""
     if status == 'OUT':
         return '#ffcdd2'
-    elif status in ['QUESTIONABLE', 'DOUBTFUL']:
+    elif status in ['QUESTIONABLE', 'DOUBTFUL', 'DAY_TO_DAY']:
         return '#fff9c4'
-    elif status in ['INJURY_RESERVE', 'IR']:
+    elif status in ['INJURY_RESERVE', 'IR', 'SUSPENSION']:
         return '#e1bee7'
     return '#ffffff'
 
@@ -215,7 +215,6 @@ def generate_html_report(league, my_team):
     current_time = datetime.now().strftime('%Y-%m-%d %I:%M %p ET')
     week = league.current_week
     
-    # Fetch real NFL schedule
     nfl_schedule = fetch_nfl_schedule(week, YEAR)
     
     html = f"""
@@ -323,7 +322,7 @@ def generate_html_report(league, my_team):
     </div>
     
     <div class="info-box">
-        <strong>â¹ï¸ Note on Historical Data:</strong> ESPN's API only stores 1-2 recent weeks of detailed stats. 
+        <strong>Note:</strong> ESPN's API only stores 1-2 recent weeks of detailed stats. 
         "Recent Weeks" shows the most recent available week data, plus a combined total for all previous weeks.
     </div>
     
@@ -353,7 +352,7 @@ def generate_html_report(league, my_team):
     except:
         html += """
     <div class="alert">
-        <strong>â ï¸ BYE WEEK</strong> - No matchup this week
+        <strong>BYE WEEK</strong> - No matchup this week
     </div>
 """
     
@@ -367,6 +366,7 @@ def generate_html_report(league, my_team):
                 <th>Player</th>
                 <th>Pos</th>
                 <th>Team</th>
+                <th>Injury</th>
                 <th>Status</th>
                 <th>Proj</th>
                 <th>Avg</th>
@@ -377,7 +377,6 @@ def generate_html_report(league, my_team):
             </tr>
 """
     
-    # Sort: starters first
     roster_sorted = sorted(my_team.roster, key=lambda p: (p.lineupSlot == 'BE', p.lineupSlot))
     
     for player in roster_sorted:
@@ -392,7 +391,8 @@ def generate_html_report(league, my_team):
                 <td><strong>{details['name']}</strong></td>
                 <td>{details['position']}</td>
                 <td>{details['pro_team']}</td>
-                <td style="background-color: {injury_color}; font-weight: bold;">{details['opponent']}</td>
+                <td style="background-color: {injury_color};">{details['injury_display']}</td>
+                <td><strong>{details['opponent']}</strong></td>
                 <td><strong>{details['projected']:.1f}</strong></td>
                 <td>{details['avg_points']:.1f}</td>
                 <td>{details['total_points']:.1f}</td>
@@ -407,13 +407,236 @@ def generate_html_report(league, my_team):
     </div>
 """
     
-    # [Rest of HTML sections - standings, free agents, etc. - same as before]
-    # Abbreviated for length...
+    # All League Rosters
+    html += """
+    <div class="section">
+        <h2>Complete League Rosters</h2>
+        <p style="color: #666; font-size: 13px;">Use this to identify trade targets, see what other teams need, and scout potential waiver pickups before others notice them.</p>
+"""
     
+    sorted_teams = sorted(league.teams, key=lambda x: x.standing)
+    for team in sorted_teams:
+        is_my_team = team.team_id == my_team.team_id
+        
+        html += f"""
+        <div style="margin: 20px 0; padding: 15px; background: {'#fff3cd' if is_my_team else '#f8f9fa'}; border-radius: 8px; border-left: 4px solid {'#ffc107' if is_my_team else '#e0e0e0'};">
+            <h3>#{team.standing} - {team.team_name} {' &lt;- YOU' if is_my_team else ''}</h3>
+            <div class="stat-box">Record: {team.wins}-{team.losses}</div>
+            <div class="stat-box">PF: {team.points_for:.2f}</div>
+            <div class="stat-box">Avg: {team.points_for/max(1, team.wins + team.losses):.2f}/wk</div>
+            
+            <table style="margin-top: 10px;">
+                <tr>
+                    <th>Slot</th>
+                    <th>Player</th>
+                    <th>Pos</th>
+                    <th>Injury</th>
+                    <th>Status</th>
+                    <th>Proj</th>
+                    <th>Avg</th>
+                    <th>Total</th>
+                    <th>Recent</th>
+                </tr>
+"""
+        
+        roster_sorted = sorted(team.roster, key=lambda p: (p.lineupSlot == 'BE', p.lineupSlot))
+        
+        for player in roster_sorted:
+            details = get_player_details(player, league, nfl_schedule)
+            row_class = 'starter' if details['slot'] != 'BE' else 'bench'
+            injury_color = get_injury_color(details['injury_status'])
+            
+            html += f"""
+                <tr class="{row_class}">
+                    <td><strong>{details['slot']}</strong></td>
+                    <td><strong>{details['name']}</strong></td>
+                    <td>{details['position']}</td>
+                    <td style="background-color: {injury_color}; font-size: 10px;">{details['injury_display']}</td>
+                    <td style="font-size: 11px;"><strong>{details['opponent']}</strong></td>
+                    <td><strong>{details['projected']:.1f}</strong></td>
+                    <td>{details['avg_points']:.1f}</td>
+                    <td>{details['total_points']:.1f}</td>
+                    <td style="font-size: 10px;">{details['recent_weeks_display']}</td>
+                </tr>
+"""
+        
+        html += """
+            </table>
+        </div>
+"""
+    
+    html += """
+    </div>
+"""
+    
+    # Top Available Players - Multiple Views
+    positions = ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST']
+    sort_options = [
+        ('projected', 'By Projected Points This Week'),
+        ('avg', 'By Season Average'),
+        ('owned', 'By Ownership % (Trending)'),
+        ('started', 'By Started % (League Value)')
+    ]
+    
+    for sort_key, sort_name in sort_options:
+        html += f"""
+    <div class="section">
+        <h2>Top Available Players - {sort_name}</h2>
+        <p style="color: #666; font-size: 13px;">
+"""
+        
+        if sort_key == 'projected':
+            html += """Best waiver pickups for this week's matchup. High projections = immediate impact."""
+        elif sort_key == 'avg':
+            html += """Most consistent performers available. Good for ROS (rest of season) value."""
+        elif sort_key == 'owned':
+            html += """Trending players gaining attention. Grab them before your league mates do."""
+        else:
+            html += """Players actually being started in other leagues. Real-world validation of value."""
+        
+        html += """
+        </p>
+"""
+        
+        for pos in positions:
+            top_players = get_top_available_players(league, nfl_schedule, position=pos, limit=10, sort_by=sort_key)
+            if top_players:
+                html += f"""
+        <h3>{pos}</h3>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Injury</th>
+                <th>Status</th>
+                <th>Proj</th>
+                <th>Avg</th>
+                <th>Total</th>
+                <th>Own%</th>
+                <th>Start%</th>
+            </tr>
+"""
+                
+                for player in top_players:
+                    details = get_player_details(player, league, nfl_schedule)
+                    injury_color = get_injury_color(details['injury_status'])
+                    
+                    html += f"""
+            <tr>
+                <td><strong>{details['name']}</strong></td>
+                <td>{details['pro_team']}</td>
+                <td style="background-color: {injury_color}; font-size: 11px;">{details['injury_display']}</td>
+                <td><strong>{details['opponent']}</strong></td>
+                <td><strong>{details['projected']:.1f}</strong></td>
+                <td>{details['avg_points']:.1f}</td>
+                <td>{details['total_points']:.1f}</td>
+                <td>{details['percent_owned']:.0f}%</td>
+                <td>{details['percent_started']:.0f}%</td>
+            </tr>
+"""
+                
+                html += """
+        </table>
+"""
+        
+        html += """
+    </div>
+"""
+    
+    # League Standings
+    html += """
+    <div class="section">
+        <h2>League Standings</h2>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Record</th>
+                <th>PF</th>
+                <th>PA</th>
+                <th>Avg/Wk</th>
+            </tr>
+"""
+    
+    for team in sorted_teams:
+        row_class = 'starter' if team.team_id == my_team.team_id else ''
+        avg_per_week = team.points_for / max(1, team.wins + team.losses)
+        
+        html += f"""
+            <tr class="{row_class}">
+                <td>{team.standing}</td>
+                <td><strong>{team.team_name}</strong>{' &lt;- YOU' if team.team_id == my_team.team_id else ''}</td>
+                <td>{team.wins}-{team.losses}</td>
+                <td>{team.points_for:.2f}</td>
+                <td>{team.points_against:.2f}</td>
+                <td>{avg_per_week:.2f}</td>
+            </tr>
+"""
+    
+    html += """
+        </table>
+    </div>
+"""
+    
+    # Upcoming Schedule
+    html += f"""
+    <div class="section">
+        <h2>My Upcoming Schedule</h2>
+        <p style="color: #666; font-size: 13px;">Plan ahead - identify tough matchups and potential wins.</p>
+        <table>
+            <tr>
+                <th>Week</th>
+                <th>Opponent</th>
+                <th>Their Record</th>
+                <th>Their Avg</th>
+                <th>Difficulty</th>
+            </tr>
+"""
+    
+    for i in range(week - 1, min(week + 4, league.settings.reg_season_count)):
+        opponent = my_team.schedule[i]
+        week_num = i + 1
+        if opponent:
+            opp_avg = opponent.points_for / max(1, opponent.wins + opponent.losses)
+            my_avg = my_team.points_for / max(1, my_team.wins + my_team.losses)
+            
+            if opp_avg > my_avg + 10:
+                difficulty = "HARD"
+                diff_color = "#ffcdd2"
+            elif opp_avg > my_avg:
+                difficulty = "Medium"
+                diff_color = "#fff9c4"
+            else:
+                difficulty = "Favorable"
+                diff_color = "#c8e6c9"
+            
+            html += f"""
+            <tr>
+                <td>Week {week_num}</td>
+                <td>{opponent.team_name}</td>
+                <td>{opponent.wins}-{opponent.losses} (#{opponent.standing})</td>
+                <td>{opp_avg:.2f} pts/wk</td>
+                <td style="background-color: {diff_color};"><strong>{difficulty}</strong></td>
+            </tr>
+"""
+        else:
+            html += f"""
+            <tr>
+                <td>Week {week_num}</td>
+                <td colspan="4">BYE WEEK</td>
+            </tr>
+"""
+    
+    html += """
+        </table>
+    </div>
+"""
+    
+    # Footer
     html += f"""
     <div class="section" style="text-align: center; color: #666;">
-        <p><strong>Complete Data Extraction</strong></p>
-        <p>Share this report with Claude for strategic analysis</p>
+        <p><strong>Complete Strategic Data Extraction</strong></p>
+        <p>Share this report with Claude for lineup advice, trade analysis, and waiver recommendations</p>
         <p>Last updated: {current_time}</p>
     </div>
 </body>
@@ -425,7 +648,7 @@ def generate_html_report(league, my_team):
 def main():
     try:
         print("="*80)
-        print("ESPN FANTASY FOOTBALL DATA EXTRACTOR - FINAL VERSION")
+        print("ESPN FANTASY FOOTBALL - COMPLETE STRATEGIC EXTRACTION")
         print("="*80)
         
         league = connect_to_league()
@@ -434,7 +657,7 @@ def main():
         print(f"â Connected to {league.settings.name}")
         print(f"â Found team: {my_team.team_name}")
         print(f"â Current week: {league.current_week}")
-        print(f"â Extracting data for {len(league.teams)} teams...")
+        print(f"â Extracting comprehensive data...")
         
         html = generate_html_report(league, my_team)
         
@@ -443,8 +666,10 @@ def main():
             f.write(html)
         
         print(f"â Report saved to {filename}")
+        print(f"â Extracted data for {len(league.teams)} teams")
+        print(f"â Analyzed {len(league.free_agents(size=100))} available players")
         print("\n" + "="*80)
-        print("SUCCESS!")
+        print("SUCCESS! Full strategic report generated.")
         print("="*80)
         
     except Exception as e:
