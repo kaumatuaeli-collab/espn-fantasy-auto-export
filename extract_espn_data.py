@@ -590,11 +590,113 @@ def generate_html_report(league, my_team):
     </div>
 """
     
-    # Upcoming Schedule
+    # Next Week Preparation - NEW SECTION
+    next_week = week + 1
+    if next_week <= league.settings.reg_season_count:
+        html += f"""
+    <div class="section">
+        <h2>Week {next_week} Preparation - Your Next Matchup</h2>
+"""
+        
+        next_opponent = my_team.schedule[next_week - 1] if next_week - 1 < len(my_team.schedule) else None
+        
+        if next_opponent:
+            opp_avg = next_opponent.points_for / max(1, next_opponent.wins + next_opponent.losses)
+            my_avg = my_team.points_for / max(1, my_team.wins + my_team.losses)
+            
+            html += f"""
+        <h3>vs {next_opponent.team_name}</h3>
+        <div class="stat-box">Their Record: {next_opponent.wins}-{next_opponent.losses} (#{next_opponent.standing})</div>
+        <div class="stat-box">Their Avg: {opp_avg:.2f} pts/wk</div>
+        <div class="stat-box">Your Avg: {my_avg:.2f} pts/wk</div>
+        <div class="stat-box">Point Differential: {my_avg - opp_avg:+.2f}</div>
+        
+        <h3>Your Players on BYE Week {next_week}</h3>
+"""
+            
+            # Check which of your players are on BYE next week
+            next_week_schedule = fetch_nfl_schedule(next_week, YEAR)
+            bye_players = []
+            
+            for player in my_team.roster:
+                team_abbrev = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
+                player_status = next_week_schedule.get(team_abbrev, 'UNKNOWN')
+                if player_status == 'BYE':
+                    bye_players.append(player)
+            
+            if bye_players:
+                html += """
+        <div class="alert">
+            <strong>WARNING: You have players on BYE next week!</strong>
+        </div>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Slot</th>
+                <th>Team</th>
+                <th>Avg Points</th>
+                <th>Impact</th>
+            </tr>
+"""
+                
+                for player in bye_players:
+                    is_starter = player.lineupSlot != 'BE'
+                    impact = "MUST REPLACE" if is_starter else "Bench (OK)"
+                    impact_color = "#ffcdd2" if is_starter else "#c8e6c9"
+                    
+                    html += f"""
+            <tr>
+                <td><strong>{player.name}</strong></td>
+                <td>{player.position}</td>
+                <td>{player.lineupSlot}</td>
+                <td>{player.proTeam}</td>
+                <td>{player.avg_points:.1f}</td>
+                <td style="background-color: {impact_color};"><strong>{impact}</strong></td>
+            </tr>
+"""
+                
+                html += """
+        </table>
+        <p style="color: #666; margin-top: 10px;">Check the "Top Available Players" sections below to find replacements!</p>
+"""
+            else:
+                html += """
+        <div style="background-color: #c8e6c9; padding: 15px; border-radius: 5px; margin: 10px 0;">
+            <strong>â Good news!</strong> None of your players are on BYE next week.
+        </div>
+"""
+            
+            # Show opponent's potential BYE issues
+            opp_bye_count = 0
+            for player in next_opponent.roster:
+                team_abbrev = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
+                player_status = next_week_schedule.get(team_abbrev, 'UNKNOWN')
+                if player_status == 'BYE' and player.lineupSlot != 'BE':
+                    opp_bye_count += 1
+            
+            if opp_bye_count > 0:
+                html += f"""
+        <div class="info-box">
+            <strong>Opponent Intel:</strong> {next_opponent.team_name} has {opp_bye_count} starter(s) on BYE next week. This could be your advantage!
+        </div>
+"""
+        else:
+            html += """
+        <div class="alert">
+            <strong>BYE WEEK</strong> - You have no matchup next week. Use this time to optimize your roster!
+        </div>
+"""
+        
+        html += """
+    </div>
+"""
+    
+    # Upcoming Schedule (Extended 3 weeks)
     html += f"""
     <div class="section">
-        <h2>My Upcoming Schedule</h2>
-        <p style="color: #666; font-size: 13px;">Plan ahead - identify tough matchups and potential wins.</p>
+        <h2>Upcoming Schedule (Next 3 Weeks)</h2>
+        <p style="color: #666; font-size: 13px;">Plan ahead - identify tough matchups, BYE week issues, and potential wins.</p>
         <table>
             <tr>
                 <th>Week</th>
@@ -602,12 +704,27 @@ def generate_html_report(league, my_team):
                 <th>Their Record</th>
                 <th>Their Avg</th>
                 <th>Difficulty</th>
+                <th>Your BYE Players</th>
             </tr>
 """
     
-    for i in range(week - 1, min(week + 4, league.settings.reg_season_count)):
+    for i in range(week, min(week + 3, league.settings.reg_season_count)):
         opponent = my_team.schedule[i]
         week_num = i + 1
+        
+        # Get BYE info for this week
+        future_schedule = fetch_nfl_schedule(week_num, YEAR)
+        bye_count = 0
+        bye_starters = 0
+        
+        for player in my_team.roster:
+            team_abbrev = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
+            player_status = future_schedule.get(team_abbrev, 'UNKNOWN')
+            if player_status == 'BYE':
+                bye_count += 1
+                if player.lineupSlot != 'BE':
+                    bye_starters += 1
+        
         if opponent:
             opp_avg = opponent.points_for / max(1, opponent.wins + opponent.losses)
             my_avg = my_team.points_for / max(1, my_team.wins + my_team.losses)
@@ -622,20 +739,24 @@ def generate_html_report(league, my_team):
                 difficulty = "Favorable"
                 diff_color = "#c8e6c9"
             
+            bye_display = f"{bye_count} total ({bye_starters} starters)" if bye_count > 0 else "None"
+            bye_color = "#ffcdd2" if bye_starters > 0 else "#ffffff"
+            
             html += f"""
             <tr>
-                <td>Week {week_num}</td>
+                <td><strong>Week {week_num}</strong></td>
                 <td>{opponent.team_name}</td>
                 <td>{opponent.wins}-{opponent.losses} (#{opponent.standing})</td>
                 <td>{opp_avg:.2f} pts/wk</td>
                 <td style="background-color: {diff_color};"><strong>{difficulty}</strong></td>
+                <td style="background-color: {bye_color};">{bye_display}</td>
             </tr>
 """
         else:
             html += f"""
             <tr>
-                <td>Week {week_num}</td>
-                <td colspan="4">BYE WEEK</td>
+                <td><strong>Week {week_num}</strong></td>
+                <td colspan="5">YOUR BYE WEEK - No matchup</td>
             </tr>
 """
     
