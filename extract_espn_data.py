@@ -99,6 +99,13 @@ def fetch_nfl_schedule(week, year=2025):
 
 def get_injury_status_display(status):
     """Get human-readable injury status with expected return info"""
+    # Handle case where status is a list (ESPN sometimes returns lists)
+    if isinstance(status, list):
+        if not status:
+            status = 'ACTIVE'
+        else:
+            status = status[0]  # Take first status if list
+    
     status_map = {
         'ACTIVE': 'Healthy',
         'QUESTIONABLE': 'Questionable',
@@ -109,7 +116,7 @@ def get_injury_status_display(status):
         'SUSPENSION': 'Suspended',
         'DAY_TO_DAY': 'Day-to-Day',
     }
-    return status_map.get(status, status)
+    return status_map.get(status, str(status))
 
 def get_recent_weeks_with_calculation(player, current_week):
     """
@@ -142,13 +149,18 @@ def get_player_details(player, league, nfl_schedule):
     """Extract comprehensive player details"""
     week = league.current_week
     
+    # Handle injury status - can be string or list
+    injury_status = player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE'
+    if isinstance(injury_status, list):
+        injury_status = injury_status[0] if injury_status else 'ACTIVE'
+    
     details = {
         'name': player.name,
         'position': player.position,
         'slot': player.lineupSlot,
         'pro_team': player.proTeam,
-        'injury_status': player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE',
-        'injury_display': get_injury_status_display(player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE'),
+        'injury_status': injury_status,
+        'injury_display': get_injury_status_display(injury_status),
         'percent_owned': player.percent_owned,
         'percent_started': player.percent_started,
         'total_points': player.total_points,
