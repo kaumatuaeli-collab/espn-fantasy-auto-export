@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-ESPN Fantasy Football Comprehensive JSON Data Extractor
-Extracts ALL available data for deep analysis and GitHub.io endpoint
+ESPN Fantasy Football OPTIMIZED JSON Data Extractor v2
+Incorporates user feedback: position-aware filters, game timing, implied points, 
+boom/bust metrics, eligibility slots, and trade-optimized opponent rosters
 """
 
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import defaultdict
 import requests
 from espn_api.football import League
@@ -17,6 +18,26 @@ YEAR = 2025
 ESPN_S2 = os.environ.get('ESPN_S2')
 SWID = os.environ.get('SWID')
 MY_TEAM_NAME = 'Intelligent MBLeague (TM)'
+
+# Configuration for smart data reduction
+WEEKS_OF_HISTORY = 3  # Keep last 3 weeks for trend analysis
+TOP_AVAILABLE_PER_POSITION = 15  # Top N per position (includes handcuffs)
+
+# Position-aware relevance filters (don't miss handcuffs & streamers!)
+POSITION_FILTERS = {
+    'QB': {'min_proj': 12.0, 'min_owned': 15.0, 'min_avg': 10.0},
+    'RB': {'min_proj': 4.0, 'min_owned': 15.0, 'min_avg': 3.5},  # Lower for handcuffs
+    'WR': {'min_proj': 5.0, 'min_owned': 20.0, 'min_avg': 4.0},
+    'TE': {'min_proj': 5.0, 'min_owned': 20.0, 'min_avg': 4.0},
+    'K': {'min_proj': 6.0, 'min_owned': 10.0, 'min_avg': 5.0},   # Show streamers
+    'D/ST': {'min_proj': 6.0, 'min_owned': 10.0, 'min_avg': 5.0},  # Show streamers
+}
+
+# Always show IR-eligible stashes (lottery tickets)
+INCLUDE_INJURED_STASHES = True
+
+# Keep all opponent players but with minimal fields (for trade analysis)
+SHOW_FULL_OPPONENT_ROSTERS = True
 
 # NFL Team Abbreviation Mapping
 ESPN_TO_STANDARD = {
@@ -54,8 +75,8 @@ def find_my_team(league):
             return team
     raise ValueError(f"Could not find team '{MY_TEAM_NAME}'")
 
-def fetch_nfl_schedule(week, year=2025):
-    """Fetch NFL schedule from ESPN's public API with game details"""
+def fetch_nfl_schedule_enhanced(week, year=2025):
+    """Fetch NFL schedule with game timing, implied points, and context flags"""
     try:
         url = f"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates={year}&seasontype=2&week={week}"
         print(f"Fetching NFL schedule for week {week}...")
@@ -72,15 +93,56 @@ def fetch_nfl_schedule(week, year=2025):
                 if 'competitions' in event and len(event['competitions']) > 0:
                     comp = event['competitions'][0]
                     
-                    # Extract game details
+                    # Extract game timing and context
+                    game_date = event.get('date', '')
+                    
+                    # Determine game type flags
+                    is_tnf = False
+                    is_mnf = False
+                    is_snf = False
+                    
+                    if game_date:
+                        try:
+                            dt = datetime.fromisoformat(game_date.replace('Z', '+00:00'))
+                            day_of_week = dt.strftime('%A')
+                            hour = dt.hour
+                            
+                            is_tnf = day_of_week == 'Thursday'
+                            is_mnf = day_of_week == 'Monday'
+                            is_snf = day_of_week == 'Sunday' and hour >= 20
+                        except:
+                            pass
+                    
                     game_info = {
-                        'date': event.get('date', ''),
+                        'kickoff': game_date,
                         'status': comp.get('status', {}).get('type', {}).get('description', 'Scheduled'),
-                        'venue': comp.get('venue', {}).get('fullName', 'Unknown'),
-                        'weather': comp.get('weather', {}),
-                        'odds': comp.get('odds', [{}])[0] if comp.get('odds') else {},
-                        'broadcasts': [b.get('names', [''])[0] for b in comp.get('broadcasts', [])],
+                        'is_tnf': is_tnf,
+                        'is_mnf': is_mnf,
+                        'is_snf': is_snf,
                     }
+                    
+                    # Parse odds for spread, total, and implied points
+                    spread = None
+                    total = None
+                    favored_team = None
+                    
+                    if comp.get('odds') and len(comp['odds']) > 0:
+                        odds = comp['odds'][0]
+                        spread_str = odds.get('details', '')
+                        total = odds.get('overUnder', None)
+                        
+                        # Parse spread (e.g., "HOU -1.5")
+                        if spread_str and total:
+                            try:
+                                parts = spread_str.split()
+                                if len(parts) >= 2:
+                                    favored_team = parts[0]
+                                    spread = float(parts[1])
+                            except:
+                                pass
+                    
+                    game_info['spread'] = spread
+                    game_info['total'] = total
                     
                     if 'competitors' in comp:
                         home_team = None
@@ -92,100 +154,121 @@ def fetch_nfl_schedule(week, year=2025):
                             
                             if is_home:
                                 home_team = team_abbrev
-                                game_info['home_team'] = team_abbrev
-                                game_info['home_score'] = competitor.get('score', 0)
                             else:
                                 away_team = team_abbrev
-                                game_info['away_team'] = team_abbrev
-                                game_info['away_score'] = competitor.get('score', 0)
                         
                         if home_team and away_team:
                             schedule[home_team] = f'vs {away_team}'
                             schedule[away_team] = f'@{home_team}'
-                            game_details[home_team] = game_info
-                            game_details[away_team] = game_info
+                            
+                            # Calculate implied points for each team
+                            home_implied = None
+                            away_implied = None
+                            
+                            if spread is not None and total is not None:
+                                if favored_team == home_team:
+                                    home_implied = round((total + abs(spread)) / 2, 1)
+                                    away_implied = round((total - abs(spread)) / 2, 1)
+                                elif favored_team == away_team:
+                                    away_implied = round((total + abs(spread)) / 2, 1)
+                                    home_implied = round((total - abs(spread)) / 2, 1)
+                            
+                            # Home team details
+                            home_info = game_info.copy()
+                            home_info['home'] = True
+                            home_info['opp'] = away_team
+                            home_info['implied_pts'] = home_implied
+                            
+                            # Away team details
+                            away_info = game_info.copy()
+                            away_info['home'] = False
+                            away_info['opp'] = home_team
+                            away_info['implied_pts'] = away_implied
+                            
+                            game_details[home_team] = home_info
+                            game_details[away_team] = away_info
         
+        # Add BYE teams
         all_teams = set(ESPN_TO_STANDARD.values())
         for team in all_teams:
             if team not in schedule:
                 schedule[team] = 'BYE'
                 game_details[team] = {'status': 'BYE'}
         
-        print(f"✓ Found {len([v for v in schedule.values() if v != 'BYE'])} games scheduled")
+        print(f"â Found {len([v for v in schedule.values() if v != 'BYE'])} games")
         return schedule, game_details
         
     except Exception as e:
         print(f"Warning: Could not fetch NFL schedule: {e}")
         return {}, {}
 
-def get_weekly_stats(player, current_week):
-    """Extract weekly performance data"""
-    weekly_data = []
+def get_compact_eligibility(player):
+    """Get compact eligibility slots (e.g., ['RB', 'FLEX'])"""
+    eligible = []
+    
+    # Map ESPN slot IDs to readable names
+    slot_map = {
+        0: 'QB', 2: 'RB', 4: 'WR', 6: 'TE', 16: 'D/ST', 17: 'K',
+        23: 'FLEX',  # RB/WR/TE
+    }
+    
+    if hasattr(player, 'eligibleSlots'):
+        for slot_id in player.eligibleSlots:
+            if slot_id in slot_map:
+                slot_name = slot_map[slot_id]
+                if slot_name not in eligible:
+                    eligible.append(slot_name)
+    
+    # Fallback to position if no eligible slots
+    if not eligible and hasattr(player, 'position'):
+        eligible = [player.position]
+    
+    return eligible
+
+def get_recent_weekly_stats(player, current_week, weeks_back=WEEKS_OF_HISTORY):
+    """Extract recent weekly performance (last N weeks as array)"""
+    weekly_points = []
     
     if not hasattr(player, 'stats') or not isinstance(player.stats, dict):
-        return weekly_data
+        return weekly_points
     
-    # Get all available weeks
-    for week in range(1, current_week + 1):
+    # Get recent weeks
+    start_week = max(1, current_week - weeks_back)
+    for week in range(start_week, current_week + 1):
         week_stats = player.stats.get(week, {})
         if isinstance(week_stats, dict):
-            weekly_data.append({
-                'week': week,
-                'points': week_stats.get('points', 0),
-                'projected_points': week_stats.get('projected_points', 0),
-                'breakdown': week_stats.get('breakdown', {}),
-                'projected_breakdown': week_stats.get('projected_breakdown', {}),
-            })
+            points = week_stats.get('points', 0)
+            if points > 0:  # Only include weeks where they played
+                weekly_points.append(round(points, 2))
     
-    return weekly_data
+    return weekly_points
 
-def calculate_consistency_metrics(weekly_stats):
-    """Calculate advanced consistency and performance metrics"""
-    if not weekly_stats:
-        return {}
-    
-    points = [w['points'] for w in weekly_stats if w['points'] > 0]
-    projections = [w['projected_points'] for w in weekly_stats if w['projected_points'] > 0]
-    
-    if not points:
+def calculate_boom_bust_metrics(weekly_points):
+    """Calculate boom/bust rates and consistency metrics"""
+    if not weekly_points or len(weekly_points) == 0:
         return {}
     
     import statistics
     
+    avg = statistics.mean(weekly_points)
+    
+    # Boom/Bust thresholds (120% and 60%)
+    boom_threshold = avg * 1.2
+    bust_threshold = avg * 0.6
+    
+    boom_weeks = sum(1 for p in weekly_points if p >= boom_threshold)
+    bust_weeks = sum(1 for p in weekly_points if p <= bust_threshold)
+    
     metrics = {
-        'games_played': len(points),
-        'avg_points': statistics.mean(points),
-        'median_points': statistics.median(points),
-        'std_dev': statistics.stdev(points) if len(points) > 1 else 0,
-        'min_points': min(points),
-        'max_points': max(points),
-        'consistency_score': 0,
-        'boom_weeks': 0,
-        'bust_weeks': 0,
-        'vs_projection_avg': 0,
+        'stdev': round(statistics.stdev(weekly_points), 2) if len(weekly_points) > 1 else 0,
+        'boom': round(boom_weeks / len(weekly_points), 2),
+        'bust': round(bust_weeks / len(weekly_points), 2),
     }
-    
-    # Consistency score (lower std_dev relative to mean = more consistent)
-    if metrics['avg_points'] > 0:
-        metrics['consistency_score'] = round(100 - (metrics['std_dev'] / metrics['avg_points'] * 100), 2)
-    
-    # Boom/Bust analysis (compared to season average)
-    for pts in points:
-        if pts > metrics['avg_points'] * 1.5:
-            metrics['boom_weeks'] += 1
-        elif pts < metrics['avg_points'] * 0.5:
-            metrics['bust_weeks'] += 1
-    
-    # Performance vs projection
-    if projections and len(points) == len(projections):
-        diffs = [points[i] - projections[i] for i in range(len(points))]
-        metrics['vs_projection_avg'] = round(statistics.mean(diffs), 2)
-        metrics['exceeded_projection_pct'] = round(len([d for d in diffs if d > 0]) / len(diffs) * 100, 1)
     
     return metrics
 
-def get_player_full_data(player, league, nfl_schedule, game_details):
-    """Extract comprehensive player data"""
+def get_player_data(player, league, nfl_schedule, game_details, include_history=False, minimal=False):
+    """Extract player data with configurable detail level"""
     week = league.current_week
     
     # Basic info
@@ -194,503 +277,373 @@ def get_player_full_data(player, league, nfl_schedule, game_details):
         injury_status = injury_status[0] if injury_status else 'ACTIVE'
     
     pro_team = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
-    opponent_display = nfl_schedule.get(pro_team, 'vs OPP')
-    
-    # Get weekly stats
-    weekly_stats = get_weekly_stats(player, week)
-    
-    # Calculate metrics
-    consistency_metrics = calculate_consistency_metrics(weekly_stats)
+    opponent_display = nfl_schedule.get(pro_team, 'BYE')
     
     # Current week projection
     current_week_stats = player.stats.get(week, {}) if hasattr(player, 'stats') else {}
     projected = current_week_stats.get('projected_points', 0) if isinstance(current_week_stats, dict) else 0
-    projected_breakdown = current_week_stats.get('projected_breakdown', {}) if isinstance(current_week_stats, dict) else {}
     
-    # Game details for this week
+    # Game details
     game_info = game_details.get(pro_team, {})
     
     player_data = {
-        # Identity
+        'id': getattr(player, 'playerId', None),
         'name': player.name,
-        'position': player.position,
-        'eligible_slots': getattr(player, 'eligibleSlots', []),
-        'lineup_slot': player.lineupSlot,
-        'pro_team': pro_team,
-        'player_id': getattr(player, 'playerId', None),
-        
-        # Health & Availability
-        'injury_status': injury_status,
-        'injury_status_display': get_injury_status_display(injury_status),
-        
-        # Matchup Info
-        'opponent': opponent_display,
-        'game_details': game_info,
-        
-        # Ownership
-        'percent_owned': round(player.percent_owned, 1),
-        'percent_started': round(player.percent_started, 1),
-        'ownership_change': getattr(player, 'percent_change', 0),
-        
-        # Scoring Stats
-        'total_points': round(player.total_points, 2),
-        'avg_points': round(player.avg_points, 2),
-        'projected_points': round(projected, 2),
-        'projected_breakdown': projected_breakdown,
-        
-        # Advanced Metrics
-        'consistency_metrics': consistency_metrics,
-        'weekly_stats': weekly_stats,
-        
-        # Additional ESPN data
-        'acquisition_type': getattr(player, 'acquisitionType', 'UNKNOWN'),
-        'on_bye_week': opponent_display == 'BYE',
+        'pos': player.position,
+        'team': pro_team,
+        'slot': player.lineupSlot,
+        'inj': injury_status,
+        'bye': opponent_display == 'BYE',
+        'proj': round(projected, 2),
+        'avg': round(player.avg_points, 2),
+        'total': round(player.total_points, 2),
     }
+    
+    # Add eligibility for flex logic
+    if not minimal:
+        player_data['elig'] = get_compact_eligibility(player)
+    
+    # Add ownership (for waiver decisions)
+    if not minimal:
+        player_data['own'] = round(player.percent_owned, 1)
+        player_data['start'] = round(player.percent_started, 1)
+    
+    # Add game context
+    if not minimal and game_info.get('status') != 'BYE':
+        player_data['opp'] = game_info.get('opp', opponent_display)
+        player_data['kickoff'] = game_info.get('kickoff', '')
+        player_data['home'] = game_info.get('home', None)
+        
+        # Game flags for late-swap logic
+        if game_info.get('is_tnf'):
+            player_data['is_tnf'] = True
+        if game_info.get('is_mnf'):
+            player_data['is_mnf'] = True
+        if game_info.get('is_snf'):
+            player_data['is_snf'] = True
+        
+        # Implied points (for DST/RB/WR analysis)
+        if game_info.get('implied_pts'):
+            player_data['implied_pts'] = game_info['implied_pts']
+    
+    # Add recent performance and metrics (for roster decisions)
+    if include_history:
+        weekly_points = get_recent_weekly_stats(player, week)
+        if weekly_points:
+            player_data['last_n'] = weekly_points
+            metrics = calculate_boom_bust_metrics(weekly_points)
+            player_data.update(metrics)
     
     return player_data
 
-def get_injury_status_display(status):
-    """Get human-readable injury status"""
-    if isinstance(status, list):
-        status = status[0] if status else 'ACTIVE'
+def is_player_relevant_for_waivers(player, position, league, game_details):
+    """Check if FA is relevant using position-aware filters"""
+    filters = POSITION_FILTERS.get(position, {'min_proj': 5.0, 'min_owned': 20.0, 'min_avg': 4.0})
     
-    status_map = {
-        'ACTIVE': 'Healthy',
-        'QUESTIONABLE': 'Questionable',
-        'DOUBTFUL': 'Doubtful',
-        'OUT': 'Out',
-        'INJURY_RESERVE': 'IR (4+ weeks)',
-        'IR': 'IR (4+ weeks)',
-        'SUSPENSION': 'Suspended',
-        'DAY_TO_DAY': 'Day-to-Day',
-    }
-    return status_map.get(status, str(status))
-
-def get_scoring_type(league):
-    """Safely detect league scoring type"""
-    try:
-        # Try different ways to access scoring settings
-        if hasattr(league.settings, 'scoring_settings'):
-            scoring = league.settings.scoring_settings
-        elif hasattr(league, 'scoring_settings'):
-            scoring = league.scoring_settings
-        else:
-            return 'Unknown'
-        
-        # Check for PPR value
-        if isinstance(scoring, dict):
-            ppr_value = scoring.get('receivingReceptions', scoring.get('rec', 0))
-        else:
-            ppr_value = getattr(scoring, 'receivingReceptions', getattr(scoring, 'rec', 0))
-        
-        if ppr_value == 1:
-            return 'PPR'
-        elif ppr_value == 0.5:
-            return 'Half-PPR'
-        else:
-            return 'Standard'
-    except:
-        return 'Unknown'
-
-def get_roster_settings(league):
-    """Safely extract roster settings"""
-    try:
-        roster_info = {}
-        
-        if hasattr(league.settings, 'roster'):
-            roster = league.settings.roster
-            if isinstance(roster, dict):
-                roster_info = roster
-            else:
-                # Try to get attributes
-                for attr in ['rosterSize', 'roster_size', 'benchSize', 'bench_size']:
-                    if hasattr(roster, attr):
-                        roster_info[attr] = getattr(roster, attr)
-        
-        return roster_info if roster_info else {'note': 'Roster settings not available'}
-    except:
-        return {'note': 'Roster settings not available'}
-
-
-def analyze_positional_scarcity(league, position):
-    """Analyze how scarce a position is based on rostered vs available players"""
-    rostered = []
-    available = []
-    
-    # Get all rostered players at position
-    for team in league.teams:
-        for player in team.roster:
-            if player.position == position:
-                rostered.append(player.avg_points)
-    
-    # Get available players at position
-    try:
-        free_agents = league.free_agents(size=50)
-        for player in free_agents:
-            if player.position == position:
-                available.append(player.avg_points)
-    except:
-        pass
-    
-    if not rostered:
-        return {}
-    
-    import statistics
-    
-    scarcity = {
-        'position': position,
-        'rostered_count': len(rostered),
-        'available_count': len(available),
-        'rostered_avg': round(statistics.mean(rostered), 2) if rostered else 0,
-        'available_avg': round(statistics.mean(available), 2) if available else 0,
-        'scarcity_score': 0,
-    }
-    
-    # Scarcity score: higher when there's a big gap between rostered and available
-    if scarcity['available_avg'] > 0:
-        scarcity['scarcity_score'] = round(scarcity['rostered_avg'] / scarcity['available_avg'], 2)
-    
-    return scarcity
-
-def get_recent_transactions(league, days=7):
-    """Get recent league activity"""
-    transactions = []
-    
-    try:
-        # ESPN API provides recent activity
-        if hasattr(league, 'recent_activity'):
-            for activity in league.recent_activity(size=50):
-                trans_date = getattr(activity, 'date', None)
-                
-                # Filter by date if available
-                if trans_date:
-                    activity_age = datetime.now() - datetime.fromtimestamp(trans_date / 1000)
-                    if activity_age.days > days:
-                        continue
-                
-                trans = {
-                    'type': getattr(activity, 'action', 'UNKNOWN'),
-                    'date': trans_date,
-                    'team': getattr(activity, 'team_name', 'Unknown'),
-                }
-                
-                # Add player info if available
-                if hasattr(activity, 'actions'):
-                    for action in activity.actions:
-                        if hasattr(action, 'player'):
-                            trans['player'] = action.player.name
-                            trans['player_position'] = action.player.position
-                
-                transactions.append(trans)
-    except Exception as e:
-        print(f"Could not fetch transactions: {e}")
-    
-    return transactions
-
-def calculate_strength_of_schedule(team, league, weeks_ahead=3):
-    """Calculate remaining strength of schedule"""
+    # Get current week projection
     current_week = league.current_week
-    upcoming_opponents = []
+    current_week_stats = player.stats.get(current_week, {}) if hasattr(player, 'stats') else {}
+    projected = current_week_stats.get('projected_points', 0) if isinstance(current_week_stats, dict) else 0
+    
+    # Check injury status for stash value
+    injury_status = player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE'
+    if isinstance(injury_status, list):
+        injury_status = injury_status[0] if injury_status else 'ACTIVE'
+    
+    is_injured = injury_status in ['OUT', 'IR', 'INJURY_RESERVE', 'QUESTIONABLE', 'DOUBTFUL']
+    
+    # Always include injured stashes (lottery tickets)
+    if INCLUDE_INJURED_STASHES and is_injured and player.percent_owned > 10:
+        return True
+    
+    # Check against position-specific thresholds
+    passes_projection = projected >= filters['min_proj']
+    passes_ownership = player.percent_owned >= filters['min_owned']
+    passes_avg = player.avg_points >= filters['min_avg']
+    
+    # For DST/K, also consider favorable matchups (low implied points against)
+    if position in ['D/ST', 'K']:
+        pro_team = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
+        game_info = game_details.get(pro_team, {})
+        
+        # If opponent implied points < 20, it's a good streaming matchup
+        opp_team = game_info.get('opp')
+        if opp_team:
+            opp_game_info = game_details.get(opp_team, {})
+            opp_implied = opp_game_info.get('implied_pts', 999)
+            if opp_implied and opp_implied <= 20.5:
+                return True
+    
+    # Include if passes any threshold
+    return passes_projection or passes_ownership or passes_avg
+
+def analyze_positional_depth(roster):
+    """Analyze roster depth by position"""
+    positions = defaultdict(list)
+    
+    for player in roster:
+        if player.lineupSlot != 'IR':
+            positions[player.position].append({
+                'name': player.name,
+                'avg': round(player.avg_points, 2),
+                'slot': player.lineupSlot,
+            })
+    
+    depth = {}
+    for pos, players in positions.items():
+        starters = len([p for p in players if p['slot'] != 'BE'])
+        bench = len([p for p in players if p['slot'] == 'BE'])
+        
+        depth[pos] = {
+            'total': len(players),
+            'start': starters,
+            'bench': bench,
+        }
+    
+    return depth
+
+def get_schedule_lookahead(team, league, weeks_ahead=3):
+    """Get next N weeks opponents with game context"""
+    current_week = league.current_week
+    upcoming = []
     
     try:
-        for i in range(current_week, min(current_week + weeks_ahead, len(team.schedule))):
-            opponent = team.schedule[i]
+        for i in range(weeks_ahead):
+            check_week = current_week + i
+            if check_week >= len(team.schedule):
+                break
+            
+            # Fetch schedule for that week
+            schedule, game_details = fetch_nfl_schedule_enhanced(check_week + 1, YEAR)
+            
+            opponent = team.schedule[check_week]
             if opponent:
                 opp_avg = opponent.points_for / max(1, opponent.wins + opponent.losses)
-                upcoming_opponents.append({
-                    'week': i + 1,
-                    'opponent': opponent.team_name,
-                    'opponent_avg': round(opp_avg, 2),
-                    'opponent_record': f"{opponent.wins}-{opponent.losses}",
-                    'opponent_standing': opponent.standing,
+                upcoming.append({
+                    'week': check_week + 1,
+                    'opp': opponent.team_name,
+                    'opp_avg': round(opp_avg, 2),
+                    'difficulty': 'Hard' if opp_avg > 100 else 'Med' if opp_avg > 85 else 'Easy',
                 })
     except:
         pass
     
-    if upcoming_opponents:
-        avg_opponent_strength = sum(o['opponent_avg'] for o in upcoming_opponents) / len(upcoming_opponents)
-        return {
-            'upcoming_opponents': upcoming_opponents,
-            'avg_opponent_strength': round(avg_opponent_strength, 2),
-            'difficulty_rating': 'Hard' if avg_opponent_strength > 100 else 'Medium' if avg_opponent_strength > 85 else 'Easy',
-        }
-    
-    return {}
+    return upcoming
 
-def calculate_playoff_probability(team, league):
-    """Estimate playoff probability based on current standing and remaining schedule"""
-    teams_count = len(league.teams)
-    playoff_spots = league.settings.playoff_team_count
-    current_standing = team.standing
+def identify_trade_opportunities(league, my_team):
+    """Find teams with surplus at positions where you're weak"""
+    my_depth = analyze_positional_depth(my_team.roster)
     
-    weeks_remaining = league.settings.reg_season_count - league.current_week
+    # Positions where I have <2 players (excluding K/DST)
+    weak_positions = [pos for pos, info in my_depth.items() 
+                     if info['total'] < 2 and pos not in ['K', 'D/ST']]
     
-    # Simple estimation
-    if current_standing <= playoff_spots:
-        base_prob = 90
-    elif current_standing <= playoff_spots + 2:
-        base_prob = 60
-    elif current_standing <= playoff_spots + 4:
-        base_prob = 30
-    else:
-        base_prob = 10
+    opportunities = []
     
-    # Adjust based on weeks remaining
-    prob = min(99, base_prob + (weeks_remaining * 2))
-    
-    return {
-        'estimated_probability': prob,
-        'current_standing': current_standing,
-        'playoff_spots': playoff_spots,
-        'weeks_remaining': weeks_remaining,
-        'must_win_games': max(0, playoff_spots - current_standing + 2) if current_standing > playoff_spots else 0,
-    }
-
-def get_trade_targets_analysis(league, my_team):
-    """Analyze potential trade targets based on team needs"""
-    trade_targets = []
-    
-    # Analyze my team's weaknesses
-    my_positions = defaultdict(list)
-    for player in my_team.roster:
-        if player.lineupSlot != 'BE':
-            my_positions[player.position].append(player.avg_points)
-    
-    # Find teams with surpluses at positions I'm weak in
     for team in league.teams:
         if team.team_id == my_team.team_id:
             continue
         
-        team_positions = defaultdict(list)
-        for player in team.roster:
-            team_positions[player.position].append({
-                'name': player.name,
-                'avg_points': player.avg_points,
-                'lineup_slot': player.lineupSlot,
-            })
+        team_depth = analyze_positional_depth(team.roster)
         
-        # Look for teams with depth at positions
-        for pos, players in team_positions.items():
-            if len(players) > 2:  # They have depth
-                # Sort by points
-                sorted_players = sorted(players, key=lambda x: x['avg_points'], reverse=True)
-                
-                # Their bench players might be trade targets
-                bench_stars = [p for p in sorted_players if p['lineup_slot'] == 'BE' and p['avg_points'] > 5]
-                
-                if bench_stars:
-                    trade_targets.append({
-                        'team': team.team_name,
-                        'position': pos,
-                        'trade_candidates': bench_stars[:2],  # Top 2 bench players
-                        'team_record': f"{team.wins}-{team.losses}",
-                        'analysis': f"{team.team_name} has depth at {pos}",
-                    })
+        for weak_pos in weak_positions:
+            if team_depth.get(weak_pos, {}).get('total', 0) >= 3:
+                # They have depth where I'm weak
+                opportunities.append({
+                    'team': team.team_name,
+                    'record': f"{team.wins}-{team.losses}",
+                    'pos': weak_pos,
+                    'their_depth': team_depth[weak_pos]['total'],
+                })
     
-    return trade_targets
+    return opportunities
 
-def generate_comprehensive_json(league, my_team):
-    """Generate comprehensive JSON with all available data"""
-    print("Generating comprehensive JSON data...")
+def generate_optimized_json(league, my_team):
+    """Generate optimized JSON with smart filtering"""
+    print("Generating optimized JSON...")
     
     current_week = league.current_week
-    nfl_schedule, game_details = fetch_nfl_schedule(current_week, YEAR)
+    nfl_schedule, game_details = fetch_nfl_schedule_enhanced(current_week, YEAR)
     
-    # Build the massive data structure
     data = {
         'meta': {
-            'generated_at': datetime.now().isoformat(),
-            'league_id': LEAGUE_ID,
+            'generated': datetime.now().isoformat(),
+            'league': LEAGUE_ID,
             'year': YEAR,
-            'current_week': current_week,
-            'last_updated': datetime.now().strftime('%Y-%m-%d %I:%M %p ET'),
+            'week': current_week,
+            'version': 'optimized_v2',
         },
         
-        'league_info': {
+        'league': {
             'name': league.settings.name,
-            'total_teams': len(league.teams),
-            'regular_season_weeks': league.settings.reg_season_count,
+            'teams': len(league.teams),
+            'reg_weeks': league.settings.reg_season_count,
             'playoff_teams': league.settings.playoff_team_count,
-            'scoring_type': get_scoring_type(league),
-            'roster_settings': get_roster_settings(league),
         },
         
         'my_team': {
-            'team_id': my_team.team_id,
-            'team_name': my_team.team_name,
-            'owner': getattr(my_team, 'owner', 'Unknown'),
-            'record': {
-                'wins': my_team.wins,
-                'losses': my_team.losses,
-                'ties': getattr(my_team, 'ties', 0),
-            },
+            'name': my_team.team_name,
+            'record': f"{my_team.wins}-{my_team.losses}",
             'standing': my_team.standing,
-            'points_for': round(my_team.points_for, 2),
-            'points_against': round(my_team.points_against, 2),
-            'avg_points_per_week': round(my_team.points_for / max(1, my_team.wins + my_team.losses), 2),
-            'playoff_probability': calculate_playoff_probability(my_team, league),
-            'strength_of_schedule': calculate_strength_of_schedule(my_team, league),
+            'pf': round(my_team.points_for, 2),
+            'pa': round(my_team.points_against, 2),
+            'avg': round(my_team.points_for / max(1, my_team.wins + my_team.losses), 2),
+            'depth': analyze_positional_depth(my_team.roster),
+            'schedule': get_schedule_lookahead(my_team, league),
         },
         
-        'current_matchup': {},
-        
-        'my_roster': [],
-        
-        'all_teams': [],
-        
-        'available_players': {
-            'QB': [],
-            'RB': [],
-            'WR': [],
-            'TE': [],
-            'K': [],
-            'D/ST': [],
-        },
-        
-        'positional_scarcity': {},
-        
-        'recent_transactions': get_recent_transactions(league),
-        
-        'trade_targets': get_trade_targets_analysis(league, my_team),
-        
-        'nfl_schedule': {
-            'week': current_week,
-            'games': game_details,
-        },
-        
-        'next_week_preview': {},
+        'matchup': {},
+        'roster': [],
+        'opponents': [],
+        'waivers': {},
+        'trades': [],
+        'byes': {},
     }
     
     # Current matchup
     try:
         opponent = my_team.schedule[current_week - 1]
         if opponent:
-            data['current_matchup'] = {
+            data['matchup'] = {
                 'week': current_week,
-                'opponent_name': opponent.team_name,
-                'opponent_record': f"{opponent.wins}-{opponent.losses}",
-                'opponent_standing': opponent.standing,
-                'opponent_avg': round(opponent.points_for / max(1, opponent.wins + opponent.losses), 2),
-                'opponent_points_for': round(opponent.points_for, 2),
-                'opponent_points_against': round(opponent.points_against, 2),
+                'opp': opponent.team_name,
+                'opp_record': f"{opponent.wins}-{opponent.losses}",
+                'opp_avg': round(opponent.points_for / max(1, opponent.wins + opponent.losses), 2),
             }
     except:
-        data['current_matchup'] = {'week': current_week, 'status': 'BYE'}
+        data['matchup'] = {'week': current_week, 'bye': True}
     
-    # My roster with full details
-    print("Extracting my roster...")
+    # My roster - FULL detail
+    print("  ââ My roster...")
     for player in my_team.roster:
-        data['my_roster'].append(get_player_full_data(player, league, nfl_schedule, game_details))
+        data['roster'].append(
+            get_player_data(player, league, nfl_schedule, game_details, 
+                          include_history=True, minimal=False)
+        )
     
-    # All league teams
-    print("Extracting all league rosters...")
+    # Opponent rosters - ALL players but minimal fields
+    print("  ââ Opponent rosters...")
     for team in sorted(league.teams, key=lambda x: x.standing):
-        team_data = {
-            'team_id': team.team_id,
-            'team_name': team.team_name,
-            'owner': getattr(team, 'owner', 'Unknown'),
-            'standing': team.standing,
-            'record': {
-                'wins': team.wins,
-                'losses': team.losses,
-                'ties': getattr(team, 'ties', 0),
-            },
-            'points_for': round(team.points_for, 2),
-            'points_against': round(team.points_against, 2),
-            'avg_points_per_week': round(team.points_for / max(1, team.wins + team.losses), 2),
-            'roster': [],
-            'strength_of_schedule': calculate_strength_of_schedule(team, league),
-        }
+        if team.team_id == my_team.team_id:
+            continue
         
-        for player in team.roster:
-            team_data['roster'].append(get_player_full_data(player, league, nfl_schedule, game_details))
-        
-        data['all_teams'].append(team_data)
-    
-    # Available players by position
-    print("Extracting available players...")
-    positions = ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST']
-    for pos in positions:
-        try:
-            free_agents = league.free_agents(size=50, position=pos)
-            for player in free_agents[:15]:  # Top 15 per position
-                data['available_players'][pos].append(
-                    get_player_full_data(player, league, nfl_schedule, game_details)
-                )
-            
-            # Calculate scarcity for this position
-            data['positional_scarcity'][pos] = analyze_positional_scarcity(league, pos)
-        except Exception as e:
-            print(f"Error fetching {pos} free agents: {e}")
-    
-    # Next week preview
-    next_week = current_week + 1
-    if next_week <= league.settings.reg_season_count:
-        next_schedule, next_game_details = fetch_nfl_schedule(next_week, YEAR)
-        
-        bye_players = []
-        for player in my_team.roster:
-            team_abbrev = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
-            if next_schedule.get(team_abbrev) == 'BYE':
-                bye_players.append({
-                    'name': player.name,
-                    'position': player.position,
-                    'lineup_slot': player.lineupSlot,
-                    'avg_points': round(player.avg_points, 2),
-                })
-        
-        try:
-            next_opponent = my_team.schedule[next_week - 1]
-            data['next_week_preview'] = {
-                'week': next_week,
-                'opponent': next_opponent.team_name if next_opponent else 'BYE',
-                'bye_players': bye_players,
-                'schedule': next_schedule,
+        if SHOW_FULL_OPPONENT_ROSTERS:
+            team_data = {
+                'name': team.team_name,
+                'record': f"{team.wins}-{team.losses}",
+                'avg': round(team.points_for / max(1, team.wins + team.losses), 2),
+                'depth': analyze_positional_depth(team.roster),
+                'roster': [
+                    get_player_data(p, league, nfl_schedule, game_details, 
+                                  include_history=False, minimal=True)
+                    for p in team.roster
+                ],
             }
-        except:
-            data['next_week_preview'] = {'week': next_week, 'status': 'Unable to load'}
+        else:
+            team_data = {
+                'name': team.team_name,
+                'record': f"{team.wins}-{team.losses}",
+                'depth': analyze_positional_depth(team.roster),
+            }
+        
+        data['opponents'].append(team_data)
+    
+    # Waivers - SMART filtered
+    print("  ââ Waiver targets (filtered)...")
+    for pos in ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST']:
+        try:
+            free_agents = league.free_agents(size=100, position=pos)
+            
+            relevant = []
+            for player in free_agents:
+                if is_player_relevant_for_waivers(player, pos, league, game_details):
+                    relevant.append(player)
+                    
+                    if len(relevant) >= TOP_AVAILABLE_PER_POSITION:
+                        break
+            
+            data['waivers'][pos] = [
+                get_player_data(p, league, nfl_schedule, game_details,
+                              include_history=False, minimal=False)
+                for p in relevant
+            ]
+            
+        except Exception as e:
+            print(f"    Error fetching {pos}: {e}")
+            data['waivers'][pos] = []
+    
+    # Trade targets
+    print("  ââ Trade opportunities...")
+    data['trades'] = identify_trade_opportunities(league, my_team)
+    
+    # BYE alerts (next 2 weeks)
+    print("  ââ BYE week alerts...")
+    for week_ahead in [1, 2]:
+        check_week = current_week + week_ahead
+        if check_week <= league.settings.reg_season_count:
+            future_schedule, _ = fetch_nfl_schedule_enhanced(check_week, YEAR)
+            
+            bye_players = []
+            for player in my_team.roster:
+                team_abbrev = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
+                if future_schedule.get(team_abbrev) == 'BYE':
+                    bye_players.append({
+                        'name': player.name,
+                        'pos': player.position,
+                        'slot': player.lineupSlot,
+                        'starter': player.lineupSlot != 'BE',
+                    })
+            
+            if bye_players:
+                data['byes'][f'w{check_week}'] = bye_players
     
     return data
 
 def main():
     try:
-        print("="*80)
-        print("ESPN FANTASY FOOTBALL - COMPREHENSIVE JSON EXTRACTION")
-        print("="*80)
+        print("="*70)
+        print("ESPN FANTASY FOOTBALL - OPTIMIZED EXTRACTION v2")
+        print("Smart filtering â¢ Game timing â¢ Implied points â¢ Boom/bust")
+        print("="*70)
         
         league = connect_to_league()
         my_team = find_my_team(league)
         
-        print(f"✓ Connected to {league.settings.name}")
-        print(f"✓ Found team: {my_team.team_name}")
-        print(f"✓ Current week: {league.current_week}")
+        print(f"â {league.settings.name}")
+        print(f"â {my_team.team_name}")
+        print(f"â Week {league.current_week}\n")
         
-        data = generate_comprehensive_json(league, my_team)
+        data = generate_optimized_json(league, my_team)
         
-        filename = "fantasy-data.json"
+        # Save formatted
+        filename = "fantasy-data-optimized-v2.json"
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         
-        print(f"\n✓ JSON data saved to {filename}")
-        print(f"✓ File size: {os.path.getsize(filename) / 1024:.2f} KB")
-        print(f"✓ Extracted {len(data['all_teams'])} teams")
-        print(f"✓ Total players in dataset: {sum(len(data['available_players'][pos]) for pos in data['available_players'])}")
+        size_kb = os.path.getsize(filename) / 1024
+        print(f"\nâ Saved: {filename} ({size_kb:.1f} KB)")
         
-        # Also create a minified version for web serving
-        filename_min = "fantasy-data.min.json"
+        # Save minified
+        filename_min = "fantasy-data-optimized-v2.min.json"
         with open(filename_min, 'w', encoding='utf-8') as f:
             json.dump(data, f, separators=(',', ':'), ensure_ascii=False)
         
-        print(f"✓ Minified version saved to {filename_min}")
-        print(f"✓ Minified size: {os.path.getsize(filename_min) / 1024:.2f} KB")
+        size_min_kb = os.path.getsize(filename_min) / 1024
+        print(f"â Minified: {filename_min} ({size_min_kb:.1f} KB)")
         
-        print("\n" + "="*80)
-        print("SUCCESS! Comprehensive data extraction complete.")
-        print("Upload this JSON to your GitHub.io endpoint!")
-        print("="*80)
+        # Stats
+        print(f"\nð Summary:")
+        print(f"  â¢ Roster: {len(data['roster'])} players")
+        print(f"  â¢ Opponents: {len(data['opponents'])} teams")
+        print(f"  â¢ Waivers: {sum(len(data['waivers'][p]) for p in data['waivers'])} relevant")
+        print(f"  â¢ Trades: {len(data['trades'])} opportunities")
+        
+        print("\n" + "="*70)
+        print("SUCCESS! Optimized for AI decision-making.")
+        print("="*70)
         
     except Exception as e:
-        print(f"\n✗ ERROR: {e}")
+        print(f"\nâ ERROR: {e}")
         import traceback
         traceback.print_exc()
         raise
