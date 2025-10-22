@@ -111,7 +111,7 @@ def fetch_nfl_schedule(week, year=2025):
                 schedule[team] = 'BYE'
                 game_details[team] = {'status': 'BYE'}
         
-        print(f"â Found {len([v for v in schedule.values() if v != 'BYE'])} games scheduled")
+        print(f"✓ Found {len([v for v in schedule.values() if v != 'BYE'])} games scheduled")
         return schedule, game_details
         
     except Exception as e:
@@ -661,9 +661,9 @@ def main():
         league = connect_to_league()
         my_team = find_my_team(league)
         
-        print(f"â Connected to {league.settings.name}")
-        print(f"â Found team: {my_team.team_name}")
-        print(f"â Current week: {league.current_week}")
+        print(f"✓ Connected to {league.settings.name}")
+        print(f"✓ Found team: {my_team.team_name}")
+        print(f"✓ Current week: {league.current_week}")
         
         data = generate_comprehensive_json(league, my_team)
         
@@ -671,18 +671,18 @@ def main():
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         
-        print(f"\nâ JSON data saved to {filename}")
-        print(f"â File size: {os.path.getsize(filename) / 1024:.2f} KB")
-        print(f"â Extracted {len(data['all_teams'])} teams")
-        print(f"â Total players in dataset: {sum(len(data['available_players'][pos]) for pos in data['available_players'])}")
+        print(f"\n✓ JSON data saved to {filename}")
+        print(f"✓ File size: {os.path.getsize(filename) / 1024:.2f} KB")
+        print(f"✓ Extracted {len(data['all_teams'])} teams")
+        print(f"✓ Total players in dataset: {sum(len(data['available_players'][pos]) for pos in data['available_players'])}")
         
         # Also create a minified version for web serving
         filename_min = "fantasy-data.min.json"
         with open(filename_min, 'w', encoding='utf-8') as f:
             json.dump(data, f, separators=(',', ':'), ensure_ascii=False)
         
-        print(f"â Minified version saved to {filename_min}")
-        print(f"â Minified size: {os.path.getsize(filename_min) / 1024:.2f} KB")
+        print(f"✓ Minified version saved to {filename_min}")
+        print(f"✓ Minified size: {os.path.getsize(filename_min) / 1024:.2f} KB")
         
         print("\n" + "="*80)
         print("SUCCESS! Comprehensive data extraction complete.")
@@ -690,7 +690,7 @@ def main():
         print("="*80)
         
     except Exception as e:
-        print(f"\nâ ERROR: {e}")
+        print(f"\n✗ ERROR: {e}")
         import traceback
         traceback.print_exc()
         raise
