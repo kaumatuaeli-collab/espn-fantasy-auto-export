@@ -1,9 +1,34 @@
 name: Extract Fantasy Data to JSON
 
 on:
+  # Schedule: Runs at key decision points throughout the fantasy week
   schedule:
-    - cron: '0 12 * * 2'  # Runs Tuesdays at 12pm UTC (waiver day)
+    # TUESDAY - Injury reports after Monday night (9:00 AM ET = 1:00 PM UTC)
+    - cron: '0 13 * * 2'
+    
+    # WEDNESDAY - Waiver claims processing (runs 3 times to catch roster changes)
+    - cron: '0 11 * * 3'  # 7:00 AM ET - Early claims
+    - cron: '0 14 * * 3'  # 10:00 AM ET - Mid-morning claims
+    - cron: '0 18 * * 3'  # 2:00 PM ET - Afternoon claims
+    
+    # THURSDAY - Pre-game update (3:00 PM ET = 7:00 PM UTC, before TNF at 8:15 PM ET)
+    - cron: '0 19 * * 4'
+    
+    # SATURDAY - Post-practice injury reports (7:00 PM ET = 11:00 PM UTC)
+    - cron: '0 23 * * 6'
+    
+    # SUNDAY - Pre-games update (11:00 AM ET = 3:00 PM UTC, before 1 PM games)
+    - cron: '0 15 * * 0'
+    
+    # MONDAY - Pre-MNF update (6:00 PM ET = 10:00 PM UTC, before 8:15 PM games)
+    - cron: '0 22 * * 1'
+  
   workflow_dispatch:  # Allows manual trigger
+    inputs:
+      reason:
+        description: 'Reason for manual run (optional)'
+        required: false
+        default: 'Manual data refresh'
 
 jobs:
   extract-data:
@@ -27,12 +52,34 @@ jobs:
       env:
         ESPN_S2: ${{ secrets.ESPN_S2 }}
         SWID: ${{ secrets.SWID }}
-      run: python extract_espn_data_json.py
+      run: |
+        python extract_espn_data_json.py
+        echo "Checking if files were created..."
+        ls -la fantasy-data*.json
+    
+    - name: Verify JSON files exist
+      run: |
+        if [ ! -f fantasy-data.json ]; then
+          echo "ERROR: fantasy-data.json was not created!"
+          exit 1
+        fi
+        echo "✓ JSON files confirmed"
+        echo "fantasy-data.json size: $(wc -c < fantasy-data.json) bytes"
+        echo "fantasy-data.min.json size: $(wc -c < fantasy-data.min.json) bytes"
+    
+    - name: Create deployment directory
+      run: |
+        mkdir -p deploy
+        cp fantasy-data.json deploy/
+        cp fantasy-data.min.json deploy/
+        echo "Files copied to deploy directory"
+        ls -la deploy/
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./output
+        publish_dir: ./deploy
         publish_branch: gh-pages
         keep_files: false
+        enable_jekyll: false
