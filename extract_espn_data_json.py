@@ -266,6 +266,52 @@ def get_injury_status_display(status):
     }
     return status_map.get(status, str(status))
 
+def get_scoring_type(league):
+    """Safely detect league scoring type"""
+    try:
+        # Try different ways to access scoring settings
+        if hasattr(league.settings, 'scoring_settings'):
+            scoring = league.settings.scoring_settings
+        elif hasattr(league, 'scoring_settings'):
+            scoring = league.scoring_settings
+        else:
+            return 'Unknown'
+        
+        # Check for PPR value
+        if isinstance(scoring, dict):
+            ppr_value = scoring.get('receivingReceptions', scoring.get('rec', 0))
+        else:
+            ppr_value = getattr(scoring, 'receivingReceptions', getattr(scoring, 'rec', 0))
+        
+        if ppr_value == 1:
+            return 'PPR'
+        elif ppr_value == 0.5:
+            return 'Half-PPR'
+        else:
+            return 'Standard'
+    except:
+        return 'Unknown'
+
+def get_roster_settings(league):
+    """Safely extract roster settings"""
+    try:
+        roster_info = {}
+        
+        if hasattr(league.settings, 'roster'):
+            roster = league.settings.roster
+            if isinstance(roster, dict):
+                roster_info = roster
+            else:
+                # Try to get attributes
+                for attr in ['rosterSize', 'roster_size', 'benchSize', 'bench_size']:
+                    if hasattr(roster, attr):
+                        roster_info[attr] = getattr(roster, attr)
+        
+        return roster_info if roster_info else {'note': 'Roster settings not available'}
+    except:
+        return {'note': 'Roster settings not available'}
+
+
 def analyze_positional_scarcity(league, position):
     """Analyze how scarce a position is based on rostered vs available players"""
     rostered = []
@@ -465,11 +511,8 @@ def generate_comprehensive_json(league, my_team):
             'total_teams': len(league.teams),
             'regular_season_weeks': league.settings.reg_season_count,
             'playoff_teams': league.settings.playoff_team_count,
-            'scoring_type': 'PPR' if league.settings.scoring.get('receivingReceptions', 0) == 1 else 'Half-PPR' if league.settings.scoring.get('receivingReceptions', 0) == 0.5 else 'Standard',
-            'roster_settings': {
-                'roster_size': league.settings.roster_settings.get('rosterSize', 'Unknown'),
-                'bench_size': league.settings.roster_settings.get('benchSize', 'Unknown'),
-            },
+            'scoring_type': get_scoring_type(league),
+            'roster_settings': get_roster_settings(league),
         },
         
         'my_team': {
