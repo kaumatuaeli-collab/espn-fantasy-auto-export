@@ -77,7 +77,7 @@ def find_my_team(league):
     for team in league.teams:
         if team.team_name == MY_TEAM_NAME:
             return team
-    raise ValueValue(f"Could not find team '{MY_TEAM_NAME}'")
+    raise ValueError(f"Could not find team '{MY_TEAM_NAME}'")
 
 def fetch_nfl_schedule_enhanced(week, year=2025):
     """Fetch NFL schedule with game timing, implied points, and context flags"""
@@ -146,8 +146,8 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                                 if len(parts) >= 2:
                                     favored_team = parts[0]
                                     spread = float(parts[1])
-                                except:
-                                    pass
+                            except:
+                                pass
                     
                     game_info['spread'] = spread
                     game_info['total'] = total
@@ -177,7 +177,7 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                                 if favored_team == home_team:
                                     home_implied = round((total + abs(spread)) / 2, 1)
                                     away_implied = round((total - abs(spread)) / 2, 1)
-                                elif favored_team = away_team:
+                                elif favored_team == away_team:
                                     away_implied = round((total + abs(spread)) / 2, 1)
                                     home_implied = round((total - abs(spread)) / 2, 1)
                             
@@ -638,4 +638,18 @@ def main():
             json.dump(data, f, separators=(',', ':'), ensure_ascii=False)
         
         size_min_kb = os.path.getsize(filename_min) / 1024
-        print(f
+        print(f"✓ Saved: {filename_min} ({size_min_kb:.1f} KB)")
+        
+        print(f"\n{'='*70}")
+        print(f"SUCCESS! Reduced from ~{size_kb:.1f} KB to {size_min_kb:.1f} KB")
+        print(f"Data coverage: {len(data['roster'])} roster + {sum(len(v) for v in data['waivers'].values())} waivers")
+        print(f"{'='*70}")
+        
+    except Exception as e:
+        print(f"\n❌ ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        raise
+
+if __name__ == "__main__":
+    main()
