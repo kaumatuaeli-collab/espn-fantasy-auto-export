@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2025-10-26T15:35:58.018091",
+    "generated": "2025-10-27T22:33:53.884502",
     "league": 44181678,
     "year": 2025,
     "week": 8,
@@ -94,7 +94,7 @@
         "WR"
       ],
       "own": 99.9,
-      "start": 19.9,
+      "start": 17.9,
       "last_n": [
         17.6
       ],
@@ -110,18 +110,23 @@
       "slot": "RB",
       "inj": "ACTIVE",
       "bye": false,
-      "proj": 14.94,
-      "avg": 11.8,
-      "total": 70.8,
+      "proj": 15.45,
+      "avg": 12.84,
+      "total": 89.9,
       "elig": [
         "RB"
       ],
       "own": 99.3,
-      "start": 87.4,
+      "start": 88.5,
       "opp": "CHI",
       "kickoff": "2025-10-26T17:00Z",
       "home": true,
-      "implied_pts": 24.0
+      "last_n": [
+        19.1
+      ],
+      "stdev": 0,
+      "boom": 0.0,
+      "bust": 0.0
     },
     {
       "id": 16800,
@@ -137,8 +142,8 @@
       "elig": [
         "WR"
       ],
-      "own": 99.2,
-      "start": 21.4,
+      "own": 99.1,
+      "start": 19.2,
       "last_n": [
         24.0
       ],
@@ -160,8 +165,8 @@
       "elig": [
         "TE"
       ],
-      "own": 96.8,
-      "start": 22.4,
+      "own": 96.5,
+      "start": 20.3,
       "last_n": [
         3.0
       ],
@@ -178,22 +183,22 @@
       "inj": "ACTIVE",
       "bye": false,
       "proj": 17.32,
-      "avg": 15.82,
-      "total": 94.9,
+      "avg": 16.66,
+      "total": 116.62,
       "elig": [
         "QB"
       ],
       "own": 60.1,
-      "start": 23.6,
+      "start": 23.9,
       "opp": "SF",
       "kickoff": "2025-10-26T17:00Z",
       "home": true,
-      "implied_pts": 22.5,
       "last_n": [
-        13.66
+        13.66,
+        21.72
       ],
-      "stdev": 0,
-      "boom": 0.0,
+      "stdev": 5.7,
+      "boom": 0.5,
       "bust": 0.0
     },
     {
@@ -211,7 +216,7 @@
         "WR"
       ],
       "own": 91.7,
-      "start": 75.8,
+      "start": 75.7,
       "opp": "MIN",
       "kickoff": "2025-10-24T00:15Z",
       "home": true,
@@ -232,22 +237,22 @@
       "inj": "ACTIVE",
       "bye": false,
       "proj": 11.8,
-      "avg": 13.1,
-      "total": 91.7,
+      "avg": 12.14,
+      "total": 97.1,
       "elig": [
         "RB"
       ],
-      "own": 89.4,
-      "start": 68.5,
+      "own": 89.3,
+      "start": 68.6,
       "opp": "BUF",
       "kickoff": "2025-10-26T17:00Z",
       "home": true,
-      "implied_pts": 20.0,
       "last_n": [
-        10.1
+        10.1,
+        5.4
       ],
-      "stdev": 0,
-      "boom": 0.0,
+      "stdev": 3.32,
+      "boom": 0.5,
       "bust": 0.0
     },
     {
@@ -264,8 +269,8 @@
       "elig": [
         "WR"
       ],
-      "own": 97.2,
-      "start": 81.1,
+      "own": 97.4,
+      "start": 82.2,
       "opp": "WSH",
       "kickoff": "2025-10-28T00:15Z",
       "home": true,
@@ -291,8 +296,8 @@
       "elig": [
         "RB"
       ],
-      "own": 84.3,
-      "start": 47.8,
+      "own": 84.5,
+      "start": 48.9,
       "opp": "WSH",
       "kickoff": "2025-10-28T00:15Z",
       "home": true,
@@ -312,23 +317,23 @@
       "slot": "D/ST",
       "inj": "NORMAL",
       "bye": false,
-      "proj": 5.72,
-      "avg": 9.0,
-      "total": 63.0,
+      "proj": 5.71,
+      "avg": 9.38,
+      "total": 75.0,
       "elig": [
         "D/ST"
       ],
-      "own": 84.1,
+      "own": 84.0,
       "start": 79.8,
       "opp": "CLE",
       "kickoff": "2025-10-26T17:00Z",
       "home": true,
-      "implied_pts": 24.0,
       "last_n": [
-        20.0
+        20.0,
+        12.0
       ],
-      "stdev": 0,
-      "boom": 0.0,
+      "stdev": 5.66,
+      "boom": 0.5,
       "bust": 0.0
     },
     {
@@ -340,22 +345,22 @@
       "inj": "ACTIVE",
       "bye": false,
       "proj": 12.13,
-      "avg": 9.0,
-      "total": 63.0,
+      "avg": 8.56,
+      "total": 68.5,
       "elig": [
         "RB"
       ],
       "own": 96.2,
-      "start": 76.0,
+      "start": 76.7,
       "opp": "TB",
       "kickoff": "2025-10-26T20:05Z",
       "home": true,
       "is_snf": true,
-      "implied_pts": 20.5,
       "last_n": [
-        4.4
+        4.4,
+        5.5
       ],
-      "stdev": 0,
+      "stdev": 0.78,
       "boom": 0.0,
       "bust": 0.0
     },
@@ -368,22 +373,22 @@
       "inj": "ACTIVE",
       "bye": false,
       "proj": 7.67,
-      "avg": 5.93,
-      "total": 35.6,
+      "avg": 5.89,
+      "total": 41.2,
       "elig": [
         "TE"
       ],
-      "own": 60.0,
-      "start": 36.1,
+      "own": 60.2,
+      "start": 36.6,
       "opp": "DAL",
       "kickoff": "2025-10-26T20:25Z",
       "home": true,
       "is_snf": true,
-      "implied_pts": 27.5,
       "last_n": [
-        6.7
+        6.7,
+        5.6
       ],
-      "stdev": 0,
+      "stdev": 0.78,
       "boom": 0.0,
       "bust": 0.0
     },
@@ -393,20 +398,25 @@
       "pos": "TE",
       "team": "BUF",
       "slot": "BE",
-      "inj": "QUESTIONABLE",
+      "inj": "ACTIVE",
       "bye": false,
-      "proj": 7.85,
-      "avg": 11.34,
-      "total": 56.7,
+      "proj": 7.84,
+      "avg": 9.92,
+      "total": 59.5,
       "elig": [
         "TE"
       ],
-      "own": 72.9,
-      "start": 22.6,
+      "own": 73.0,
+      "start": 25.9,
       "opp": "CAR",
       "kickoff": "2025-10-26T17:00Z",
       "home": false,
-      "implied_pts": 27.5
+      "last_n": [
+        2.8
+      ],
+      "stdev": 0,
+      "boom": 0.0,
+      "bust": 0.0
     },
     {
       "id": 3055899,
@@ -422,8 +432,8 @@
       "elig": [
         "K"
       ],
-      "own": 86.4,
-      "start": 83.0,
+      "own": 87.2,
+      "start": 83.8,
       "opp": "WSH",
       "kickoff": "2025-10-28T00:15Z",
       "home": true,
@@ -444,21 +454,21 @@
       "inj": "ACTIVE",
       "bye": false,
       "proj": 17.84,
-      "avg": 14.57,
-      "total": 87.44,
+      "avg": 15.27,
+      "total": 106.86,
       "elig": [
         "QB"
       ],
-      "own": 69.0,
-      "start": 39.3,
+      "own": 69.4,
+      "start": 40.1,
       "opp": "PHI",
       "kickoff": "2025-10-26T17:00Z",
       "home": false,
-      "implied_pts": 18.0,
       "last_n": [
-        28.42
+        28.42,
+        19.42
       ],
-      "stdev": 0,
+      "stdev": 6.36,
       "boom": 0.0,
       "bust": 0.0
     },
@@ -476,13 +486,12 @@
       "elig": [
         "WR"
       ],
-      "own": 71.2,
-      "start": 1.6,
+      "own": 70.6,
+      "start": 1.5,
       "opp": "NO",
       "kickoff": "2025-10-26T20:05Z",
       "home": false,
-      "is_snf": true,
-      "implied_pts": 25.0
+      "is_snf": true
     },
     {
       "id": 4429059,
@@ -493,21 +502,21 @@
       "inj": "ACTIVE",
       "bye": false,
       "proj": 9.71,
-      "avg": 8.22,
-      "total": 49.3,
+      "avg": 8.91,
+      "total": 62.4,
       "elig": [
         "RB"
       ],
-      "own": 62.6,
-      "start": 29.7,
+      "own": 62.8,
+      "start": 30.5,
       "opp": "SF",
       "kickoff": "2025-10-26T17:00Z",
       "home": true,
-      "implied_pts": 22.5,
       "last_n": [
-        11.0
+        11.0,
+        13.1
       ],
-      "stdev": 0,
+      "stdev": 1.48,
       "boom": 0.0,
       "bust": 0.0
     }
@@ -558,9 +567,9 @@
           "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 13.69,
-          "avg": 12.43,
-          "total": 49.7
+          "proj": 13.68,
+          "avg": 12.16,
+          "total": 60.8
         },
         {
           "id": 4429160,
@@ -570,9 +579,9 @@
           "slot": "RB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 17.07,
-          "avg": 17.19,
-          "total": 120.3
+          "proj": 17.08,
+          "avg": 17.24,
+          "total": 137.9
         },
         {
           "id": 4047365,
@@ -582,9 +591,9 @@
           "slot": "RB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 17.78,
-          "avg": 19.22,
-          "total": 115.3
+          "proj": 17.79,
+          "avg": 18.19,
+          "total": 127.3
         },
         {
           "id": 4040715,
@@ -595,8 +604,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 21.83,
-          "avg": 21.2,
-          "total": 148.42
+          "avg": 21.72,
+          "total": 173.78
         },
         {
           "id": 4432710,
@@ -606,9 +615,9 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 7.26,
-          "avg": 5.6,
-          "total": 39.2
+          "proj": 7.33,
+          "avg": 5.59,
+          "total": 44.7
         },
         {
           "id": 4683062,
@@ -630,9 +639,9 @@
           "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 11.41,
-          "avg": 11.91,
-          "total": 83.4
+          "proj": 11.4,
+          "avg": 11.51,
+          "total": 92.1
         },
         {
           "id": 3953687,
@@ -643,8 +652,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.75,
-          "avg": 12.0,
-          "total": 84.0
+          "avg": 11.25,
+          "total": 90.0
         },
         {
           "id": 4572680,
@@ -654,9 +663,9 @@
           "slot": "TE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 8.27,
-          "avg": 11.4,
-          "total": 68.4
+          "proj": 8.3,
+          "avg": 14.03,
+          "total": 98.2
         },
         {
           "id": 4429025,
@@ -676,11 +685,11 @@
           "pos": "RB",
           "team": "NYG",
           "slot": "RB/WR/TE",
-          "inj": "ACTIVE",
+          "inj": "OUT",
           "bye": false,
-          "proj": 12.86,
-          "avg": 15.17,
-          "total": 106.2
+          "proj": 12.85,
+          "avg": 14.46,
+          "total": 115.7
         },
         {
           "id": 3128720,
@@ -691,8 +700,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.43,
-          "avg": 7.77,
-          "total": 46.6
+          "avg": 7.79,
+          "total": 54.5
         },
         {
           "id": 2577417,
@@ -703,8 +712,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 18.26,
-          "avg": 20.98,
-          "total": 146.84
+          "avg": 19.18,
+          "total": 153.46
         },
         {
           "id": 3916945,
@@ -714,9 +723,9 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 6.97,
-          "avg": 4.12,
-          "total": 20.6
+          "proj": 6.96,
+          "avg": 4.03,
+          "total": 24.2
         },
         {
           "id": 2576925,
@@ -789,9 +798,9 @@
           "slot": "RB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 23.33,
-          "avg": 21.73,
-          "total": 130.4
+          "proj": 23.98,
+          "avg": 19.24,
+          "total": 134.7
         },
         {
           "id": 4432773,
@@ -814,8 +823,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 10.27,
-          "avg": 8.8,
-          "total": 61.6
+          "avg": 9.06,
+          "total": 72.5
         },
         {
           "id": 4430878,
@@ -861,9 +870,9 @@
           "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 9.54,
-          "avg": 10.75,
-          "total": 64.5
+          "proj": 10.26,
+          "avg": 10.73,
+          "total": 75.1
         },
         {
           "id": 4575131,
@@ -885,9 +894,9 @@
           "slot": "TE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 10.56,
-          "avg": 12.14,
-          "total": 85.0
+          "proj": 10.58,
+          "avg": 11.54,
+          "total": 92.3
         },
         {
           "id": 4685702,
@@ -895,11 +904,11 @@
           "pos": "RB",
           "team": "CLE",
           "slot": "RB/WR/TE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 11.68,
-          "avg": 14.57,
-          "total": 87.4
+          "avg": 12.94,
+          "total": 90.6
         },
         {
           "id": 4428718,
@@ -922,8 +931,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 15.27,
-          "avg": 9.69,
-          "total": 67.8
+          "avg": 9.36,
+          "total": 74.9
         },
         {
           "id": 4431611,
@@ -934,8 +943,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 18.4,
-          "avg": 17.77,
-          "total": 106.64
+          "avg": 16.92,
+          "total": 118.44
         },
         {
           "id": 17372,
@@ -946,8 +955,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.7,
-          "avg": 9.5,
-          "total": 57.0
+          "avg": 11.0,
+          "total": 77.0
         },
         {
           "id": 4032473,
@@ -958,8 +967,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 9.95,
-          "avg": 9.01,
-          "total": 63.1
+          "avg": 9.14,
+          "total": 73.1
         },
         {
           "id": -16034,
@@ -970,8 +979,8 @@
           "inj": "NORMAL",
           "bye": false,
           "proj": 6.76,
-          "avg": 10.33,
-          "total": 62.0
+          "avg": 9.86,
+          "total": 69.0
         }
       ]
     },
@@ -1021,8 +1030,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 18.78,
-          "avg": 22.94,
-          "total": 160.6
+          "avg": 21.11,
+          "total": 168.9
         },
         {
           "id": 4890973,
@@ -1102,11 +1111,11 @@
           "pos": "TE",
           "team": "CLE",
           "slot": "TE",
-          "inj": "QUESTIONABLE",
+          "inj": "ACTIVE",
           "bye": false,
           "proj": 8.0,
-          "avg": 6.63,
-          "total": 39.8
+          "avg": 7.36,
+          "total": 51.5
         },
         {
           "id": 2976212,
@@ -1117,8 +1126,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 10.19,
-          "avg": 9.3,
-          "total": 65.1
+          "avg": 9.25,
+          "total": 74.0
         },
         {
           "id": 4429205,
@@ -1140,9 +1149,9 @@
           "slot": "RB/WR/TE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 8.61,
-          "avg": 6.78,
-          "total": 40.7
+          "proj": 8.63,
+          "avg": 7.44,
+          "total": 52.1
         },
         {
           "id": 4431452,
@@ -1153,8 +1162,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 18.21,
-          "avg": 20.92,
-          "total": 146.46
+          "avg": 21.59,
+          "total": 172.74
         },
         {
           "id": 4569587,
@@ -1164,9 +1173,9 @@
           "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 10.45,
-          "avg": 10.61,
-          "total": 74.3
+          "proj": 10.44,
+          "avg": 10.08,
+          "total": 80.6
         },
         {
           "id": -16027,
@@ -1177,8 +1186,8 @@
           "inj": "NORMAL",
           "bye": false,
           "proj": 5.58,
-          "avg": 5.43,
-          "total": 38.0
+          "avg": 7.88,
+          "total": 63.0
         },
         {
           "id": 4360248,
@@ -1188,9 +1197,9 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 8.04,
-          "avg": 8.25,
-          "total": 49.5
+          "proj": 8.63,
+          "avg": 8.56,
+          "total": 59.9
         },
         {
           "id": 4373626,
@@ -1198,11 +1207,11 @@
           "pos": "RB",
           "team": "ATL",
           "slot": "RB",
-          "inj": "QUESTIONABLE",
+          "inj": "ACTIVE",
           "bye": false,
-          "proj": 7.25,
-          "avg": 6.8,
-          "total": 40.8
+          "proj": 7.62,
+          "avg": 7.03,
+          "total": 49.2
         },
         {
           "id": 3050478,
@@ -1213,8 +1222,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.42,
-          "avg": 6.29,
-          "total": 44.0
+          "avg": 6.5,
+          "total": 52.0
         }
       ]
     },
@@ -1275,9 +1284,9 @@
           "slot": "RB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 24.2,
-          "avg": 23.96,
-          "total": 167.7
+          "proj": 24.21,
+          "avg": 25.51,
+          "total": 204.1
         },
         {
           "id": 4379399,
@@ -1288,20 +1297,20 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 14.31,
-          "avg": 16.43,
-          "total": 98.6
+          "avg": 18.89,
+          "total": 132.2
         },
         {
           "id": 3040151,
           "name": "George Kittle",
           "pos": "TE",
           "team": "SF",
-          "slot": "BE",
+          "slot": "TE",
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.69,
-          "avg": 5.25,
-          "total": 10.5
+          "avg": 7.6,
+          "total": 22.8
         },
         {
           "id": 16737,
@@ -1324,8 +1333,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 13.44,
-          "avg": 11.63,
-          "total": 81.4
+          "avg": 11.6,
+          "total": 92.8
         },
         {
           "id": 4567750,
@@ -1336,8 +1345,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 14.29,
-          "avg": 14.44,
-          "total": 101.1
+          "avg": 13.26,
+          "total": 106.1
         },
         {
           "id": 4035687,
@@ -1347,9 +1356,9 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 10.94,
-          "avg": 12.09,
-          "total": 84.6
+          "proj": 10.97,
+          "avg": 13.01,
+          "total": 104.1
         },
         {
           "id": 4038941,
@@ -1384,8 +1393,8 @@
           "inj": "NORMAL",
           "bye": false,
           "proj": 5.39,
-          "avg": 5.33,
-          "total": 32.0
+          "avg": 5.57,
+          "total": 39.0
         },
         {
           "id": 4430968,
@@ -1408,8 +1417,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.68,
-          "avg": 9.25,
-          "total": 55.5
+          "avg": 8.29,
+          "total": 58.0
         },
         {
           "id": 4428209,
@@ -1428,12 +1437,12 @@
           "name": "Cade Otton",
           "pos": "TE",
           "team": "TB",
-          "slot": "TE",
+          "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
           "proj": 7.96,
-          "avg": 4.87,
-          "total": 34.1
+          "avg": 5.01,
+          "total": 40.1
         },
         {
           "id": 4361741,
@@ -1495,8 +1504,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 16.04,
-          "avg": 17.21,
-          "total": 120.5
+          "avg": 16.95,
+          "total": 135.6
         },
         {
           "id": 4047646,
@@ -1519,8 +1528,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 20.25,
-          "avg": 22.21,
-          "total": 133.28
+          "avg": 22.36,
+          "total": 156.5
         },
         {
           "id": 4685382,
@@ -1543,8 +1552,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 10.71,
-          "avg": 11.22,
-          "total": 56.1
+          "avg": 10.92,
+          "total": 65.5
         },
         {
           "id": 4685472,
@@ -1554,9 +1563,9 @@
           "slot": "RB/WR/TE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 11.2,
-          "avg": 9.76,
-          "total": 68.3
+          "proj": 11.21,
+          "avg": 10.21,
+          "total": 81.7
         },
         {
           "id": 4242355,
@@ -1566,8 +1575,8 @@
           "slot": "TE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 10.1,
-          "avg": 13.56,
+          "proj": 10.09,
+          "avg": 11.86,
           "total": 94.9
         },
         {
@@ -1591,8 +1600,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 4.95,
-          "avg": 5.48,
-          "total": 27.4
+          "avg": 5.62,
+          "total": 33.7
         },
         {
           "id": 4569173,
@@ -1603,8 +1612,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 11.59,
-          "avg": 8.77,
-          "total": 61.4
+          "avg": 8.35,
+          "total": 66.8
         },
         {
           "id": 4361579,
@@ -1615,8 +1624,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 14.38,
-          "avg": 17.03,
-          "total": 119.2
+          "avg": 17.08,
+          "total": 136.6
         },
         {
           "id": 4360569,
@@ -1639,8 +1648,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 0.84,
-          "avg": 0.39,
-          "total": 2.7
+          "avg": 1.64,
+          "total": 13.1
         },
         {
           "id": -16021,
@@ -1650,9 +1659,9 @@
           "slot": "D/ST",
           "inj": "NORMAL",
           "bye": false,
-          "proj": 5.83,
-          "avg": 6.57,
-          "total": 46.0
+          "proj": 5.82,
+          "avg": 6.62,
+          "total": 53.0
         },
         {
           "id": -16002,
@@ -1662,9 +1671,9 @@
           "slot": "BE",
           "inj": "NORMAL",
           "bye": false,
-          "proj": 4.76,
-          "avg": 4.67,
-          "total": 28.0
+          "proj": 4.79,
+          "avg": 6.57,
+          "total": 46.0
         },
         {
           "id": 17427,
@@ -1672,11 +1681,11 @@
           "pos": "K",
           "team": "CHI",
           "slot": "K",
-          "inj": "QUESTIONABLE",
+          "inj": "ACTIVE",
           "bye": false,
           "proj": 8.52,
-          "avg": 8.75,
-          "total": 35.0
+          "avg": 9.0,
+          "total": 45.0
         }
       ]
     },
@@ -1783,11 +1792,11 @@
           "pos": "RB",
           "team": "CHI",
           "slot": "RB",
-          "inj": "QUESTIONABLE",
+          "inj": "ACTIVE",
           "bye": false,
           "proj": 13.91,
-          "avg": 14.75,
-          "total": 88.5
+          "avg": 14.66,
+          "total": 102.6
         },
         {
           "id": 4426354,
@@ -1798,8 +1807,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 11.99,
-          "avg": 16.39,
-          "total": 114.7
+          "avg": 15.75,
+          "total": 126.0
         },
         {
           "id": 4431299,
@@ -1810,8 +1819,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 11.29,
-          "avg": 12.98,
-          "total": 77.9
+          "avg": 13.26,
+          "total": 92.8
         },
         {
           "id": 3917315,
@@ -1834,8 +1843,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 13.62,
-          "avg": 11.71,
-          "total": 82.0
+          "avg": 11.5,
+          "total": 92.0
         },
         {
           "id": 4373678,
@@ -1845,9 +1854,9 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 9.37,
-          "avg": 8.63,
-          "total": 51.8
+          "proj": 9.42,
+          "avg": 9.94,
+          "total": 69.6
         },
         {
           "id": 4635008,
@@ -1858,8 +1867,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.57,
-          "avg": 7.62,
-          "total": 45.7
+          "avg": 7.17,
+          "total": 50.2
         },
         {
           "id": 4426385,
@@ -1881,9 +1890,9 @@
           "slot": "QB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 17.18,
-          "avg": 17.09,
-          "total": 102.52
+          "proj": 17.15,
+          "avg": 18.69,
+          "total": 130.82
         },
         {
           "id": -16011,
@@ -1893,9 +1902,9 @@
           "slot": "D/ST",
           "inj": "NORMAL",
           "bye": false,
-          "proj": 6.48,
-          "avg": 7.43,
-          "total": 52.0
+          "proj": 6.51,
+          "avg": 7.38,
+          "total": 59.0
         },
         {
           "id": 3150744,
@@ -1906,8 +1915,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.37,
-          "avg": 9.43,
-          "total": 66.0
+          "avg": 10.38,
+          "total": 83.0
         }
       ]
     },
@@ -2005,8 +2014,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 12.46,
-          "avg": 12.6,
-          "total": 75.6
+          "avg": 12.8,
+          "total": 89.6
         },
         {
           "id": 3915416,
@@ -2017,8 +2026,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.68,
-          "avg": 7.37,
-          "total": 44.2
+          "avg": 7.69,
+          "total": 53.8
         },
         {
           "id": 4239996,
@@ -2040,9 +2049,9 @@
           "slot": "QB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 21.16,
-          "avg": 19.63,
-          "total": 137.44
+          "proj": 21.19,
+          "avg": 20.15,
+          "total": 161.22
         },
         {
           "id": 4360438,
@@ -2077,8 +2086,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 6.17,
-          "avg": 6.7,
-          "total": 46.9
+          "avg": 8.81,
+          "total": 70.5
         },
         {
           "id": -16003,
@@ -2088,8 +2097,8 @@
           "slot": "D/ST",
           "inj": "NORMAL",
           "bye": false,
-          "proj": 5.99,
-          "avg": 7.5,
+          "proj": 6.12,
+          "avg": 6.43,
           "total": 45.0
         },
         {
@@ -2113,8 +2122,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 7.77,
-          "avg": 5.22,
-          "total": 31.3
+          "avg": 4.81,
+          "total": 33.7
         },
         {
           "id": 2985659,
@@ -2125,8 +2134,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.49,
-          "avg": 6.71,
-          "total": 47.0
+          "avg": 7.0,
+          "total": 56.0
         },
         {
           "id": 3886598,
@@ -2137,8 +2146,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 7.28,
-          "avg": 6.34,
-          "total": 31.7
+          "avg": 6.37,
+          "total": 38.2
         },
         {
           "id": 4608810,
@@ -2149,8 +2158,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 7.45,
-          "avg": 5.75,
-          "total": 34.5
+          "avg": 5.9,
+          "total": 41.3
         }
       ]
     },
@@ -2221,11 +2230,11 @@
           "pos": "RB",
           "team": "NYJ",
           "slot": "RB",
-          "inj": "QUESTIONABLE",
+          "inj": "ACTIVE",
           "bye": false,
           "proj": 16.76,
-          "avg": 9.81,
-          "total": 68.7
+          "avg": 12.57,
+          "total": 100.56
         },
         {
           "id": 4569987,
@@ -2236,8 +2245,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 14.5,
-          "avg": 12.8,
-          "total": 64.0
+          "avg": 12.05,
+          "total": 72.3
         },
         {
           "id": 3052587,
@@ -2248,8 +2257,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 18.38,
-          "avg": 19.5,
-          "total": 136.48
+          "avg": 17.57,
+          "total": 140.56
         },
         {
           "id": 3116365,
@@ -2259,9 +2268,9 @@
           "slot": "TE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 6.53,
-          "avg": 6.72,
-          "total": 40.3
+          "proj": 6.9,
+          "avg": 6.46,
+          "total": 45.2
         },
         {
           "id": 4249087,
@@ -2269,9 +2278,9 @@
           "pos": "K",
           "team": "WSH",
           "slot": "K",
-          "inj": "QUESTIONABLE",
+          "inj": "OUT",
           "bye": false,
-          "proj": 7.46,
+          "proj": 0.0,
           "avg": 8.0,
           "total": 56.0
         },
@@ -2283,9 +2292,9 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 5.02,
-          "avg": 3.92,
-          "total": 23.5
+          "proj": 5.38,
+          "avg": 4.23,
+          "total": 29.6
         },
         {
           "id": 4360310,
@@ -2307,9 +2316,9 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 1.64,
-          "avg": 2.05,
-          "total": 12.3
+          "proj": 1.65,
+          "avg": 1.99,
+          "total": 13.9
         },
         {
           "id": 4361432,
@@ -2319,9 +2328,9 @@
           "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 10.06,
-          "avg": 11.1,
-          "total": 66.6
+          "proj": 10.09,
+          "avg": 10.64,
+          "total": 74.5
         },
         {
           "id": -16012,
@@ -2344,8 +2353,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 7.92,
-          "avg": 4.63,
-          "total": 13.9
+          "avg": 7.4,
+          "total": 29.6
         },
         {
           "id": -16028,
@@ -2380,8 +2389,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 9.82,
-          "avg": 11.6,
-          "total": 69.6
+          "avg": 12.27,
+          "total": 85.9
         }
       ]
     },
@@ -2392,13 +2401,13 @@
       "depth": {
         "RB": {
           "total": 4,
-          "start": 2,
-          "bench": 2
+          "start": 3,
+          "bench": 1
         },
         "WR": {
           "total": 5,
-          "start": 3,
-          "bench": 2
+          "start": 2,
+          "bench": 3
         },
         "QB": {
           "total": 2,
@@ -2428,21 +2437,21 @@
           "pos": "RB",
           "team": "PHI",
           "slot": "RB",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 15.41,
-          "avg": 12.06,
-          "total": 84.4
+          "avg": 14.48,
+          "total": 115.8
         },
         {
           "id": 4426502,
           "name": "Drake London",
           "pos": "WR",
           "team": "ATL",
-          "slot": "WR",
-          "inj": "QUESTIONABLE",
+          "slot": "BE",
+          "inj": "OUT",
           "bye": false,
-          "proj": 14.25,
+          "proj": 0.0,
           "avg": 12.65,
           "total": 75.9
         },
@@ -2490,9 +2499,9 @@
           "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 10.45,
-          "avg": 10.55,
-          "total": 73.82
+          "proj": 10.46,
+          "avg": 11.53,
+          "total": 92.22
         },
         {
           "id": 3916148,
@@ -2503,8 +2512,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.44,
-          "avg": 9.53,
-          "total": 66.7
+          "avg": 9.06,
+          "total": 72.5
         },
         {
           "id": 3916433,
@@ -2527,15 +2536,15 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 12.75,
-          "avg": 11.71,
-          "total": 82.0
+          "avg": 11.89,
+          "total": 95.1
         },
         {
           "id": 3126486,
           "name": "Deebo Samuel",
           "pos": "WR",
           "team": "WSH",
-          "slot": "RB/WR/TE",
+          "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
           "proj": 11.19,
@@ -2550,21 +2559,21 @@
           "slot": "QB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 20.65,
-          "avg": 19.99,
-          "total": 139.9
+          "proj": 20.68,
+          "avg": 20.38,
+          "total": 163.08
         },
         {
           "id": 4362238,
           "name": "Chase Brown",
           "pos": "RB",
           "team": "CIN",
-          "slot": "BE",
+          "slot": "RB/WR/TE",
           "inj": "ACTIVE",
           "bye": false,
           "proj": 10.93,
-          "avg": 8.49,
-          "total": 59.4
+          "avg": 10.43,
+          "total": 83.4
         },
         {
           "id": 4429275,
@@ -2587,8 +2596,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 7.67,
-          "avg": 8.71,
-          "total": 61.0
+          "avg": 8.53,
+          "total": 68.2
         },
         {
           "id": -16026,
@@ -2610,8 +2619,8 @@
           "slot": "D/ST",
           "inj": "NORMAL",
           "bye": false,
-          "proj": 6.69,
-          "avg": 8.17,
+          "proj": 6.66,
+          "avg": 7.0,
           "total": 49.0
         },
         {
@@ -2623,8 +2632,8 @@
           "inj": "ACTIVE",
           "bye": false,
           "proj": 8.89,
-          "avg": 7.0,
-          "total": 14.0
+          "avg": 7.67,
+          "total": 23.0
         }
       ]
     }
@@ -2645,8 +2654,8 @@
         "elig": [
           "QB"
         ],
-        "own": 72.2,
-        "start": 5.4
+        "own": 71.6,
+        "start": 4.4
       },
       {
         "id": 3915511,
@@ -2662,12 +2671,11 @@
         "elig": [
           "QB"
         ],
-        "own": 63.0,
+        "own": 62.9,
         "start": 8.2,
         "opp": "NYJ",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.0
+        "home": true
       },
       {
         "id": 4362887,
@@ -2678,17 +2686,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 19.4,
-        "avg": 15.92,
-        "total": 95.5,
+        "avg": 16.62,
+        "total": 116.36,
         "elig": [
           "QB"
         ],
-        "own": 49.0,
-        "start": 13.2,
+        "own": 50.1,
+        "start": 15.1,
         "opp": "CIN",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 19.5
+        "home": false
       },
       {
         "id": 8439,
@@ -2700,17 +2707,16 @@
         "bye": false,
         "proj": 16.21,
         "avg": 16.77,
-        "total": 100.6,
+        "total": 117.36,
         "elig": [
           "QB"
         ],
-        "own": 40.8,
-        "start": 24.4,
+        "own": 41.9,
+        "start": 25.7,
         "opp": "GB",
         "kickoff": "2025-10-27T00:20Z",
         "home": true,
-        "is_mnf": true,
-        "implied_pts": 21.5
+        "is_mnf": true
       },
       {
         "id": 11252,
@@ -2718,20 +2724,19 @@
         "pos": "QB",
         "team": "CIN",
         "slot": "",
-        "inj": "ACTIVE",
+        "inj": "QUESTIONABLE",
         "bye": false,
-        "proj": 15.47,
-        "avg": 11.77,
-        "total": 70.64,
+        "proj": 15.44,
+        "avg": 13.57,
+        "total": 94.96,
         "elig": [
           "QB"
         ],
-        "own": 36.1,
-        "start": 28.2,
+        "own": 36.7,
+        "start": 29.1,
         "opp": "NYJ",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.0
+        "home": true
       },
       {
         "id": 4433970,
@@ -2767,29 +2772,8 @@
         "elig": [
           "QB"
         ],
-        "own": 21.2,
-        "start": 1.1
-      },
-      {
-        "id": 4360423,
-        "name": "Michael Penix Jr.",
-        "pos": "QB",
-        "team": "ATL",
-        "slot": "",
-        "inj": "QUESTIONABLE",
-        "bye": false,
-        "proj": 0.0,
-        "avg": 13.11,
-        "total": 78.66,
-        "elig": [
-          "QB"
-        ],
-        "own": 15.1,
-        "start": 3.4,
-        "opp": "MIA",
-        "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.5
+        "own": 20.9,
+        "start": 0.8
       },
       {
         "id": 4241479,
@@ -2800,38 +2784,36 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 12.09,
-        "avg": 11.47,
-        "total": 80.32,
+        "avg": 13.06,
+        "total": 104.52,
         "elig": [
           "QB"
         ],
-        "own": 14.4,
-        "start": 3.5,
+        "own": 14.2,
+        "start": 3.4,
         "opp": "ATL",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 19.0
+        "home": false
       },
       {
-        "id": 4685720,
-        "name": "Bryce Young",
+        "id": 4360423,
+        "name": "Michael Penix Jr.",
         "pos": "QB",
-        "team": "CAR",
+        "team": "ATL",
         "slot": "",
-        "inj": "DOUBTFUL",
+        "inj": "OUT",
         "bye": false,
         "proj": 0.0,
-        "avg": 13.2,
-        "total": 92.42,
+        "avg": 13.11,
+        "total": 78.66,
         "elig": [
           "QB"
         ],
-        "own": 10.5,
-        "start": 1.2,
-        "opp": "BUF",
+        "own": 14.2,
+        "start": 2.2,
+        "opp": "MIA",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 20.0
+        "home": true
       },
       {
         "id": 2576980,
@@ -2847,12 +2829,12 @@
         "elig": [
           "QB"
         ],
-        "own": 10.5,
-        "start": 9.0,
+        "own": 11.9,
+        "start": 10.4,
         "opp": "KC",
         "kickoff": "2025-10-28T00:15Z",
         "home": false,
-        "implied_pts": 18.0
+        "implied_pts": 19.0
       },
       {
         "id": 2573079,
@@ -2860,7 +2842,7 @@
         "pos": "QB",
         "team": "MIN",
         "slot": "",
-        "inj": "QUESTIONABLE",
+        "inj": "INJURY_RESERVE",
         "bye": false,
         "proj": 16.73,
         "avg": 14.07,
@@ -2875,26 +2857,24 @@
         "home": false
       },
       {
-        "id": 4688380,
-        "name": "Cam Ward",
+        "id": 4685720,
+        "name": "Bryce Young",
         "pos": "QB",
-        "team": "TEN",
+        "team": "CAR",
         "slot": "",
-        "inj": "ACTIVE",
+        "inj": "OUT",
         "bye": false,
-        "proj": 12.82,
-        "avg": 7.69,
-        "total": 53.84,
+        "proj": 0.0,
+        "avg": 13.2,
+        "total": 92.42,
         "elig": [
           "QB"
         ],
-        "own": 7.3,
-        "start": 1.9,
-        "opp": "IND",
-        "kickoff": "2025-10-26T20:25Z",
-        "home": false,
-        "is_snf": true,
-        "implied_pts": 17.0
+        "own": 10.2,
+        "start": 1.0,
+        "opp": "BUF",
+        "kickoff": "2025-10-26T17:00Z",
+        "home": true
       },
       {
         "id": 14880,
@@ -2904,18 +2884,38 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 14.85,
-        "avg": 1.16,
-        "total": 1.16,
+        "proj": 14.79,
+        "avg": 4.14,
+        "total": 8.28,
         "elig": [
           "QB"
         ],
-        "own": 7.2,
-        "start": 6.2,
+        "own": 8.1,
+        "start": 7.1,
         "opp": "MIA",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.5
+        "home": true
+      },
+      {
+        "id": 4688380,
+        "name": "Cam Ward",
+        "pos": "QB",
+        "team": "TEN",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 12.83,
+        "avg": 8.32,
+        "total": 66.6,
+        "elig": [
+          "QB"
+        ],
+        "own": 7.3,
+        "start": 1.9,
+        "opp": "IND",
+        "kickoff": "2025-10-26T20:25Z",
+        "home": false,
+        "is_snf": true
       },
       {
         "id": 15864,
@@ -2931,8 +2931,8 @@
         "elig": [
           "QB"
         ],
-        "own": 6.8,
-        "start": 0.7
+        "own": 6.6,
+        "start": 0.6
       }
     ],
     "RB": [
@@ -2950,7 +2950,7 @@
         "elig": [
           "RB"
         ],
-        "own": 76.0,
+        "own": 75.9,
         "start": 11.3,
         "opp": "LAC",
         "kickoff": "2025-10-24T00:15Z",
@@ -2970,12 +2970,11 @@
         "elig": [
           "RB"
         ],
-        "own": 46.4,
+        "own": 46.1,
         "start": 2.6,
         "opp": "SF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 22.5
+        "home": true
       },
       {
         "id": 4240657,
@@ -2991,8 +2990,8 @@
         "elig": [
           "RB"
         ],
-        "own": 35.1,
-        "start": 1.6
+        "own": 34.0,
+        "start": 1.2
       },
       {
         "id": 3045147,
@@ -3008,8 +3007,8 @@
         "elig": [
           "RB"
         ],
-        "own": 29.5,
-        "start": 9.9
+        "own": 29.2,
+        "start": 9.8
       },
       {
         "id": 3059915,
@@ -3025,12 +3024,32 @@
         "elig": [
           "RB"
         ],
-        "own": 28.2,
-        "start": 7.9,
+        "own": 28.5,
+        "start": 8.6,
         "opp": "WSH",
         "kickoff": "2025-10-28T00:15Z",
         "home": true,
         "implied_pts": 29.5
+      },
+      {
+        "id": 4038441,
+        "name": "Justice Hill",
+        "pos": "RB",
+        "team": "BAL",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 6.5,
+        "avg": 6.34,
+        "total": 44.4,
+        "elig": [
+          "RB"
+        ],
+        "own": 24.3,
+        "start": 10.2,
+        "opp": "CHI",
+        "kickoff": "2025-10-26T17:00Z",
+        "home": true
       },
       {
         "id": 4241474,
@@ -3041,38 +3060,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 3.22,
-        "avg": 2.57,
+        "avg": 2.25,
         "total": 18.0,
         "elig": [
           "RB"
         ],
-        "own": 24.4,
+        "own": 24.2,
         "start": 2.3,
         "opp": "HOU",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 20.0
-      },
-      {
-        "id": 4038441,
-        "name": "Justice Hill",
-        "pos": "RB",
-        "team": "BAL",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 6.18,
-        "avg": 7.37,
-        "total": 44.2,
-        "elig": [
-          "RB"
-        ],
-        "own": 24.4,
-        "start": 10.1,
-        "opp": "CHI",
-        "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 24.0
+        "home": false
       },
       {
         "id": 4819231,
@@ -3088,13 +3085,12 @@
         "elig": [
           "RB"
         ],
-        "own": 23.9,
-        "start": 1.9,
+        "own": 23.6,
+        "start": 2.1,
         "opp": "GB",
         "kickoff": "2025-10-27T00:20Z",
         "home": true,
-        "is_mnf": true,
-        "implied_pts": 21.5
+        "is_mnf": true
       },
       {
         "id": 4882093,
@@ -3110,7 +3106,7 @@
         "elig": [
           "RB"
         ],
-        "own": 22.4,
+        "own": 22.0,
         "start": 0.5
       },
       {
@@ -3127,12 +3123,12 @@
         "elig": [
           "RB"
         ],
-        "own": 21.8,
+        "own": 21.5,
         "start": 0.7,
         "opp": "KC",
         "kickoff": "2025-10-28T00:15Z",
         "home": false,
-        "implied_pts": 18.0
+        "implied_pts": 19.0
       },
       {
         "id": 4372019,
@@ -3143,17 +3139,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 3.76,
-        "avg": 3.57,
-        "total": 25.0,
+        "avg": 3.18,
+        "total": 25.4,
         "elig": [
           "RB"
         ],
-        "own": 20.4,
+        "own": 20.2,
         "start": 3.1,
         "opp": "NE",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 16.5
+        "home": false
       },
       {
         "id": 4427728,
@@ -3169,8 +3164,8 @@
         "elig": [
           "RB"
         ],
-        "own": 18.9,
-        "start": 0.5
+        "own": 18.5,
+        "start": 0.3
       },
       {
         "id": 4596602,
@@ -3186,8 +3181,8 @@
         "elig": [
           "RB"
         ],
-        "own": 12.4,
-        "start": 3.8,
+        "own": 12.5,
+        "start": 3.9,
         "opp": "WSH",
         "kickoff": "2025-10-28T00:15Z",
         "home": true,
@@ -3222,17 +3217,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 4.18,
-        "avg": 2.24,
-        "total": 15.7,
+        "avg": 3.6,
+        "total": 28.8,
         "elig": [
           "RB"
         ],
-        "own": 10.7,
+        "own": 10.6,
         "start": 1.2,
         "opp": "ATL",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 19.0
+        "home": false
       }
     ],
     "WR": [
@@ -3242,21 +3236,20 @@
         "pos": "WR",
         "team": "GB",
         "slot": "",
-        "inj": "QUESTIONABLE",
+        "inj": "ACTIVE",
         "bye": false,
-        "proj": 8.61,
-        "avg": 6.4,
-        "total": 38.4,
+        "proj": 8.63,
+        "avg": 5.76,
+        "total": 40.3,
         "elig": [
           "WR"
         ],
-        "own": 77.4,
-        "start": 27.6,
+        "own": 76.9,
+        "start": 26.2,
         "opp": "PIT",
         "kickoff": "2025-10-27T00:20Z",
         "home": false,
-        "is_mnf": true,
-        "implied_pts": 24.0
+        "is_mnf": true
       },
       {
         "id": 4685415,
@@ -3272,8 +3265,8 @@
         "elig": [
           "WR"
         ],
-        "own": 75.3,
-        "start": 6.2
+        "own": 75.0,
+        "start": 5.7
       },
       {
         "id": 4241463,
@@ -3283,18 +3276,17 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 8.93,
-        "avg": 5.24,
+        "proj": 8.94,
+        "avg": 4.59,
         "total": 36.7,
         "elig": [
           "WR"
         ],
         "own": 74.4,
-        "start": 26.7,
+        "start": 27.6,
         "opp": "NE",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 16.5
+        "home": false
       },
       {
         "id": 4040655,
@@ -3304,18 +3296,17 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 8.91,
-        "avg": 4.93,
-        "total": 19.7,
+        "proj": 10.13,
+        "avg": 4.26,
+        "total": 21.3,
         "elig": [
           "WR"
         ],
-        "own": 48.0,
-        "start": 14.1,
+        "own": 52.8,
+        "start": 20.7,
         "opp": "MIA",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.5
+        "home": true
       },
       {
         "id": 4241372,
@@ -3331,8 +3322,8 @@
         "elig": [
           "WR"
         ],
-        "own": 45.2,
-        "start": 10.8,
+        "own": 45.0,
+        "start": 11.3,
         "opp": "WSH",
         "kickoff": "2025-10-28T00:15Z",
         "home": true,
@@ -3347,18 +3338,17 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 9.15,
-        "avg": 7.96,
-        "total": 55.7,
+        "avg": 9.95,
+        "total": 79.6,
         "elig": [
           "WR"
         ],
-        "own": 42.4,
-        "start": 23.9,
+        "own": 43.5,
+        "start": 25.8,
         "opp": "DAL",
         "kickoff": "2025-10-26T20:25Z",
         "home": true,
-        "is_snf": true,
-        "implied_pts": 27.5
+        "is_snf": true
       },
       {
         "id": 4362249,
@@ -3374,13 +3364,12 @@
         "elig": [
           "WR"
         ],
-        "own": 41.7,
+        "own": 41.4,
         "start": 0.3,
         "opp": "PIT",
         "kickoff": "2025-10-27T00:20Z",
         "home": false,
-        "is_mnf": true,
-        "implied_pts": 24.0
+        "is_mnf": true
       },
       {
         "id": 3045523,
@@ -3391,17 +3380,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 6.55,
-        "avg": 8.5,
-        "total": 51.0,
+        "avg": 8.13,
+        "total": 56.9,
         "elig": [
           "WR"
         ],
-        "own": 33.6,
-        "start": 8.9,
+        "own": 33.3,
+        "start": 9.2,
         "opp": "HOU",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 20.0
+        "home": false
       },
       {
         "id": 4430034,
@@ -3412,17 +3400,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 6.99,
-        "avg": 6.94,
-        "total": 34.7,
+        "avg": 6.23,
+        "total": 37.4,
         "elig": [
           "WR"
         ],
-        "own": 32.9,
-        "start": 9.1,
+        "own": 33.0,
+        "start": 9.5,
         "opp": "BUF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 20.0
+        "home": true
       },
       {
         "id": 4429022,
@@ -3433,39 +3420,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 6.34,
-        "avg": 9.94,
-        "total": 69.6,
+        "avg": 10.57,
+        "total": 84.6,
         "elig": [
           "WR"
         ],
-        "own": 30.2,
-        "start": 11.8,
+        "own": 30.1,
+        "start": 12.1,
         "opp": "CLE",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 24.0
-      },
-      {
-        "id": 4686472,
-        "name": "Marvin Mims Jr.",
-        "pos": "WR",
-        "team": "DEN",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 7.32,
-        "avg": 6.86,
-        "total": 48.0,
-        "elig": [
-          "WR"
-        ],
-        "own": 23.9,
-        "start": 9.7,
-        "opp": "DAL",
-        "kickoff": "2025-10-26T20:25Z",
-        "home": true,
-        "is_snf": true,
-        "implied_pts": 27.5
+        "home": true
       },
       {
         "id": 4883647,
@@ -3475,19 +3439,39 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 8.75,
-        "avg": 6.29,
-        "total": 44.0,
+        "proj": 8.76,
+        "avg": 6.4,
+        "total": 51.2,
         "elig": [
           "WR"
         ],
-        "own": 23.9,
-        "start": 9.4,
+        "own": 25.3,
+        "start": 11.4,
         "opp": "IND",
         "kickoff": "2025-10-26T20:25Z",
         "home": false,
-        "is_snf": true,
-        "implied_pts": 17.0
+        "is_snf": true
+      },
+      {
+        "id": 4686472,
+        "name": "Marvin Mims Jr.",
+        "pos": "WR",
+        "team": "DEN",
+        "slot": "",
+        "inj": "QUESTIONABLE",
+        "bye": false,
+        "proj": 7.32,
+        "avg": 6.22,
+        "total": 49.8,
+        "elig": [
+          "WR"
+        ],
+        "own": 24.3,
+        "start": 10.5,
+        "opp": "DAL",
+        "kickoff": "2025-10-26T20:25Z",
+        "home": true,
+        "is_snf": true
       },
       {
         "id": 4877706,
@@ -3498,17 +3482,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.39,
-        "avg": 3.77,
-        "total": 22.6,
+        "avg": 4.86,
+        "total": 34.0,
         "elig": [
           "WR"
         ],
-        "own": 21.4,
-        "start": 4.5,
+        "own": 21.7,
+        "start": 5.0,
         "opp": "SF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 22.5
+        "home": true
       },
       {
         "id": 3895856,
@@ -3524,12 +3507,11 @@
         "elig": [
           "WR"
         ],
-        "own": 16.5,
+        "own": 16.2,
         "start": 0.5,
         "opp": "SF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 22.5
+        "home": true
       },
       {
         "id": 4369863,
@@ -3545,12 +3527,11 @@
         "elig": [
           "WR"
         ],
-        "own": 16.0,
+        "own": 15.8,
         "start": 0.2,
         "opp": "NE",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 16.5
+        "home": false
       }
     ],
     "TE": [
@@ -3568,12 +3549,12 @@
         "elig": [
           "TE"
         ],
-        "own": 61.4,
-        "start": 30.9,
+        "own": 61.3,
+        "start": 30.6,
         "opp": "KC",
         "kickoff": "2025-10-28T00:15Z",
         "home": false,
-        "implied_pts": 18.0
+        "implied_pts": 19.0
       },
       {
         "id": 5083076,
@@ -3584,17 +3565,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.4,
-        "avg": 7.34,
-        "total": 51.4,
+        "avg": 8.35,
+        "total": 66.8,
         "elig": [
           "TE"
         ],
-        "own": 55.4,
-        "start": 33.0,
+        "own": 54.8,
+        "start": 32.0,
         "opp": "NE",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 16.5
+        "home": false
       },
       {
         "id": 3929645,
@@ -3605,18 +3585,17 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.56,
-        "avg": 7.29,
-        "total": 51.0,
+        "avg": 7.35,
+        "total": 58.8,
         "elig": [
           "TE"
         ],
-        "own": 32.8,
-        "start": 13.7,
+        "own": 32.9,
+        "start": 14.0,
         "opp": "TB",
         "kickoff": "2025-10-26T20:05Z",
         "home": true,
-        "is_snf": true,
-        "implied_pts": 20.5
+        "is_snf": true
       },
       {
         "id": 3117256,
@@ -3627,17 +3606,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.7,
-        "avg": 7.23,
-        "total": 43.4,
+        "avg": 6.69,
+        "total": 46.8,
         "elig": [
           "TE"
         ],
-        "own": 27.5,
-        "start": 16.6,
+        "own": 28.3,
+        "start": 17.5,
         "opp": "SF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 22.5
+        "home": true
       },
       {
         "id": 4723086,
@@ -3648,17 +3626,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 5.25,
-        "avg": 2.36,
-        "total": 11.8,
+        "avg": 2.85,
+        "total": 17.1,
         "elig": [
           "TE"
         ],
         "own": 24.1,
-        "start": 7.6,
+        "start": 7.7,
         "opp": "BAL",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 21.5
+        "home": false
       },
       {
         "id": 4808766,
@@ -3666,20 +3643,19 @@
         "pos": "TE",
         "team": "NYJ",
         "slot": "",
-        "inj": "QUESTIONABLE",
+        "inj": "ACTIVE",
         "bye": false,
         "proj": 7.06,
-        "avg": 4.97,
-        "total": 34.8,
+        "avg": 5.84,
+        "total": 46.7,
         "elig": [
           "TE"
         ],
-        "own": 20.4,
-        "start": 9.4,
+        "own": 20.1,
+        "start": 9.3,
         "opp": "CIN",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 19.5
+        "home": false
       },
       {
         "id": 4429148,
@@ -3689,18 +3665,17 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 7.69,
-        "avg": 7.6,
-        "total": 53.2,
+        "proj": 7.68,
+        "avg": 7.09,
+        "total": 56.7,
         "elig": [
           "TE"
         ],
-        "own": 19.3,
+        "own": 19.4,
         "start": 11.5,
         "opp": "PHI",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 18.0
+        "home": false
       },
       {
         "id": 3054212,
@@ -3711,18 +3686,17 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 6.39,
-        "avg": 5.78,
-        "total": 34.7,
+        "avg": 5.34,
+        "total": 37.4,
         "elig": [
           "TE"
         ],
-        "own": 17.3,
-        "start": 6.8,
+        "own": 17.4,
+        "start": 7.1,
         "opp": "GB",
         "kickoff": "2025-10-27T00:20Z",
         "home": true,
-        "is_mnf": true,
-        "implied_pts": 21.5
+        "is_mnf": true
       },
       {
         "id": 4430539,
@@ -3738,8 +3712,29 @@
         "elig": [
           "TE"
         ],
-        "own": 12.9,
-        "start": 0.7
+        "own": 12.6,
+        "start": 0.6
+      },
+      {
+        "id": 4360635,
+        "name": "Chig Okonkwo",
+        "pos": "TE",
+        "team": "TEN",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 6.32,
+        "avg": 5.08,
+        "total": 40.6,
+        "elig": [
+          "TE"
+        ],
+        "own": 9.8,
+        "start": 3.8,
+        "opp": "IND",
+        "kickoff": "2025-10-26T20:25Z",
+        "home": false,
+        "is_snf": true
       },
       {
         "id": 4429086,
@@ -3755,30 +3750,29 @@
         "elig": [
           "TE"
         ],
-        "own": 9.9,
-        "start": 1.2
+        "own": 9.4,
+        "start": 0.8
       },
       {
-        "id": 4360635,
-        "name": "Chig Okonkwo",
+        "id": 4361411,
+        "name": "Pat Freiermuth",
         "pos": "TE",
-        "team": "TEN",
+        "team": "PIT",
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 6.32,
-        "avg": 4.76,
-        "total": 33.3,
+        "proj": 4.06,
+        "avg": 5.71,
+        "total": 40.0,
         "elig": [
           "TE"
         ],
-        "own": 9.8,
-        "start": 3.8,
-        "opp": "IND",
-        "kickoff": "2025-10-26T20:25Z",
-        "home": false,
-        "is_snf": true,
-        "implied_pts": 17.0
+        "own": 6.8,
+        "start": 2.8,
+        "opp": "GB",
+        "kickoff": "2025-10-27T00:20Z",
+        "home": true,
+        "is_mnf": true
       },
       {
         "id": 4576297,
@@ -3794,30 +3788,8 @@
         "elig": [
           "TE"
         ],
-        "own": 6.8,
-        "start": 0.4
-      },
-      {
-        "id": 4361411,
-        "name": "Pat Freiermuth",
-        "pos": "TE",
-        "team": "PIT",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 4.06,
-        "avg": 6.2,
-        "total": 37.2,
-        "elig": [
-          "TE"
-        ],
-        "own": 6.7,
-        "start": 2.7,
-        "opp": "GB",
-        "kickoff": "2025-10-27T00:20Z",
-        "home": true,
-        "is_mnf": true,
-        "implied_pts": 21.5
+        "own": 6.5,
+        "start": 0.3
       },
       {
         "id": 4036131,
@@ -3828,17 +3800,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 5.47,
-        "avg": 5.85,
-        "total": 35.1,
+        "avg": 5.81,
+        "total": 40.7,
         "elig": [
           "TE"
         ],
-        "own": 4.5,
+        "own": 4.6,
         "start": 2.7,
         "opp": "NYJ",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.0
+        "home": true
       },
       {
         "id": 4259147,
@@ -3849,17 +3820,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 0.77,
-        "avg": 7.56,
-        "total": 52.9,
+        "avg": 7.45,
+        "total": 59.6,
         "elig": [
           "TE"
         ],
-        "own": 4.3,
+        "own": 4.2,
         "start": 0.8,
         "opp": "HOU",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 20.0
+        "home": false
       }
     ],
     "K": [
@@ -3877,8 +3847,8 @@
         "elig": [
           "K"
         ],
-        "own": 67.3,
-        "start": 28.6
+        "own": 65.4,
+        "start": 25.4
       },
       {
         "id": 4034949,
@@ -3889,8 +3859,8 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.8,
-        "avg": 12.5,
-        "total": 75.0,
+        "avg": 10.86,
+        "total": 76.0,
         "elig": [
           "K"
         ],
@@ -3898,8 +3868,7 @@
         "start": 54.5,
         "opp": "HOU",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 20.0
+        "home": false
       },
       {
         "id": 4697745,
@@ -3910,17 +3879,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.88,
-        "avg": 7.83,
-        "total": 47.0,
+        "avg": 8.57,
+        "total": 60.0,
         "elig": [
           "K"
         ],
-        "own": 39.8,
-        "start": 32.3,
+        "own": 39.6,
+        "start": 32.2,
         "opp": "CHI",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 24.0
+        "home": true
       },
       {
         "id": 11122,
@@ -3931,17 +3899,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 8.34,
-        "avg": 8.5,
-        "total": 51.0,
+        "avg": 9.0,
+        "total": 63.0,
         "elig": [
           "K"
         ],
-        "own": 33.4,
-        "start": 24.0,
+        "own": 34.0,
+        "start": 24.9,
         "opp": "CAR",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 27.5
+        "home": false
       },
       {
         "id": 2971573,
@@ -3952,17 +3919,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.94,
-        "avg": 10.17,
-        "total": 61.0,
+        "avg": 10.71,
+        "total": 75.0,
         "elig": [
           "K"
         ],
-        "own": 30.4,
-        "start": 25.3,
+        "own": 30.5,
+        "start": 25.5,
         "opp": "SF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 22.5
+        "home": true
       },
       {
         "id": 3917232,
@@ -3979,11 +3945,10 @@
           "K"
         ],
         "own": 24.0,
-        "start": 11.8,
+        "start": 11.9,
         "opp": "CAR",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 27.5
+        "home": false
       },
       {
         "id": 10621,
@@ -3994,17 +3959,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.96,
-        "avg": 9.0,
-        "total": 63.0,
+        "avg": 9.38,
+        "total": 75.0,
         "elig": [
           "K"
         ],
-        "own": 19.8,
-        "start": 17.2,
+        "own": 19.9,
+        "start": 17.3,
         "opp": "CIN",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 19.5
+        "home": false
       },
       {
         "id": 4567104,
@@ -4021,7 +3985,7 @@
           "K"
         ],
         "own": 19.8,
-        "start": 18.5,
+        "start": 18.4,
         "opp": "LAC",
         "kickoff": "2025-10-24T00:15Z",
         "home": false
@@ -4040,8 +4004,8 @@
         "elig": [
           "K"
         ],
-        "own": 18.6,
-        "start": 5.1
+        "own": 17.6,
+        "start": 3.9
       },
       {
         "id": 4686361,
@@ -4057,8 +4021,8 @@
         "elig": [
           "K"
         ],
-        "own": 17.8,
-        "start": 9.2
+        "own": 16.6,
+        "start": 7.8
       },
       {
         "id": 4360234,
@@ -4069,17 +4033,36 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 7.97,
-        "avg": 6.86,
-        "total": 48.0,
+        "avg": 7.0,
+        "total": 56.0,
         "elig": [
           "K"
         ],
-        "own": 16.2,
-        "start": 14.8,
+        "own": 16.6,
+        "start": 15.2,
         "opp": "NYJ",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.0
+        "home": true
+      },
+      {
+        "id": 4569923,
+        "name": "Andy Borregales",
+        "pos": "K",
+        "team": "NE",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 8.09,
+        "avg": 7.75,
+        "total": 62.0,
+        "elig": [
+          "K"
+        ],
+        "own": 9.0,
+        "start": 8.1,
+        "opp": "CLE",
+        "kickoff": "2025-10-26T17:00Z",
+        "home": true
       },
       {
         "id": 4566192,
@@ -4095,29 +4078,29 @@
         "elig": [
           "K"
         ],
-        "own": 9.5,
-        "start": 4.8
+        "own": 8.9,
+        "start": 4.2
       },
       {
-        "id": 4569923,
-        "name": "Andy Borregales",
+        "id": 16339,
+        "name": "Brandon McManus",
         "pos": "K",
-        "team": "NE",
+        "team": "GB",
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 8.09,
-        "avg": 7.0,
-        "total": 49.0,
+        "proj": 8.39,
+        "avg": 8.2,
+        "total": 41.0,
         "elig": [
           "K"
         ],
-        "own": 8.9,
-        "start": 8.0,
-        "opp": "CLE",
-        "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 24.0
+        "own": 8.6,
+        "start": 5.5,
+        "opp": "PIT",
+        "kickoff": "2025-10-27T00:20Z",
+        "home": false,
+        "is_mnf": true
       },
       {
         "id": 4568263,
@@ -4128,8 +4111,8 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 8.08,
-        "avg": 7.86,
-        "total": 55.0,
+        "avg": 7.25,
+        "total": 58.0,
         "elig": [
           "K"
         ],
@@ -4137,30 +4120,7 @@
         "start": 7.1,
         "opp": "BUF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 20.0
-      },
-      {
-        "id": 16339,
-        "name": "Brandon McManus",
-        "pos": "K",
-        "team": "GB",
-        "slot": "",
-        "inj": "QUESTIONABLE",
-        "bye": false,
-        "proj": 8.39,
-        "avg": 8.5,
-        "total": 34.0,
-        "elig": [
-          "K"
-        ],
-        "own": 7.5,
-        "start": 4.3,
-        "opp": "PIT",
-        "kickoff": "2025-10-27T00:20Z",
-        "home": false,
-        "is_mnf": true,
-        "implied_pts": 24.0
+        "home": true
       }
     ],
     "D/ST": [
@@ -4172,19 +4132,18 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 4.14,
-        "avg": 8.14,
-        "total": 57.0,
+        "proj": 4.15,
+        "avg": 7.88,
+        "total": 63.0,
         "elig": [
           "D/ST"
         ],
-        "own": 91.6,
-        "start": 69.2,
+        "own": 91.2,
+        "start": 68.1,
         "opp": "DAL",
         "kickoff": "2025-10-26T20:25Z",
         "home": true,
-        "is_snf": true,
-        "implied_pts": 27.5
+        "is_snf": true
       },
       {
         "id": -16023,
@@ -4195,18 +4154,17 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 3.56,
-        "avg": 6.0,
-        "total": 36.0,
+        "avg": 4.0,
+        "total": 28.0,
         "elig": [
           "D/ST"
         ],
-        "own": 72.1,
-        "start": 48.0,
+        "own": 71.4,
+        "start": 47.0,
         "opp": "GB",
         "kickoff": "2025-10-27T00:20Z",
         "home": true,
-        "is_mnf": true,
-        "implied_pts": 21.5
+        "is_mnf": true
       },
       {
         "id": -16016,
@@ -4216,7 +4174,7 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 4.43,
+        "proj": 4.51,
         "avg": 6.86,
         "total": 48.0,
         "elig": [
@@ -4242,8 +4200,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 59.3,
-        "start": 19.7
+        "own": 58.5,
+        "start": 18.0
       },
       {
         "id": -16005,
@@ -4253,18 +4211,17 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 5.21,
-        "avg": 8.14,
-        "total": 57.0,
+        "proj": 5.31,
+        "avg": 7.88,
+        "total": 63.0,
         "elig": [
           "D/ST"
         ],
-        "own": 46.2,
-        "start": 36.5,
+        "own": 45.8,
+        "start": 36.1,
         "opp": "NE",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 16.5
+        "home": false
       },
       {
         "id": -16014,
@@ -4280,8 +4237,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 36.9,
-        "start": 6.8
+        "own": 35.9,
+        "start": 5.2
       },
       {
         "id": -16033,
@@ -4292,17 +4249,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 2.88,
-        "avg": 0.33,
-        "total": 2.0,
+        "avg": 0.71,
+        "total": 5.0,
         "elig": [
           "D/ST"
         ],
-        "own": 29.5,
-        "start": 17.5,
+        "own": 29.4,
+        "start": 17.6,
         "opp": "CHI",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 24.0
+        "home": true
       },
       {
         "id": -16025,
@@ -4313,17 +4269,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 4.84,
-        "avg": 4.43,
-        "total": 31.0,
+        "avg": 3.5,
+        "total": 28.0,
         "elig": [
           "D/ST"
         ],
         "own": 18.4,
-        "start": 15.2,
+        "start": 15.3,
         "opp": "HOU",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 20.0
+        "home": false
       },
       {
         "id": -16004,
@@ -4334,17 +4289,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 5.35,
-        "avg": 1.0,
-        "total": 7.0,
+        "avg": -0.25,
+        "total": -2.0,
         "elig": [
           "D/ST"
         ],
-        "own": 16.5,
-        "start": 15.6,
+        "own": 17.0,
+        "start": 16.1,
         "opp": "NYJ",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 25.0
+        "home": true
       },
       {
         "id": -16020,
@@ -4354,18 +4308,17 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 5.68,
-        "avg": 3.0,
-        "total": 21.0,
+        "proj": 5.82,
+        "avg": 2.25,
+        "total": 18.0,
         "elig": [
           "D/ST"
         ],
-        "own": 15.0,
-        "start": 13.3,
+        "own": 15.1,
+        "start": 13.4,
         "opp": "CIN",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 19.5
+        "home": false
       },
       {
         "id": -16019,
@@ -4376,17 +4329,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 4.74,
-        "avg": 1.57,
-        "total": 11.0,
+        "avg": 1.12,
+        "total": 9.0,
         "elig": [
           "D/ST"
         ],
-        "own": 11.3,
-        "start": 7.3,
+        "own": 11.2,
+        "start": 7.2,
         "opp": "PHI",
         "kickoff": "2025-10-26T17:00Z",
-        "home": false,
-        "implied_pts": 18.0
+        "home": false
       },
       {
         "id": -16022,
@@ -4402,8 +4354,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 10.6,
-        "start": 4.6
+        "own": 10.1,
+        "start": 4.2
       },
       {
         "id": -16030,
@@ -4419,8 +4371,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 10.2,
-        "start": 1.7
+        "own": 9.8,
+        "start": 1.3
       },
       {
         "id": -16029,
@@ -4431,17 +4383,16 @@
         "inj": "ACTIVE",
         "bye": false,
         "proj": 3.76,
-        "avg": 6.29,
-        "total": 44.0,
+        "avg": 5.0,
+        "total": 40.0,
         "elig": [
           "D/ST"
         ],
-        "own": 9.0,
-        "start": 6.3,
+        "own": 8.5,
+        "start": 5.8,
         "opp": "BUF",
         "kickoff": "2025-10-26T17:00Z",
-        "home": true,
-        "implied_pts": 20.0
+        "home": true
       },
       {
         "id": -16018,
@@ -4451,19 +4402,18 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 3.3,
-        "avg": 5.29,
-        "total": 37.0,
+        "proj": 3.28,
+        "avg": 5.62,
+        "total": 45.0,
         "elig": [
           "D/ST"
         ],
-        "own": 1.5,
-        "start": 0.8,
+        "own": 1.7,
+        "start": 1.0,
         "opp": "TB",
         "kickoff": "2025-10-26T20:05Z",
         "home": true,
-        "is_snf": true,
-        "implied_pts": 20.5
+        "is_snf": true
       }
     ]
   },
