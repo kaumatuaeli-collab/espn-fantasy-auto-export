@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2025-11-05T14:42:59.554306",
+    "generated": "2025-11-05T18:53:28.944099",
     "league": 44181678,
     "year": 2025,
     "week": 10,
@@ -94,7 +94,7 @@
         "WR"
       ],
       "own": 99.9,
-      "start": 94.7,
+      "start": 94.9,
       "opp": "WSH",
       "kickoff": "2025-11-09T21:25Z",
       "home": false,
@@ -126,7 +126,7 @@
       "opp": "MIN",
       "kickoff": "2025-11-09T18:00Z",
       "home": false,
-      "implied_pts": 26.5,
+      "implied_pts": 27.0,
       "last_n": [
         12.6
       ],
@@ -149,12 +149,12 @@
         "WR"
       ],
       "own": 99.4,
-      "start": 88.4,
+      "start": 88.8,
       "opp": "SF",
       "kickoff": "2025-11-09T21:25Z",
       "home": false,
       "is_snf": true,
-      "implied_pts": 26.5,
+      "implied_pts": 27.0,
       "last_n": [
         20.5
       ],
@@ -176,8 +176,8 @@
       "elig": [
         "TE"
       ],
-      "own": 97.7,
-      "start": 79.1,
+      "own": 97.8,
+      "start": 80.3,
       "opp": "WSH",
       "kickoff": "2025-11-09T21:25Z",
       "home": false,
@@ -204,8 +204,8 @@
       "elig": [
         "QB"
       ],
-      "own": 54.1,
-      "start": 14.2,
+      "own": 53.2,
+      "start": 12.8,
       "opp": "JAX",
       "kickoff": "2025-11-09T18:00Z",
       "home": true,
@@ -231,8 +231,8 @@
       "elig": [
         "WR"
       ],
-      "own": 91.3,
-      "start": 61.3,
+      "own": 91.2,
+      "start": 60.6,
       "opp": "PIT",
       "kickoff": "2025-11-10T01:20Z",
       "home": true,
@@ -259,8 +259,8 @@
       "elig": [
         "RB"
       ],
-      "own": 91.5,
-      "start": 74.3,
+      "own": 92.0,
+      "start": 77.1,
       "opp": "NO",
       "kickoff": "2025-11-09T18:00Z",
       "home": true,
@@ -287,7 +287,7 @@
         "WR"
       ],
       "own": 98.0,
-      "start": 38.1,
+      "start": 34.1,
       "last_n": [
         16.6
       ],
@@ -309,8 +309,8 @@
       "elig": [
         "RB"
       ],
-      "own": 72.0,
-      "start": 7.8
+      "own": 71.5,
+      "start": 7.7
     },
     {
       "id": 3054850,
@@ -326,8 +326,8 @@
       "elig": [
         "RB"
       ],
-      "own": 93.9,
-      "start": 53.0,
+      "own": 93.7,
+      "start": 53.2,
       "opp": "CAR",
       "kickoff": "2025-11-09T18:00Z",
       "home": false,
@@ -353,8 +353,8 @@
       "elig": [
         "TE"
       ],
-      "own": 75.7,
-      "start": 36.5,
+      "own": 76.2,
+      "start": 38.0,
       "opp": "MIA",
       "kickoff": "2025-11-09T18:00Z",
       "home": false,
@@ -380,8 +380,8 @@
       "elig": [
         "WR"
       ],
-      "own": 67.2,
-      "start": 4.0,
+      "own": 67.3,
+      "start": 4.2,
       "opp": "NE",
       "kickoff": "2025-11-09T18:00Z",
       "home": true,
@@ -401,8 +401,8 @@
       "elig": [
         "QB"
       ],
-      "own": 74.8,
-      "start": 31.9,
+      "own": 75.4,
+      "start": 33.5,
       "opp": "WSH",
       "kickoff": "2025-11-09T21:25Z",
       "home": false,
@@ -429,13 +429,13 @@
       "elig": [
         "D/ST"
       ],
-      "own": 76.2,
-      "start": 64.8,
+      "own": 74.2,
+      "start": 61.6,
       "opp": "SF",
       "kickoff": "2025-11-09T21:25Z",
       "home": false,
       "is_snf": true,
-      "implied_pts": 26.5,
+      "implied_pts": 27.0,
       "last_n": [
         10.0
       ],
@@ -457,8 +457,8 @@
       "elig": [
         "K"
       ],
-      "own": 47.2,
-      "start": 35.2,
+      "own": 50.8,
+      "start": 40.2,
       "opp": "MIA",
       "kickoff": "2025-11-09T18:00Z",
       "home": false,
@@ -484,8 +484,8 @@
       "elig": [
         "RB"
       ],
-      "own": 19.2,
-      "start": 5.7,
+      "own": 22.1,
+      "start": 8.1,
       "opp": "CHI",
       "kickoff": "2025-11-09T18:00Z",
       "home": false,
@@ -511,12 +511,12 @@
       "elig": [
         "D/ST"
       ],
-      "own": 50.8,
-      "start": 32.7,
+      "own": 54.2,
+      "start": 37.5,
       "opp": "NYJ",
       "kickoff": "2025-11-09T18:00Z",
       "home": false,
-      "implied_pts": 20.0
+      "implied_pts": 20.5
     }
   ],
   "opponents": [
@@ -830,7 +830,7 @@
           "pos": "RB",
           "team": "BUF",
           "slot": "RB",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 20.33,
           "avg": 18.15,
@@ -2664,8 +2664,8 @@
         "elig": [
           "QB"
         ],
-        "own": 83.5,
-        "start": 45.6,
+        "own": 83.8,
+        "start": 46.3,
         "opp": "NYG",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -2685,7 +2685,7 @@
         "elig": [
           "QB"
         ],
-        "own": 61.3,
+        "own": 61.2,
         "start": 8.1
       },
       {
@@ -2702,13 +2702,13 @@
         "elig": [
           "QB"
         ],
-        "own": 47.3,
-        "start": 25.0,
+        "own": 48.2,
+        "start": 25.7,
         "opp": "ARI",
         "kickoff": "2025-11-09T21:05Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 26.0
+        "implied_pts": 25.5
       },
       {
         "id": 4362887,
@@ -2724,12 +2724,12 @@
         "elig": [
           "QB"
         ],
-        "own": 42.0,
-        "start": 7.2,
+        "own": 42.3,
+        "start": 7.9,
         "opp": "CLE",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 17.5
+        "implied_pts": 18.0
       },
       {
         "id": 4433970,
@@ -2745,12 +2745,12 @@
         "elig": [
           "QB"
         ],
-        "own": 36.1,
-        "start": 10.9,
+        "own": 38.2,
+        "start": 13.8,
         "opp": "BAL",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 22.0
+        "implied_pts": 22.5
       },
       {
         "id": 8439,
@@ -2766,8 +2766,8 @@
         "elig": [
           "QB"
         ],
-        "own": 35.4,
-        "start": 13.3,
+        "own": 35.1,
+        "start": 13.1,
         "opp": "LAC",
         "kickoff": "2025-11-10T01:20Z",
         "home": false,
@@ -2788,8 +2788,8 @@
         "elig": [
           "QB"
         ],
-        "own": 33.8,
-        "start": 6.1
+        "own": 33.7,
+        "start": 5.2
       },
       {
         "id": 4241479,
@@ -2805,8 +2805,8 @@
         "elig": [
           "QB"
         ],
-        "own": 15.6,
-        "start": 4.9,
+        "own": 15.4,
+        "start": 4.8,
         "opp": "BUF",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -2826,13 +2826,13 @@
         "elig": [
           "QB"
         ],
-        "own": 14.1,
-        "start": 7.8,
+        "own": 14.2,
+        "start": 7.9,
         "opp": "SEA",
         "kickoff": "2025-11-09T21:05Z",
         "home": false,
         "is_snf": true,
-        "implied_pts": 19.5
+        "implied_pts": 19.0
       },
       {
         "id": 4360423,
@@ -2848,8 +2848,8 @@
         "elig": [
           "QB"
         ],
-        "own": 13.7,
-        "start": 4.3,
+        "own": 14.2,
+        "start": 4.9,
         "opp": "IND",
         "kickoff": "2025-11-09T14:30Z",
         "home": false,
@@ -2870,7 +2870,7 @@
           "QB"
         ],
         "own": 8.8,
-        "start": 2.2,
+        "start": 2.3,
         "opp": "NO",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -2890,8 +2890,8 @@
         "elig": [
           "QB"
         ],
-        "own": 7.4,
-        "start": 2.6,
+        "own": 7.9,
+        "start": 3.3,
         "opp": "DET",
         "kickoff": "2025-11-09T21:25Z",
         "home": true,
@@ -2913,7 +2913,7 @@
           "QB"
         ],
         "own": 6.4,
-        "start": 2.0,
+        "start": 1.9,
         "opp": "DEN",
         "kickoff": "2025-11-07T01:15Z",
         "home": false,
@@ -2933,13 +2933,13 @@
         "elig": [
           "QB"
         ],
-        "own": 5.3,
-        "start": 2.0,
+        "own": 5.2,
+        "start": 1.8,
         "opp": "LAR",
         "kickoff": "2025-11-09T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 23.0
+        "implied_pts": 22.5
       },
       {
         "id": 2573079,
@@ -2955,12 +2955,12 @@
         "elig": [
           "QB"
         ],
-        "own": 2.6,
+        "own": 2.5,
         "start": 0.3,
         "opp": "BAL",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 22.0
+        "implied_pts": 22.5
       }
     ],
     "RB": [
@@ -2978,8 +2978,8 @@
         "elig": [
           "RB"
         ],
-        "own": 83.5,
-        "start": 9.9,
+        "own": 83.1,
+        "start": 10.4,
         "opp": "NE",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -2999,12 +2999,12 @@
         "elig": [
           "RB"
         ],
-        "own": 79.2,
-        "start": 26.2,
+        "own": 79.3,
+        "start": 26.4,
         "opp": "BAL",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 22.0
+        "implied_pts": 22.5
       },
       {
         "id": 3059915,
@@ -3020,8 +3020,8 @@
         "elig": [
           "RB"
         ],
-        "own": 50.8,
-        "start": 13.3
+        "own": 50.5,
+        "start": 11.7
       },
       {
         "id": 4696981,
@@ -3037,8 +3037,8 @@
         "elig": [
           "RB"
         ],
-        "own": 47.9,
-        "start": 7.4,
+        "own": 47.3,
+        "start": 7.3,
         "opp": "CHI",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
@@ -3058,7 +3058,7 @@
         "elig": [
           "RB"
         ],
-        "own": 42.8,
+        "own": 42.6,
         "start": 2.6,
         "opp": "JAX",
         "kickoff": "2025-11-09T18:00Z",
@@ -3085,7 +3085,7 @@
         "kickoff": "2025-11-09T21:05Z",
         "home": false,
         "is_snf": true,
-        "implied_pts": 19.5
+        "implied_pts": 19.0
       },
       {
         "id": 4241474,
@@ -3101,13 +3101,13 @@
         "elig": [
           "RB"
         ],
-        "own": 21.7,
+        "own": 21.6,
         "start": 1.9,
         "opp": "LAR",
         "kickoff": "2025-11-09T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 23.0
+        "implied_pts": 22.5
       },
       {
         "id": 4819231,
@@ -3123,7 +3123,7 @@
         "elig": [
           "RB"
         ],
-        "own": 21.1,
+        "own": 21.0,
         "start": 1.7,
         "opp": "LAC",
         "kickoff": "2025-11-10T01:20Z",
@@ -3145,7 +3145,7 @@
         "elig": [
           "RB"
         ],
-        "own": 20.5,
+        "own": 20.4,
         "start": 1.5,
         "opp": "HOU",
         "kickoff": "2025-11-09T18:00Z",
@@ -3166,7 +3166,7 @@
         "elig": [
           "RB"
         ],
-        "own": 20.1,
+        "own": 20.0,
         "start": 0.7,
         "opp": "DET",
         "kickoff": "2025-11-09T21:25Z",
@@ -3188,12 +3188,12 @@
         "elig": [
           "RB"
         ],
-        "own": 18.4,
-        "start": 3.8,
+        "own": 18.1,
+        "start": 3.7,
         "opp": "MIN",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
-        "implied_pts": 26.5
+        "implied_pts": 27.0
       },
       {
         "id": 4372019,
@@ -3209,12 +3209,12 @@
         "elig": [
           "RB"
         ],
-        "own": 17.1,
+        "own": 16.9,
         "start": 1.3,
         "opp": "NYJ",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
-        "implied_pts": 20.0
+        "implied_pts": 20.5
       },
       {
         "id": 4240657,
@@ -3230,13 +3230,13 @@
         "elig": [
           "RB"
         ],
-        "own": 14.3,
+        "own": 14.0,
         "start": 1.3,
         "opp": "SEA",
         "kickoff": "2025-11-09T21:05Z",
         "home": false,
         "is_snf": true,
-        "implied_pts": 19.5
+        "implied_pts": 19.0
       },
       {
         "id": 3116389,
@@ -3252,8 +3252,8 @@
         "elig": [
           "RB"
         ],
-        "own": 13.2,
-        "start": 4.5
+        "own": 12.5,
+        "start": 4.0
       },
       {
         "id": 5081397,
@@ -3269,12 +3269,12 @@
         "elig": [
           "RB"
         ],
-        "own": 11.0,
+        "own": 11.1,
         "start": 0.8,
         "opp": "NYJ",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
-        "implied_pts": 20.0
+        "implied_pts": 20.5
       }
     ],
     "WR": [
@@ -3292,8 +3292,8 @@
         "elig": [
           "WR"
         ],
-        "own": 64.6,
-        "start": 10.1,
+        "own": 64.0,
+        "start": 9.8,
         "opp": "PHI",
         "kickoff": "2025-11-11T01:15Z",
         "home": true,
@@ -3313,33 +3313,12 @@
         "elig": [
           "WR"
         ],
-        "own": 61.9,
-        "start": 8.7,
+        "own": 61.7,
+        "start": 9.1,
         "opp": "NYJ",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
-        "implied_pts": 20.0
-      },
-      {
-        "id": 4040655,
-        "name": "Darnell Mooney",
-        "pos": "WR",
-        "team": "ATL",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 7.14,
-        "avg": 3.88,
-        "total": 23.3,
-        "elig": [
-          "WR"
-        ],
-        "own": 41.4,
-        "start": 5.8,
-        "opp": "IND",
-        "kickoff": "2025-11-09T14:30Z",
-        "home": false,
-        "implied_pts": 21.0
+        "implied_pts": 20.5
       },
       {
         "id": 4428718,
@@ -3355,12 +3334,33 @@
         "elig": [
           "WR"
         ],
-        "own": 40.9,
-        "start": 8.3,
+        "own": 41.5,
+        "start": 8.7,
         "opp": "DEN",
         "kickoff": "2025-11-07T01:15Z",
         "home": false,
         "implied_pts": 16.5
+      },
+      {
+        "id": 4040655,
+        "name": "Darnell Mooney",
+        "pos": "WR",
+        "team": "ATL",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 7.14,
+        "avg": 3.88,
+        "total": 23.3,
+        "elig": [
+          "WR"
+        ],
+        "own": 41.0,
+        "start": 5.8,
+        "opp": "IND",
+        "kickoff": "2025-11-09T14:30Z",
+        "home": false,
+        "implied_pts": 21.0
       },
       {
         "id": 4362249,
@@ -3397,8 +3397,8 @@
         "elig": [
           "WR"
         ],
-        "own": 35.4,
-        "start": 3.2
+        "own": 35.2,
+        "start": 3.1
       },
       {
         "id": 4608810,
@@ -3414,7 +3414,7 @@
         "elig": [
           "WR"
         ],
-        "own": 27.2,
+        "own": 26.7,
         "start": 2.2,
         "opp": "NE",
         "kickoff": "2025-11-09T18:00Z",
@@ -3435,33 +3435,12 @@
         "elig": [
           "WR"
         ],
-        "own": 26.1,
-        "start": 7.0,
+        "own": 26.4,
+        "start": 7.2,
         "opp": "PHI",
         "kickoff": "2025-11-11T01:15Z",
         "home": true,
         "implied_pts": 23.5
-      },
-      {
-        "id": 4430034,
-        "name": "Xavier Legette",
-        "pos": "WR",
-        "team": "CAR",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 4.5,
-        "avg": 5.73,
-        "total": 40.1,
-        "elig": [
-          "WR"
-        ],
-        "own": 25.0,
-        "start": 2.6,
-        "opp": "NO",
-        "kickoff": "2025-11-09T18:00Z",
-        "home": true,
-        "implied_pts": 22.5
       },
       {
         "id": 4360078,
@@ -3477,34 +3456,33 @@
         "elig": [
           "WR"
         ],
-        "own": 23.6,
-        "start": 8.5,
+        "own": 25.7,
+        "start": 10.1,
         "opp": "ATL",
         "kickoff": "2025-11-09T14:30Z",
         "home": true,
         "implied_pts": 27.5
       },
       {
-        "id": 3045523,
-        "name": "Kendrick Bourne",
+        "id": 4430034,
+        "name": "Xavier Legette",
         "pos": "WR",
-        "team": "SF",
+        "team": "CAR",
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 5.94,
-        "avg": 7.66,
-        "total": 61.3,
+        "proj": 4.5,
+        "avg": 5.73,
+        "total": 40.1,
         "elig": [
           "WR"
         ],
-        "own": 22.9,
-        "start": 4.7,
-        "opp": "LAR",
-        "kickoff": "2025-11-09T21:25Z",
+        "own": 24.8,
+        "start": 2.6,
+        "opp": "NO",
+        "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "is_snf": true,
-        "implied_pts": 23.0
+        "implied_pts": 22.5
       },
       {
         "id": 3916945,
@@ -3520,12 +3498,34 @@
         "elig": [
           "WR"
         ],
-        "own": 21.2,
-        "start": 8.0,
+        "own": 22.8,
+        "start": 9.5,
         "opp": "CHI",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
         "implied_pts": 22.0
+      },
+      {
+        "id": 3045523,
+        "name": "Kendrick Bourne",
+        "pos": "WR",
+        "team": "SF",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 5.94,
+        "avg": 7.66,
+        "total": 61.3,
+        "elig": [
+          "WR"
+        ],
+        "own": 22.5,
+        "start": 4.5,
+        "opp": "LAR",
+        "kickoff": "2025-11-09T21:25Z",
+        "home": true,
+        "is_snf": true,
+        "implied_pts": 22.5
       },
       {
         "id": 4877706,
@@ -3541,7 +3541,7 @@
         "elig": [
           "WR"
         ],
-        "own": 18.6,
+        "own": 18.5,
         "start": 1.6,
         "opp": "JAX",
         "kickoff": "2025-11-09T18:00Z",
@@ -3562,8 +3562,8 @@
         "elig": [
           "WR"
         ],
-        "own": 18.5,
-        "start": 3.1
+        "own": 18.2,
+        "start": 2.8
       },
       {
         "id": 4431268,
@@ -3579,8 +3579,8 @@
         "elig": [
           "WR"
         ],
-        "own": 18.5,
-        "start": 3.9
+        "own": 17.8,
+        "start": 3.4
       }
     ],
     "TE": [
@@ -3598,8 +3598,8 @@
         "elig": [
           "TE"
         ],
-        "own": 64.4,
-        "start": 35.3,
+        "own": 61.2,
+        "start": 31.7,
         "opp": "PHI",
         "kickoff": "2025-11-11T01:15Z",
         "home": true,
@@ -3619,8 +3619,8 @@
         "elig": [
           "TE"
         ],
-        "own": 61.4,
-        "start": 30.2,
+        "own": 61.1,
+        "start": 29.7,
         "opp": "DET",
         "kickoff": "2025-11-09T21:25Z",
         "home": true,
@@ -3641,12 +3641,12 @@
         "elig": [
           "TE"
         ],
-        "own": 53.1,
-        "start": 15.0,
+        "own": 53.6,
+        "start": 16.7,
         "opp": "NYJ",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
-        "implied_pts": 20.0
+        "implied_pts": 20.5
       },
       {
         "id": 3051876,
@@ -3662,8 +3662,8 @@
         "elig": [
           "TE"
         ],
-        "own": 52.5,
-        "start": 22.9,
+        "own": 52.0,
+        "start": 22.5,
         "opp": "LV",
         "kickoff": "2025-11-07T01:15Z",
         "home": true,
@@ -3683,8 +3683,8 @@
         "elig": [
           "TE"
         ],
-        "own": 38.0,
-        "start": 24.1,
+        "own": 39.0,
+        "start": 25.3,
         "opp": "CHI",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
@@ -3704,8 +3704,8 @@
         "elig": [
           "TE"
         ],
-        "own": 36.2,
-        "start": 12.3,
+        "own": 37.6,
+        "start": 13.5,
         "opp": "NYG",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -3725,8 +3725,8 @@
         "elig": [
           "TE"
         ],
-        "own": 33.7,
-        "start": 13.5,
+        "own": 33.9,
+        "start": 13.7,
         "opp": "CAR",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
@@ -3746,7 +3746,7 @@
         "elig": [
           "TE"
         ],
-        "own": 23.9,
+        "own": 23.5,
         "start": 1.4,
         "opp": "BUF",
         "kickoff": "2025-11-09T18:00Z",
@@ -3767,8 +3767,8 @@
         "elig": [
           "TE"
         ],
-        "own": 17.6,
-        "start": 6.6,
+        "own": 17.4,
+        "start": 6.5,
         "opp": "LAC",
         "kickoff": "2025-11-10T01:20Z",
         "home": false,
@@ -3789,12 +3789,12 @@
         "elig": [
           "TE"
         ],
-        "own": 13.9,
-        "start": 2.1,
+        "own": 13.8,
+        "start": 2.2,
         "opp": "CLE",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 17.5
+        "implied_pts": 18.0
       },
       {
         "id": 4576297,
@@ -3810,13 +3810,13 @@
         "elig": [
           "TE"
         ],
-        "own": 11.9,
-        "start": 5.7,
+        "own": 11.8,
+        "start": 5.5,
         "opp": "ARI",
         "kickoff": "2025-11-09T21:05Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 26.0
+        "implied_pts": 25.5
       },
       {
         "id": 4430539,
@@ -3853,8 +3853,8 @@
         "elig": [
           "TE"
         ],
-        "own": 8.3,
-        "start": 2.7,
+        "own": 9.6,
+        "start": 3.5,
         "opp": "PHI",
         "kickoff": "2025-11-11T01:15Z",
         "home": true,
@@ -3874,8 +3874,8 @@
         "elig": [
           "TE"
         ],
-        "own": 8.1,
-        "start": 2.0
+        "own": 8.0,
+        "start": 1.9
       },
       {
         "id": 4361411,
@@ -3915,8 +3915,8 @@
         "elig": [
           "K"
         ],
-        "own": 75.0,
-        "start": 63.8
+        "own": 72.4,
+        "start": 58.3
       },
       {
         "id": 4034949,
@@ -3932,13 +3932,13 @@
         "elig": [
           "K"
         ],
-        "own": 62.8,
-        "start": 59.6,
+        "own": 63.0,
+        "start": 59.8,
         "opp": "LAR",
         "kickoff": "2025-11-09T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 23.0
+        "implied_pts": 22.5
       },
       {
         "id": 3050478,
@@ -3954,8 +3954,8 @@
         "elig": [
           "K"
         ],
-        "own": 50.5,
-        "start": 28.1,
+        "own": 51.2,
+        "start": 29.6,
         "opp": "GB",
         "kickoff": "2025-11-11T01:15Z",
         "home": false,
@@ -3967,7 +3967,7 @@
         "pos": "K",
         "team": "HOU",
         "slot": "",
-        "inj": "ACTIVE",
+        "inj": "QUESTIONABLE",
         "bye": false,
         "proj": 8.04,
         "avg": 11.5,
@@ -3975,8 +3975,8 @@
         "elig": [
           "K"
         ],
-        "own": 45.7,
-        "start": 39.1,
+        "own": 46.5,
+        "start": 40.4,
         "opp": "JAX",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -3996,8 +3996,8 @@
         "elig": [
           "K"
         ],
-        "own": 34.2,
-        "start": 29.9,
+        "own": 33.4,
+        "start": 29.1,
         "opp": "LV",
         "kickoff": "2025-11-07T01:15Z",
         "home": true,
@@ -4017,7 +4017,7 @@
         "elig": [
           "K"
         ],
-        "own": 22.4,
+        "own": 22.3,
         "start": 11.7,
         "opp": "MIA",
         "kickoff": "2025-11-09T18:00Z",
@@ -4038,8 +4038,8 @@
         "elig": [
           "K"
         ],
-        "own": 20.8,
-        "start": 18.7,
+        "own": 20.7,
+        "start": 18.6,
         "opp": "TB",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
@@ -4059,8 +4059,8 @@
         "elig": [
           "K"
         ],
-        "own": 17.9,
-        "start": 11.8,
+        "own": 18.4,
+        "start": 12.5,
         "opp": "HOU",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
@@ -4080,12 +4080,12 @@
         "elig": [
           "K"
         ],
-        "own": 15.9,
-        "start": 13.1,
+        "own": 16.5,
+        "start": 13.9,
         "opp": "BAL",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 22.0
+        "implied_pts": 22.5
       },
       {
         "id": 16339,
@@ -4122,8 +4122,8 @@
         "elig": [
           "K"
         ],
-        "own": 13.1,
-        "start": 10.1
+        "own": 12.4,
+        "start": 9.1
       },
       {
         "id": 4566192,
@@ -4139,13 +4139,13 @@
         "elig": [
           "K"
         ],
-        "own": 10.1,
-        "start": 7.2,
+        "own": 10.3,
+        "start": 7.4,
         "opp": "SF",
         "kickoff": "2025-11-09T21:25Z",
         "home": false,
         "is_snf": true,
-        "implied_pts": 26.5
+        "implied_pts": 27.0
       },
       {
         "id": 10621,
@@ -4162,11 +4162,11 @@
           "K"
         ],
         "own": 9.1,
-        "start": 3.2,
+        "start": 3.4,
         "opp": "CLE",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 17.5
+        "implied_pts": 18.0
       },
       {
         "id": 4568263,
@@ -4183,7 +4183,7 @@
           "K"
         ],
         "own": 5.5,
-        "start": 4.4,
+        "start": 4.5,
         "opp": "NO",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -4203,13 +4203,13 @@
         "elig": [
           "K"
         ],
-        "own": 5.4,
+        "own": 5.3,
         "start": 4.2,
         "opp": "SEA",
         "kickoff": "2025-11-09T21:05Z",
         "home": false,
         "is_snf": true,
-        "implied_pts": 19.5
+        "implied_pts": 19.0
       }
     ],
     "D/ST": [
@@ -4227,8 +4227,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 91.7,
-        "start": 82.6,
+        "own": 91.9,
+        "start": 82.9,
         "opp": "WSH",
         "kickoff": "2025-11-09T21:25Z",
         "home": false,
@@ -4249,8 +4249,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 74.4,
-        "start": 60.7,
+        "own": 73.7,
+        "start": 59.3,
         "opp": "TB",
         "kickoff": "2025-11-09T18:00Z",
         "home": false,
@@ -4270,8 +4270,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 56.7,
-        "start": 37.7,
+        "own": 57.0,
+        "start": 38.3,
         "opp": "LAC",
         "kickoff": "2025-11-10T01:20Z",
         "home": false,
@@ -4292,12 +4292,12 @@
         "elig": [
           "D/ST"
         ],
-        "own": 49.4,
-        "start": 29.4,
+        "own": 49.0,
+        "start": 29.2,
         "opp": "BAL",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 22.0
+        "implied_pts": 22.5
       },
       {
         "id": -16027,
@@ -4314,11 +4314,32 @@
           "D/ST"
         ],
         "own": 28.5,
-        "start": 8.0,
+        "start": 8.5,
         "opp": "NE",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
         "implied_pts": 25.5
+      },
+      {
+        "id": -16029,
+        "name": "Panthers D/ST",
+        "pos": "D/ST",
+        "team": "CAR",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 6.29,
+        "avg": 5.22,
+        "total": 47.0,
+        "elig": [
+          "D/ST"
+        ],
+        "own": 19.1,
+        "start": 16.5,
+        "opp": "NO",
+        "kickoff": "2025-11-09T18:00Z",
+        "home": true,
+        "implied_pts": 22.5
       },
       {
         "id": -16003,
@@ -4334,8 +4355,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 19.7,
-        "start": 15.0,
+        "own": 19.1,
+        "start": 14.4,
         "opp": "NYG",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
@@ -4355,33 +4376,12 @@
         "elig": [
           "D/ST"
         ],
-        "own": 18.6,
-        "start": 13.6,
+        "own": 17.9,
+        "start": 12.8,
         "opp": "LAR",
         "kickoff": "2025-11-09T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 23.0
-      },
-      {
-        "id": -16029,
-        "name": "Panthers D/ST",
-        "pos": "D/ST",
-        "team": "CAR",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 6.29,
-        "avg": 5.22,
-        "total": 47.0,
-        "elig": [
-          "D/ST"
-        ],
-        "own": 15.9,
-        "start": 13.1,
-        "opp": "NO",
-        "kickoff": "2025-11-09T18:00Z",
-        "home": true,
         "implied_pts": 22.5
       },
       {
@@ -4398,8 +4398,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 11.3,
-        "start": 8.8,
+        "own": 10.7,
+        "start": 8.2,
         "opp": "DEN",
         "kickoff": "2025-11-07T01:15Z",
         "home": false,
@@ -4419,12 +4419,12 @@
         "elig": [
           "D/ST"
         ],
-        "own": 9.5,
-        "start": 6.3,
+        "own": 9.8,
+        "start": 6.7,
         "opp": "CLE",
         "kickoff": "2025-11-09T18:00Z",
         "home": true,
-        "implied_pts": 17.5
+        "implied_pts": 18.0
       },
       {
         "id": -16022,
@@ -4446,7 +4446,7 @@
         "kickoff": "2025-11-09T21:05Z",
         "home": false,
         "is_snf": true,
-        "implied_pts": 19.5
+        "implied_pts": 19.0
       }
     ]
   },
