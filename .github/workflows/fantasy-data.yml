@@ -1,4 +1,5 @@
 name: Extract Fantasy Data to JSON
+
 on:
   # Schedule: Runs at key decision points throughout the fantasy week
   schedule:
@@ -22,7 +23,7 @@ on:
     # MONDAY - Pre-MNF update (6:00 PM ET = 10:00 PM UTC, before 8:15 PM games)
     - cron: '0 22 * * 1'
   
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:
     inputs:
       reason:
         description: 'Reason for manual run (optional)'
@@ -34,7 +35,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
       
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -49,10 +51,26 @@ jobs:
         env:
           ESPN_S2: ${{ secrets.ESPN_S2 }}
           SWID: ${{ secrets.SWID }}
-        run: python extract_espn_data_json.py
+        run: |
+          python extract_espn_data_json.py
+          echo "=== Files created after extraction ==="
+          ls -lah *.json 2>/dev/null || echo "No JSON files found"
       
       - name: Analyze Players
-        run: python player_scoring.py fantasy-data-optimized-v3.json
+        run: |
+          if [ -f "fantasy-data.json" ]; then
+            python player_scoring.py fantasy-data.json
+          else
+            echo "ERROR: fantasy-data.json not found!"
+            echo "Available files:"
+            ls -la
+            exit 1
+          fi
+      
+      - name: Verify Output Files
+        run: |
+          echo "=== Final output files ==="
+          ls -lah *.json
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
