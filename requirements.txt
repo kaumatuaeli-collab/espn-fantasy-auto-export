@@ -1,3 +1,4 @@
 espn-api==0.38.0
 beautifulsoup4==4.12.2
 requests==2.31.0
+numpy>=1.23.0
