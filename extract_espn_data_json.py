@@ -625,7 +625,7 @@ def main():
         data = generate_optimized_json(league, my_team)
         
         # Save formatted
-        filename = "fantasy-data-optimized-v3.json"
+        filename = "fantasy-data.json"
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         
@@ -633,7 +633,7 @@ def main():
         print(f"\n✓ Saved: {filename} ({size_kb:.1f} KB)")
         
         # Save minified
-        filename_min = "fantasy-data-optimized-v3.min.json"
+        filename_min = "fantasy-data.min.json"
         with open(filename_min, 'w', encoding='utf-8') as f:
             json.dump(data, f, separators=(',', ':'), ensure_ascii=False)
         
