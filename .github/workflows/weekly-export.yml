@@ -1,49 +1,39 @@
-name: ESPN Fantasy Football Auto-Extract
+name: Extract Fantasy Data to JSON
 
 on:
   schedule:
-    # Daily at 7 AM ET (12:00 UTC)
-    - cron: '0 12 * * *'
-    # Thursday at 11 AM ET (16:00 UTC) - Before TNF
-    - cron: '0 16 * * 4'
-    # Saturday at 7 PM ET (00:00 UTC Sunday) - Before international/Sunday games
-    - cron: '0 0 * * 0'
-    # Monday at 9 PM ET (01:00 UTC Tuesday) - After MNF, waiver prep
-    - cron: '0 1 * * 2'
-  workflow_dispatch:  # Allows manual trigger
+    - cron: '0 8 * * 2,4,6,0'  # Tue, Thu, Sat, Sun at 8am
+  workflow_dispatch:
 
 jobs:
-  extract-data:
+  extract:
     runs-on: ubuntu-latest
     
-    permissions:
-      contents: write  # Allow pushing files back to repo
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-    
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-    
-    - name: Run extraction script
-      env:
-        ESPN_S2: ${{ secrets.ESPN_S2 }}
-        SWID: ${{ secrets.SWID }}
-      run: |
-        python extract_espn_data.py
-    
-    - name: Commit and push report
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add *.html *.txt 2>/dev/null || true
-        git diff --staged --quiet || git commit -m "Auto-update: Fantasy report $(date +'%Y-%m-%d %H:%M')"
-        git push
-      continue-on-error: true
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          pip install espn-api requests numpy
+      
+      - name: Extract ESPN Data
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+        run: python extract_espn_data_json.py  # ← FIXED
+      
+      - name: Analyze Players
+        run: python player_scoring.py fantasy-data.json  # ← NEW
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
