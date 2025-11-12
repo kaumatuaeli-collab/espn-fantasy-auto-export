@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-ESPN Fantasy Football OPTIMIZED JSON Data Extractor v3
-Simplified output filename: fantasy-data.json
+ESPN Fantasy Football OPTIMIZED JSON Data Extractor v4
+Updates:
+- Force fresh data from ESPN (no Week 8 cache)
+- Expand historical data (10 weeks instead of 3)
+- Add full season history for time-decay calculations
+- Better debugging output
 """
 
 import json
@@ -10,6 +14,7 @@ from datetime import datetime
 from collections import defaultdict
 import requests
 from espn_api.football import League
+import time
 
 # Cache for NFL schedule to avoid duplicate API calls
 schedule_cache = {}
@@ -22,23 +27,20 @@ SWID = os.environ.get('SWID')
 MY_TEAM_NAME = 'Intelligent MBLeague (TM)'
 
 # Configuration for smart data reduction
-WEEKS_OF_HISTORY = 3  # Keep last 3 weeks for trend analysis
-TOP_AVAILABLE_PER_POSITION = 15  # Top N per position (includes handcuffs)
+WEEKS_OF_HISTORY = 10  # Increased from 3 to 10
+TOP_AVAILABLE_PER_POSITION = 15
 
-# Position-aware relevance filters (don't miss handcuffs & streamers!)
+# Position-aware relevance filters
 POSITION_FILTERS = {
     'QB': {'min_proj': 12.0, 'min_owned': 15.0, 'min_avg': 10.0},
-    'RB': {'min_proj': 4.0, 'min_owned': 15.0, 'min_avg': 3.5},  # Lower for handcuffs
+    'RB': {'min_proj': 4.0, 'min_owned': 15.0, 'min_avg': 3.5},
     'WR': {'min_proj': 5.0, 'min_owned': 20.0, 'min_avg': 4.0},
     'TE': {'min_proj': 5.0, 'min_owned': 20.0, 'min_avg': 4.0},
-    'K': {'min_proj': 6.0, 'min_owned': 10.0, 'min_avg': 5.0},   # Show streamers
-    'D/ST': {'min_proj': 6.0, 'min_owned': 10.0, 'min_avg': 5.0},  # Show streamers
+    'K': {'min_proj': 6.0, 'min_owned': 10.0, 'min_avg': 5.0},
+    'D/ST': {'min_proj': 6.0, 'min_owned': 10.0, 'min_avg': 5.0},
 }
 
-# Always show IR-eligible stashes (lottery tickets)
 INCLUDE_INJURED_STASHES = True
-
-# Keep all opponent players but with minimal fields (for trade analysis)
 SHOW_FULL_OPPONENT_ROSTERS = True
 
 # NFL Team Abbreviation Mapping
@@ -60,14 +62,27 @@ ESPN_TO_STANDARD = {
 }
 
 def connect_to_league():
-    """Connect to ESPN Fantasy League"""
-    print(f"Connecting to league {LEAGUE_ID}...")
+    """Connect to ESPN Fantasy League with debugging"""
+    print(f"\n🔌 Connecting to league {LEAGUE_ID}...")
+    
     league = League(
         league_id=LEAGUE_ID,
         year=YEAR,
         espn_s2=ESPN_S2,
         swid=SWID
     )
+    
+    # Debug output
+    print(f"✅ Connected successfully!")
+    print(f"   📊 League: {league.settings.name}")
+    print(f"   📅 ESPN Current Week: {league.current_week}")
+    print(f"   🏁 Regular Season: {league.settings.reg_season_count} weeks")
+    
+    # Warning if data seems stale
+    if league.current_week <= 8:
+        print(f"\n⚠️  WARNING: ESPN reports Week {league.current_week}")
+        print(f"⚠️  This may be outdated (expected Week 11+)")
+    
     return league
 
 def find_my_team(league):
@@ -81,11 +96,12 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
     """Fetch NFL schedule with game timing, implied points, and context flags"""
     key = f"{year}_{week}"
     if key in schedule_cache:
-        print(f"Fetching NFL schedule for week {week}... (from cache)")
+        print(f"   📅 NFL schedule Week {week} (cached)")
         return schedule_cache[key]
+    
     try:
         url = f"https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates={year}&seasontype=2&week={week}"
-        print(f"Fetching NFL schedule for week {week}...")
+        print(f"   📅 Fetching NFL schedule Week {week}...")
         
         response = requests.get(url, timeout=10)
         response.raise_for_status()
@@ -98,11 +114,8 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
             for event in data['events']:
                 if 'competitions' in event and len(event['competitions']) > 0:
                     comp = event['competitions'][0]
-                    
-                    # Extract game timing and context
                     game_date = event.get('date', '')
                     
-                    # Determine game type flags
                     is_tnf = False
                     is_mnf = False
                     is_snf = False
@@ -127,7 +140,6 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                         'is_snf': is_snf,
                     }
                     
-                    # Parse odds for spread, total, and implied points
                     spread = None
                     total = None
                     favored_team = None
@@ -137,7 +149,6 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                         spread_str = odds.get('details', '')
                         total = odds.get('overUnder', None)
                         
-                        # Parse spread (e.g., "HOU -1.5")
                         if spread_str and total:
                             try:
                                 parts = spread_str.split()
@@ -167,7 +178,6 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                             schedule[home_team] = f'vs {away_team}'
                             schedule[away_team] = f'@{home_team}'
                             
-                            # Calculate implied points for each team
                             home_implied = None
                             away_implied = None
                             
@@ -179,13 +189,11 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                                     away_implied = round((total + abs(spread)) / 2, 1)
                                     home_implied = round((total - abs(spread)) / 2, 1)
                             
-                            # Home team details
                             home_info = game_info.copy()
                             home_info['home'] = True
                             home_info['opp'] = away_team
                             home_info['implied_pts'] = home_implied
                             
-                            # Away team details
                             away_info = game_info.copy()
                             away_info['home'] = False
                             away_info['opp'] = home_team
@@ -194,29 +202,26 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                             game_details[home_team] = home_info
                             game_details[away_team] = away_info
         
-        # Add BYE teams
         all_teams = set(ESPN_TO_STANDARD.values())
         for team in all_teams:
             if team not in schedule:
                 schedule[team] = 'BYE'
                 game_details[team] = {'status': 'BYE'}
         
-        print(f"✓ Found {len([v for v in schedule.values() if v != 'BYE'])} games")
+        print(f"      ✓ Found {len([v for v in schedule.values() if v != 'BYE'])} games")
         schedule_cache[key] = (schedule, game_details)
         return schedule, game_details
         
     except Exception as e:
-        print(f"Warning: Could not fetch NFL schedule: {e}")
+        print(f"      ⚠️  Could not fetch NFL schedule: {e}")
         return {}, {}
 
 def get_compact_eligibility(player):
-    """Get compact eligibility slots (e.g., ['RB', 'FLEX'])"""
+    """Get compact eligibility slots"""
     eligible = []
-    
-    # Map ESPN slot IDs to readable names
     slot_map = {
         0: 'QB', 2: 'RB', 4: 'WR', 6: 'TE', 16: 'D/ST', 17: 'K',
-        23: 'FLEX',  # RB/WR/TE
+        23: 'FLEX',
     }
     
     if hasattr(player, 'eligibleSlots'):
@@ -226,29 +231,50 @@ def get_compact_eligibility(player):
                 if slot_name not in eligible:
                     eligible.append(slot_name)
     
-    # Fallback to position if no eligible slots
     if not eligible and hasattr(player, 'position'):
         eligible = [player.position]
     
     return eligible
 
 def get_recent_weekly_stats(player, current_week, weeks_back=WEEKS_OF_HISTORY):
-    """Extract recent weekly performance (last N weeks as array)"""
+    """Extract recent weekly performance - UPDATED to include more weeks"""
     weekly_points = []
     
     if not hasattr(player, 'stats') or not isinstance(player.stats, dict):
         return weekly_points
     
-    # Get recent weeks
     start_week = max(1, current_week - weeks_back)
+    
     for week in range(start_week, current_week + 1):
         week_stats = player.stats.get(week, {})
         if isinstance(week_stats, dict):
             points = week_stats.get('points', 0)
-            if points > 0:  # Only include weeks where they played
+            if points is not None:  # Include zeros (player played but scored 0)
                 weekly_points.append(round(points, 2))
     
+    # Reverse so most recent is first (for EWMA)
+    weekly_points.reverse()
+    
     return weekly_points
+
+def get_full_season_stats(player, current_week):
+    """Get ALL games from entire season for time-decay calculations"""
+    all_games = []
+    
+    if not hasattr(player, 'stats') or not isinstance(player.stats, dict):
+        return all_games
+    
+    for week in range(1, current_week + 1):
+        week_stats = player.stats.get(week, {})
+        if isinstance(week_stats, dict):
+            points = week_stats.get('points', 0)
+            if points is not None and points > 0:
+                all_games.append(round(points, 2))
+    
+    # Most recent first
+    all_games.reverse()
+    
+    return all_games
 
 def calculate_boom_bust_metrics(weekly_points):
     """Calculate boom/bust rates and consistency metrics"""
@@ -258,8 +284,6 @@ def calculate_boom_bust_metrics(weekly_points):
     import statistics
     
     avg = statistics.mean(weekly_points)
-    
-    # Boom/Bust thresholds (120% and 60%)
     boom_threshold = avg * 1.2
     bust_threshold = avg * 0.6
     
@@ -278,7 +302,6 @@ def get_player_data(player, league, nfl_schedule, game_details, include_history=
     """Extract player data with configurable detail level"""
     week = league.current_week
     
-    # Basic info
     injury_status = player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE'
     if isinstance(injury_status, list):
         injury_status = injury_status[0] if injury_status else 'ACTIVE'
@@ -286,11 +309,9 @@ def get_player_data(player, league, nfl_schedule, game_details, include_history=
     pro_team = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
     opponent_display = nfl_schedule.get(pro_team, 'BYE')
     
-    # Current week projection
     current_week_stats = player.stats.get(week, {}) if hasattr(player, 'stats') else {}
     projected = current_week_stats.get('projected_points', 0) if isinstance(current_week_stats, dict) else 0
     
-    # Game details
     game_info = game_details.get(pro_team, {})
     
     player_data = {
@@ -306,22 +327,18 @@ def get_player_data(player, league, nfl_schedule, game_details, include_history=
         'total': round(player.total_points, 2),
     }
     
-    # Add eligibility for flex logic
     if not minimal:
         player_data['elig'] = get_compact_eligibility(player)
     
-    # Add ownership (for waiver decisions)
     if not minimal:
         player_data['own'] = round(player.percent_owned, 1)
         player_data['start'] = round(player.percent_started, 1)
     
-    # Add game context
     if not minimal and game_info.get('status') != 'BYE':
         player_data['opp'] = game_info.get('opp', opponent_display)
         player_data['kickoff'] = game_info.get('kickoff', '')
         player_data['home'] = game_info.get('home', None)
         
-        # Game flags for late-swap logic
         if game_info.get('is_tnf'):
             player_data['is_tnf'] = True
         if game_info.get('is_mnf'):
@@ -329,17 +346,21 @@ def get_player_data(player, league, nfl_schedule, game_details, include_history=
         if game_info.get('is_snf'):
             player_data['is_snf'] = True
         
-        # Implied points (for DST/RB/WR analysis)
         if game_info.get('implied_pts'):
             player_data['implied_pts'] = game_info['implied_pts']
     
-    # Add recent performance and metrics (for roster decisions)
+    # UPDATED: Add both recent and full season history
     if include_history:
-        weekly_points = get_recent_weekly_stats(player, week)
+        weekly_points = get_recent_weekly_stats(player, week, weeks_back=3)
+        all_season = get_full_season_stats(player, week)
+        
         if weekly_points:
             player_data['last_n'] = weekly_points
             metrics = calculate_boom_bust_metrics(weekly_points)
             player_data.update(metrics)
+        
+        if all_season:
+            player_data['all_game_history'] = all_season
     
     return player_data
 
@@ -347,33 +368,26 @@ def is_player_relevant_for_waivers(player, position, league, game_details):
     """Check if FA is relevant using position-aware filters"""
     filters = POSITION_FILTERS.get(position, {'min_proj': 5.0, 'min_owned': 20.0, 'min_avg': 4.0})
     
-    # Get current week projection
     current_week = league.current_week
     current_week_stats = player.stats.get(current_week, {}) if hasattr(player, 'stats') else {}
     projected = current_week_stats.get('projected_points', 0) if isinstance(current_week_stats, dict) else 0
     
-    # Check injury status for stash value
     injury_status = player.injuryStatus if hasattr(player, 'injuryStatus') else 'ACTIVE'
     if isinstance(injury_status, list):
         injury_status = injury_status[0] if injury_status else 'ACTIVE'
     
     is_injured = injury_status in ['OUT', 'IR', 'INJURY_RESERVE', 'QUESTIONABLE', 'DOUBTFUL']
     
-    # Always include injured stashes (lottery tickets)
     if INCLUDE_INJURED_STASHES and is_injured and player.percent_owned > 10:
         return True
     
-    # Check against position-specific thresholds
     passes_projection = projected >= filters['min_proj']
     passes_ownership = player.percent_owned >= filters['min_owned']
     passes_avg = player.avg_points >= filters['min_avg']
     
-    # For DST/K, also consider favorable matchups (low implied points against)
     if position in ['D/ST', 'K']:
         pro_team = ESPN_TO_STANDARD.get(player.proTeam, player.proTeam)
         game_info = game_details.get(pro_team, {})
-        
-        # If opponent implied points < 20, it's a good streaming matchup
         opp_team = game_info.get('opp')
         if opp_team:
             opp_game_info = game_details.get(opp_team, {})
@@ -381,7 +395,6 @@ def is_player_relevant_for_waivers(player, position, league, game_details):
             if opp_implied and opp_implied <= 20.5:
                 return True
     
-    # Include if passes any threshold
     return passes_projection or passes_ownership or passes_avg
 
 def analyze_positional_depth(roster):
@@ -420,7 +433,6 @@ def get_schedule_lookahead(team, league, weeks_ahead=3):
             if check_week >= len(team.schedule):
                 break
             
-            # Fetch schedule for that week
             schedule, game_details = fetch_nfl_schedule_enhanced(check_week + 1, YEAR)
             
             opponent = team.schedule[check_week]
@@ -440,8 +452,6 @@ def get_schedule_lookahead(team, league, weeks_ahead=3):
 def identify_trade_opportunities(league, my_team):
     """Find teams with surplus at positions where you're weak"""
     my_depth = analyze_positional_depth(my_team.roster)
-    
-    # Positions where I have <2 players (excluding K/DST)
     weak_positions = [pos for pos, info in my_depth.items() 
                       if info['total'] < 2 and pos not in ['K', 'D/ST']]
     
@@ -455,7 +465,6 @@ def identify_trade_opportunities(league, my_team):
         
         for weak_pos in weak_positions:
             if team_depth.get(weak_pos, {}).get('total', 0) >= 3:
-                # They have depth where I'm weak
                 opportunities.append({
                     'team': team.team_name,
                     'record': f"{team.wins}-{team.losses}",
@@ -467,7 +476,7 @@ def identify_trade_opportunities(league, my_team):
 
 def generate_optimized_json(league, my_team):
     """Generate optimized JSON with smart filtering"""
-    print("Generating optimized JSON...")
+    print("\n📊 Generating optimized JSON...")
     
     current_week = league.current_week
     nfl_schedule, game_details = fetch_nfl_schedule_enhanced(current_week, YEAR)
@@ -478,7 +487,7 @@ def generate_optimized_json(league, my_team):
             'league': LEAGUE_ID,
             'year': YEAR,
             'week': current_week,
-            'version': 'v3_simplified',
+            'version': 'v4_expanded_history',
         },
         
         'league': {
@@ -507,7 +516,6 @@ def generate_optimized_json(league, my_team):
         'byes': {},
     }
     
-    # Current matchup
     try:
         opponent = my_team.schedule[current_week - 1]
         if opponent:
@@ -520,16 +528,14 @@ def generate_optimized_json(league, my_team):
     except:
         data['matchup'] = {'week': current_week, 'bye': True}
     
-    # My roster - FULL detail
-    print("  └─ My roster...")
+    print("   🏈 Processing my roster...")
     for player in my_team.roster:
         data['roster'].append(
             get_player_data(player, league, nfl_schedule, game_details, 
                           include_history=True, minimal=False)
         )
     
-    # Opponent rosters - ALL players but minimal fields
-    print("  └─ Opponent rosters...")
+    print("   👥 Processing opponent rosters...")
     for team in sorted(league.teams, key=lambda x: x.standing):
         if team.team_id == my_team.team_id:
             continue
@@ -555,8 +561,7 @@ def generate_optimized_json(league, my_team):
         
         data['opponents'].append(team_data)
     
-    # Waivers - SMART filtered
-    print("  └─ Waiver targets (filtered)...")
+    print("   📋 Processing waiver targets...")
     for pos in ['QB', 'RB', 'WR', 'TE', 'K', 'D/ST']:
         data['waivers'][pos] = []
         try:
@@ -577,14 +582,12 @@ def generate_optimized_json(league, my_team):
             ]
             
         except Exception as e:
-            print(f"    Error fetching {pos} free agents: {e}")
+            print(f"      ⚠️  Error fetching {pos}: {e}")
     
-    # Trade targets
-    print("  └─ Trade opportunities...")
+    print("   💼 Identifying trade opportunities...")
     data['trades'] = identify_trade_opportunities(league, my_team)
     
-    # BYE alerts (next 2 weeks)
-    print("  └─ BYE week alerts...")
+    print("   🚫 Checking upcoming bye weeks...")
     for week_ahead in [1, 2]:
         check_week = current_week + week_ahead
         if check_week <= league.settings.reg_season_count:
@@ -609,15 +612,24 @@ def generate_optimized_json(league, my_team):
 def main():
     try:
         print("="*70)
-        print("ESPN FANTASY FOOTBALL - DATA EXTRACTION v3")
+        print("ESPN FANTASY FOOTBALL - DATA EXTRACTION v4")
+        print("Expanded History • Fresh Data • Better Debugging")
         print("="*70)
+        
+        # Log current time for debugging
+        current_time = datetime.now()
+        print(f"\n🕐 Extraction Time: {current_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"📅 Date: {current_time.date()}")
+        
+        # Small delay to ensure fresh API data
+        print("⏳ Waiting 2 seconds for API freshness...")
+        time.sleep(2)
         
         league = connect_to_league()
         my_team = find_my_team(league)
         
-        print(f"✓ {league.settings.name}")
-        print(f"✓ {my_team.team_name}")
-        print(f"✓ Week {league.current_week}\n")
+        print(f"✅ Found: {my_team.team_name}")
+        print(f"📊 Record: {my_team.wins}-{my_team.losses} (#{my_team.standing})")
         
         data = generate_optimized_json(league, my_team)
         
@@ -627,10 +639,14 @@ def main():
             json.dump(data, f, indent=2, ensure_ascii=False)
         
         size_kb = os.path.getsize(filename) / 1024
-        print(f"\n✓ Saved: {filename} ({size_kb:.1f} KB)")
-        print(f"✓ Data coverage: {len(data['roster'])} roster + {sum(len(v) for v in data['waivers'].values())} waivers")
+        
+        print(f"\n{'='*70}")
+        print(f"✅ SUCCESS!")
         print(f"{'='*70}")
-        print("SUCCESS!")
+        print(f"📁 File: {filename} ({size_kb:.1f} KB)")
+        print(f"📊 Week: {data['meta']['week']}")
+        print(f"🏈 Roster Players: {len(data['roster'])}")
+        print(f"📋 Waiver Players: {sum(len(v) for v in data['waivers'].values())}")
         print(f"{'='*70}")
         
     except Exception as e:
