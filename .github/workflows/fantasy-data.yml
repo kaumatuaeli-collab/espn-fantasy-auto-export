@@ -1,5 +1,4 @@
 name: Extract Fantasy Data to JSON
-
 on:
   # Schedule: Runs at key decision points throughout the fantasy week
   schedule:
@@ -50,13 +49,14 @@ jobs:
         env:
           ESPN_S2: ${{ secrets.ESPN_S2 }}
           SWID: ${{ secrets.SWID }}
-        run: python espn_extractor.py
+        run: python extract_espn_data_json.py
       
-      - name: Analyze Players  # ← NEW STEP
-        run: python player_scoring.py fantasy-data.json
+      - name: Analyze Players
+        run: python player_scoring.py fantasy-data-optimized-v3.json
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
+          publish_branch: gh-pages
