@@ -193,11 +193,13 @@ def fetch_nfl_schedule_enhanced(week, year=2025):
                             home_info['home'] = True
                             home_info['opp'] = away_team
                             home_info['implied_pts'] = home_implied
+                            home_info['opp_implied_pts'] = away_implied
                             
                             away_info = game_info.copy()
                             away_info['home'] = False
                             away_info['opp'] = home_team
                             away_info['implied_pts'] = away_implied
+                            away_info['opp_implied_pts'] = home_implied
                             
                             game_details[home_team] = home_info
                             game_details[away_team] = away_info
@@ -577,7 +579,7 @@ def generate_optimized_json(league, my_team):
             
             data['waivers'][pos] = [
                 get_player_data(p, league, nfl_schedule, game_details,
-                              include_history=False, minimal=False)
+                              include_history=True, minimal=False)
                 for p in relevant
             ]
             
