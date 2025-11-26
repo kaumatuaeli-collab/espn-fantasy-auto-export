@@ -4,31 +4,31 @@
     "name": "Amon-Ra St. Brown",
     "position": "WR",
     "team": "DET",
-    "starter_score": 6.19,
-    "waiver_score": 6.95,
-    "ros_score": 4.33,
+    "starter_score": 6.05,
+    "waiver_score": 6.91,
+    "ros_score": 4.29,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "ewma_fp": 10.0,
       "avg": 1.6,
-      "matchup": 6.0,
+      "matchup": 5.2,
       "proj": 10.0
     },
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "opportunity": 10.0,
       "avg": 1.6
     },
     "ros_components": {
       "avg": 1.6,
       "trend": 7.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "consistency": 0,
       "proj": 10.0
     },
@@ -51,7 +51,7 @@
       "avg_raw": 16.44,
       "time_decay_avg": 6.67,
       "proj_raw": 16.68,
-      "implied_pts_raw": 25.5,
+      "implied_pts_raw": 25.2,
       "last_n_raw": [
         0,
         25.4,
@@ -212,23 +212,23 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 6.0,
+      "matchup": 5.2,
       "proj": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "opportunity": 8.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -251,7 +251,7 @@
       "avg_raw": 9.66,
       "time_decay_avg": 0.0,
       "proj_raw": 0.0,
-      "implied_pts_raw": 25.5,
+      "implied_pts_raw": 25.2,
       "last_n_raw": [
         0,
         0.0,
@@ -273,15 +273,15 @@
     "name": "Keenan Allen",
     "position": "WR",
     "team": "LAC",
-    "starter_score": 1.74,
-    "waiver_score": 3.4,
-    "ros_score": 3.98,
+    "starter_score": 1.66,
+    "waiver_score": 3.34,
+    "ros_score": 3.9,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 7.5,
+      "implied_pts": 7.1,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.0,
@@ -290,14 +290,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
-      "opportunity": 4.3,
+      "implied_pts": 7.1,
+      "opportunity": 4.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
+      "implied_pts": 7.1,
       "consistency": 5.0,
       "proj": 4.8
     },
@@ -320,7 +320,7 @@
       "avg_raw": 10.11,
       "time_decay_avg": 0.0,
       "proj_raw": 9.63,
-      "implied_pts_raw": 25.0,
+      "implied_pts_raw": 24.5,
       "last_n_raw": [
         0,
         0,
@@ -341,15 +341,15 @@
     "name": "Rico Dowdle",
     "position": "RB",
     "team": "CAR",
-    "starter_score": 4.69,
-    "waiver_score": 6.12,
-    "ros_score": 2.77,
+    "starter_score": 4.72,
+    "waiver_score": 6.14,
+    "ros_score": 2.79,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "ewma_fp": 10.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -358,14 +358,14 @@
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "opportunity": 10.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 7.0,
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "consistency": 0,
       "proj": 8.8
     },
@@ -476,7 +476,7 @@
     "position": "RB",
     "team": "KC",
     "starter_score": 4.51,
-    "waiver_score": 3.71,
+    "waiver_score": 3.72,
     "ros_score": 4.52,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -493,7 +493,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 10.0,
-      "opportunity": 3.0,
+      "opportunity": 3.1,
       "avg": 0.0
     },
     "ros_components": {
@@ -543,15 +543,15 @@
     "name": "Alvin Kamara",
     "position": "RB",
     "team": "NO",
-    "starter_score": 1.24,
-    "waiver_score": 4.29,
-    "ros_score": 1.43,
+    "starter_score": 1.27,
+    "waiver_score": 4.28,
+    "ros_score": 1.45,
     "risk_index": 4.6,
     "risk_category": "MEDIUM",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 1.7,
+      "implied_pts": 1.8,
       "ewma_fp": 2.7,
       "avg": 0.0,
       "matchup": 7.2,
@@ -560,14 +560,14 @@
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 1.7,
-      "opportunity": 6.3,
+      "implied_pts": 1.8,
+      "opportunity": 6.1,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 7.0,
-      "implied_pts": 1.7,
+      "implied_pts": 1.8,
       "consistency": 0,
       "proj": 5.0
     },
@@ -611,31 +611,31 @@
     "name": "Dalton Kincaid",
     "position": "TE",
     "team": "BUF",
-    "starter_score": 1.24,
-    "waiver_score": 2.42,
-    "ros_score": 3.12,
+    "starter_score": 1.12,
+    "waiver_score": 2.36,
+    "ros_score": 3.05,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 5.0,
+      "matchup": 4.5,
       "proj": 8.9
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
-      "opportunity": 5.7,
+      "implied_pts": 7.5,
+      "opportunity": 5.8,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "consistency": 5.0,
       "proj": 8.9
     },
@@ -657,8 +657,8 @@
     "metadata": {
       "avg_raw": 10.41,
       "time_decay_avg": 0.0,
-      "proj_raw": 7.71,
-      "implied_pts_raw": 25.5,
+      "proj_raw": 7.72,
+      "implied_pts_raw": 25.0,
       "last_n_raw": [
         0,
         0.0,
@@ -680,33 +680,33 @@
     "name": "Jared Goff",
     "position": "QB",
     "team": "DET",
-    "starter_score": 6.5,
-    "waiver_score": 7.54,
-    "ros_score": 4.05,
+    "starter_score": 6.3,
+    "waiver_score": 7.5,
+    "ros_score": 3.95,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "ewma_fp": 9.5,
       "avg": 0.0,
-      "matchup": 6.0,
-      "proj": 7.2
+      "matchup": 5.2,
+      "proj": 6.6
     },
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "opportunity": 9.8,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 7.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "consistency": 0,
-      "proj": 7.2
+      "proj": 6.6
     },
     "starter_reasons": [
       "implied_pts (40%)",
@@ -727,7 +727,7 @@
       "avg_raw": 17.36,
       "time_decay_avg": 4.51,
       "proj_raw": 15.91,
-      "implied_pts_raw": 25.5,
+      "implied_pts_raw": 25.2,
       "last_n_raw": [
         0,
         17.16,
@@ -748,9 +748,9 @@
     "name": "Aaron Jones Sr.",
     "position": "RB",
     "team": "MIN",
-    "starter_score": 3.61,
+    "starter_score": 3.6,
     "waiver_score": 5.48,
-    "ros_score": 2.44,
+    "ros_score": 2.42,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "HIGH",
@@ -760,7 +760,7 @@
       "ewma_fp": 7.7,
       "avg": 0.0,
       "matchup": 9.5,
-      "proj": 6.9
+      "proj": 6.7
     },
     "waiver_components": {
       "upside": 9.1,
@@ -774,7 +774,7 @@
       "trend": 7.0,
       "implied_pts": 0.0,
       "consistency": 0,
-      "proj": 6.9
+      "proj": 6.7
     },
     "starter_reasons": [
       "ewma_fp (30%)",
@@ -794,7 +794,7 @@
     "metadata": {
       "avg_raw": 8.93,
       "time_decay_avg": 1.89,
-      "proj_raw": 11.01,
+      "proj_raw": 10.81,
       "implied_pts_raw": 15.0,
       "last_n_raw": [
         0,
@@ -816,33 +816,33 @@
     "name": "Caleb Williams",
     "position": "QB",
     "team": "CHI",
-    "starter_score": 4.25,
-    "waiver_score": 5.78,
+    "starter_score": 4.28,
+    "waiver_score": 5.8,
     "ros_score": 2.8,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 2.2,
+      "implied_pts": 2.3,
       "ewma_fp": 10.0,
       "avg": 0.0,
       "matchup": 8.8,
-      "proj": 9.2
+      "proj": 9.0
     },
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 2.2,
+      "implied_pts": 2.3,
       "opportunity": 10.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 7.0,
-      "implied_pts": 2.2,
+      "implied_pts": 2.3,
       "consistency": 0,
-      "proj": 9.2
+      "proj": 9.0
     },
     "starter_reasons": [
       "ewma_fp (25%)",
@@ -882,15 +882,15 @@
     "name": "Sean Tucker",
     "position": "RB",
     "team": "TB",
-    "starter_score": 4.44,
-    "waiver_score": 6.16,
-    "ros_score": 3.39,
+    "starter_score": 4.16,
+    "waiver_score": 5.98,
+    "ros_score": 3.23,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "ewma_fp": 5.4,
       "avg": 0.0,
       "matchup": 3.5,
@@ -899,14 +899,14 @@
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 6.6,
-      "opportunity": 2.4,
+      "implied_pts": 5.8,
+      "opportunity": 2.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 7.0,
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "consistency": 0,
       "proj": 3.2
     },
@@ -929,7 +929,7 @@
       "avg_raw": 5.92,
       "time_decay_avg": 1.34,
       "proj_raw": 6.49,
-      "implied_pts_raw": 24.0,
+      "implied_pts_raw": 23.0,
       "last_n_raw": [
         0,
         5.1,
@@ -949,7 +949,7 @@
     "position": "D/ST",
     "team": "LAR",
     "starter_score": 6.42,
-    "waiver_score": 6.43,
+    "waiver_score": 6.48,
     "ros_score": 4.53,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
@@ -966,7 +966,7 @@
       "upside": 9.1,
       "trend": 7.0,
       "implied_pts": 9.6,
-      "opportunity": 8.7,
+      "opportunity": 9.2,
       "avg": 3.3
     },
     "ros_components": {
@@ -1016,33 +1016,33 @@
     "name": "Juwan Johnson",
     "position": "TE",
     "team": "NO",
-    "starter_score": 4.14,
-    "waiver_score": 6.05,
-    "ros_score": 2.71,
+    "starter_score": 4.16,
+    "waiver_score": 6.07,
+    "ros_score": 2.72,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 1.7,
+      "implied_pts": 1.8,
       "ewma_fp": 10.0,
       "avg": 0.0,
       "matchup": 7.2,
-      "proj": 6.2
+      "proj": 6.1
     },
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 1.7,
+      "implied_pts": 1.8,
       "opportunity": 8.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 7.0,
-      "implied_pts": 1.7,
+      "implied_pts": 1.8,
       "consistency": 0,
-      "proj": 6.2
+      "proj": 6.1
     },
     "starter_reasons": [
       "ewma_fp (25%)",
@@ -1062,7 +1062,7 @@
     "metadata": {
       "avg_raw": 8.56,
       "time_decay_avg": 2.0,
-      "proj_raw": 6.69,
+      "proj_raw": 6.68,
       "implied_pts_raw": 18.2,
       "last_n_raw": [
         0,
@@ -1082,32 +1082,32 @@
     "name": "Ka'imi Fairbairn",
     "position": "K",
     "team": "HOU",
-    "starter_score": 2.75,
-    "waiver_score": 5.08,
-    "ros_score": 2.36,
+    "starter_score": 2.91,
+    "waiver_score": 5.11,
+    "ros_score": 2.43,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "avg": 0.0,
-      "proj": 2.3,
+      "proj": 2.9,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 9.1,
       "trend": 7.0,
-      "implied_pts": 3.2,
-      "opportunity": 3.5,
+      "implied_pts": 3.3,
+      "opportunity": 3.6,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 7.0,
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "consistency": 0,
-      "proj": 2.3
+      "proj": 2.9
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -1147,15 +1147,15 @@
     "name": "Jaxson Dart",
     "position": "QB",
     "team": "NYG",
-    "starter_score": 1.46,
-    "waiver_score": 1.57,
-    "ros_score": 2.3,
+    "starter_score": 1.49,
+    "waiver_score": 1.62,
+    "ros_score": 2.32,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -1164,14 +1164,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
-      "opportunity": 6.2,
+      "implied_pts": 2.9,
+      "opportunity": 6.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "consistency": 5.0,
       "proj": 10.0
     },
@@ -1215,33 +1215,33 @@
     "name": "Jacoby Brissett",
     "position": "QB",
     "team": "ARI",
-    "starter_score": 2.64,
-    "waiver_score": 2.95,
+    "starter_score": 2.57,
+    "waiver_score": 2.99,
     "ros_score": 3.65,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 7.0,
-      "proj": 9.1
+      "matchup": 6.0,
+      "proj": 8.9
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
-      "opportunity": 6.4,
+      "implied_pts": 3.8,
+      "opportunity": 6.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "consistency": 5.0,
-      "proj": 9.1
+      "proj": 8.9
     },
     "starter_reasons": [
       "implied_pts (40%)",
@@ -1256,7 +1256,7 @@
     "ros_reasons": [
       "trend (25%)",
       "proj (10%)",
-      "consistency (15%)"
+      "implied_pts (20%)"
     ],
     "metadata": {
       "avg_raw": 15.69,
@@ -1282,32 +1282,32 @@
     "position": "QB",
     "team": "SEA",
     "starter_score": 3.8,
-    "waiver_score": 3.72,
-    "ros_score": 4.39,
+    "waiver_score": 3.75,
+    "ros_score": 4.31,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.0,
-      "proj": 6.5
+      "proj": 5.5
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "opportunity": 4.9,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "consistency": 5.0,
-      "proj": 6.5
+      "proj": 5.5
     },
     "starter_reasons": [
       "implied_pts (40%)",
@@ -1327,7 +1327,7 @@
     "metadata": {
       "avg_raw": 14.94,
       "time_decay_avg": 0.0,
-      "proj_raw": 15.38,
+      "proj_raw": 15.17,
       "implied_pts_raw": 26.5,
       "last_n_raw": [
         0,
@@ -1349,33 +1349,33 @@
     "name": "C.J. Stroud",
     "position": "QB",
     "team": "HOU",
-    "starter_score": 1.33,
-    "waiver_score": 1.13,
-    "ros_score": 2.28,
+    "starter_score": 1.35,
+    "waiver_score": 1.16,
+    "ros_score": 2.27,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 7.5,
-      "proj": 8.9
+      "proj": 8.6
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.2,
-      "opportunity": 2.4,
+      "implied_pts": 3.3,
+      "opportunity": 2.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "consistency": 5.0,
-      "proj": 8.9
+      "proj": 8.6
     },
     "starter_reasons": [
       "implied_pts (40%)",
@@ -1417,9 +1417,9 @@
     "name": "J.J. McCarthy",
     "position": "QB",
     "team": "MIN",
-    "starter_score": 0.0,
-    "waiver_score": 0.54,
-    "ros_score": 0.91,
+    "starter_score": 0.18,
+    "waiver_score": 0.52,
+    "ros_score": 1.35,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
@@ -1429,13 +1429,13 @@
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 9.5,
-      "proj": 0.1
+      "proj": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 0.0,
-      "opportunity": 2.3,
+      "opportunity": 2.2,
       "avg": 0.0
     },
     "ros_components": {
@@ -1443,7 +1443,7 @@
       "trend": 5.0,
       "implied_pts": 0.0,
       "consistency": 5.0,
-      "proj": 0.1
+      "proj": 5.0
     },
     "starter_reasons": [
       "matchup (10%)",
@@ -1463,7 +1463,7 @@
     "metadata": {
       "avg_raw": 10.86,
       "time_decay_avg": 0.0,
-      "proj_raw": 10.72,
+      "proj_raw": 0.0,
       "implied_pts_raw": 15.0,
       "last_n_raw": [
         0,
@@ -1486,15 +1486,15 @@
     "name": "Justin Fields",
     "position": "QB",
     "team": "NYJ",
-    "starter_score": 1.45,
-    "waiver_score": 1.9,
-    "ros_score": 2.9,
+    "starter_score": 1.49,
+    "waiver_score": 1.92,
+    "ros_score": 2.92,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 4.0,
@@ -1503,14 +1503,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "opportunity": 1.7,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -1552,33 +1552,33 @@
     "name": "Aaron Rodgers",
     "position": "QB",
     "team": "PIT",
-    "starter_score": 1.85,
-    "waiver_score": 1.32,
-    "ros_score": 2.22,
+    "starter_score": 1.66,
+    "waiver_score": 1.27,
+    "ros_score": 2.09,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.5,
-      "proj": 4.9
+      "matchup": 8.0,
+      "proj": 4.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "opportunity": 1.6,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "consistency": 5.0,
-      "proj": 4.9
+      "proj": 4.0
     },
     "starter_reasons": [
       "implied_pts (40%)",
@@ -1599,7 +1599,7 @@
       "avg_raw": 14.54,
       "time_decay_avg": 0.0,
       "proj_raw": 14.27,
-      "implied_pts_raw": 22.0,
+      "implied_pts_raw": 21.5,
       "last_n_raw": [
         0,
         0,
@@ -1621,15 +1621,15 @@
     "name": "Joe Flacco",
     "position": "QB",
     "team": "CIN",
-    "starter_score": 3.49,
+    "starter_score": 3.53,
     "waiver_score": 2.62,
-    "ros_score": 3.62,
+    "ros_score": 3.64,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 5.6,
+      "implied_pts": 5.7,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -1638,14 +1638,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.6,
-      "opportunity": 1.7,
+      "implied_pts": 5.7,
+      "opportunity": 1.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.6,
+      "implied_pts": 5.7,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -1687,15 +1687,15 @@
     "name": "Bryce Young",
     "position": "QB",
     "team": "CAR",
-    "starter_score": 1.28,
+    "starter_score": 1.32,
     "waiver_score": 1.55,
-    "ros_score": 2.14,
+    "ros_score": 2.16,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -1704,14 +1704,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.7,
-      "opportunity": 1.1,
+      "implied_pts": 0.8,
+      "opportunity": 1.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "consistency": 5.0,
       "proj": 0.0
     },
@@ -1722,8 +1722,8 @@
     ],
     "waiver_reasons": [
       "trend (25%)",
-      "opportunity (15%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "opportunity (15%)"
     ],
     "ros_reasons": [
       "trend (25%)",
@@ -1753,9 +1753,9 @@
     "name": "Tua Tagovailoa",
     "position": "QB",
     "team": "MIA",
-    "starter_score": 2.98,
-    "waiver_score": 2.67,
-    "ros_score": 3.63,
+    "starter_score": 2.92,
+    "waiver_score": 2.68,
+    "ros_score": 3.51,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
@@ -1765,13 +1765,13 @@
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 1.2,
-      "proj": 2.7
+      "proj": 1.5
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 6.8,
-      "opportunity": 0.4,
+      "opportunity": 0.5,
       "avg": 0.0
     },
     "ros_components": {
@@ -1779,12 +1779,12 @@
       "trend": 5.0,
       "implied_pts": 6.8,
       "consistency": 5.0,
-      "proj": 2.7
+      "proj": 1.5
     },
     "starter_reasons": [
       "implied_pts (40%)",
-      "proj (5%)",
-      "matchup (10%)"
+      "matchup (10%)",
+      "proj (5%)"
     ],
     "waiver_reasons": [
       "implied_pts (20%)",
@@ -1799,7 +1799,7 @@
     "metadata": {
       "avg_raw": 11.88,
       "time_decay_avg": 0.0,
-      "proj_raw": 12.62,
+      "proj_raw": 12.64,
       "implied_pts_raw": 24.2,
       "last_n_raw": [
         0,
@@ -1819,33 +1819,33 @@
     "name": "Marcus Mariota",
     "position": "QB",
     "team": "WSH",
-    "starter_score": 1.89,
-    "waiver_score": 1.68,
-    "ros_score": 2.97,
+    "starter_score": 1.94,
+    "waiver_score": 1.74,
+    "ros_score": 2.95,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.0,
-      "proj": 5.7
+      "matchup": 7.8,
+      "proj": 4.9
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "opportunity": 0.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "consistency": 5.0,
-      "proj": 5.7
+      "proj": 4.9
     },
     "starter_reasons": [
       "implied_pts (40%)",
@@ -1866,7 +1866,7 @@
       "avg_raw": 12.27,
       "time_decay_avg": 0.0,
       "proj_raw": 14.84,
-      "implied_pts_raw": 18.5,
+      "implied_pts_raw": 18.8,
       "last_n_raw": [
         0,
         0,
@@ -1882,72 +1882,6 @@
       "MNF"
     ]
   },
-  "4242546": {
-    "id": 4242546,
-    "name": "Davis Mills",
-    "position": "QB",
-    "team": "HOU",
-    "starter_score": 2.28,
-    "waiver_score": 1.95,
-    "ros_score": 3.14,
-    "risk_index": 0.0,
-    "risk_category": "LOW",
-    "confidence": "HIGH",
-    "confidence_multiplier": 1.0,
-    "starter_components": {
-      "implied_pts": 3.2,
-      "ewma_fp": 0.0,
-      "avg": 0.0,
-      "matchup": 7.5,
-      "proj": 5.0
-    },
-    "waiver_components": {
-      "upside": 0.0,
-      "trend": 5.0,
-      "implied_pts": 3.2,
-      "opportunity": 0.4,
-      "avg": 0.0
-    },
-    "ros_components": {
-      "avg": 0.0,
-      "trend": 5.0,
-      "implied_pts": 3.2,
-      "consistency": 5.0,
-      "proj": 5.0
-    },
-    "starter_reasons": [
-      "implied_pts (40%)",
-      "matchup (10%)",
-      "proj (5%)"
-    ],
-    "waiver_reasons": [
-      "trend (25%)",
-      "implied_pts (20%)",
-      "opportunity (15%)"
-    ],
-    "ros_reasons": [
-      "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
-    ],
-    "metadata": {
-      "avg_raw": 13.19,
-      "time_decay_avg": 0.0,
-      "proj_raw": 0.0,
-      "implied_pts_raw": 20.0,
-      "last_n_raw": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "games_played": 4,
-      "injury_status": "ACTIVE",
-      "model_version": "player_analyst_v1.1",
-      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
-    },
-    "flags": []
-  },
   "4360423": {
     "id": 4360423,
     "name": "Michael Penix Jr.",
@@ -1961,7 +1895,7 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 4.1,
+      "implied_pts": 4.2,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 1.5,
@@ -1970,14 +1904,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.1,
+      "implied_pts": 4.2,
       "opportunity": 0.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.1,
+      "implied_pts": 4.2,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -2016,42 +1950,42 @@
       "INJURY"
     ]
   },
-  "4360689": {
-    "id": 4360689,
-    "name": "Tyler Shough",
+  "4242546": {
+    "id": 4242546,
+    "name": "Davis Mills",
     "position": "QB",
-    "team": "NO",
-    "starter_score": 1.6,
-    "waiver_score": 1.65,
-    "ros_score": 2.73,
+    "team": "HOU",
+    "starter_score": 2.32,
+    "waiver_score": 1.96,
+    "ros_score": 3.16,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 1.7,
+      "implied_pts": 3.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 7.2,
-      "proj": 3.9
+      "matchup": 7.5,
+      "proj": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.7,
-      "opportunity": 0.4,
+      "implied_pts": 3.3,
+      "opportunity": 0.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.7,
+      "implied_pts": 3.3,
       "consistency": 5.0,
-      "proj": 3.9
+      "proj": 5.0
     },
     "starter_reasons": [
-      "matchup (10%)",
       "implied_pts (40%)",
+      "matchup (10%)",
       "proj (5%)"
     ],
     "waiver_reasons": [
@@ -2062,12 +1996,78 @@
     "ros_reasons": [
       "trend (25%)",
       "consistency (15%)",
-      "proj (10%)"
+      "implied_pts (20%)"
+    ],
+    "metadata": {
+      "avg_raw": 13.19,
+      "time_decay_avg": 0.0,
+      "proj_raw": 0.0,
+      "implied_pts_raw": 20.0,
+      "last_n_raw": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "games_played": 4,
+      "injury_status": "ACTIVE",
+      "model_version": "player_analyst_v1.1",
+      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
+    },
+    "flags": []
+  },
+  "4360689": {
+    "id": 4360689,
+    "name": "Tyler Shough",
+    "position": "QB",
+    "team": "NO",
+    "starter_score": 1.58,
+    "waiver_score": 1.66,
+    "ros_score": 2.64,
+    "risk_index": 0.0,
+    "risk_category": "LOW",
+    "confidence": "HIGH",
+    "confidence_multiplier": 1.0,
+    "starter_components": {
+      "implied_pts": 1.8,
+      "ewma_fp": 0.0,
+      "avg": 0.0,
+      "matchup": 7.2,
+      "proj": 2.8
+    },
+    "waiver_components": {
+      "upside": 0.0,
+      "trend": 5.0,
+      "implied_pts": 1.8,
+      "opportunity": 0.4,
+      "avg": 0.0
+    },
+    "ros_components": {
+      "avg": 0.0,
+      "trend": 5.0,
+      "implied_pts": 1.8,
+      "consistency": 5.0,
+      "proj": 2.8
+    },
+    "starter_reasons": [
+      "implied_pts (40%)",
+      "matchup (10%)",
+      "proj (5%)"
+    ],
+    "waiver_reasons": [
+      "trend (25%)",
+      "implied_pts (20%)",
+      "opportunity (15%)"
+    ],
+    "ros_reasons": [
+      "trend (25%)",
+      "consistency (15%)",
+      "implied_pts (20%)"
     ],
     "metadata": {
       "avg_raw": 8.09,
       "time_decay_avg": 0.0,
-      "proj_raw": 13.49,
+      "proj_raw": 13.47,
       "implied_pts_raw": 18.2,
       "last_n_raw": [
         0,
@@ -2087,33 +2087,33 @@
     "name": "Cam Ward",
     "position": "QB",
     "team": "TEN",
-    "starter_score": 1.3,
-    "waiver_score": 1.47,
-    "ros_score": 2.53,
+    "starter_score": 1.31,
+    "waiver_score": 1.49,
+    "ros_score": 2.49,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 7.0,
-      "proj": 3.1
+      "proj": 2.5
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "opportunity": 0.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "consistency": 5.0,
-      "proj": 3.1
+      "proj": 2.5
     },
     "starter_reasons": [
       "matchup (10%)",
@@ -2133,7 +2133,7 @@
     "metadata": {
       "avg_raw": 10.0,
       "time_decay_avg": 0.0,
-      "proj_raw": 12.9,
+      "proj_raw": 13.29,
       "implied_pts_raw": 17.5,
       "last_n_raw": [
         0,
@@ -2153,15 +2153,15 @@
     "name": "Rachaad White",
     "position": "RB",
     "team": "TB",
-    "starter_score": 2.78,
-    "waiver_score": 3.23,
-    "ros_score": 3.57,
+    "starter_score": 2.5,
+    "waiver_score": 3.06,
+    "ros_score": 3.41,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 3.5,
@@ -2170,14 +2170,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
-      "opportunity": 4.4,
+      "implied_pts": 5.8,
+      "opportunity": 4.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "consistency": 5.0,
       "proj": 2.5
     },
@@ -2187,20 +2187,20 @@
       "proj (5%)"
     ],
     "waiver_reasons": [
-      "implied_pts (20%)",
       "trend (25%)",
+      "implied_pts (20%)",
       "opportunity (15%)"
     ],
     "ros_reasons": [
-      "implied_pts (20%)",
       "trend (25%)",
+      "implied_pts (20%)",
       "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 8.61,
       "time_decay_avg": 0.0,
       "proj_raw": 5.58,
-      "implied_pts_raw": 24.0,
+      "implied_pts_raw": 23.0,
       "last_n_raw": [
         0,
         0,
@@ -2219,37 +2219,37 @@
     "name": "Jacory Croskey-Merritt",
     "position": "RB",
     "team": "WSH",
-    "starter_score": 1.6,
-    "waiver_score": 2.32,
-    "ros_score": 2.6,
+    "starter_score": 1.68,
+    "waiver_score": 2.38,
+    "ros_score": 2.66,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.0,
+      "matchup": 7.8,
       "proj": 2.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "opportunity": 4.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "consistency": 5.0,
       "proj": 2.0
     },
     "starter_reasons": [
-      "matchup (10%)",
       "implied_pts (35%)",
+      "matchup (10%)",
       "proj (5%)"
     ],
     "waiver_reasons": [
@@ -2266,7 +2266,7 @@
       "avg_raw": 7.37,
       "time_decay_avg": 0.0,
       "proj_raw": 5.03,
-      "implied_pts_raw": 18.5,
+      "implied_pts_raw": 18.8,
       "last_n_raw": [
         0,
         0,
@@ -2295,7 +2295,7 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -2304,20 +2304,20 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "opportunity": 1.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "consistency": 5.0,
       "proj": 5.0
     },
     "starter_reasons": [
-      "matchup (10%)",
       "implied_pts (35%)",
+      "matchup (10%)",
       "proj (5%)"
     ],
     "waiver_reasons": [
@@ -2350,6 +2350,72 @@
       "INJURY"
     ]
   },
+  "4682652": {
+    "id": 4682652,
+    "name": "Devin Neal",
+    "position": "RB",
+    "team": "NO",
+    "starter_score": 1.62,
+    "waiver_score": 1.83,
+    "ros_score": 2.91,
+    "risk_index": 0.0,
+    "risk_category": "LOW",
+    "confidence": "HIGH",
+    "confidence_multiplier": 1.0,
+    "starter_components": {
+      "implied_pts": 1.8,
+      "ewma_fp": 0.0,
+      "avg": 0.0,
+      "matchup": 7.2,
+      "proj": 5.5
+    },
+    "waiver_components": {
+      "upside": 0.0,
+      "trend": 5.0,
+      "implied_pts": 1.8,
+      "opportunity": 1.5,
+      "avg": 0.0
+    },
+    "ros_components": {
+      "avg": 0.0,
+      "trend": 5.0,
+      "implied_pts": 1.8,
+      "consistency": 5.0,
+      "proj": 5.5
+    },
+    "starter_reasons": [
+      "matchup (10%)",
+      "implied_pts (35%)",
+      "proj (5%)"
+    ],
+    "waiver_reasons": [
+      "trend (25%)",
+      "implied_pts (20%)",
+      "opportunity (15%)"
+    ],
+    "ros_reasons": [
+      "trend (25%)",
+      "consistency (15%)",
+      "proj (10%)"
+    ],
+    "metadata": {
+      "avg_raw": 2.64,
+      "time_decay_avg": 0.0,
+      "proj_raw": 9.35,
+      "implied_pts_raw": 18.2,
+      "last_n_raw": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "games_played": 4,
+      "injury_status": "ACTIVE",
+      "model_version": "player_analyst_v1.1",
+      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
+    },
+    "flags": []
+  },
   "3116385": {
     "id": 3116385,
     "name": "Joe Mixon",
@@ -2363,7 +2429,7 @@
     "confidence": "LOW",
     "confidence_multiplier": 0.8,
     "starter_components": {
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 7.5,
@@ -2372,14 +2438,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "opportunity": 1.1,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -2423,15 +2489,15 @@
     "name": "Devin Singletary",
     "position": "RB",
     "team": "NYG",
-    "starter_score": 2.11,
-    "waiver_score": 2.35,
-    "ros_score": 2.82,
+    "starter_score": 2.14,
+    "waiver_score": 2.36,
+    "ros_score": 2.84,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -2440,20 +2506,20 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
-      "opportunity": 3.6,
+      "implied_pts": 2.9,
+      "opportunity": 3.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "consistency": 5.0,
       "proj": 2.6
     },
     "starter_reasons": [
-      "matchup (10%)",
       "implied_pts (35%)",
+      "matchup (10%)",
       "proj (5%)"
     ],
     "waiver_reasons": [
@@ -2484,86 +2550,20 @@
     },
     "flags": []
   },
-  "4682652": {
-    "id": 4682652,
-    "name": "Devin Neal",
-    "position": "RB",
-    "team": "NO",
-    "starter_score": 1.59,
-    "waiver_score": 1.75,
-    "ros_score": 2.89,
-    "risk_index": 0.0,
-    "risk_category": "LOW",
-    "confidence": "HIGH",
-    "confidence_multiplier": 1.0,
-    "starter_components": {
-      "implied_pts": 1.7,
-      "ewma_fp": 0.0,
-      "avg": 0.0,
-      "matchup": 7.2,
-      "proj": 5.5
-    },
-    "waiver_components": {
-      "upside": 0.0,
-      "trend": 5.0,
-      "implied_pts": 1.7,
-      "opportunity": 1.0,
-      "avg": 0.0
-    },
-    "ros_components": {
-      "avg": 0.0,
-      "trend": 5.0,
-      "implied_pts": 1.7,
-      "consistency": 5.0,
-      "proj": 5.5
-    },
-    "starter_reasons": [
-      "matchup (10%)",
-      "implied_pts (35%)",
-      "proj (5%)"
-    ],
-    "waiver_reasons": [
-      "trend (25%)",
-      "implied_pts (20%)",
-      "opportunity (15%)"
-    ],
-    "ros_reasons": [
-      "trend (25%)",
-      "consistency (15%)",
-      "proj (10%)"
-    ],
-    "metadata": {
-      "avg_raw": 2.64,
-      "time_decay_avg": 0.0,
-      "proj_raw": 9.34,
-      "implied_pts_raw": 18.2,
-      "last_n_raw": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "games_played": 4,
-      "injury_status": "ACTIVE",
-      "model_version": "player_analyst_v1.1",
-      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
-    },
-    "flags": []
-  },
   "4882093": {
     "id": 4882093,
     "name": "Bhayshul Tuten",
     "position": "RB",
     "team": "JAX",
-    "starter_score": 2.53,
-    "waiver_score": 2.72,
-    "ros_score": 3.66,
+    "starter_score": 2.56,
+    "waiver_score": 2.73,
+    "ros_score": 3.68,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.5,
@@ -2572,14 +2572,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
-      "opportunity": 1.0,
+      "implied_pts": 6.7,
+      "opportunity": 0.9,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "consistency": 5.0,
       "proj": 3.4
     },
@@ -2629,23 +2629,23 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 7.0,
+      "matchup": 6.0,
       "proj": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "opportunity": 1.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -2661,8 +2661,8 @@
     ],
     "ros_reasons": [
       "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 9.77,
@@ -2689,15 +2689,15 @@
     "name": "Brian Robinson Jr.",
     "position": "RB",
     "team": "SF",
-    "starter_score": 1.39,
-    "waiver_score": 2.08,
-    "ros_score": 2.93,
+    "starter_score": 1.42,
+    "waiver_score": 2.1,
+    "ros_score": 2.95,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.0,
@@ -2706,14 +2706,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "opportunity": 0.6,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "consistency": 5.0,
       "proj": 1.9
     },
@@ -2729,8 +2729,8 @@
     ],
     "ros_reasons": [
       "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 3.97,
@@ -2755,31 +2755,31 @@
     "name": "Kaleb Johnson",
     "position": "RB",
     "team": "PIT",
-    "starter_score": 2.57,
-    "waiver_score": 2.29,
-    "ros_score": 2.98,
+    "starter_score": 2.41,
+    "waiver_score": 2.23,
+    "ros_score": 2.92,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.5,
+      "matchup": 8.0,
       "proj": 0.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "opportunity": 0.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "consistency": 5.0,
       "proj": 0.0
     },
@@ -2802,7 +2802,7 @@
       "avg_raw": 1.03,
       "time_decay_avg": 0.0,
       "proj_raw": 0.51,
-      "implied_pts_raw": 22.0,
+      "implied_pts_raw": 21.5,
       "last_n_raw": [
         0,
         0,
@@ -2831,29 +2831,29 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.0,
+      "matchup": 7.8,
       "proj": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
-      "opportunity": 0.4,
+      "implied_pts": 2.3,
+      "opportunity": 0.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "consistency": 5.0,
       "proj": 5.0
     },
     "starter_reasons": [
-      "matchup (10%)",
       "implied_pts (35%)",
+      "matchup (10%)",
       "proj (5%)"
     ],
     "waiver_reasons": [
@@ -2870,7 +2870,7 @@
       "avg_raw": 5.3,
       "time_decay_avg": 0.0,
       "proj_raw": 0.0,
-      "implied_pts_raw": 18.5,
+      "implied_pts_raw": 18.8,
       "last_n_raw": [
         0,
         0,
@@ -2958,31 +2958,31 @@
     "name": "Emari Demercado",
     "position": "RB",
     "team": "ARI",
-    "starter_score": 0.98,
-    "waiver_score": 1.17,
-    "ros_score": 1.73,
+    "starter_score": 0.92,
+    "waiver_score": 1.18,
+    "ros_score": 1.75,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 7.0,
+      "matchup": 6.0,
       "proj": 1.8
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "opportunity": 2.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "consistency": 5.0,
       "proj": 1.8
     },
@@ -2998,8 +2998,8 @@
     ],
     "ros_reasons": [
       "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 4.28,
@@ -3021,13 +3021,81 @@
       "INJURY"
     ]
   },
+  "4362619": {
+    "id": 4362619,
+    "name": "Chris Rodriguez Jr.",
+    "position": "RB",
+    "team": "WSH",
+    "starter_score": 1.76,
+    "waiver_score": 2.01,
+    "ros_score": 2.8,
+    "risk_index": 0.0,
+    "risk_category": "LOW",
+    "confidence": "HIGH",
+    "confidence_multiplier": 1.0,
+    "starter_components": {
+      "implied_pts": 2.3,
+      "ewma_fp": 0.0,
+      "avg": 0.0,
+      "matchup": 7.8,
+      "proj": 3.4
+    },
+    "waiver_components": {
+      "upside": 0.0,
+      "trend": 5.0,
+      "implied_pts": 2.3,
+      "opportunity": 2.0,
+      "avg": 0.0
+    },
+    "ros_components": {
+      "avg": 0.0,
+      "trend": 5.0,
+      "implied_pts": 2.3,
+      "consistency": 5.0,
+      "proj": 3.4
+    },
+    "starter_reasons": [
+      "implied_pts (35%)",
+      "matchup (10%)",
+      "proj (5%)"
+    ],
+    "waiver_reasons": [
+      "trend (25%)",
+      "implied_pts (20%)",
+      "opportunity (15%)"
+    ],
+    "ros_reasons": [
+      "trend (25%)",
+      "consistency (15%)",
+      "implied_pts (20%)"
+    ],
+    "metadata": {
+      "avg_raw": 5.22,
+      "time_decay_avg": 0.0,
+      "proj_raw": 6.79,
+      "implied_pts_raw": 18.8,
+      "last_n_raw": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "games_played": 4,
+      "injury_status": "ACTIVE",
+      "model_version": "player_analyst_v1.1",
+      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
+    },
+    "flags": [
+      "MNF"
+    ]
+  },
   "4038441": {
     "id": 4038441,
     "name": "Justice Hill",
     "position": "RB",
     "team": "BAL",
     "starter_score": 2.8,
-    "waiver_score": 2.03,
+    "waiver_score": 2.02,
     "ros_score": 2.75,
     "risk_index": 0.6,
     "risk_category": "LOW",
@@ -3044,7 +3112,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 10.0,
-      "opportunity": 0.1,
+      "opportunity": 0.0,
       "avg": 0.0
     },
     "ros_components": {
@@ -3062,7 +3130,7 @@
     "waiver_reasons": [
       "implied_pts (20%)",
       "trend (25%)",
-      "opportunity (15%)"
+      "upside (30%)"
     ],
     "ros_reasons": [
       "implied_pts (20%)",
@@ -3089,88 +3157,20 @@
       "INJURY"
     ]
   },
-  "4362619": {
-    "id": 4362619,
-    "name": "Chris Rodriguez Jr.",
-    "position": "RB",
-    "team": "WSH",
-    "starter_score": 1.67,
-    "waiver_score": 1.95,
-    "ros_score": 2.74,
-    "risk_index": 0.0,
-    "risk_category": "LOW",
-    "confidence": "HIGH",
-    "confidence_multiplier": 1.0,
-    "starter_components": {
-      "implied_pts": 2.0,
-      "ewma_fp": 0.0,
-      "avg": 0.0,
-      "matchup": 8.0,
-      "proj": 3.4
-    },
-    "waiver_components": {
-      "upside": 0.0,
-      "trend": 5.0,
-      "implied_pts": 2.0,
-      "opportunity": 2.0,
-      "avg": 0.0
-    },
-    "ros_components": {
-      "avg": 0.0,
-      "trend": 5.0,
-      "implied_pts": 2.0,
-      "consistency": 5.0,
-      "proj": 3.4
-    },
-    "starter_reasons": [
-      "matchup (10%)",
-      "implied_pts (35%)",
-      "proj (5%)"
-    ],
-    "waiver_reasons": [
-      "trend (25%)",
-      "implied_pts (20%)",
-      "opportunity (15%)"
-    ],
-    "ros_reasons": [
-      "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
-    ],
-    "metadata": {
-      "avg_raw": 5.22,
-      "time_decay_avg": 0.0,
-      "proj_raw": 6.79,
-      "implied_pts_raw": 18.5,
-      "last_n_raw": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "games_played": 4,
-      "injury_status": "ACTIVE",
-      "model_version": "player_analyst_v1.1",
-      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
-    },
-    "flags": [
-      "MNF"
-    ]
-  },
   "4432773": {
     "id": 4432773,
     "name": "Brian Thomas Jr.",
     "position": "WR",
     "team": "JAX",
-    "starter_score": 0.58,
-    "waiver_score": 2.36,
-    "ros_score": 2.54,
+    "starter_score": 0.6,
+    "waiver_score": 2.39,
+    "ros_score": 2.56,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.5,
@@ -3179,14 +3179,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
-      "opportunity": 7.0,
+      "implied_pts": 6.7,
+      "opportunity": 7.1,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -3225,86 +3225,20 @@
       "INJURY"
     ]
   },
-  "3915416": {
-    "id": 3915416,
-    "name": "DJ Moore",
-    "position": "WR",
-    "team": "CHI",
-    "starter_score": 1.93,
-    "waiver_score": 2.38,
-    "ros_score": 2.78,
-    "risk_index": 0.0,
-    "risk_category": "LOW",
-    "confidence": "HIGH",
-    "confidence_multiplier": 1.0,
-    "starter_components": {
-      "implied_pts": 2.2,
-      "ewma_fp": 0.0,
-      "avg": 0.0,
-      "matchup": 8.8,
-      "proj": 3.4
-    },
-    "waiver_components": {
-      "upside": 0.0,
-      "trend": 5.0,
-      "implied_pts": 2.2,
-      "opportunity": 4.6,
-      "avg": 0.0
-    },
-    "ros_components": {
-      "avg": 0.0,
-      "trend": 5.0,
-      "implied_pts": 2.2,
-      "consistency": 5.0,
-      "proj": 3.4
-    },
-    "starter_reasons": [
-      "matchup (15%)",
-      "implied_pts (20%)",
-      "proj (5%)"
-    ],
-    "waiver_reasons": [
-      "trend (25%)",
-      "opportunity (15%)",
-      "implied_pts (20%)"
-    ],
-    "ros_reasons": [
-      "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
-    ],
-    "metadata": {
-      "avg_raw": 8.93,
-      "time_decay_avg": 0.0,
-      "proj_raw": 8.0,
-      "implied_pts_raw": 18.8,
-      "last_n_raw": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "games_played": 4,
-      "injury_status": "ACTIVE",
-      "model_version": "player_analyst_v1.1",
-      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
-    },
-    "flags": []
-  },
   "4032473": {
     "id": 4032473,
     "name": "Rashid Shaheed",
     "position": "WR",
     "team": "SEA",
-    "starter_score": 1.86,
-    "waiver_score": 3.4,
-    "ros_score": 3.97,
+    "starter_score": 1.88,
+    "waiver_score": 3.42,
+    "ros_score": 3.99,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.0,
@@ -3313,14 +3247,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "opportunity": 2.7,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "consistency": 5.0,
       "proj": 2.3
     },
@@ -3342,7 +3276,7 @@
     "metadata": {
       "avg_raw": 7.47,
       "time_decay_avg": 0.0,
-      "proj_raw": 6.89,
+      "proj_raw": 6.8,
       "implied_pts_raw": 26.5,
       "last_n_raw": [
         0,
@@ -3364,15 +3298,15 @@
     "name": "Chris Godwin Jr.",
     "position": "WR",
     "team": "TB",
-    "starter_score": 1.95,
-    "waiver_score": 2.87,
-    "ros_score": 3.52,
+    "starter_score": 1.78,
+    "waiver_score": 2.71,
+    "ros_score": 3.36,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 3.5,
@@ -3381,16 +3315,82 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "opportunity": 2.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "consistency": 5.0,
       "proj": 2.0
+    },
+    "starter_reasons": [
+      "implied_pts (20%)",
+      "matchup (15%)",
+      "proj (5%)"
+    ],
+    "waiver_reasons": [
+      "trend (25%)",
+      "implied_pts (20%)",
+      "opportunity (15%)"
+    ],
+    "ros_reasons": [
+      "trend (25%)",
+      "implied_pts (20%)",
+      "consistency (15%)"
+    ],
+    "metadata": {
+      "avg_raw": 3.37,
+      "time_decay_avg": 0.0,
+      "proj_raw": 6.55,
+      "implied_pts_raw": 23.0,
+      "last_n_raw": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "games_played": 4,
+      "injury_status": "ACTIVE",
+      "model_version": "player_analyst_v1.1",
+      "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
+    },
+    "flags": []
+  },
+  "4360078": {
+    "id": 4360078,
+    "name": "Alec Pierce",
+    "position": "WR",
+    "team": "IND",
+    "starter_score": 2.05,
+    "waiver_score": 3.11,
+    "ros_score": 3.78,
+    "risk_index": 0.0,
+    "risk_category": "LOW",
+    "confidence": "HIGH",
+    "confidence_multiplier": 1.0,
+    "starter_components": {
+      "implied_pts": 7.1,
+      "ewma_fp": 0.0,
+      "avg": 0.0,
+      "matchup": 3.0,
+      "proj": 3.6
+    },
+    "waiver_components": {
+      "upside": 0.0,
+      "trend": 5.0,
+      "implied_pts": 7.1,
+      "opportunity": 2.9,
+      "avg": 0.0
+    },
+    "ros_components": {
+      "avg": 0.0,
+      "trend": 5.0,
+      "implied_pts": 7.1,
+      "consistency": 5.0,
+      "proj": 3.6
     },
     "starter_reasons": [
       "implied_pts (20%)",
@@ -3408,10 +3408,10 @@
       "consistency (15%)"
     ],
     "metadata": {
-      "avg_raw": 3.37,
+      "avg_raw": 9.07,
       "time_decay_avg": 0.0,
-      "proj_raw": 6.55,
-      "implied_pts_raw": 24.0,
+      "proj_raw": 8.29,
+      "implied_pts_raw": 24.5,
       "last_n_raw": [
         0,
         0,
@@ -3430,31 +3430,31 @@
     "name": "Matthew Golden",
     "position": "WR",
     "team": "GB",
-    "starter_score": 1.3,
-    "waiver_score": 1.74,
-    "ros_score": 1.96,
+    "starter_score": 1.15,
+    "waiver_score": 1.63,
+    "ros_score": 1.85,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.5,
+      "matchup": 8.2,
       "proj": 0.2
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "opportunity": 3.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "consistency": 5.0,
       "proj": 0.2
     },
@@ -3477,7 +3477,7 @@
       "avg_raw": 5.01,
       "time_decay_avg": 0.0,
       "proj_raw": 4.51,
-      "implied_pts_raw": 23.0,
+      "implied_pts_raw": 22.2,
       "last_n_raw": [
         0,
         0,
@@ -3499,43 +3499,43 @@
     "name": "Tre Tucker",
     "position": "WR",
     "team": "LV",
-    "starter_score": 1.45,
-    "waiver_score": 1.57,
-    "ros_score": 2.44,
+    "starter_score": 1.32,
+    "waiver_score": 1.5,
+    "ros_score": 2.38,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 0.3,
+      "implied_pts": 0.0,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.0,
+      "matchup": 7.5,
       "proj": 3.8
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.3,
+      "implied_pts": 0.0,
       "opportunity": 1.7,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.3,
+      "implied_pts": 0.0,
       "consistency": 5.0,
       "proj": 3.8
     },
     "starter_reasons": [
       "matchup (15%)",
       "proj (5%)",
-      "implied_pts (20%)"
+      "ewma_fp (35%)"
     ],
     "waiver_reasons": [
       "trend (25%)",
       "opportunity (15%)",
-      "implied_pts (20%)"
+      "upside (30%)"
     ],
     "ros_reasons": [
       "trend (25%)",
@@ -3546,7 +3546,7 @@
       "avg_raw": 9.74,
       "time_decay_avg": 0.0,
       "proj_raw": 8.5,
-      "implied_pts_raw": 16.5,
+      "implied_pts_raw": 16.0,
       "last_n_raw": [
         0,
         0,
@@ -3575,23 +3575,23 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.5,
+      "matchup": 8.2,
       "proj": 1.8
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "opportunity": 0.9,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "consistency": 5.0,
       "proj": 1.8
     },
@@ -3614,7 +3614,7 @@
       "avg_raw": 6.0,
       "time_decay_avg": 0.0,
       "proj_raw": 6.31,
-      "implied_pts_raw": 23.0,
+      "implied_pts_raw": 22.2,
       "last_n_raw": [
         0,
         0,
@@ -3644,7 +3644,7 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.5,
@@ -3653,14 +3653,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "opportunity": 1.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -3704,15 +3704,15 @@
     "name": "Jayden Higgins",
     "position": "WR",
     "team": "HOU",
-    "starter_score": 1.96,
-    "waiver_score": 1.98,
-    "ros_score": 3.03,
+    "starter_score": 1.98,
+    "waiver_score": 2.02,
+    "ros_score": 3.05,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 7.5,
@@ -3721,14 +3721,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.2,
-      "opportunity": 0.6,
+      "implied_pts": 3.3,
+      "opportunity": 0.7,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.2,
+      "implied_pts": 3.3,
       "consistency": 5.0,
       "proj": 3.9
     },
@@ -3788,7 +3788,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 10.0,
-      "opportunity": 0.3,
+      "opportunity": 0.2,
       "avg": 0.0
     },
     "ros_components": {
@@ -3838,15 +3838,15 @@
     "name": "Tez Johnson",
     "position": "WR",
     "team": "TB",
-    "starter_score": 1.89,
-    "waiver_score": 2.62,
-    "ros_score": 3.41,
+    "starter_score": 1.73,
+    "waiver_score": 2.46,
+    "ros_score": 3.25,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 3.5,
@@ -3855,14 +3855,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "opportunity": 0.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "consistency": 5.0,
       "proj": 0.9
     },
@@ -3872,20 +3872,20 @@
       "proj (5%)"
     ],
     "waiver_reasons": [
-      "implied_pts (20%)",
       "trend (25%)",
+      "implied_pts (20%)",
       "opportunity (15%)"
     ],
     "ros_reasons": [
-      "implied_pts (20%)",
       "trend (25%)",
+      "implied_pts (20%)",
       "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 7.14,
       "time_decay_avg": 0.0,
       "proj_raw": 5.36,
-      "implied_pts_raw": 24.0,
+      "implied_pts_raw": 23.0,
       "last_n_raw": [
         0,
         0,
@@ -3904,15 +3904,15 @@
     "name": "Darius Slayton",
     "position": "WR",
     "team": "NYG",
-    "starter_score": 2.16,
-    "waiver_score": 1.87,
-    "ros_score": 2.77,
+    "starter_score": 2.18,
+    "waiver_score": 1.88,
+    "ros_score": 2.79,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -3921,14 +3921,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
-      "opportunity": 0.4,
+      "implied_pts": 2.9,
+      "opportunity": 0.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "consistency": 5.0,
       "proj": 2.1
     },
@@ -3970,15 +3970,15 @@
     "name": "Parker Washington",
     "position": "WR",
     "team": "JAX",
-    "starter_score": 1.54,
-    "waiver_score": 2.92,
-    "ros_score": 3.61,
+    "starter_score": 1.56,
+    "waiver_score": 2.95,
+    "ros_score": 3.63,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.5,
@@ -3987,14 +3987,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
-      "opportunity": 2.3,
+      "implied_pts": 6.7,
+      "opportunity": 2.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "consistency": 5.0,
       "proj": 2.9
     },
@@ -4036,15 +4036,15 @@
     "name": "Xavier Legette",
     "position": "WR",
     "team": "CAR",
-    "starter_score": 1.66,
-    "waiver_score": 1.4,
-    "ros_score": 2.19,
+    "starter_score": 1.68,
+    "waiver_score": 1.42,
+    "ros_score": 2.21,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -4053,14 +4053,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "opportunity": 0.1,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.7,
+      "implied_pts": 0.8,
       "consistency": 5.0,
       "proj": 0.5
     },
@@ -4102,15 +4102,15 @@
     "name": "Chimere Dike",
     "position": "WR",
     "team": "TEN",
-    "starter_score": 1.46,
-    "waiver_score": 1.5,
-    "ros_score": 2.59,
+    "starter_score": 1.48,
+    "waiver_score": 1.53,
+    "ros_score": 2.61,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 7.0,
@@ -4119,14 +4119,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "opportunity": 0.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "consistency": 5.0,
       "proj": 3.7
     },
@@ -4168,15 +4168,15 @@
     "name": "Oronde Gadsden II",
     "position": "TE",
     "team": "LAC",
-    "starter_score": 1.62,
-    "waiver_score": 4.04,
-    "ros_score": 4.5,
+    "starter_score": 1.56,
+    "waiver_score": 4.02,
+    "ros_score": 4.42,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 7.5,
+      "implied_pts": 7.1,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.0,
@@ -4185,14 +4185,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
-      "opportunity": 8.6,
+      "implied_pts": 7.1,
+      "opportunity": 9.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
+      "implied_pts": 7.1,
       "consistency": 5.0,
       "proj": 10.0
     },
@@ -4215,7 +4215,7 @@
       "avg_raw": 8.8,
       "time_decay_avg": 0.0,
       "proj_raw": 8.54,
-      "implied_pts_raw": 25.0,
+      "implied_pts_raw": 24.5,
       "last_n_raw": [
         0,
         0,
@@ -4236,38 +4236,38 @@
     "name": "Zach Ertz",
     "position": "TE",
     "team": "WSH",
-    "starter_score": 1.83,
-    "waiver_score": 2.34,
-    "ros_score": 3.06,
+    "starter_score": 1.84,
+    "waiver_score": 2.42,
+    "ros_score": 3.12,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.0,
+      "matchup": 7.8,
       "proj": 6.6
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
-      "opportunity": 4.6,
+      "implied_pts": 2.3,
+      "opportunity": 4.7,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.3,
       "consistency": 5.0,
       "proj": 6.6
     },
     "starter_reasons": [
       "matchup (15%)",
-      "proj (5%)",
-      "implied_pts (15%)"
+      "implied_pts (15%)",
+      "proj (5%)"
     ],
     "waiver_reasons": [
       "trend (25%)",
@@ -4283,7 +4283,7 @@
       "avg_raw": 7.65,
       "time_decay_avg": 0.0,
       "proj_raw": 6.85,
-      "implied_pts_raw": 18.5,
+      "implied_pts_raw": 18.8,
       "last_n_raw": [
         0,
         0,
@@ -4304,15 +4304,15 @@
     "name": "Theo Johnson",
     "position": "TE",
     "team": "NYG",
-    "starter_score": 2.26,
-    "waiver_score": 3.12,
-    "ros_score": 3.25,
+    "starter_score": 2.28,
+    "waiver_score": 3.14,
+    "ros_score": 3.27,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 10.0,
@@ -4321,14 +4321,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "opportunity": 8.7,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.8,
+      "implied_pts": 2.9,
       "consistency": 5.0,
       "proj": 6.9
     },
@@ -4371,7 +4371,7 @@
     "position": "TE",
     "team": "CLE",
     "starter_score": 1.0,
-    "waiver_score": 2.33,
+    "waiver_score": 2.34,
     "ros_score": 2.95,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -4388,7 +4388,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 0.0,
-      "opportunity": 7.2,
+      "opportunity": 7.3,
       "avg": 0.0
     },
     "ros_components": {
@@ -4436,38 +4436,38 @@
     "name": "Evan Engram",
     "position": "TE",
     "team": "DEN",
-    "starter_score": 1.6,
-    "waiver_score": 3.46,
-    "ros_score": 4.0,
+    "starter_score": 1.62,
+    "waiver_score": 3.43,
+    "ros_score": 3.96,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 7.5,
+      "implied_pts": 7.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 1.5,
+      "matchup": 1.8,
       "proj": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
+      "implied_pts": 7.3,
       "opportunity": 4.8,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
+      "implied_pts": 7.3,
       "consistency": 5.0,
       "proj": 5.0
     },
     "starter_reasons": [
       "implied_pts (15%)",
-      "proj (5%)",
-      "matchup (15%)"
+      "matchup (15%)",
+      "proj (5%)"
     ],
     "waiver_reasons": [
       "implied_pts (20%)",
@@ -4483,7 +4483,7 @@
       "avg_raw": 4.87,
       "time_decay_avg": 0.0,
       "proj_raw": 6.27,
-      "implied_pts_raw": 25.0,
+      "implied_pts_raw": 24.8,
       "last_n_raw": [
         0,
         0,
@@ -4504,15 +4504,15 @@
     "name": "Colston Loveland",
     "position": "TE",
     "team": "CHI",
-    "starter_score": 1.86,
-    "waiver_score": 2.36,
-    "ros_score": 2.86,
+    "starter_score": 1.88,
+    "waiver_score": 2.39,
+    "ros_score": 2.88,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.2,
+      "implied_pts": 2.3,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 8.8,
@@ -4521,14 +4521,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.2,
-      "opportunity": 4.5,
+      "implied_pts": 2.3,
+      "opportunity": 4.6,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.2,
+      "implied_pts": 2.3,
       "consistency": 5.0,
       "proj": 4.2
     },
@@ -4578,23 +4578,23 @@
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.5,
+      "matchup": 8.2,
       "proj": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "opportunity": 2.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -4617,7 +4617,7 @@
       "avg_raw": 12.65,
       "time_decay_avg": 0.0,
       "proj_raw": 0.0,
-      "implied_pts_raw": 23.0,
+      "implied_pts_raw": 22.2,
       "last_n_raw": [
         0,
         0,
@@ -4707,33 +4707,33 @@
     "name": "AJ Barner",
     "position": "TE",
     "team": "SEA",
-    "starter_score": 1.57,
-    "waiver_score": 3.28,
+    "starter_score": 1.58,
+    "waiver_score": 3.29,
     "ros_score": 4.27,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 0.0,
-      "proj": 5.3
+      "proj": 5.1
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "opportunity": 1.9,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.7,
+      "implied_pts": 8.8,
       "consistency": 5.0,
-      "proj": 5.3
+      "proj": 5.1
     },
     "starter_reasons": [
       "implied_pts (15%)",
@@ -4753,7 +4753,7 @@
     "metadata": {
       "avg_raw": 7.27,
       "time_decay_avg": 0.0,
-      "proj_raw": 6.38,
+      "proj_raw": 6.28,
       "implied_pts_raw": 26.5,
       "last_n_raw": [
         0,
@@ -4775,31 +4775,31 @@
     "name": "Jonnu Smith",
     "position": "TE",
     "team": "PIT",
-    "starter_score": 2.02,
-    "waiver_score": 2.45,
-    "ros_score": 3.0,
+    "starter_score": 1.9,
+    "waiver_score": 2.38,
+    "ros_score": 2.94,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.5,
+      "matchup": 8.0,
       "proj": 0.2
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "opportunity": 1.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "consistency": 5.0,
       "proj": 0.2
     },
@@ -4822,7 +4822,7 @@
       "avg_raw": 4.24,
       "time_decay_avg": 0.0,
       "proj_raw": 4.45,
-      "implied_pts_raw": 22.0,
+      "implied_pts_raw": 21.5,
       "last_n_raw": [
         0,
         0,
@@ -4843,15 +4843,15 @@
     "name": "Mason Taylor",
     "position": "TE",
     "team": "NYJ",
-    "starter_score": 1.2,
-    "waiver_score": 1.89,
-    "ros_score": 3.0,
+    "starter_score": 1.22,
+    "waiver_score": 1.9,
+    "ros_score": 3.02,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 4.0,
@@ -4860,21 +4860,21 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
-      "opportunity": 1.6,
+      "implied_pts": 2.1,
+      "opportunity": 1.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "consistency": 5.0,
       "proj": 6.0
     },
     "starter_reasons": [
       "matchup (15%)",
-      "proj (5%)",
-      "implied_pts (15%)"
+      "implied_pts (15%)",
+      "proj (5%)"
     ],
     "waiver_reasons": [
       "trend (25%)",
@@ -4975,31 +4975,31 @@
     "name": "Pat Freiermuth",
     "position": "TE",
     "team": "PIT",
-    "starter_score": 2.01,
-    "waiver_score": 2.26,
-    "ros_score": 2.98,
+    "starter_score": 1.89,
+    "waiver_score": 2.2,
+    "ros_score": 2.92,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 8.5,
+      "matchup": 8.0,
       "proj": 0.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "opportunity": 0.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "consistency": 5.0,
       "proj": 0.0
     },
@@ -5022,7 +5022,7 @@
       "avg_raw": 6.07,
       "time_decay_avg": 0.0,
       "proj_raw": 4.18,
-      "implied_pts_raw": 22.0,
+      "implied_pts_raw": 21.5,
       "last_n_raw": [
         0,
         0,
@@ -5043,31 +5043,31 @@
     "name": "Brock Wright",
     "position": "TE",
     "team": "DET",
-    "starter_score": 1.26,
-    "waiver_score": 1.99,
-    "ros_score": 2.89,
+    "starter_score": 1.12,
+    "waiver_score": 1.95,
+    "ros_score": 2.85,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "ewma_fp": 0.0,
       "avg": 0.0,
-      "matchup": 6.0,
+      "matchup": 5.2,
       "proj": 6.3
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "opportunity": 2.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.7,
       "consistency": 5.0,
       "proj": 6.3
     },
@@ -5090,7 +5090,7 @@
       "avg_raw": 2.71,
       "time_decay_avg": 0.0,
       "proj_raw": 6.75,
-      "implied_pts_raw": 25.5,
+      "implied_pts_raw": 25.2,
       "last_n_raw": [
         0,
         0,
@@ -5112,15 +5112,15 @@
     "name": "Chig Okonkwo",
     "position": "TE",
     "team": "TEN",
-    "starter_score": 1.27,
-    "waiver_score": 1.47,
-    "ros_score": 2.32,
+    "starter_score": 1.28,
+    "waiver_score": 1.49,
+    "ros_score": 2.34,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "ewma_fp": 0.0,
       "avg": 0.0,
       "matchup": 7.0,
@@ -5129,14 +5129,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "opportunity": 0.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.1,
+      "implied_pts": 1.2,
       "consistency": 5.0,
       "proj": 1.0
     },
@@ -5178,32 +5178,32 @@
     "name": "Chris Boswell",
     "position": "K",
     "team": "PIT",
-    "starter_score": 5.57,
-    "waiver_score": 3.73,
-    "ros_score": 3.84,
+    "starter_score": 5.44,
+    "waiver_score": 3.67,
+    "ros_score": 3.79,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "avg": 0.0,
-      "proj": 8.6,
+      "proj": 8.7,
       "home": 7.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "opportunity": 10.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "consistency": 5.0,
-      "proj": 8.6
+      "proj": 8.7
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5224,7 +5224,7 @@
       "avg_raw": 9.64,
       "time_decay_avg": 0.0,
       "proj_raw": 8.42,
-      "implied_pts_raw": 22.0,
+      "implied_pts_raw": 21.5,
       "last_n_raw": [
         0,
         0,
@@ -5310,32 +5310,32 @@
     "name": "Jake Elliott",
     "position": "K",
     "team": "PHI",
-    "starter_score": 7.11,
-    "waiver_score": 4.01,
-    "ros_score": 4.45,
+    "starter_score": 7.18,
+    "waiver_score": 4.03,
+    "ros_score": 4.48,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 8.1,
+      "implied_pts": 8.2,
       "avg": 0.0,
-      "proj": 8.3,
+      "proj": 8.4,
       "home": 7.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.1,
+      "implied_pts": 8.2,
       "opportunity": 7.6,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 8.1,
+      "implied_pts": 8.2,
       "consistency": 5.0,
-      "proj": 8.3
+      "proj": 8.4
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5375,32 +5375,32 @@
     "name": "Matt Prater",
     "position": "K",
     "team": "BUF",
-    "starter_score": 6.55,
-    "waiver_score": 4.07,
-    "ros_score": 4.38,
+    "starter_score": 6.37,
+    "waiver_score": 3.99,
+    "ros_score": 4.31,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "avg": 0.0,
-      "proj": 8.0,
+      "proj": 8.1,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "opportunity": 8.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "consistency": 5.0,
-      "proj": 8.0
+      "proj": 8.1
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5421,7 +5421,7 @@
       "avg_raw": 7.55,
       "time_decay_avg": 0.0,
       "proj_raw": 8.35,
-      "implied_pts_raw": 25.5,
+      "implied_pts_raw": 25.0,
       "last_n_raw": [
         0,
         0,
@@ -5442,32 +5442,32 @@
     "name": "Cam Little",
     "position": "K",
     "team": "JAX",
-    "starter_score": 5.52,
-    "waiver_score": 3.2,
-    "ros_score": 3.93,
+    "starter_score": 5.61,
+    "waiver_score": 3.22,
+    "ros_score": 3.97,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "avg": 0.0,
-      "proj": 6.1,
+      "proj": 6.3,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "opportunity": 4.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 6.7,
       "consistency": 5.0,
-      "proj": 6.1
+      "proj": 6.3
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5507,32 +5507,32 @@
     "name": "Michael Badgley",
     "position": "K",
     "team": "IND",
-    "starter_score": 6.12,
-    "waiver_score": 3.1,
-    "ros_score": 4.01,
+    "starter_score": 6.21,
+    "waiver_score": 3.11,
+    "ros_score": 4.05,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 7.0,
+      "implied_pts": 7.1,
       "avg": 0.0,
-      "proj": 6.1,
+      "proj": 6.3,
       "home": 7.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.0,
+      "implied_pts": 7.1,
       "opportunity": 3.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.0,
+      "implied_pts": 7.1,
       "consistency": 5.0,
-      "proj": 6.1
+      "proj": 6.3
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5572,32 +5572,32 @@
     "name": "Eddy Pineiro",
     "position": "K",
     "team": "SF",
-    "starter_score": 2.64,
-    "waiver_score": 1.05,
-    "ros_score": 2.05,
+    "starter_score": 2.74,
+    "waiver_score": 1.07,
+    "ros_score": 2.1,
     "risk_index": 0.6,
     "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "avg": 0.0,
-      "proj": 5.4,
+      "proj": 5.7,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "opportunity": 1.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "consistency": 5.0,
-      "proj": 5.4
+      "proj": 5.7
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5611,8 +5611,8 @@
     ],
     "ros_reasons": [
       "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 10.4,
@@ -5647,7 +5647,7 @@
     "confidence": "LOW",
     "confidence_multiplier": 0.8,
     "starter_components": {
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "avg": 0.0,
       "proj": 5.0,
       "home": 5.0
@@ -5655,14 +5655,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "opportunity": 1.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.9,
+      "implied_pts": 7.5,
       "consistency": 5.0,
       "proj": 5.0
     },
@@ -5685,7 +5685,7 @@
       "avg_raw": 0.0,
       "time_decay_avg": 0.0,
       "proj_raw": 0.0,
-      "implied_pts_raw": 25.5,
+      "implied_pts_raw": 25.0,
       "last_n_raw": [
         0,
         0,
@@ -5752,7 +5752,7 @@
     "metadata": {
       "avg_raw": 9.09,
       "time_decay_avg": 0.0,
-      "proj_raw": 7.22,
+      "proj_raw": 7.01,
       "implied_pts_raw": 15.0,
       "last_n_raw": [
         0,
@@ -5774,32 +5774,32 @@
     "name": "Wil Lutz",
     "position": "K",
     "team": "DEN",
-    "starter_score": 5.85,
-    "waiver_score": 2.83,
-    "ros_score": 4.05,
+    "starter_score": 5.81,
+    "waiver_score": 2.79,
+    "ros_score": 4.04,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 7.5,
+      "implied_pts": 7.3,
       "avg": 0.0,
-      "proj": 5.5,
+      "proj": 5.8,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
+      "implied_pts": 7.3,
       "opportunity": 0.6,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
+      "implied_pts": 7.3,
       "consistency": 5.0,
-      "proj": 5.5
+      "proj": 5.8
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5820,7 +5820,7 @@
       "avg_raw": 7.27,
       "time_decay_avg": 0.0,
       "proj_raw": 8.08,
-      "implied_pts_raw": 25.0,
+      "implied_pts_raw": 24.8,
       "last_n_raw": [
         0,
         0,
@@ -5841,32 +5841,32 @@
     "name": "Evan McPherson",
     "position": "K",
     "team": "CIN",
-    "starter_score": 4.64,
-    "waiver_score": 2.47,
-    "ros_score": 3.54,
+    "starter_score": 4.77,
+    "waiver_score": 2.49,
+    "ros_score": 3.6,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 5.6,
+      "implied_pts": 5.7,
       "avg": 0.0,
-      "proj": 4.2,
+      "proj": 4.6,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.6,
+      "implied_pts": 5.7,
       "opportunity": 0.6,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.6,
+      "implied_pts": 5.7,
       "consistency": 5.0,
-      "proj": 4.2
+      "proj": 4.6
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5906,32 +5906,32 @@
     "name": "Brandon McManus",
     "position": "K",
     "team": "GB",
-    "starter_score": 4.56,
-    "waiver_score": 2.48,
-    "ros_score": 3.49,
+    "starter_score": 4.36,
+    "waiver_score": 2.36,
+    "ros_score": 3.42,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "avg": 0.0,
-      "proj": 3.3,
+      "proj": 3.8,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "opportunity": 0.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 5.8,
+      "implied_pts": 5.2,
       "consistency": 5.0,
-      "proj": 3.3
+      "proj": 3.8
     },
     "starter_reasons": [
       "implied_pts (50%)",
@@ -5952,7 +5952,7 @@
       "avg_raw": 7.5,
       "time_decay_avg": 0.0,
       "proj_raw": 7.84,
-      "implied_pts_raw": 23.0,
+      "implied_pts_raw": 22.2,
       "last_n_raw": [
         0,
         0,
@@ -5973,32 +5973,32 @@
     "name": "Nick Folk",
     "position": "K",
     "team": "NYJ",
-    "starter_score": 2.7,
-    "waiver_score": 1.66,
-    "ros_score": 2.55,
+    "starter_score": 2.87,
+    "waiver_score": 1.68,
+    "ros_score": 2.63,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "avg": 0.0,
-      "proj": 1.5,
+      "proj": 2.1,
       "home": 7.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "opportunity": 0.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.0,
+      "implied_pts": 2.1,
       "consistency": 5.0,
-      "proj": 1.5
+      "proj": 2.1
     },
     "starter_reasons": [
       "home (20%)",
@@ -6170,31 +6170,31 @@
     "name": "Broncos D/ST",
     "position": "D/ST",
     "team": "DEN",
-    "starter_score": 5.75,
-    "waiver_score": 4.03,
-    "ros_score": 4.48,
+    "starter_score": 5.61,
+    "waiver_score": 4.05,
+    "ros_score": 4.44,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "matchup": 6.8,
+      "matchup": 6.6,
       "proj": 9.8,
-      "opp_implied_low": 6.8,
+      "opp_implied_low": 6.6,
       "pressure": 0.0,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
-      "opportunity": 8.5,
+      "implied_pts": 7.3,
+      "opportunity": 8.9,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.5,
+      "implied_pts": 7.3,
       "consistency": 5.0,
       "proj": 9.8
     },
@@ -6217,7 +6217,7 @@
       "avg_raw": 8.45,
       "time_decay_avg": 0.0,
       "proj_raw": 7.26,
-      "implied_pts_raw": 25.0,
+      "implied_pts_raw": 24.8,
       "last_n_raw": [
         0,
         0,
@@ -6304,16 +6304,16 @@
     "name": "Browns D/ST",
     "position": "D/ST",
     "team": "CLE",
-    "starter_score": 4.7,
-    "waiver_score": 2.63,
-    "ros_score": 2.44,
+    "starter_score": 4.69,
+    "waiver_score": 2.58,
+    "ros_score": 2.41,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
       "matchup": 5.4,
-      "proj": 4.4,
+      "proj": 4.1,
       "opp_implied_low": 5.4,
       "pressure": 0.0,
       "home": 7.0
@@ -6322,7 +6322,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 0.0,
-      "opportunity": 9.2,
+      "opportunity": 8.9,
       "avg": 0.0
     },
     "ros_components": {
@@ -6330,7 +6330,7 @@
       "trend": 5.0,
       "implied_pts": 0.0,
       "consistency": 5.0,
-      "proj": 4.4
+      "proj": 4.1
     },
     "starter_reasons": [
       "matchup (40%)",
@@ -6350,7 +6350,7 @@
     "metadata": {
       "avg_raw": 9.45,
       "time_decay_avg": 0.0,
-      "proj_raw": 5.25,
+      "proj_raw": 5.16,
       "implied_pts_raw": 16.0,
       "last_n_raw": [
         0,
@@ -6371,7 +6371,7 @@
     "position": "D/ST",
     "team": "BAL",
     "starter_score": 3.57,
-    "waiver_score": 4.64,
+    "waiver_score": 4.6,
     "ros_score": 4.55,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -6388,7 +6388,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 10.0,
-      "opportunity": 9.3,
+      "opportunity": 9.0,
       "avg": 0.0
     },
     "ros_components": {
@@ -6436,31 +6436,31 @@
     "name": "Steelers D/ST",
     "position": "D/ST",
     "team": "PIT",
-    "starter_score": 2.1,
-    "waiver_score": 3.29,
-    "ros_score": 3.26,
+    "starter_score": 2.31,
+    "waiver_score": 3.21,
+    "ros_score": 3.2,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "matchup": 1.8,
+      "matchup": 2.1,
       "proj": 2.8,
-      "opp_implied_low": 1.8,
+      "opp_implied_low": 2.1,
       "pressure": 0.0,
       "home": 7.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
-      "opportunity": 7.1,
+      "implied_pts": 4.6,
+      "opportunity": 7.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.9,
+      "implied_pts": 4.6,
       "consistency": 5.0,
       "proj": 2.8
     },
@@ -6483,7 +6483,7 @@
       "avg_raw": 7.36,
       "time_decay_avg": 0.0,
       "proj_raw": 4.68,
-      "implied_pts_raw": 22.0,
+      "implied_pts_raw": 21.5,
       "last_n_raw": [
         0,
         0,
@@ -6505,15 +6505,15 @@
     "position": "D/ST",
     "team": "MIN",
     "starter_score": 1.3,
-    "waiver_score": 1.84,
-    "ros_score": 2.05,
+    "waiver_score": 1.82,
+    "ros_score": 2.06,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
       "matchup": 1.1,
-      "proj": 0.5,
+      "proj": 0.6,
       "opp_implied_low": 1.1,
       "pressure": 0.0,
       "home": 5.0
@@ -6522,7 +6522,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 0.0,
-      "opportunity": 3.9,
+      "opportunity": 3.8,
       "avg": 0.0
     },
     "ros_components": {
@@ -6530,7 +6530,7 @@
       "trend": 5.0,
       "implied_pts": 0.0,
       "consistency": 5.0,
-      "proj": 0.5
+      "proj": 0.6
     },
     "starter_reasons": [
       "home (10%)",
@@ -6550,7 +6550,7 @@
     "metadata": {
       "avg_raw": 5.73,
       "time_decay_avg": 0.0,
-      "proj_raw": 3.83,
+      "proj_raw": 3.86,
       "implied_pts_raw": 15.0,
       "last_n_raw": [
         0,
@@ -6573,8 +6573,8 @@
     "position": "D/ST",
     "team": "ATL",
     "starter_score": 5.68,
-    "waiver_score": 2.72,
-    "ros_score": 3.66,
+    "waiver_score": 2.75,
+    "ros_score": 3.68,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
@@ -6589,14 +6589,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.1,
-      "opportunity": 4.3,
+      "implied_pts": 4.2,
+      "opportunity": 4.4,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 4.1,
+      "implied_pts": 4.2,
       "consistency": 5.0,
       "proj": 8.4
     },
@@ -6612,8 +6612,8 @@
     ],
     "ros_reasons": [
       "trend (25%)",
-      "proj (10%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "proj (10%)"
     ],
     "metadata": {
       "avg_raw": 7.0,
@@ -6638,31 +6638,31 @@
     "name": "Raiders D/ST",
     "position": "D/ST",
     "team": "LV",
-    "starter_score": 2.25,
-    "waiver_score": 1.91,
-    "ros_score": 2.62,
+    "starter_score": 2.53,
+    "waiver_score": 1.78,
+    "ros_score": 2.56,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "matchup": 2.1,
+      "matchup": 2.5,
       "proj": 5.6,
-      "opp_implied_low": 2.1,
+      "opp_implied_low": 2.5,
       "pressure": 0.0,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.3,
-      "opportunity": 4.0,
+      "implied_pts": 0.0,
+      "opportunity": 3.5,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 0.3,
+      "implied_pts": 0.0,
       "consistency": 5.0,
       "proj": 5.6
     },
@@ -6674,7 +6674,7 @@
     "waiver_reasons": [
       "trend (25%)",
       "opportunity (15%)",
-      "implied_pts (20%)"
+      "upside (30%)"
     ],
     "ros_reasons": [
       "trend (25%)",
@@ -6685,7 +6685,7 @@
       "avg_raw": 4.18,
       "time_decay_avg": 0.0,
       "proj_raw": 5.71,
-      "implied_pts_raw": 16.5,
+      "implied_pts_raw": 16.0,
       "last_n_raw": [
         0,
         0,
@@ -6707,8 +6707,8 @@
     "position": "D/ST",
     "team": "SF",
     "starter_score": 6.99,
-    "waiver_score": 2.42,
-    "ros_score": 3.68,
+    "waiver_score": 2.5,
+    "ros_score": 3.7,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
@@ -6723,14 +6723,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
-      "opportunity": 2.9,
+      "implied_pts": 3.8,
+      "opportunity": 3.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "consistency": 5.0,
       "proj": 9.4
     },
@@ -6747,7 +6747,7 @@
     "ros_reasons": [
       "trend (25%)",
       "proj (10%)",
-      "consistency (15%)"
+      "implied_pts (20%)"
     ],
     "metadata": {
       "avg_raw": 3.17,
@@ -6773,8 +6773,8 @@
     "position": "D/ST",
     "team": "TB",
     "starter_score": 4.78,
-    "waiver_score": 2.76,
-    "ros_score": 3.91,
+    "waiver_score": 2.59,
+    "ros_score": 3.75,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
@@ -6789,14 +6789,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
-      "opportunity": 1.3,
+      "implied_pts": 5.8,
+      "opportunity": 1.2,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 6.6,
+      "implied_pts": 5.8,
       "consistency": 5.0,
       "proj": 5.9
     },
@@ -6806,20 +6806,20 @@
       "home (10%)"
     ],
     "waiver_reasons": [
-      "implied_pts (20%)",
       "trend (25%)",
+      "implied_pts (20%)",
       "opportunity (15%)"
     ],
     "ros_reasons": [
-      "implied_pts (20%)",
       "trend (25%)",
+      "implied_pts (20%)",
       "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 5.64,
       "time_decay_avg": 0.0,
       "proj_raw": 5.83,
-      "implied_pts_raw": 24.0,
+      "implied_pts_raw": 23.0,
       "last_n_raw": [
         0,
         0,
@@ -6839,8 +6839,8 @@
     "position": "D/ST",
     "team": "CHI",
     "starter_score": 1.64,
-    "waiver_score": 1.92,
-    "ros_score": 2.47,
+    "waiver_score": 1.91,
+    "ros_score": 2.49,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
@@ -6855,14 +6855,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.2,
-      "opportunity": 1.5,
+      "implied_pts": 2.3,
+      "opportunity": 1.3,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 2.2,
+      "implied_pts": 2.3,
       "consistency": 5.0,
       "proj": 0.3
     },
@@ -6905,8 +6905,8 @@
     "position": "D/ST",
     "team": "DAL",
     "starter_score": 0.7,
-    "waiver_score": 2.83,
-    "ros_score": 3.4,
+    "waiver_score": 2.82,
+    "ros_score": 3.42,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
@@ -6921,14 +6921,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.0,
-      "opportunity": 1.2,
+      "implied_pts": 7.1,
+      "opportunity": 1.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 7.0,
+      "implied_pts": 7.1,
       "consistency": 5.0,
       "proj": 0.0
     },
@@ -6972,31 +6972,31 @@
     "name": "Cardinals D/ST",
     "position": "D/ST",
     "team": "ARI",
-    "starter_score": 2.68,
-    "waiver_score": 2.12,
-    "ros_score": 3.03,
+    "starter_score": 3.17,
+    "waiver_score": 2.11,
+    "ros_score": 3.05,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
     "confidence_multiplier": 1.0,
     "starter_components": {
-      "matchup": 2.9,
+      "matchup": 3.6,
       "proj": 2.9,
-      "opp_implied_low": 2.9,
+      "opp_implied_low": 3.6,
       "pressure": 0.0,
       "home": 5.0
     },
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
-      "opportunity": 0.9,
+      "implied_pts": 3.8,
+      "opportunity": 0.7,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 3.7,
+      "implied_pts": 3.8,
       "consistency": 5.0,
       "proj": 2.9
     },
@@ -7012,8 +7012,8 @@
     ],
     "ros_reasons": [
       "trend (25%)",
-      "consistency (15%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "consistency (15%)"
     ],
     "metadata": {
       "avg_raw": 6.18,
@@ -7039,7 +7039,7 @@
     "position": "D/ST",
     "team": "MIA",
     "starter_score": 6.0,
-    "waiver_score": 2.61,
+    "waiver_score": 2.63,
     "ros_score": 4.16,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -7056,7 +7056,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 6.8,
-      "opportunity": 0.0,
+      "opportunity": 0.1,
       "avg": 0.0
     },
     "ros_components": {
@@ -7074,7 +7074,7 @@
     "waiver_reasons": [
       "implied_pts (20%)",
       "trend (25%)",
-      "upside (30%)"
+      "opportunity (15%)"
     ],
     "ros_reasons": [
       "implied_pts (20%)",
@@ -7084,7 +7084,7 @@
     "metadata": {
       "avg_raw": 4.0,
       "time_decay_avg": 0.0,
-      "proj_raw": 6.58,
+      "proj_raw": 6.57,
       "implied_pts_raw": 24.2,
       "last_n_raw": [
         0,
@@ -7105,8 +7105,8 @@
     "position": "D/ST",
     "team": "NO",
     "starter_score": 2.68,
-    "waiver_score": 1.59,
-    "ros_score": 2.92,
+    "waiver_score": 1.61,
+    "ros_score": 2.94,
     "risk_index": 0.0,
     "risk_category": "LOW",
     "confidence": "HIGH",
@@ -7121,14 +7121,14 @@
     "waiver_components": {
       "upside": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.7,
+      "implied_pts": 1.8,
       "opportunity": 0.0,
       "avg": 0.0
     },
     "ros_components": {
       "avg": 0.0,
       "trend": 5.0,
-      "implied_pts": 1.7,
+      "implied_pts": 1.8,
       "consistency": 5.0,
       "proj": 5.8
     },
@@ -7150,7 +7150,7 @@
     "metadata": {
       "avg_raw": 6.18,
       "time_decay_avg": 0.0,
-      "proj_raw": 5.78,
+      "proj_raw": 5.79,
       "implied_pts_raw": 18.2,
       "last_n_raw": [
         0,
