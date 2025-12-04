@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2025-12-03T18:36:52.842265",
+    "generated": "2025-12-04T19:16:47.137047",
     "league": 44181678,
     "year": 2025,
     "week": 14,
@@ -21,14 +21,14 @@
     "avg": 109.56,
     "depth": {
       "WR": {
-        "total": 4,
+        "total": 5,
         "start": 2,
-        "bench": 2
+        "bench": 3
       },
       "RB": {
-        "total": 5,
+        "total": 4,
         "start": 3,
-        "bench": 2
+        "bench": 1
       },
       "QB": {
         "total": 2,
@@ -36,14 +36,14 @@
         "bench": 1
       },
       "D/ST": {
-        "total": 3,
+        "total": 2,
         "start": 1,
-        "bench": 2
+        "bench": 1
       },
       "TE": {
-        "total": 1,
+        "total": 2,
         "start": 1,
-        "bench": 0
+        "bench": 1
       },
       "K": {
         "total": 1,
@@ -75,11 +75,11 @@
         "WR"
       ],
       "own": 99.9,
-      "start": 64.5,
+      "start": 51.1,
       "opp": "DAL",
       "kickoff": "2025-12-05T01:15Z",
       "home": true,
-      "implied_pts": 28.8,
+      "implied_pts": 29.0,
       "last_n": [
         0,
         0.0,
@@ -104,12 +104,12 @@
       "elig": [
         "RB"
       ],
-      "own": 99.6,
-      "start": 96.6,
+      "own": 99.7,
+      "start": 96.5,
       "opp": "PIT",
       "kickoff": "2025-12-07T18:00Z",
       "home": true,
-      "implied_pts": 24.2,
+      "implied_pts": 24.0,
       "last_n": [
         0,
         16.9,
@@ -129,7 +129,7 @@
       "pos": "WR",
       "team": "LAR",
       "slot": "WR",
-      "inj": "ACTIVE",
+      "inj": "QUESTIONABLE",
       "bye": false,
       "proj": 14.2,
       "avg": 14.91,
@@ -138,7 +138,7 @@
         "WR"
       ],
       "own": 99.5,
-      "start": 93.6,
+      "start": 93.2,
       "opp": "ARI",
       "kickoff": "2025-12-07T21:25Z",
       "home": false,
@@ -158,36 +158,6 @@
       ]
     },
     {
-      "id": 4430027,
-      "name": "Sam LaPorta",
-      "pos": "TE",
-      "team": "DET",
-      "slot": "IR",
-      "inj": "INJURY_RESERVE",
-      "bye": false,
-      "proj": 0.0,
-      "avg": 9.66,
-      "total": 86.9,
-      "elig": [
-        "TE"
-      ],
-      "own": 74.9,
-      "start": 17.8,
-      "opp": "DAL",
-      "kickoff": "2025-12-05T01:15Z",
-      "home": true,
-      "implied_pts": 28.8,
-      "last_n": [
-        0,
-        0.0,
-        0,
-        0
-      ],
-      "stdev": 0.0,
-      "boom": 1.0,
-      "bust": 1.0
-    },
-    {
       "id": 4428331,
       "name": "Rashee Rice",
       "pos": "WR",
@@ -202,7 +172,7 @@
         "WR"
       ],
       "own": 98.7,
-      "start": 83.5,
+      "start": 83.8,
       "opp": "HOU",
       "kickoff": "2025-12-08T01:20Z",
       "home": true,
@@ -222,40 +192,6 @@
       ]
     },
     {
-      "id": 4361529,
-      "name": "Isiah Pacheco",
-      "pos": "RB",
-      "team": "KC",
-      "slot": "RB/WR/TE",
-      "inj": "ACTIVE",
-      "bye": false,
-      "proj": 7.63,
-      "avg": 6.56,
-      "total": 59.0,
-      "elig": [
-        "RB"
-      ],
-      "own": 64.0,
-      "start": 14.3,
-      "opp": "HOU",
-      "kickoff": "2025-12-08T01:20Z",
-      "home": true,
-      "is_mnf": true,
-      "implied_pts": 22.5,
-      "last_n": [
-        0,
-        4.3,
-        0,
-        0
-      ],
-      "stdev": 2.15,
-      "boom": 0.25,
-      "bust": 0.75,
-      "all_game_history": [
-        4.3
-      ]
-    },
-    {
       "id": 3054850,
       "name": "Alvin Kamara",
       "pos": "RB",
@@ -263,18 +199,18 @@
       "slot": "BE",
       "inj": "QUESTIONABLE",
       "bye": false,
-      "proj": 10.62,
+      "proj": 0.0,
       "avg": 7.65,
       "total": 84.2,
       "elig": [
         "RB"
       ],
-      "own": 89.8,
-      "start": 27.7,
+      "own": 89.4,
+      "start": 24.0,
       "opp": "TB",
       "kickoff": "2025-12-07T18:00Z",
       "home": false,
-      "implied_pts": 17.0,
+      "implied_pts": 16.5,
       "last_n": [
         0,
         0.0,
@@ -299,12 +235,12 @@
       "elig": [
         "QB"
       ],
-      "own": 83.7,
-      "start": 44.6,
+      "own": 85.0,
+      "start": 49.1,
       "opp": "DAL",
       "kickoff": "2025-12-05T01:15Z",
       "home": true,
-      "implied_pts": 28.8,
+      "implied_pts": 29.0,
       "last_n": [
         0,
         20.64,
@@ -323,7 +259,7 @@
       "name": "Aaron Jones Sr.",
       "pos": "RB",
       "team": "MIN",
-      "slot": "BE",
+      "slot": "RB",
       "inj": "QUESTIONABLE",
       "bye": false,
       "proj": 11.33,
@@ -332,12 +268,12 @@
       "elig": [
         "RB"
       ],
-      "own": 85.5,
+      "own": 85.4,
       "start": 42.3,
       "opp": "WSH",
       "kickoff": "2025-12-07T18:00Z",
       "home": true,
-      "implied_pts": 21.5,
+      "implied_pts": 22.5,
       "last_n": [
         0,
         2.5,
@@ -356,7 +292,7 @@
       "name": "Rams D/ST",
       "pos": "D/ST",
       "team": "LAR",
-      "slot": "BE",
+      "slot": "D/ST",
       "inj": "NORMAL",
       "bye": false,
       "proj": 6.81,
@@ -365,8 +301,8 @@
       "elig": [
         "D/ST"
       ],
-      "own": 81.4,
-      "start": 71.5,
+      "own": 83.2,
+      "start": 73.3,
       "opp": "ARI",
       "kickoff": "2025-12-07T21:25Z",
       "home": false,
@@ -393,18 +329,18 @@
       "slot": "TE",
       "inj": "ACTIVE",
       "bye": false,
-      "proj": 7.59,
+      "proj": 7.55,
       "avg": 8.38,
       "total": 100.6,
       "elig": [
         "TE"
       ],
-      "own": 54.2,
-      "start": 30.5,
+      "own": 55.9,
+      "start": 33.9,
       "opp": "TB",
       "kickoff": "2025-12-07T18:00Z",
       "home": false,
-      "implied_pts": 17.0,
+      "implied_pts": 16.5,
       "last_n": [
         0,
         6.4,
@@ -419,59 +355,25 @@
       ]
     },
     {
-      "id": 2971573,
-      "name": "Ka'imi Fairbairn",
-      "pos": "K",
-      "team": "HOU",
-      "slot": "K",
-      "inj": "ACTIVE",
-      "bye": false,
-      "proj": 7.66,
-      "avg": 11.3,
-      "total": 113.0,
-      "elig": [
-        "K"
-      ],
-      "own": 38.5,
-      "start": 29.5,
-      "opp": "KC",
-      "kickoff": "2025-12-08T01:20Z",
-      "home": false,
-      "is_mnf": true,
-      "implied_pts": 19.0,
-      "last_n": [
-        0,
-        9.0,
-        0,
-        0
-      ],
-      "stdev": 4.5,
-      "boom": 0.25,
-      "bust": 0.75,
-      "all_game_history": [
-        9.0
-      ]
-    },
-    {
       "id": 4682652,
       "name": "Devin Neal",
       "pos": "RB",
       "team": "NO",
-      "slot": "RB",
+      "slot": "RB/WR/TE",
       "inj": "ACTIVE",
       "bye": false,
-      "proj": 4.51,
+      "proj": 10.76,
       "avg": 3.36,
       "total": 26.9,
       "elig": [
         "RB"
       ],
-      "own": 34.2,
-      "start": 8.4,
+      "own": 41.5,
+      "start": 18.8,
       "opp": "TB",
       "kickoff": "2025-12-07T18:00Z",
       "home": false,
-      "implied_pts": 17.0,
+      "implied_pts": 16.5,
       "last_n": [
         0,
         8.4,
@@ -499,8 +401,8 @@
       "elig": [
         "WR"
       ],
-      "own": 89.7,
-      "start": 37.3,
+      "own": 89.6,
+      "start": 38.8,
       "opp": "IND",
       "kickoff": "2025-12-07T18:00Z",
       "home": true,
@@ -533,11 +435,11 @@
         "D/ST"
       ],
       "own": 4.8,
-      "start": 2.1,
+      "start": 2.0,
       "opp": "TB",
       "kickoff": "2025-12-07T18:00Z",
       "home": false,
-      "implied_pts": 17.0,
+      "implied_pts": 16.5,
       "last_n": [
         0,
         8.0,
@@ -552,70 +454,162 @@
       ]
     },
     {
-      "id": 4432577,
-      "name": "C.J. Stroud",
-      "pos": "QB",
-      "team": "HOU",
+      "id": 4597500,
+      "name": "Adonai Mitchell",
+      "pos": "WR",
+      "team": "NYJ",
       "slot": "BE",
       "inj": "ACTIVE",
       "bye": false,
-      "proj": 16.68,
-      "avg": 14.45,
-      "total": 130.02,
+      "proj": 8.91,
+      "avg": 4.05,
+      "total": 44.6,
       "elig": [
-        "QB"
+        "WR"
       ],
-      "own": 47.1,
-      "start": 11.8,
-      "opp": "KC",
-      "kickoff": "2025-12-08T01:20Z",
-      "home": false,
-      "is_mnf": true,
-      "implied_pts": 19.0,
+      "own": 28.4,
+      "start": 11.9,
+      "opp": "MIA",
+      "kickoff": "2025-12-07T18:00Z",
+      "home": true,
+      "implied_pts": 19.5,
       "last_n": [
         0,
-        9.04,
+        20.2,
         0,
         0
       ],
-      "stdev": 4.52,
+      "stdev": 10.1,
       "boom": 0.25,
       "bust": 0.75,
       "all_game_history": [
-        9.04
+        20.2
       ]
     },
     {
-      "id": -16015,
-      "name": "Dolphins D/ST",
-      "pos": "D/ST",
-      "team": "MIA",
-      "slot": "D/ST",
-      "inj": "NORMAL",
+      "id": 11122,
+      "name": "Matt Prater",
+      "pos": "K",
+      "team": "BUF",
+      "slot": "K",
+      "inj": "ACTIVE",
       "bye": false,
-      "proj": 6.04,
-      "avg": 4.75,
-      "total": 57.0,
+      "proj": 8.85,
+      "avg": 7.58,
+      "total": 91.0,
       "elig": [
-        "D/ST"
+        "K"
       ],
-      "own": 16.9,
-      "start": 14.9,
-      "opp": "NYJ",
+      "own": 64.2,
+      "start": 52.8,
+      "opp": "CIN",
       "kickoff": "2025-12-07T18:00Z",
-      "home": false,
-      "implied_pts": 22.0,
+      "home": true,
+      "implied_pts": 29.5,
       "last_n": [
         0,
-        13.0,
+        8.0,
         0,
         0
       ],
-      "stdev": 6.5,
+      "stdev": 4.0,
       "boom": 0.25,
       "bust": 0.75,
       "all_game_history": [
-        13.0
+        8.0
+      ]
+    },
+    {
+      "id": 5083076,
+      "name": "Harold Fannin Jr.",
+      "pos": "TE",
+      "team": "CLE",
+      "slot": "BE",
+      "inj": "ACTIVE",
+      "bye": false,
+      "proj": 7.64,
+      "avg": 7.75,
+      "total": 93.0,
+      "elig": [
+        "TE"
+      ],
+      "own": 53.8,
+      "start": 29.9,
+      "opp": "TEN",
+      "kickoff": "2025-12-07T18:00Z",
+      "home": true,
+      "implied_pts": 19.0,
+      "last_n": [
+        0,
+        9.8,
+        0,
+        0
+      ],
+      "stdev": 4.9,
+      "boom": 0.25,
+      "bust": 0.75,
+      "all_game_history": [
+        9.8
+      ]
+    },
+    {
+      "id": 4362249,
+      "name": "Jayden Reed",
+      "pos": "WR",
+      "team": "GB",
+      "slot": "IR",
+      "inj": "INJURY_RESERVE",
+      "bye": false,
+      "proj": 6.44,
+      "avg": 6.0,
+      "total": 12.0,
+      "elig": [
+        "WR"
+      ],
+      "own": 40.6,
+      "start": 0.6,
+      "opp": "CHI",
+      "kickoff": "2025-12-07T21:25Z",
+      "home": true,
+      "is_snf": true,
+      "implied_pts": 25.5,
+      "last_n": [
+        0,
+        0.0,
+        0,
+        0
+      ],
+      "stdev": 0.0,
+      "boom": 1.0,
+      "bust": 1.0
+    },
+    {
+      "id": 4689114,
+      "name": "Jaxson Dart",
+      "pos": "QB",
+      "team": "NYG",
+      "slot": "BE",
+      "inj": "ACTIVE",
+      "bye": true,
+      "proj": 0.0,
+      "avg": 17.39,
+      "total": 173.94,
+      "elig": [
+        "QB"
+      ],
+      "own": 78.9,
+      "start": 9.4,
+      "last_n": [
+        0,
+        13.56,
+        0,
+        0
+      ],
+      "stdev": 6.78,
+      "boom": 0.25,
+      "bust": 0.75,
+      "all_game_history": [
+        13.56
       ]
     }
   ],
@@ -807,7 +801,7 @@
           "pos": "RB",
           "team": "CHI",
           "slot": "RB/WR/TE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 9.11,
           "avg": 8.65,
@@ -918,7 +912,7 @@
           "pos": "RB",
           "team": "GB",
           "slot": "RB",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 19.9,
           "avg": 16.01,
@@ -1026,7 +1020,7 @@
           "pos": "RB",
           "team": "HOU",
           "slot": "RB/WR/TE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 10.18,
           "avg": 8.37,
@@ -1052,7 +1046,7 @@
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 4.07,
+          "proj": 7.76,
           "avg": 7.72,
           "total": 77.2
         },
@@ -1107,12 +1101,12 @@
           "start": 1,
           "bench": 1
         },
-        "D/ST": {
+        "K": {
           "total": 1,
           "start": 1,
           "bench": 0
         },
-        "K": {
+        "D/ST": {
           "total": 1,
           "start": 1,
           "bench": 0
@@ -1160,7 +1154,7 @@
           "name": "George Kittle",
           "pos": "TE",
           "team": "SF",
-          "slot": "TE",
+          "slot": "BE",
           "inj": "ACTIVE",
           "bye": true,
           "proj": 0.0,
@@ -1184,7 +1178,7 @@
           "name": "DeVonta Smith",
           "pos": "WR",
           "team": "PHI",
-          "slot": "BE",
+          "slot": "WR",
           "inj": "ACTIVE",
           "bye": false,
           "proj": 10.74,
@@ -1208,7 +1202,7 @@
           "name": "Michael Pittman Jr.",
           "pos": "WR",
           "team": "IND",
-          "slot": "WR",
+          "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
           "proj": 10.11,
@@ -1226,18 +1220,6 @@
           "proj": 16.17,
           "avg": 18.25,
           "total": 218.98
-        },
-        {
-          "id": -16009,
-          "name": "Packers D/ST",
-          "pos": "D/ST",
-          "team": "GB",
-          "slot": "D/ST",
-          "inj": "NORMAL",
-          "bye": false,
-          "proj": 3.53,
-          "avg": 6.5,
-          "total": 78.0
         },
         {
           "id": 4430968,
@@ -1292,7 +1274,7 @@
           "name": "Dalton Kincaid",
           "pos": "TE",
           "team": "BUF",
-          "slot": "BE",
+          "slot": "TE",
           "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 8.2,
@@ -1305,7 +1287,7 @@
           "pos": "QB",
           "team": "SEA",
           "slot": "BE",
-          "inj": "QUESTIONABLE",
+          "inj": "ACTIVE",
           "bye": false,
           "proj": 14.26,
           "avg": 13.95,
@@ -1317,11 +1299,23 @@
           "pos": "WR",
           "team": "TB",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 8.89,
           "avg": 4.85,
           "total": 19.4
+        },
+        {
+          "id": -16027,
+          "name": "Buccaneers D/ST",
+          "pos": "D/ST",
+          "team": "TB",
+          "slot": "D/ST",
+          "inj": "NORMAL",
+          "bye": false,
+          "proj": 5.84,
+          "avg": 5.67,
+          "total": 68.0
         }
       ]
     },
@@ -1331,9 +1325,9 @@
       "avg": 104.38,
       "depth": {
         "RB": {
-          "total": 3,
+          "total": 4,
           "start": 2,
-          "bench": 1
+          "bench": 2
         },
         "QB": {
           "total": 2,
@@ -1341,9 +1335,9 @@
           "bench": 1
         },
         "WR": {
-          "total": 7,
+          "total": 6,
           "start": 3,
-          "bench": 4
+          "bench": 3
         },
         "TE": {
           "total": 2,
@@ -1367,7 +1361,7 @@
           "name": "Christian McCaffrey",
           "pos": "RB",
           "team": "SF",
-          "slot": "RB",
+          "slot": "BE",
           "inj": "ACTIVE",
           "bye": true,
           "proj": 0.0,
@@ -1404,47 +1398,23 @@
           "pos": "QB",
           "team": "BAL",
           "slot": "QB",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 16.79,
           "avg": 17.12,
           "total": 154.04
         },
         {
-          "id": 4569618,
-          "name": "Garrett Wilson",
-          "pos": "WR",
-          "team": "NYJ",
-          "slot": "BE",
-          "inj": "INJURY_RESERVE",
-          "bye": false,
-          "proj": 0.0,
-          "avg": 10.19,
-          "total": 81.5
-        },
-        {
           "id": 4432708,
           "name": "Marvin Harrison Jr.",
           "pos": "WR",
           "team": "ARI",
-          "slot": "BE",
+          "slot": "WR",
           "inj": "QUESTIONABLE",
           "bye": false,
-          "proj": 11.3,
+          "proj": 11.27,
           "avg": 10.54,
           "total": 105.4
-        },
-        {
-          "id": 3925357,
-          "name": "Calvin Ridley",
-          "pos": "WR",
-          "team": "TEN",
-          "slot": "BE",
-          "inj": "INJURY_RESERVE",
-          "bye": false,
-          "proj": 0.0,
-          "avg": 5.54,
-          "total": 38.8
         },
         {
           "id": 3123076,
@@ -1452,7 +1422,7 @@
           "pos": "TE",
           "team": "CLE",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 3.45,
           "avg": 5.75,
@@ -1463,7 +1433,7 @@
           "name": "Stefon Diggs",
           "pos": "WR",
           "team": "NE",
-          "slot": "WR",
+          "slot": "BE",
           "inj": "ACTIVE",
           "bye": true,
           "proj": 0.0,
@@ -1488,7 +1458,7 @@
           "pos": "WR",
           "team": "IND",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 7.47,
           "avg": 6.64,
@@ -1511,7 +1481,7 @@
           "name": "Wan'Dale Robinson",
           "pos": "WR",
           "team": "NYG",
-          "slot": "WR",
+          "slot": "BE",
           "inj": "ACTIVE",
           "bye": true,
           "proj": 0.0,
@@ -1565,6 +1535,30 @@
           "proj": 4.19,
           "avg": 7.58,
           "total": 91.0
+        },
+        {
+          "id": 4360761,
+          "name": "Michael Wilson",
+          "pos": "WR",
+          "team": "ARI",
+          "slot": "WR",
+          "inj": "ACTIVE",
+          "bye": false,
+          "proj": 9.23,
+          "avg": 7.33,
+          "total": 88.0
+        },
+        {
+          "id": 4362619,
+          "name": "Chris Rodriguez Jr.",
+          "pos": "RB",
+          "team": "WSH",
+          "slot": "RB",
+          "inj": "ACTIVE",
+          "bye": false,
+          "proj": 8.86,
+          "avg": 5.71,
+          "total": 57.1
         }
       ]
     },
@@ -1805,9 +1799,9 @@
       "avg": 105.18,
       "depth": {
         "RB": {
-          "total": 6,
+          "total": 5,
           "start": 3,
-          "bench": 3
+          "bench": 2
         },
         "TE": {
           "total": 2,
@@ -1815,9 +1809,9 @@
           "bench": 1
         },
         "WR": {
-          "total": 4,
+          "total": 5,
           "start": 2,
-          "bench": 2
+          "bench": 3
         },
         "QB": {
           "total": 2,
@@ -1844,7 +1838,7 @@
           "slot": "RB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 21.83,
+          "proj": 21.84,
           "avg": 20.43,
           "total": 245.1
         },
@@ -1854,7 +1848,7 @@
           "pos": "RB",
           "team": "TB",
           "slot": "RB/WR/TE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 14.87,
           "avg": 15.52,
@@ -1878,7 +1872,7 @@
           "pos": "RB",
           "team": "LAR",
           "slot": "RB",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 12.73,
           "avg": 14.43,
@@ -1981,18 +1975,6 @@
           "total": 35.1
         },
         {
-          "id": 4887558,
-          "name": "Emanuel Wilson",
-          "pos": "RB",
-          "team": "GB",
-          "slot": "BE",
-          "inj": "ACTIVE",
-          "bye": false,
-          "proj": 5.65,
-          "avg": 5.77,
-          "total": 69.3
-        },
-        {
           "id": 4040655,
           "name": "Darnell Mooney",
           "pos": "WR",
@@ -2039,6 +2021,18 @@
           "proj": 7.52,
           "avg": 8.5,
           "total": 101.98
+        },
+        {
+          "id": 4569559,
+          "name": "Devaughn Vele",
+          "pos": "WR",
+          "team": "NO",
+          "slot": "BE",
+          "inj": "ACTIVE",
+          "bye": false,
+          "proj": 7.69,
+          "avg": 3.54,
+          "total": 38.9
         }
       ]
     },
@@ -2111,7 +2105,7 @@
           "slot": "TE",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 11.97,
+          "proj": 11.93,
           "avg": 14.99,
           "total": 179.9
         },
@@ -2169,7 +2163,7 @@
           "pos": "WR",
           "team": "CHI",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 11.01,
           "avg": 10.34,
@@ -2193,9 +2187,9 @@
           "pos": "WR",
           "team": "NO",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
-          "proj": 12.09,
+          "proj": 12.01,
           "avg": 11.86,
           "total": 142.3
         },
@@ -2364,7 +2358,7 @@
           "pos": "QB",
           "team": "TB",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 15.43,
           "avg": 16.53,
@@ -2681,7 +2675,7 @@
           "slot": "RB",
           "inj": "ACTIVE",
           "bye": false,
-          "proj": 12.26,
+          "proj": 12.63,
           "avg": 11.93,
           "total": 143.1
         },
@@ -2693,7 +2687,7 @@
           "slot": "IR",
           "inj": "INJURY_RESERVE",
           "bye": false,
-          "proj": 7.19,
+          "proj": 0.0,
           "avg": 7.22,
           "total": 28.9
         },
@@ -2764,39 +2758,13 @@
         "elig": [
           "QB"
         ],
-        "own": 85.7,
-        "start": 39.2,
+        "own": 85.5,
+        "start": 39.0,
         "opp": "GB",
         "kickoff": "2025-12-07T21:25Z",
         "home": false,
         "is_snf": true,
         "implied_pts": 19.0,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4689114,
-        "name": "Jaxson Dart",
-        "pos": "QB",
-        "team": "NYG",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": true,
-        "proj": 0.0,
-        "avg": 17.39,
-        "total": 173.94,
-        "elig": [
-          "QB"
-        ],
-        "own": 79.8,
-        "start": 13.3,
         "last_n": [
           0,
           0,
@@ -2821,8 +2789,8 @@
         "elig": [
           "QB"
         ],
-        "own": 72.4,
-        "start": 17.4,
+        "own": 71.1,
+        "start": 14.3,
         "last_n": [
           0,
           0,
@@ -2841,19 +2809,50 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 15.36,
+        "proj": 15.32,
         "avg": 16.12,
         "total": 145.12,
         "elig": [
           "QB"
         ],
-        "own": 49.0,
-        "start": 24.1,
+        "own": 48.5,
+        "start": 23.7,
         "opp": "LAR",
         "kickoff": "2025-12-07T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 20.5,
+        "implied_pts": 19.5,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 4432577,
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "team": "HOU",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 16.68,
+        "avg": 14.45,
+        "total": 130.02,
+        "elig": [
+          "QB"
+        ],
+        "own": 48.5,
+        "start": 14.1,
+        "opp": "KC",
+        "kickoff": "2025-12-08T01:20Z",
+        "home": false,
+        "is_mnf": true,
+        "implied_pts": 19.0,
         "last_n": [
           0,
           0,
@@ -2878,12 +2877,12 @@
         "elig": [
           "QB"
         ],
-        "own": 28.6,
-        "start": 2.7,
+        "own": 28.1,
+        "start": 3.0,
         "opp": "WSH",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
-        "implied_pts": 21.5,
+        "implied_pts": 22.5,
         "last_n": [
           0,
           0,
@@ -2908,8 +2907,8 @@
         "elig": [
           "QB"
         ],
-        "own": 27.8,
-        "start": 3.3,
+        "own": 27.2,
+        "start": 3.2,
         "opp": "MIA",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
@@ -2930,7 +2929,7 @@
         "pos": "QB",
         "team": "PIT",
         "slot": "",
-        "inj": "ACTIVE",
+        "inj": "QUESTIONABLE",
         "bye": false,
         "proj": 12.24,
         "avg": 13.46,
@@ -2938,42 +2937,12 @@
         "elig": [
           "QB"
         ],
-        "own": 25.4,
-        "start": 4.2,
+        "own": 24.6,
+        "start": 4.1,
         "opp": "BAL",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
-        "implied_pts": 18.2,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 11252,
-        "name": "Joe Flacco",
-        "pos": "QB",
-        "team": "CIN",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 0.0,
-        "avg": 14.51,
-        "total": 145.14,
-        "elig": [
-          "QB"
-        ],
-        "own": 16.0,
-        "start": 1.3,
-        "opp": "BUF",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": false,
-        "implied_pts": 23.5,
+        "implied_pts": 18.5,
         "last_n": [
           0,
           0,
@@ -2998,12 +2967,42 @@
         "elig": [
           "QB"
         ],
-        "own": 14.5,
-        "start": 6.3,
+        "own": 16.9,
+        "start": 9.2,
         "opp": "MIN",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
         "implied_pts": 20.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 11252,
+        "name": "Joe Flacco",
+        "pos": "QB",
+        "team": "CIN",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 0.0,
+        "avg": 14.51,
+        "total": 145.14,
+        "elig": [
+          "QB"
+        ],
+        "own": 14.5,
+        "start": 1.2,
+        "opp": "BUF",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 24.0,
         "last_n": [
           0,
           0,
@@ -3028,8 +3027,8 @@
         "elig": [
           "QB"
         ],
-        "own": 12.8,
-        "start": 2.6,
+        "own": 12.7,
+        "start": 2.7,
         "opp": "NYJ",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
@@ -3058,8 +3057,8 @@
         "elig": [
           "QB"
         ],
-        "own": 11.5,
-        "start": 1.8,
+        "own": 11.3,
+        "start": 1.6,
         "last_n": [
           0,
           0,
@@ -3084,8 +3083,8 @@
         "elig": [
           "QB"
         ],
-        "own": 7.6,
-        "start": 4.5,
+        "own": 8.9,
+        "start": 5.8,
         "opp": "MIA",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
@@ -3114,8 +3113,8 @@
         "elig": [
           "QB"
         ],
-        "own": 6.6,
-        "start": 2.2,
+        "own": 6.8,
+        "start": 2.6,
         "opp": "TEN",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
@@ -3144,7 +3143,7 @@
         "elig": [
           "QB"
         ],
-        "own": 6.3,
+        "own": 6.2,
         "start": 0.6,
         "opp": "SEA",
         "kickoff": "2025-12-07T18:00Z",
@@ -3168,18 +3167,18 @@
         "slot": "",
         "inj": "ACTIVE",
         "bye": false,
-        "proj": 14.0,
+        "proj": 13.98,
         "avg": 9.64,
         "total": 57.82,
         "elig": [
           "QB"
         ],
-        "own": 5.4,
-        "start": 2.0,
+        "own": 5.5,
+        "start": 2.3,
         "opp": "TB",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
-        "implied_pts": 17.0,
+        "implied_pts": 16.5,
         "last_n": [
           0,
           0,
@@ -3206,12 +3205,43 @@
         "elig": [
           "RB"
         ],
-        "own": 68.3,
-        "start": 12.3,
+        "own": 66.6,
+        "start": 12.2,
         "opp": "NO",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
-        "implied_pts": 25.5,
+        "implied_pts": 25.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 4361529,
+        "name": "Isiah Pacheco",
+        "pos": "RB",
+        "team": "KC",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 7.63,
+        "avg": 6.56,
+        "total": 59.0,
+        "elig": [
+          "RB"
+        ],
+        "own": 63.4,
+        "start": 14.7,
+        "opp": "HOU",
+        "kickoff": "2025-12-08T01:20Z",
+        "home": true,
+        "is_mnf": true,
+        "implied_pts": 22.5,
         "last_n": [
           0,
           0,
@@ -3236,12 +3266,43 @@
         "elig": [
           "RB"
         ],
-        "own": 51.8,
-        "start": 5.8,
+        "own": 50.2,
+        "start": 6.0,
         "opp": "MIN",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
         "implied_pts": 20.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 4887558,
+        "name": "Emanuel Wilson",
+        "pos": "RB",
+        "team": "GB",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 5.65,
+        "avg": 5.77,
+        "total": 69.3,
+        "elig": [
+          "RB"
+        ],
+        "own": 45.6,
+        "start": 6.9,
+        "opp": "CHI",
+        "kickoff": "2025-12-07T21:25Z",
+        "home": true,
+        "is_snf": true,
+        "implied_pts": 25.5,
         "last_n": [
           0,
           0,
@@ -3266,8 +3327,8 @@
         "elig": [
           "RB"
         ],
-        "own": 43.3,
-        "start": 6.6,
+        "own": 42.8,
+        "start": 6.9,
         "opp": "KC",
         "kickoff": "2025-12-08T01:20Z",
         "home": false,
@@ -3297,7 +3358,7 @@
         "elig": [
           "RB"
         ],
-        "own": 33.2,
+        "own": 33.0,
         "start": 3.6,
         "last_n": [
           0,
@@ -3323,8 +3384,8 @@
         "elig": [
           "RB"
         ],
-        "own": 29.5,
-        "start": 3.6,
+        "own": 29.1,
+        "start": 2.8,
         "last_n": [
           0,
           0,
@@ -3349,7 +3410,7 @@
         "elig": [
           "RB"
         ],
-        "own": 29.4,
+        "own": 28.9,
         "start": 2.5,
         "opp": "KC",
         "kickoff": "2025-12-08T01:20Z",
@@ -3380,12 +3441,12 @@
         "elig": [
           "RB"
         ],
-        "own": 28.8,
-        "start": 4.7,
+        "own": 25.8,
+        "start": 4.0,
         "opp": "NO",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
-        "implied_pts": 25.5,
+        "implied_pts": 25.0,
         "last_n": [
           0,
           0,
@@ -3410,8 +3471,8 @@
         "elig": [
           "RB"
         ],
-        "own": 25.8,
-        "start": 3.0,
+        "own": 25.5,
+        "start": 3.2,
         "opp": "IND",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
@@ -3440,43 +3501,13 @@
         "elig": [
           "RB"
         ],
-        "own": 24.3,
+        "own": 24.2,
         "start": 9.3,
         "opp": "LAR",
         "kickoff": "2025-12-07T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 20.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4362619,
-        "name": "Chris Rodriguez Jr.",
-        "pos": "RB",
-        "team": "WSH",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 8.86,
-        "avg": 5.71,
-        "total": 57.1,
-        "elig": [
-          "RB"
-        ],
-        "own": 23.6,
-        "start": 9.2,
-        "opp": "MIN",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": false,
-        "implied_pts": 20.0,
+        "implied_pts": 19.5,
         "last_n": [
           0,
           0,
@@ -3501,8 +3532,8 @@
         "elig": [
           "RB"
         ],
-        "own": 20.1,
-        "start": 1.5,
+        "own": 19.6,
+        "start": 1.4,
         "last_n": [
           0,
           0,
@@ -3527,12 +3558,12 @@
         "elig": [
           "RB"
         ],
-        "own": 18.6,
+        "own": 18.4,
         "start": 1.6,
         "opp": "BAL",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
-        "implied_pts": 18.2,
+        "implied_pts": 18.5,
         "last_n": [
           0,
           0,
@@ -3581,49 +3612,19 @@
         "slot": "",
         "inj": "QUESTIONABLE",
         "bye": false,
-        "proj": 4.89,
+        "proj": 5.84,
         "avg": 4.28,
         "total": 38.5,
         "elig": [
           "RB"
         ],
-        "own": 10.3,
-        "start": 0.8,
+        "own": 10.1,
+        "start": 0.9,
         "opp": "LAR",
         "kickoff": "2025-12-07T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 20.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4038441,
-        "name": "Justice Hill",
-        "pos": "RB",
-        "team": "BAL",
-        "slot": "",
-        "inj": "INJURY_RESERVE",
-        "bye": false,
-        "proj": 0.0,
-        "avg": 5.47,
-        "total": 54.7,
-        "elig": [
-          "RB"
-        ],
-        "own": 9.7,
-        "start": 0.7,
-        "opp": "PIT",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": true,
-        "implied_pts": 24.2,
+        "implied_pts": 19.5,
         "last_n": [
           0,
           0,
@@ -3636,6 +3637,36 @@
       }
     ],
     "WR": [
+      {
+        "id": 4569618,
+        "name": "Garrett Wilson",
+        "pos": "WR",
+        "team": "NYJ",
+        "slot": "",
+        "inj": "INJURY_RESERVE",
+        "bye": false,
+        "proj": 0.0,
+        "avg": 10.19,
+        "total": 81.5,
+        "elig": [
+          "WR"
+        ],
+        "own": 83.4,
+        "start": 11.9,
+        "opp": "MIA",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": true,
+        "implied_pts": 19.5,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
       {
         "id": 3886598,
         "name": "Jauan Jennings",
@@ -3650,39 +3681,8 @@
         "elig": [
           "WR"
         ],
-        "own": 83.5,
-        "start": 21.8,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4360761,
-        "name": "Michael Wilson",
-        "pos": "WR",
-        "team": "ARI",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 9.26,
-        "avg": 7.33,
-        "total": 88.0,
-        "elig": [
-          "WR"
-        ],
-        "own": 67.9,
-        "start": 35.1,
-        "opp": "LAR",
-        "kickoff": "2025-12-07T21:25Z",
-        "home": true,
-        "is_snf": true,
-        "implied_pts": 20.5,
+        "own": 83.0,
+        "start": 16.0,
         "last_n": [
           0,
           0,
@@ -3707,38 +3707,8 @@
         "elig": [
           "WR"
         ],
-        "own": 59.9,
-        "start": 5.2,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4032473,
-        "name": "Rashid Shaheed",
-        "pos": "WR",
-        "team": "SEA",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 6.78,
-        "avg": 7.05,
-        "total": 91.7,
-        "elig": [
-          "WR"
-        ],
         "own": 58.3,
-        "start": 8.2,
-        "opp": "ATL",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": false,
-        "implied_pts": 25.8,
+        "start": 4.3,
         "last_n": [
           0,
           0,
@@ -3763,12 +3733,42 @@
         "elig": [
           "WR"
         ],
-        "own": 56.4,
-        "start": 23.1,
+        "own": 57.5,
+        "start": 26.3,
         "opp": "JAX",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
         "implied_pts": 24.5,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 4032473,
+        "name": "Rashid Shaheed",
+        "pos": "WR",
+        "team": "SEA",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 6.78,
+        "avg": 7.05,
+        "total": 91.7,
+        "elig": [
+          "WR"
+        ],
+        "own": 57.2,
+        "start": 8.3,
+        "opp": "ATL",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 25.8,
         "last_n": [
           0,
           0,
@@ -3793,75 +3793,13 @@
         "elig": [
           "WR"
         ],
-        "own": 45.3,
-        "start": 3.7,
+        "own": 44.5,
+        "start": 3.6,
         "opp": "CHI",
         "kickoff": "2025-12-07T21:25Z",
         "home": true,
         "is_snf": true,
         "implied_pts": 25.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4362249,
-        "name": "Jayden Reed",
-        "pos": "WR",
-        "team": "GB",
-        "slot": "",
-        "inj": "INJURY_RESERVE",
-        "bye": false,
-        "proj": 6.44,
-        "avg": 6.0,
-        "total": 12.0,
-        "elig": [
-          "WR"
-        ],
-        "own": 40.4,
-        "start": 0.5,
-        "opp": "CHI",
-        "kickoff": "2025-12-07T21:25Z",
-        "home": true,
-        "is_snf": true,
-        "implied_pts": 25.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4428718,
-        "name": "Tre Tucker",
-        "pos": "WR",
-        "team": "LV",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 7.46,
-        "avg": 9.22,
-        "total": 110.6,
-        "elig": [
-          "WR"
-        ],
-        "own": 39.0,
-        "start": 8.0,
-        "opp": "DEN",
-        "kickoff": "2025-12-07T21:05Z",
-        "home": true,
-        "is_snf": true,
-        "implied_pts": 16.5,
         "last_n": [
           0,
           0,
@@ -3886,13 +3824,44 @@
         "elig": [
           "WR"
         ],
-        "own": 37.5,
-        "start": 11.8,
+        "own": 38.3,
+        "start": 12.6,
         "opp": "KC",
         "kickoff": "2025-12-08T01:20Z",
         "home": false,
         "is_mnf": true,
         "implied_pts": 19.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 4428718,
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "team": "LV",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 7.46,
+        "avg": 9.22,
+        "total": 110.6,
+        "elig": [
+          "WR"
+        ],
+        "own": 37.9,
+        "start": 7.8,
+        "opp": "DEN",
+        "kickoff": "2025-12-07T21:05Z",
+        "home": true,
+        "is_snf": true,
+        "implied_pts": 16.5,
         "last_n": [
           0,
           0,
@@ -3917,12 +3886,42 @@
         "elig": [
           "WR"
         ],
-        "own": 37.1,
+        "own": 36.7,
         "start": 4.2,
         "opp": "IND",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
         "implied_pts": 23.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 3925357,
+        "name": "Calvin Ridley",
+        "pos": "WR",
+        "team": "TEN",
+        "slot": "",
+        "inj": "INJURY_RESERVE",
+        "bye": false,
+        "proj": 0.0,
+        "avg": 5.54,
+        "total": 38.8,
+        "elig": [
+          "WR"
+        ],
+        "own": 32.9,
+        "start": 4.0,
+        "opp": "CLE",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 14.5,
         "last_n": [
           0,
           0,
@@ -3947,7 +3946,7 @@
         "elig": [
           "WR"
         ],
-        "own": 25.5,
+        "own": 25.1,
         "start": 2.4,
         "opp": "HOU",
         "kickoff": "2025-12-08T01:20Z",
@@ -3978,68 +3977,8 @@
         "elig": [
           "WR"
         ],
-        "own": 22.0,
-        "start": 2.2,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4597500,
-        "name": "Adonai Mitchell",
-        "pos": "WR",
-        "team": "NYJ",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 8.91,
-        "avg": 4.05,
-        "total": 44.6,
-        "elig": [
-          "WR"
-        ],
-        "own": 21.6,
-        "start": 7.0,
-        "opp": "MIA",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": true,
-        "implied_pts": 19.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 4608810,
-        "name": "Tez Johnson",
-        "pos": "WR",
-        "team": "TB",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 4.99,
-        "avg": 6.58,
-        "total": 72.4,
-        "elig": [
-          "WR"
-        ],
-        "own": 21.3,
-        "start": 2.7,
-        "opp": "NO",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": true,
-        "implied_pts": 25.5,
+        "own": 21.4,
+        "start": 1.8,
         "last_n": [
           0,
           0,
@@ -4064,8 +4003,68 @@
         "elig": [
           "WR"
         ],
-        "own": 21.1,
-        "start": 1.8,
+        "own": 20.8,
+        "start": 1.6,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 4608810,
+        "name": "Tez Johnson",
+        "pos": "WR",
+        "team": "TB",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 4.99,
+        "avg": 6.58,
+        "total": 72.4,
+        "elig": [
+          "WR"
+        ],
+        "own": 20.3,
+        "start": 2.6,
+        "opp": "NO",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": true,
+        "implied_pts": 25.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 4432620,
+        "name": "Parker Washington",
+        "pos": "WR",
+        "team": "JAX",
+        "slot": "",
+        "inj": "QUESTIONABLE",
+        "bye": false,
+        "proj": 5.93,
+        "avg": 7.77,
+        "total": 93.2,
+        "elig": [
+          "WR"
+        ],
+        "own": 18.7,
+        "start": 3.5,
+        "opp": "IND",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": true,
+        "implied_pts": 23.0,
         "last_n": [
           0,
           0,
@@ -4078,6 +4077,36 @@
       }
     ],
     "TE": [
+      {
+        "id": 4430027,
+        "name": "Sam LaPorta",
+        "pos": "TE",
+        "team": "DET",
+        "slot": "",
+        "inj": "INJURY_RESERVE",
+        "bye": false,
+        "proj": 0.0,
+        "avg": 9.66,
+        "total": 86.9,
+        "elig": [
+          "TE"
+        ],
+        "own": 73.5,
+        "start": 17.6,
+        "opp": "DAL",
+        "kickoff": "2025-12-05T01:15Z",
+        "home": true,
+        "implied_pts": 29.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
       {
         "id": 4595342,
         "name": "Oronde Gadsden II",
@@ -4092,12 +4121,12 @@
         "elig": [
           "TE"
         ],
-        "own": 74.2,
-        "start": 28.9,
+        "own": 72.8,
+        "start": 27.9,
         "opp": "PHI",
         "kickoff": "2025-12-09T01:15Z",
         "home": true,
-        "implied_pts": 18.8,
+        "implied_pts": 19.5,
         "last_n": [
           0,
           0,
@@ -4122,42 +4151,12 @@
         "elig": [
           "TE"
         ],
-        "own": 59.4,
-        "start": 23.6,
+        "own": 61.2,
+        "start": 28.3,
         "opp": "MIN",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
         "implied_pts": 20.0,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 5083076,
-        "name": "Harold Fannin Jr.",
-        "pos": "TE",
-        "team": "CLE",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 7.64,
-        "avg": 7.75,
-        "total": 93.0,
-        "elig": [
-          "TE"
-        ],
-        "own": 53.0,
-        "start": 27.7,
-        "opp": "TEN",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": true,
-        "implied_pts": 19.0,
         "last_n": [
           0,
           0,
@@ -4182,8 +4181,8 @@
         "elig": [
           "TE"
         ],
-        "own": 49.1,
-        "start": 16.3,
+        "own": 47.0,
+        "start": 11.7,
         "last_n": [
           0,
           0,
@@ -4208,8 +4207,8 @@
         "elig": [
           "TE"
         ],
-        "own": 42.9,
-        "start": 16.2,
+        "own": 43.0,
+        "start": 17.0,
         "opp": "LV",
         "kickoff": "2025-12-07T21:05Z",
         "home": false,
@@ -4239,8 +4238,8 @@
         "elig": [
           "TE"
         ],
-        "own": 36.6,
-        "start": 14.0,
+        "own": 37.0,
+        "start": 14.9,
         "opp": "GB",
         "kickoff": "2025-12-07T21:25Z",
         "home": false,
@@ -4270,7 +4269,7 @@
         "elig": [
           "TE"
         ],
-        "own": 28.9,
+        "own": 28.5,
         "start": 5.7,
         "opp": "CHI",
         "kickoff": "2025-12-07T21:25Z",
@@ -4301,8 +4300,8 @@
         "elig": [
           "TE"
         ],
-        "own": 21.1,
-        "start": 4.3,
+        "own": 21.7,
+        "start": 5.5,
         "opp": "NYJ",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
@@ -4323,7 +4322,7 @@
         "pos": "TE",
         "team": "SEA",
         "slot": "",
-        "inj": "ACTIVE",
+        "inj": "QUESTIONABLE",
         "bye": false,
         "proj": 7.41,
         "avg": 7.14,
@@ -4331,8 +4330,8 @@
         "elig": [
           "TE"
         ],
-        "own": 15.3,
-        "start": 6.9,
+        "own": 15.6,
+        "start": 7.3,
         "opp": "ATL",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
@@ -4361,8 +4360,8 @@
         "elig": [
           "TE"
         ],
-        "own": 12.9,
-        "start": 4.6,
+        "own": 12.6,
+        "start": 4.7,
         "opp": "MIA",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
@@ -4391,12 +4390,12 @@
         "elig": [
           "TE"
         ],
-        "own": 7.9,
-        "start": 2.9,
+        "own": 8.1,
+        "start": 3.1,
         "opp": "PIT",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
-        "implied_pts": 24.2,
+        "implied_pts": 24.0,
         "last_n": [
           0,
           0,
@@ -4421,12 +4420,12 @@
         "elig": [
           "TE"
         ],
-        "own": 6.2,
-        "start": 1.6,
+        "own": 6.1,
+        "start": 1.5,
         "opp": "BAL",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
-        "implied_pts": 18.2,
+        "implied_pts": 18.5,
         "last_n": [
           0,
           0,
@@ -4452,7 +4451,7 @@
           "TE"
         ],
         "own": 5.5,
-        "start": 1.2,
+        "start": 1.3,
         "opp": "CLE",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
@@ -4481,8 +4480,8 @@
         "elig": [
           "TE"
         ],
-        "own": 3.7,
-        "start": 2.2,
+        "own": 4.6,
+        "start": 3.2,
         "opp": "ARI",
         "kickoff": "2025-12-07T21:25Z",
         "home": false,
@@ -4512,12 +4511,12 @@
         "elig": [
           "TE"
         ],
-        "own": 2.9,
+        "own": 2.7,
         "start": 0.6,
         "opp": "BUF",
         "kickoff": "2025-12-07T18:00Z",
         "home": false,
-        "implied_pts": 23.5,
+        "implied_pts": 24.0,
         "last_n": [
           0,
           0,
@@ -4530,36 +4529,6 @@
       }
     ],
     "K": [
-      {
-        "id": 17372,
-        "name": "Chris Boswell",
-        "pos": "K",
-        "team": "PIT",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 7.94,
-        "avg": 8.92,
-        "total": 107.0,
-        "elig": [
-          "K"
-        ],
-        "own": 88.5,
-        "start": 81.7,
-        "opp": "BAL",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": false,
-        "implied_pts": 18.2,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
       {
         "id": 4362081,
         "name": "Cameron Dicker",
@@ -4574,12 +4543,42 @@
         "elig": [
           "K"
         ],
-        "own": 87.8,
-        "start": 68.2,
+        "own": 88.5,
+        "start": 71.2,
         "opp": "PHI",
         "kickoff": "2025-12-09T01:15Z",
         "home": true,
-        "implied_pts": 18.8,
+        "implied_pts": 19.5,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 17372,
+        "name": "Chris Boswell",
+        "pos": "K",
+        "team": "PIT",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 7.94,
+        "avg": 8.92,
+        "total": 107.0,
+        "elig": [
+          "K"
+        ],
+        "own": 87.5,
+        "start": 80.5,
+        "opp": "BAL",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 18.5,
         "last_n": [
           0,
           0,
@@ -4604,8 +4603,8 @@
         "elig": [
           "K"
         ],
-        "own": 66.6,
-        "start": 54.7,
+        "own": 66.3,
+        "start": 54.1,
         "opp": "HOU",
         "kickoff": "2025-12-08T01:20Z",
         "home": true,
@@ -4635,42 +4634,12 @@
         "elig": [
           "K"
         ],
-        "own": 62.1,
-        "start": 48.3,
+        "own": 61.3,
+        "start": 47.4,
         "opp": "LAC",
         "kickoff": "2025-12-09T01:15Z",
         "home": false,
-        "implied_pts": 21.8,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 11122,
-        "name": "Matt Prater",
-        "pos": "K",
-        "team": "BUF",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 8.85,
-        "avg": 7.58,
-        "total": 91.0,
-        "elig": [
-          "K"
-        ],
-        "own": 60.7,
-        "start": 48.3,
-        "opp": "CIN",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": true,
-        "implied_pts": 29.0,
+        "implied_pts": 22.0,
         "last_n": [
           0,
           0,
@@ -4695,8 +4664,39 @@
         "elig": [
           "K"
         ],
-        "own": 56.4,
-        "start": 41.0,
+        "own": 49.0,
+        "start": 27.8,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 2971573,
+        "name": "Ka'imi Fairbairn",
+        "pos": "K",
+        "team": "HOU",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 7.66,
+        "avg": 11.3,
+        "total": 113.0,
+        "elig": [
+          "K"
+        ],
+        "own": 39.0,
+        "start": 30.4,
+        "opp": "KC",
+        "kickoff": "2025-12-08T01:20Z",
+        "home": false,
+        "is_mnf": true,
+        "implied_pts": 19.0,
         "last_n": [
           0,
           0,
@@ -4721,8 +4721,8 @@
         "elig": [
           "K"
         ],
-        "own": 37.1,
-        "start": 31.0,
+        "own": 36.8,
+        "start": 30.8,
         "opp": "IND",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
@@ -4751,41 +4751,11 @@
         "elig": [
           "K"
         ],
-        "own": 30.0,
-        "start": 15.9,
+        "own": 26.3,
+        "start": 12.7,
         "opp": "BYE",
         "kickoff": "",
         "home": null,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 3917232,
-        "name": "Tyler Bass",
-        "pos": "K",
-        "team": "BUF",
-        "slot": "",
-        "inj": "INJURY_RESERVE",
-        "bye": false,
-        "proj": 0.0,
-        "avg": 0.0,
-        "total": 0.0,
-        "elig": [
-          "K"
-        ],
-        "own": 19.9,
-        "start": 11.6,
-        "opp": "CIN",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": true,
-        "implied_pts": 29.0,
         "last_n": [
           0,
           0,
@@ -4810,13 +4780,43 @@
         "elig": [
           "K"
         ],
-        "own": 19.1,
-        "start": 11.7,
+        "own": 20.9,
+        "start": 14.2,
         "opp": "LV",
         "kickoff": "2025-12-07T21:05Z",
         "home": false,
         "is_snf": true,
         "implied_pts": 24.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 3917232,
+        "name": "Tyler Bass",
+        "pos": "K",
+        "team": "BUF",
+        "slot": "",
+        "inj": "INJURY_RESERVE",
+        "bye": false,
+        "proj": 0.0,
+        "avg": 0.0,
+        "total": 0.0,
+        "elig": [
+          "K"
+        ],
+        "own": 19.7,
+        "start": 11.5,
+        "opp": "CIN",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": true,
+        "implied_pts": 29.5,
         "last_n": [
           0,
           0,
@@ -4841,12 +4841,12 @@
         "elig": [
           "K"
         ],
-        "own": 17.0,
-        "start": 13.7,
+        "own": 16.4,
+        "start": 13.2,
         "opp": "WSH",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
-        "implied_pts": 21.5,
+        "implied_pts": 22.5,
         "last_n": [
           0,
           0,
@@ -4871,8 +4871,8 @@
         "elig": [
           "K"
         ],
-        "own": 16.0,
-        "start": 4.1,
+        "own": 15.0,
+        "start": 3.7,
         "last_n": [
           0,
           0,
@@ -4897,43 +4897,13 @@
         "elig": [
           "K"
         ],
-        "own": 13.0,
-        "start": 9.3,
+        "own": 14.5,
+        "start": 11.1,
         "opp": "CHI",
         "kickoff": "2025-12-07T21:25Z",
         "home": true,
         "is_snf": true,
         "implied_pts": 25.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": 3124679,
-        "name": "Jason Sanders",
-        "pos": "K",
-        "team": "MIA",
-        "slot": "",
-        "inj": "INJURY_RESERVE",
-        "bye": false,
-        "proj": 0.0,
-        "avg": 0.0,
-        "total": 0.0,
-        "elig": [
-          "K"
-        ],
-        "own": 7.9,
-        "start": 5.8,
-        "opp": "NYJ",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": false,
-        "implied_pts": 22.0,
         "last_n": [
           0,
           0,
@@ -4959,11 +4929,41 @@
           "K"
         ],
         "own": 7.9,
-        "start": 4.4,
+        "start": 4.5,
         "opp": "MIA",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
         "implied_pts": 19.5,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": 3124679,
+        "name": "Jason Sanders",
+        "pos": "K",
+        "team": "MIA",
+        "slot": "",
+        "inj": "INJURY_RESERVE",
+        "bye": false,
+        "proj": 0.0,
+        "avg": 0.0,
+        "total": 0.0,
+        "elig": [
+          "K"
+        ],
+        "own": 7.8,
+        "start": 5.8,
+        "opp": "NYJ",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 22.0,
         "last_n": [
           0,
           0,
@@ -4990,8 +4990,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 75.4,
-        "start": 49.2,
+        "own": 73.1,
+        "start": 39.6,
         "last_n": [
           0,
           0,
@@ -5016,12 +5016,43 @@
         "elig": [
           "D/ST"
         ],
-        "own": 69.8,
-        "start": 47.5,
+        "own": 67.2,
+        "start": 44.1,
         "opp": "DAL",
         "kickoff": "2025-12-05T01:15Z",
         "home": true,
-        "implied_pts": 28.8,
+        "implied_pts": 29.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": -16009,
+        "name": "Packers D/ST",
+        "pos": "D/ST",
+        "team": "GB",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 3.53,
+        "avg": 6.5,
+        "total": 78.0,
+        "elig": [
+          "D/ST"
+        ],
+        "own": 62.4,
+        "start": 38.6,
+        "opp": "CHI",
+        "kickoff": "2025-12-07T21:25Z",
+        "home": true,
+        "is_snf": true,
+        "implied_pts": 25.5,
         "last_n": [
           0,
           0,
@@ -5046,12 +5077,42 @@
         "elig": [
           "D/ST"
         ],
-        "own": 62.6,
-        "start": 48.8,
+        "own": 61.7,
+        "start": 48.3,
         "opp": "PIT",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
-        "implied_pts": 24.2,
+        "implied_pts": 24.0,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": -16023,
+        "name": "Steelers D/ST",
+        "pos": "D/ST",
+        "team": "PIT",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 4.83,
+        "avg": 7.0,
+        "total": 84.0,
+        "elig": [
+          "D/ST"
+        ],
+        "own": 60.3,
+        "start": 40.5,
+        "opp": "BAL",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 18.5,
         "last_n": [
           0,
           0,
@@ -5076,42 +5137,12 @@
         "elig": [
           "D/ST"
         ],
-        "own": 60.4,
-        "start": 46.2,
+        "own": 54.5,
+        "start": 39.0,
         "opp": "PHI",
         "kickoff": "2025-12-09T01:15Z",
         "home": true,
-        "implied_pts": 18.8,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": -16023,
-        "name": "Steelers D/ST",
-        "pos": "D/ST",
-        "team": "PIT",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 4.75,
-        "avg": 7.0,
-        "total": 84.0,
-        "elig": [
-          "D/ST"
-        ],
-        "own": 60.4,
-        "start": 40.2,
-        "opp": "BAL",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": false,
-        "implied_pts": 18.2,
+        "implied_pts": 19.5,
         "last_n": [
           0,
           0,
@@ -5136,42 +5167,12 @@
         "elig": [
           "D/ST"
         ],
-        "own": 38.9,
-        "start": 25.7,
+        "own": 39.4,
+        "start": 27.2,
         "opp": "WSH",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
-        "implied_pts": 21.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": -16027,
-        "name": "Buccaneers D/ST",
-        "pos": "D/ST",
-        "team": "TB",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 5.93,
-        "avg": 5.67,
-        "total": 68.0,
-        "elig": [
-          "D/ST"
-        ],
-        "own": 37.1,
-        "start": 26.4,
-        "opp": "NO",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": true,
-        "implied_pts": 25.5,
+        "implied_pts": 22.5,
         "last_n": [
           0,
           0,
@@ -5196,8 +5197,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 34.6,
-        "start": 24.9,
+        "own": 31.1,
+        "start": 21.1,
         "opp": "SEA",
         "kickoff": "2025-12-07T18:00Z",
         "home": true,
@@ -5226,8 +5227,38 @@
         "elig": [
           "D/ST"
         ],
-        "own": 32.2,
-        "start": 20.7,
+        "own": 28.2,
+        "start": 14.6,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": -16015,
+        "name": "Dolphins D/ST",
+        "pos": "D/ST",
+        "team": "MIA",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 6.04,
+        "avg": 4.75,
+        "total": 57.0,
+        "elig": [
+          "D/ST"
+        ],
+        "own": 19.3,
+        "start": 17.4,
+        "opp": "NYJ",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 22.0,
         "last_n": [
           0,
           0,
@@ -5252,13 +5283,43 @@
         "elig": [
           "D/ST"
         ],
-        "own": 18.2,
-        "start": 10.8,
+        "own": 16.5,
+        "start": 9.4,
         "opp": "DEN",
         "kickoff": "2025-12-07T21:05Z",
         "home": true,
         "is_snf": true,
         "implied_pts": 16.5,
+        "last_n": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "stdev": 0.0,
+        "boom": 1.0,
+        "bust": 1.0
+      },
+      {
+        "id": -16010,
+        "name": "Titans D/ST",
+        "pos": "D/ST",
+        "team": "TEN",
+        "slot": "",
+        "inj": "ACTIVE",
+        "bye": false,
+        "proj": 6.36,
+        "avg": 4.33,
+        "total": 52.0,
+        "elig": [
+          "D/ST"
+        ],
+        "own": 15.6,
+        "start": 14.5,
+        "opp": "CLE",
+        "kickoff": "2025-12-07T18:00Z",
+        "home": false,
+        "implied_pts": 14.5,
         "last_n": [
           0,
           0,
@@ -5283,8 +5344,8 @@
         "elig": [
           "D/ST"
         ],
-        "own": 14.3,
-        "start": 7.9,
+        "own": 14.0,
+        "start": 7.6,
         "opp": "GB",
         "kickoff": "2025-12-07T21:25Z",
         "home": false,
@@ -5314,42 +5375,12 @@
         "elig": [
           "D/ST"
         ],
-        "own": 12.7,
-        "start": 6.3,
+        "own": 12.3,
+        "start": 5.9,
         "opp": "DET",
         "kickoff": "2025-12-05T01:15Z",
         "home": false,
-        "implied_pts": 25.8,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": -16010,
-        "name": "Titans D/ST",
-        "pos": "D/ST",
-        "team": "TEN",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": false,
-        "proj": 6.36,
-        "avg": 4.33,
-        "total": 52.0,
-        "elig": [
-          "D/ST"
-        ],
-        "own": 9.7,
-        "start": 8.4,
-        "opp": "CLE",
-        "kickoff": "2025-12-07T18:00Z",
-        "home": false,
-        "implied_pts": 14.5,
+        "implied_pts": 25.5,
         "last_n": [
           0,
           0,
@@ -5374,39 +5405,13 @@
         "elig": [
           "D/ST"
         ],
-        "own": 9.3,
-        "start": 5.8,
+        "own": 9.0,
+        "start": 5.5,
         "opp": "LAR",
         "kickoff": "2025-12-07T21:25Z",
         "home": true,
         "is_snf": true,
-        "implied_pts": 20.5,
-        "last_n": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "stdev": 0.0,
-        "boom": 1.0,
-        "bust": 1.0
-      },
-      {
-        "id": -16029,
-        "name": "Panthers D/ST",
-        "pos": "D/ST",
-        "team": "CAR",
-        "slot": "",
-        "inj": "ACTIVE",
-        "bye": true,
-        "proj": 0,
-        "avg": 5.46,
-        "total": 71.0,
-        "elig": [
-          "D/ST"
-        ],
-        "own": 4.7,
-        "start": 2.2,
+        "implied_pts": 19.5,
         "last_n": [
           0,
           0,
@@ -5419,13 +5424,6 @@
       }
     ]
   },
-  "trades": [
-    {
-      "team": "Adrian puts the A in Avengers",
-      "record": "8-5",
-      "pos": "TE",
-      "their_depth": 3
-    }
-  ],
+  "trades": [],
   "byes": {}
 }
