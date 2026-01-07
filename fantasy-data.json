@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-01-07T14:18:11.812108",
+    "generated": "2026-01-07T18:38:07.954462",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -1177,7 +1177,7 @@
           "pos": "TE",
           "team": "BUF",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 0,
           "avg": 8.88,
