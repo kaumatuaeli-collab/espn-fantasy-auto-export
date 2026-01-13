@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-01-12T22:10:39.919210",
+    "generated": "2026-01-13T13:33:45.805656",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -2212,7 +2212,7 @@
           "pos": "WR",
           "team": "HOU",
           "slot": "WR",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 0,
           "avg": 12.71,
@@ -3665,7 +3665,7 @@
         "pos": "WR",
         "team": "SF",
         "slot": "",
-        "inj": "OUT",
+        "inj": "QUESTIONABLE",
         "bye": false,
         "proj": 7.42,
         "avg": 7.84,
