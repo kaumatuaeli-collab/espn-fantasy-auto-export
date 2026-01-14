@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-01-13T13:33:45.805656",
+    "generated": "2026-01-14T11:16:41.285915",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -1531,7 +1531,7 @@
           "pos": "QB",
           "team": "BUF",
           "slot": "QB",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 0,
           "avg": 21.45,
