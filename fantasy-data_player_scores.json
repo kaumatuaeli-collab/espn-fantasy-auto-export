@@ -1076,13 +1076,13 @@
     "name": "Bo Nix",
     "position": "QB",
     "team": "DEN",
-    "starter_score": 4.64,
-    "waiver_score": 6.52,
-    "ros_score": 3.82,
-    "risk_index": 4.0,
-    "risk_category": "MEDIUM",
-    "confidence": "MEDIUM",
-    "confidence_multiplier": 0.9,
+    "starter_score": 0.0,
+    "waiver_score": 0.0,
+    "ros_score": 0.0,
+    "risk_index": 10.0,
+    "risk_category": "HIGH",
+    "confidence": "LOW",
+    "confidence_multiplier": 0.8,
     "starter_components": {
       "implied_pts": 5.0,
       "ewma_fp": 8.6,
@@ -1131,11 +1131,13 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "ACTIVE",
+      "injury_status": "OUT",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": []
+    "flags": [
+      "INJURY"
+    ]
   },
   "4689114": {
     "id": 4689114,
@@ -3287,10 +3289,10 @@
     "name": "Ricky Pearsall",
     "position": "WR",
     "team": "SF",
-    "starter_score": 3.11,
-    "waiver_score": 4.51,
-    "ros_score": 2.62,
-    "risk_index": 4.6,
+    "starter_score": 4.01,
+    "waiver_score": 5.41,
+    "ros_score": 3.52,
+    "risk_index": 4.0,
     "risk_category": "MEDIUM",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
@@ -3342,12 +3344,11 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "QUESTIONABLE",
+      "injury_status": "ACTIVE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
     "flags": [
-      "INJURY",
       "MNF"
     ]
   },
@@ -4897,10 +4898,10 @@
     "name": "Jake Tonges",
     "position": "TE",
     "team": "SF",
-    "starter_score": 3.58,
-    "waiver_score": 4.79,
-    "ros_score": 3.45,
-    "risk_index": 4.0,
+    "starter_score": 2.78,
+    "waiver_score": 3.99,
+    "ros_score": 2.65,
+    "risk_index": 4.6,
     "risk_category": "MEDIUM",
     "confidence": "LOW",
     "confidence_multiplier": 0.8,
@@ -4952,11 +4953,12 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "ACTIVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
     "flags": [
+      "INJURY",
       "MNF"
     ]
   },
