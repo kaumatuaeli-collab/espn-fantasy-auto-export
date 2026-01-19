@@ -4159,13 +4159,13 @@
     "name": "Dalton Schultz",
     "position": "TE",
     "team": "HOU",
-    "starter_score": 2.4,
-    "waiver_score": 6.72,
-    "ros_score": 3.99,
-    "risk_index": 4.0,
+    "starter_score": 1.26,
+    "waiver_score": 5.14,
+    "ros_score": 2.69,
+    "risk_index": 4.6,
     "risk_category": "MEDIUM",
-    "confidence": "HIGH",
-    "confidence_multiplier": 1.0,
+    "confidence": "MEDIUM",
+    "confidence_multiplier": 0.9,
     "starter_components": {
       "implied_pts": 5.0,
       "ewma_fp": 2.1,
@@ -4214,11 +4214,13 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "ACTIVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": []
+    "flags": [
+      "INJURY"
+    ]
   },
   "4430027": {
     "id": 4430027,
@@ -4360,10 +4362,10 @@
     "name": "Colston Loveland",
     "position": "TE",
     "team": "CHI",
-    "starter_score": 4.04,
-    "waiver_score": 5.37,
-    "ros_score": 3.63,
-    "risk_index": 4.0,
+    "starter_score": 3.24,
+    "waiver_score": 4.57,
+    "ros_score": 2.83,
+    "risk_index": 4.6,
     "risk_category": "MEDIUM",
     "confidence": "LOW",
     "confidence_multiplier": 0.8,
@@ -4415,11 +4417,12 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "ACTIVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
     "flags": [
+      "INJURY",
       "MNF"
     ]
   },
