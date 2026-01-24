@@ -1081,8 +1081,8 @@
     "ros_score": 0.0,
     "risk_index": 10.0,
     "risk_category": "HIGH",
-    "confidence": "LOW",
-    "confidence_multiplier": 0.8,
+    "confidence": "MEDIUM",
+    "confidence_multiplier": 0.9,
     "starter_components": {
       "implied_pts": 5.0,
       "ewma_fp": 8.6,
@@ -1131,7 +1131,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "OUT",
+      "injury_status": "INJURY_RESERVE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
