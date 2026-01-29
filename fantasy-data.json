@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-01-28T18:41:39.019491",
+    "generated": "2026-01-29T19:28:02.677704",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -1189,7 +1189,7 @@
           "pos": "QB",
           "team": "SEA",
           "slot": "QB",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 0,
           "avg": 13.85,
@@ -1372,7 +1372,7 @@
           "pos": "QB",
           "team": "NE",
           "slot": "BE",
-          "inj": "ACTIVE",
+          "inj": "QUESTIONABLE",
           "bye": false,
           "proj": 0,
           "avg": 20.67,
