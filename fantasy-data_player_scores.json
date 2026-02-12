@@ -344,7 +344,7 @@
     "position": "WR",
     "team": "JAX",
     "starter_score": 2.0,
-    "waiver_score": 3.75,
+    "waiver_score": 3.64,
     "ros_score": 3.5,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -361,7 +361,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 5.0,
-      "opportunity": 10.0,
+      "opportunity": 9.2,
       "avg": 0.0
     },
     "ros_components": {
@@ -1076,11 +1076,11 @@
     "name": "Bo Nix",
     "position": "QB",
     "team": "DEN",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 10.0,
-    "risk_category": "HIGH",
+    "starter_score": 3.74,
+    "waiver_score": 5.62,
+    "ros_score": 2.92,
+    "risk_index": 4.6,
+    "risk_category": "MEDIUM",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -1131,7 +1131,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -1212,11 +1212,11 @@
     "name": "Patrick Mahomes",
     "position": "QB",
     "team": "KC",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 1.58,
+    "waiver_score": 1.94,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -1267,7 +1267,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -2080,11 +2080,11 @@
     "name": "Quinshon Judkins",
     "position": "RB",
     "team": "CLE",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 1.35,
+    "waiver_score": 2.07,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -2135,7 +2135,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -2415,7 +2415,7 @@
     "position": "RB",
     "team": "HOU",
     "starter_score": 2.28,
-    "waiver_score": 6.26,
+    "waiver_score": 5.96,
     "ros_score": 3.25,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
@@ -2432,7 +2432,7 @@
       "upside": 8.2,
       "trend": 9.0,
       "implied_pts": 5.0,
-      "opportunity": 3.6,
+      "opportunity": 1.6,
       "avg": 0.0
     },
     "ros_components": {
@@ -2617,7 +2617,7 @@
     "position": "RB",
     "team": "CLE",
     "starter_score": 3.54,
-    "waiver_score": 6.38,
+    "waiver_score": 6.08,
     "ros_score": 4.14,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
@@ -2634,7 +2634,7 @@
       "upside": 8.3,
       "trend": 9.0,
       "implied_pts": 5.0,
-      "opportunity": 4.3,
+      "opportunity": 2.3,
       "avg": 0.0
     },
     "ros_components": {
@@ -2751,11 +2751,11 @@
     "name": "Joe Mixon",
     "position": "RB",
     "team": "HOU",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 1.2,
+    "waiver_score": 1.04,
+    "ros_score": 2.0,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "LOW",
     "confidence_multiplier": 0.8,
     "starter_components": {
@@ -2806,7 +2806,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "OUT",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -2887,11 +2887,11 @@
     "name": "James Conner",
     "position": "RB",
     "team": "ARI",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 1.35,
+    "waiver_score": 1.24,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -2942,7 +2942,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -3153,11 +3153,11 @@
     "name": "Rashee Rice",
     "position": "WR",
     "team": "KC",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.9,
+    "waiver_score": 2.03,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -3208,7 +3208,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -3824,7 +3824,7 @@
     "position": "WR",
     "team": "JAX",
     "starter_score": 4.86,
-    "waiver_score": 5.75,
+    "waiver_score": 5.48,
     "ros_score": 3.63,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
@@ -3841,7 +3841,7 @@
       "upside": 8.3,
       "trend": 9.0,
       "implied_pts": 5.0,
-      "opportunity": 4.3,
+      "opportunity": 2.3,
       "avg": 0.0
     },
     "ros_components": {
@@ -3889,11 +3889,11 @@
     "name": "Travis Hunter",
     "position": "WR",
     "team": "JAX",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.9,
+    "waiver_score": 1.16,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -3944,7 +3944,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -4227,11 +4227,11 @@
     "name": "Sam LaPorta",
     "position": "TE",
     "team": "DET",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.68,
+    "waiver_score": 1.62,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -4282,7 +4282,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -4833,11 +4833,11 @@
     "name": "Tucker Kraft",
     "position": "TE",
     "team": "GB",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.68,
+    "waiver_score": 1.2,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -4888,7 +4888,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -5566,7 +5566,7 @@
     "position": "K",
     "team": "BUF",
     "starter_score": 4.9,
-    "waiver_score": 3.04,
+    "waiver_score": 2.74,
     "ros_score": 3.5,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -5582,7 +5582,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 5.0,
-      "opportunity": 5.2,
+      "opportunity": 3.2,
       "avg": 0.0
     },
     "ros_components": {
@@ -5829,11 +5829,11 @@
     "name": "Tyler Bass",
     "position": "K",
     "team": "BUF",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 3.12,
+    "waiver_score": 1.1,
+    "ros_score": 2.0,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "LOW",
     "confidence_multiplier": 0.8,
     "starter_components": {
@@ -5883,7 +5883,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
