@@ -139,7 +139,7 @@
     "position": "RB",
     "team": "NO",
     "starter_score": 1.35,
-    "waiver_score": 2.1,
+    "waiver_score": 1.83,
     "ros_score": 2.25,
     "risk_index": 0.6,
     "risk_category": "LOW",
@@ -156,7 +156,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 5.0,
-      "opportunity": 7.2,
+      "opportunity": 5.2,
       "avg": 0.0
     },
     "ros_components": {
@@ -173,8 +173,8 @@
     ],
     "waiver_reasons": [
       "trend (25%)",
-      "opportunity (15%)",
-      "implied_pts (20%)"
+      "implied_pts (20%)",
+      "opportunity (15%)"
     ],
     "ros_reasons": [
       "trend (25%)",
@@ -809,7 +809,7 @@
     "position": "RB",
     "team": "NO",
     "starter_score": 2.5,
-    "waiver_score": 2.68,
+    "waiver_score": 2.38,
     "ros_score": 3.5,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -826,7 +826,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 5.0,
-      "opportunity": 2.8,
+      "opportunity": 0.8,
       "avg": 0.0
     },
     "ros_components": {
@@ -943,7 +943,7 @@
     "position": "WR",
     "team": "TEN",
     "starter_score": 2.0,
-    "waiver_score": 2.73,
+    "waiver_score": 2.43,
     "ros_score": 3.5,
     "risk_index": 0.0,
     "risk_category": "LOW",
@@ -960,7 +960,7 @@
       "upside": 0.0,
       "trend": 5.0,
       "implied_pts": 5.0,
-      "opportunity": 3.2,
+      "opportunity": 1.2,
       "avg": 0.0
     },
     "ros_components": {
@@ -1547,11 +1547,11 @@
     "name": "Justin Fields",
     "position": "QB",
     "team": "NYJ",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 1.58,
+    "waiver_score": 1.22,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -1602,7 +1602,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -2480,11 +2480,11 @@
     "name": "Devin Neal",
     "position": "RB",
     "team": "NO",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 1.35,
+    "waiver_score": 1.34,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -2535,7 +2535,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -2549,7 +2549,7 @@
     "position": "RB",
     "team": "NYG",
     "starter_score": 4.52,
-    "waiver_score": 5.08,
+    "waiver_score": 4.84,
     "ros_score": 3.25,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
@@ -2566,7 +2566,7 @@
       "upside": 8.3,
       "trend": 9.0,
       "implied_pts": 5.0,
-      "opportunity": 4.1,
+      "opportunity": 2.1,
       "avg": 0.0
     },
     "ros_components": {
@@ -2682,11 +2682,11 @@
     "name": "Cam Skattebo",
     "position": "RB",
     "team": "NYG",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 1.35,
+    "waiver_score": 1.24,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -2737,7 +2737,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -3221,11 +3221,11 @@
     "name": "Garrett Wilson",
     "position": "WR",
     "team": "NYJ",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.9,
+    "waiver_score": 1.58,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -3276,7 +3276,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -3626,7 +3626,7 @@
     "position": "WR",
     "team": "NYJ",
     "starter_score": 2.95,
-    "waiver_score": 6.31,
+    "waiver_score": 6.01,
     "ros_score": 4.05,
     "risk_index": 4.0,
     "risk_category": "MEDIUM",
@@ -3643,7 +3643,7 @@
       "upside": 8.3,
       "trend": 9.0,
       "implied_pts": 5.0,
-      "opportunity": 3.8,
+      "opportunity": 1.8,
       "avg": 0.0
     },
     "ros_components": {
@@ -3957,11 +3957,11 @@
     "name": "Calvin Ridley",
     "position": "WR",
     "team": "TEN",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.9,
+    "waiver_score": 1.12,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -4012,7 +4012,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -4632,11 +4632,11 @@
     "name": "Zach Ertz",
     "position": "TE",
     "team": "WSH",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.68,
+    "waiver_score": 1.34,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -4687,7 +4687,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
@@ -5038,11 +5038,11 @@
     "name": "Mason Taylor",
     "position": "TE",
     "team": "NYJ",
-    "starter_score": 0.0,
-    "waiver_score": 0.0,
-    "ros_score": 0.0,
-    "risk_index": 6.0,
-    "risk_category": "MEDIUM",
+    "starter_score": 0.68,
+    "waiver_score": 1.12,
+    "ros_score": 2.25,
+    "risk_index": 0.6,
+    "risk_category": "LOW",
     "confidence": "MEDIUM",
     "confidence_multiplier": 0.9,
     "starter_components": {
@@ -5093,7 +5093,7 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "INJURY_RESERVE",
+      "injury_status": "QUESTIONABLE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
