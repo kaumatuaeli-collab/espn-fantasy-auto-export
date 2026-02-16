@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-02-15T15:32:41.548801",
+    "generated": "2026-02-16T22:16:07.080784",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -1286,10 +1286,10 @@
           "id": 3116406,
           "name": "Tyreek Hill",
           "pos": "WR",
-          "team": "MIA",
+          "team": "None",
           "slot": "IR",
           "inj": "QUESTIONABLE",
-          "bye": false,
+          "bye": true,
           "proj": 0,
           "avg": 10.75,
           "total": 43.0
