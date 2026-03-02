@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-03-01T15:31:11.539527",
+    "generated": "2026-03-02T22:16:56.282313",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -1589,7 +1589,7 @@
           "id": 4035538,
           "name": "David Montgomery",
           "pos": "RB",
-          "team": "DET",
+          "team": "HOU",
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
