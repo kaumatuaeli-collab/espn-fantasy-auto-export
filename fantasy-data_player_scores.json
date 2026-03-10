@@ -3422,7 +3422,7 @@
     "id": 4040655,
     "name": "Darnell Mooney",
     "position": "WR",
-    "team": "ATL",
+    "team": "None",
     "starter_score": 2.56,
     "waiver_score": 5.35,
     "ros_score": 3.13,
@@ -3482,7 +3482,9 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": []
+    "flags": [
+      "BYE"
+    ]
   },
   "4685278": {
     "id": 4685278,
