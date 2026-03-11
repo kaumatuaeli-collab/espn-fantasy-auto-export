@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-03-11T14:41:08.326439",
+    "generated": "2026-03-11T18:57:47.632945",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -182,7 +182,7 @@
       "pos": "RB",
       "team": "MIN",
       "slot": "RB/WR/TE",
-      "inj": "QUESTIONABLE",
+      "inj": "ACTIVE",
       "bye": false,
       "proj": 0,
       "avg": 8.73,
