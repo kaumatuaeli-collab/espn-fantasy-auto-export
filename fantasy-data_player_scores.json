@@ -2212,7 +2212,7 @@
     "id": 4361529,
     "name": "Isiah Pacheco",
     "position": "RB",
-    "team": "KC",
+    "team": "DET",
     "starter_score": 3.28,
     "waiver_score": 6.35,
     "ros_score": 4.04,
@@ -2272,7 +2272,9 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": []
+    "flags": [
+      "TNF"
+    ]
   },
   "4697815": {
     "id": 4697815,
