@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-03-12T19:40:16.644801",
+    "generated": "2026-03-14T23:36:09.130020",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -384,7 +384,7 @@
       "id": 4887558,
       "name": "Emanuel Wilson",
       "pos": "RB",
-      "team": "GB",
+      "team": "SEA",
       "slot": "BE",
       "inj": "ACTIVE",
       "bye": false,
@@ -396,9 +396,9 @@
       ],
       "own": 38.1,
       "start": 3.4,
-      "opp": "BAL",
-      "kickoff": "2025-12-28T01:00Z",
-      "home": true,
+      "opp": "CAR",
+      "kickoff": "2025-12-28T18:00Z",
+      "home": false,
       "last_n": [
         0,
         0,
@@ -2063,7 +2063,7 @@
           "id": 3917315,
           "name": "Kyler Murray",
           "pos": "QB",
-          "team": "ARI",
+          "team": "MIN",
           "slot": "BE",
           "inj": "ACTIVE",
           "bye": false,
