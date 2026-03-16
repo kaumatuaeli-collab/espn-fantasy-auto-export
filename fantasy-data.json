@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-03-15T15:35:21.166154",
+    "generated": "2026-03-16T22:21:41.043000",
     "league": 44181678,
     "year": 2025,
     "week": 17,
@@ -2858,7 +2858,7 @@
         "id": 4362887,
         "name": "Justin Fields",
         "pos": "QB",
-        "team": "NYJ",
+        "team": "KC",
         "slot": "",
         "inj": "QUESTIONABLE",
         "bye": false,
@@ -2870,8 +2870,8 @@
         ],
         "own": 20.7,
         "start": 2.2,
-        "opp": "NE",
-        "kickoff": "2025-12-28T18:00Z",
+        "opp": "DEN",
+        "kickoff": "2025-12-26T01:15Z",
         "home": true,
         "last_n": [
           0.0,
