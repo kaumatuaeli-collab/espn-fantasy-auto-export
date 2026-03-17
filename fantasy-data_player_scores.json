@@ -1945,7 +1945,7 @@
     "id": 14880,
     "name": "Kirk Cousins",
     "position": "QB",
-    "team": "ATL",
+    "team": "None",
     "starter_score": 3.66,
     "waiver_score": 5.78,
     "ros_score": 3.52,
@@ -2005,7 +2005,9 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": []
+    "flags": [
+      "BYE"
+    ]
   },
   "5529": {
     "id": 5529,
@@ -2279,7 +2281,7 @@
     "id": 4697815,
     "name": "Rachaad White",
     "position": "RB",
-    "team": "TB",
+    "team": "WSH",
     "starter_score": 2.96,
     "waiver_score": 6.2,
     "ros_score": 3.58,
@@ -2339,7 +2341,9 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": []
+    "flags": [
+      "TNF"
+    ]
   },
   "4575131": {
     "id": 4575131,
