@@ -1545,7 +1545,7 @@
     "id": 4362887,
     "name": "Justin Fields",
     "position": "QB",
-    "team": "KC",
+    "team": "NYJ",
     "starter_score": 1.58,
     "waiver_score": 1.22,
     "ros_score": 2.25,
@@ -1813,7 +1813,7 @@
     "id": 4241479,
     "name": "Tua Tagovailoa",
     "position": "QB",
-    "team": "ATL",
+    "team": "MIA",
     "starter_score": 2.75,
     "waiver_score": 2.27,
     "ros_score": 3.5,
@@ -1945,7 +1945,7 @@
     "id": 14880,
     "name": "Kirk Cousins",
     "position": "QB",
-    "team": "None",
+    "team": "ATL",
     "starter_score": 3.66,
     "waiver_score": 5.78,
     "ros_score": 3.52,
@@ -2005,9 +2005,7 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": [
-      "BYE"
-    ]
+    "flags": []
   },
   "5529": {
     "id": 5529,
@@ -2213,7 +2211,7 @@
     "id": 4361529,
     "name": "Isiah Pacheco",
     "position": "RB",
-    "team": "DET",
+    "team": "KC",
     "starter_score": 3.28,
     "waiver_score": 6.35,
     "ros_score": 4.04,
@@ -2273,15 +2271,13 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": [
-      "TNF"
-    ]
+    "flags": []
   },
   "4697815": {
     "id": 4697815,
     "name": "Rachaad White",
     "position": "RB",
-    "team": "WSH",
+    "team": "TB",
     "starter_score": 2.96,
     "waiver_score": 6.2,
     "ros_score": 3.58,
@@ -2341,9 +2337,7 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": [
-      "TNF"
-    ]
+    "flags": []
   },
   "4575131": {
     "id": 4575131,
@@ -2754,7 +2748,7 @@
     "id": 3116385,
     "name": "Joe Mixon",
     "position": "RB",
-    "team": "None",
+    "team": "HOU",
     "starter_score": 1.2,
     "waiver_score": 1.04,
     "ros_score": 2.0,
@@ -2815,7 +2809,6 @@
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
     "flags": [
-      "BYE",
       "INJURY"
     ]
   },
@@ -3427,7 +3420,7 @@
     "id": 4040655,
     "name": "Darnell Mooney",
     "position": "WR",
-    "team": "NYG",
+    "team": "ATL",
     "starter_score": 2.56,
     "waiver_score": 5.35,
     "ros_score": 3.13,
@@ -3487,9 +3480,7 @@
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
-    "flags": [
-      "SNF"
-    ]
+    "flags": []
   },
   "4685278": {
     "id": 4685278,
@@ -5902,8 +5893,8 @@
     "id": 3123052,
     "name": "Michael Badgley",
     "position": "K",
-    "team": "None",
-    "starter_score": 4.6,
+    "team": "BUF",
+    "starter_score": 5.0,
     "waiver_score": 2.33,
     "ros_score": 3.55,
     "risk_index": 0.0,
@@ -5914,7 +5905,7 @@
       "implied_pts": 5.0,
       "avg": 0.0,
       "proj": 5.5,
-      "home": 5.0
+      "home": 7.0
     },
     "waiver_components": {
       "upside": 0.0,
@@ -5932,8 +5923,8 @@
     },
     "starter_reasons": [
       "implied_pts (50%)",
-      "proj (20%)",
-      "home (20%)"
+      "home (20%)",
+      "proj (20%)"
     ],
     "waiver_reasons": [
       "trend (25%)",
@@ -5962,14 +5953,14 @@
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
     "flags": [
-      "BYE"
+      "SNF"
     ]
   },
   "10621": {
     "id": 10621,
     "name": "Nick Folk",
     "position": "K",
-    "team": "ATL",
+    "team": "NYJ",
     "starter_score": 3.92,
     "waiver_score": 5.76,
     "ros_score": 3.26,
