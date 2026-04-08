@@ -274,13 +274,13 @@
     "name": "Aaron Jones Sr.",
     "position": "RB",
     "team": "MIN",
-    "starter_score": 1.35,
-    "waiver_score": 2.48,
-    "ros_score": 2.25,
-    "risk_index": 0.6,
+    "starter_score": 2.5,
+    "waiver_score": 3.75,
+    "ros_score": 3.5,
+    "risk_index": 0.0,
     "risk_category": "LOW",
-    "confidence": "MEDIUM",
-    "confidence_multiplier": 0.9,
+    "confidence": "HIGH",
+    "confidence_multiplier": 1.0,
     "starter_components": {
       "implied_pts": 5.0,
       "ewma_fp": 0.0,
@@ -329,12 +329,11 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "QUESTIONABLE",
+      "injury_status": "ACTIVE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
     "flags": [
-      "INJURY",
       "TNF"
     ]
   },
@@ -741,7 +740,7 @@
     "id": 4887558,
     "name": "Emanuel Wilson",
     "position": "RB",
-    "team": "GB",
+    "team": "SEA",
     "starter_score": 2.5,
     "waiver_score": 2.47,
     "ros_score": 3.5,
@@ -4430,13 +4429,13 @@
     "name": "Theo Johnson",
     "position": "TE",
     "team": "NYG",
-    "starter_score": 0.68,
-    "waiver_score": 1.42,
-    "ros_score": 2.25,
-    "risk_index": 0.6,
+    "starter_score": 1.75,
+    "waiver_score": 2.57,
+    "ros_score": 3.5,
+    "risk_index": 0.0,
     "risk_category": "LOW",
-    "confidence": "MEDIUM",
-    "confidence_multiplier": 0.9,
+    "confidence": "HIGH",
+    "confidence_multiplier": 1.0,
     "starter_components": {
       "implied_pts": 5.0,
       "ewma_fp": 0.0,
@@ -4485,12 +4484,11 @@
         0
       ],
       "games_played": 4,
-      "injury_status": "QUESTIONABLE",
+      "injury_status": "ACTIVE",
       "model_version": "player_analyst_v1.1",
       "weights_checksum": "STARTER:c2428ee2|WAIVER:eff110b9|ROS:530096b7"
     },
     "flags": [
-      "INJURY",
       "SNF"
     ]
   },
